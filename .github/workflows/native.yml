@@ -1,0 +1,70 @@
+name: Build Anki 25.9.2 with native Yiddish
+
+on:
+  workflow_dispatch:
+    inputs:
+      complete:
+        description: Require complete translations for a release build
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@v7.0.1
+        with:
+          repository: ankitects/anki
+          ref: 3890e12c9e48c028c3f12aa58cb64bd9f8895e30
+          path: upstream
+          submodules: recursive
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.13'
+      - uses: actions/cache@v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            upstream/target
+          key: anki-yidish-windows-25.9.2-rust1.89-${{ hashFiles('addons/custom/yiddish-core/locale/**/*.ftl') }}
+          restore-keys: |
+            anki-yidish-windows-25.9.2-rust1.89-
+      - name: Install the source-pinned Rust compiler and protobuf compiler
+        shell: pwsh
+        run: |
+          rustup toolchain install 1.89.0 --profile minimal
+          if ($LASTEXITCODE) { throw 'Rust installation failed' }
+          Invoke-WebRequest https://github.com/protocolbuffers/protobuf/releases/download/v31.1/protoc-31.1-win64.zip -OutFile protoc.zip
+          Expand-Archive -LiteralPath protoc.zip -DestinationPath protoc
+          "$env:GITHUB_WORKSPACE\protoc\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Prepare native locale resources
+        shell: pwsh
+        env:
+          REQUIRE_COMPLETE: ${{ inputs.complete }}
+        run: |
+          $prepareArgs = @('addons/custom/yiddish-core/build/prepare_native.py', '--upstream', 'upstream')
+          if ($env:REQUIRE_COMPLETE -ne 'true') { $prepareArgs += '--allow-incomplete' }
+          python @prepareArgs
+          if ($LASTEXITCODE) { throw 'Yiddish locale preparation failed' }
+      - name: Compile the official Anki backend
+        working-directory: upstream
+        shell: pwsh
+        run: |
+          $env:PYO3_PYTHON = (Get-Command python).Source
+          cargo +1.89.0 build --release --locked -p rsbridge --features native-tls
+          if ($LASTEXITCODE) { throw 'Native backend compilation failed' }
+          New-Item -ItemType Directory -Path ../native-output -Force | Out-Null
+          Copy-Item -LiteralPath target/release/rsbridge.dll -Destination ../native-output/_rsbridge.pyd
+          Get-FileHash -LiteralPath ../native-output/_rsbridge.pyd -Algorithm SHA256 | ConvertTo-Json | Set-Content -LiteralPath ../native-output/sha256.json -Encoding utf8
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: anki-yidish-native-${{ github.run_id }}
+          path: native-output/
+          retention-days: 7
+          if-no-files-found: error

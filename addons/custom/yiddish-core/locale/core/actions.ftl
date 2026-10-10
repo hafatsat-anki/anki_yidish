@@ -1,7 +1,7 @@
 actions-add = צולייגן
 actions-all-selected = אלע אויסגעקליבענע
 actions-any-selected = סיי וועלכע אויסגעקליבענע
-actions-cancel = אפברעכן
+actions-cancel = אפזאגן
 actions-choose = אויסקלייבן
 actions-close = פארמאכן
 actions-discard = פארווארפן

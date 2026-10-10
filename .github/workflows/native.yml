@@ -57,6 +57,11 @@ jobs:
         shell: pwsh
         run: |
           $env:PYO3_PYTHON = (Get-Command python).Source
+          $protocBinary = Get-ChildItem -LiteralPath "$env:GITHUB_WORKSPACE\protoc" -Filter protoc.exe -Recurse -File | Select-Object -First 1
+          if (-not $protocBinary) { throw 'Downloaded protobuf compiler was not found' }
+          $env:PROTOC = $protocBinary.FullName
+          & $env:PROTOC --version
+          if ($LASTEXITCODE) { throw 'Protobuf compiler could not run' }
           cargo +1.89.0 build --release --locked -p rsbridge --features native-tls
           if ($LASTEXITCODE) { throw 'Native backend compilation failed' }
           New-Item -ItemType Directory -Path ../native-output -Force | Out-Null

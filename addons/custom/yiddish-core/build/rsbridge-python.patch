@@ -1,0 +1,14 @@
+diff --git a/pylib/rsbridge/build.rs b/pylib/rsbridge/build.rs
+--- a/pylib/rsbridge/build.rs
++++ b/pylib/rsbridge/build.rs
+@@ -14,7 +14,9 @@ fn main() {
+         use std::process::Command;
+ 
+         // Run Python to get sysconfig paths
+-        let output = Command::new("../../out/pyenv/scripts/python")
++        let python = std::env::var("PYO3_PYTHON")
++            .unwrap_or_else(|_| "../../out/pyenv/scripts/python".to_string());
++        let output = Command::new(python)
+             .args([
+                 "-c",
+                 "import sysconfig; print(sysconfig.get_paths()['stdlib'])",

@@ -63,6 +63,18 @@ def prepare(upstream: Path, locale: Path, allow_incomplete: bool = False) -> int
         raise ValueError(f"Incomplete localization: {', '.join(missing)}")
     (upstream / "out").mkdir(exist_ok=True)
     (upstream / "out/buildhash").write_text(BUILDHASH, encoding="ascii")
+    # Upstream's Windows build assumes its own out/pyenv exists. A standalone
+    # GitHub rsbridge build instead uses setup-python via PYO3_PYTHON.
+    build_script = upstream / "pylib/rsbridge/build.rs"
+    rust = build_script.read_text(encoding="utf-8")
+    old = '        let output = Command::new("../../out/pyenv/scripts/python")'
+    new = '''        let python = std::env::var("PYO3_PYTHON")
+            .unwrap_or_else(|_| "../../out/pyenv/scripts/python".to_string());
+        let output = Command::new(python)'''
+    if old in rust:
+        build_script.write_bytes(rust.replace(old, new).encode("utf-8"))
+    elif new not in rust:
+        raise ValueError("Unsupported rsbridge Windows Python bootstrap")
     print(f"Prepared {total} native Yiddish messages; incomplete files: {len(missing)}")
     return total
 

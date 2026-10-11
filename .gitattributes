@@ -1,0 +1,19 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.ftl text eol=lf
+*.json text eol=lf
+*.ps1 text eol=lf
+*.nsi text eol=lf
+*.nsh text eol=lf
+*.pdf -text
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.zip -text
+*.pyd -text
+*.dll -text
+*.exe -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.otf -text

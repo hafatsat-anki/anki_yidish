@@ -1,5 +1,11 @@
 ﻿param([Parameter(Mandatory=$true)][string]$InstallRoot)
 $ErrorActionPreference = 'Stop'
+function Get-BackupHash([string]$Path) {
+    $stream = [IO.File]::OpenRead($Path)
+    $hasher = [Security.Cryptography.SHA256]::Create()
+    try { return [BitConverter]::ToString($hasher.ComputeHash($stream)) }
+    finally { $stream.Dispose(); $hasher.Dispose() }
+}
 $root = [IO.Path]::GetFullPath($InstallRoot)
 $package = Join-Path $root 'payload-addons'
 $target = Join-Path $root 'Data\addons21'
@@ -27,7 +33,7 @@ foreach ($addon in $manifest) {
             $copy = Join-Path $saved $file
             [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($copy)) | Out-Null
             Copy-Item -LiteralPath $existing -Destination $copy -Force
-            if ((Get-FileHash -LiteralPath $existing).Hash -ne (Get-FileHash -LiteralPath $copy).Hash) {
+            if ((Get-BackupHash $existing) -ne (Get-BackupHash $copy)) {
                 throw 'Saved settings backup verification failed.'
             }
             if ($file.EndsWith('.json') -and $file -in @('config.json','meta.json')) {

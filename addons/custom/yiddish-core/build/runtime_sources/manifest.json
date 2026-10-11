@@ -1,0 +1,9 @@
+{
+  "anki_source_commit": "3890e12c9e48c028c3f12aa58cb64bd9f8895e30",
+  "python": "3.13",
+  "license": "AGPL-3.0-or-later",
+  "files": {
+    "anki_lang.py": "2e7ecd06fcd47214a2592ff8880a0dbb6bd5f709cd8ff4905aa253d4a91e1bae",
+    "aqt_init.py": "7fb4ef02ccca7e9d154c031f0ac974d12da5d9f0199d78354801a6bebc730050"
+  }
+}

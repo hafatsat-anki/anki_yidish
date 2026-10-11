@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי? - פראגעס און ענטפערס וועגן אנקי</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">מבוא צו אפט געפרעגטע שאלות</a></li><li class="chapter-item affix "><a href="getting-help.html">באקומען הילף</a></li><li class="chapter-item affix "><a href="when-problems-occur.html">ווען עס קומען פראבלעמען</a></li><li class="chapter-item affix "><a href="restoring-an-automatic-backup-recovering-from-data-loss.html">צוריקברענגען אן אויטאמאטישן גיבוי נאך פארלוסט פון דאטן</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">קארטלעך און רשומות</li><li class="chapter-item "><a href="linking-cards-together.html"><strong aria-hidden="true">1.</strong> קען מען פארבינדן קארטלעך איינער מיטן צווייטן?</a></li><li class="chapter-item "><a href="can-i-reveal-parts-of-a-card-one-at-a-time.html"><strong aria-hidden="true">2.</strong> קען מען אנטפלעקן טיילן פון א קארטל איינס נאכן צווייטן?</a></li><li class="chapter-item "><a href="cards-are-reversed-appearing-twice.html"><strong aria-hidden="true">3.</strong> פארקערטע קארטלעך / קארטלעך ווייזן זיך צוויי מאל</a></li><li class="chapter-item "><a href="errors-when-recording.html"><strong aria-hidden="true">4.</strong> תקלות ביים רעקארדירן</a></li><li class="chapter-item "><a href="multiple-choice-questions.html"><strong aria-hidden="true">5.</strong> שאלות מיט עטליכע אויסקלייב־ענטפערס</a></li><li class="chapter-item "><a href="no-cloze-found-on-card.html"><strong aria-hidden="true">6.</strong> קיין אויסגעלאזטע ווערטער זענען נישט געפונען געווארן אינעם קארטל</a></li><li class="chapter-item "><a href="printing-cards-in-your-collection.html"><strong aria-hidden="true">7.</strong> דרוקן קארטלעך פון אייער אוסף</a></li><li class="chapter-item "><a href="removing-duplicate-note-types.html"><strong aria-hidden="true">8.</strong> אראפנעמען דאפלטע סארטן רשומות</a></li><li class="chapter-item "><a href="some-updates-were-ignored-because-the-note-type-has-changed.html"><strong aria-hidden="true">9.</strong> טייל דערהיינטיגונגען זענען איגנארירט געווארן ווייל דער סארט רשומה האט זיך געטוישט</a></li><li class="chapter-item "><a href="sounds-or-images-have-gone-missing.html"><strong aria-hidden="true">10.</strong> מעדיע־טעקעס פון קול/בילדער זענען פארשוואונדן!</a></li><li class="chapter-item "><a href="sticky-fields.html"><strong aria-hidden="true">11.</strong> ווען מען לייגט צו א נייעם קארטל, ווערן געוויסע פעלדער נישט אויסגעליידיגט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פעקלעך</li><li class="chapter-item "><a href="hiding-decks.html"><strong aria-hidden="true">12.</strong> באהאלטן פעקלעך</a></li><li class="chapter-item "><a href="how-do-i-move-cards-between-decks.html"><strong aria-hidden="true">13.</strong> ווי אזוי פירט מען קארטלעך אריבער צווישן פעקלעך?</a></li><li class="chapter-item "><a href="merging-or-combining-two-decks.html"><strong aria-hidden="true">14.</strong> צונויפמישן/צונויפשטעלן צוויי פעקלעך</a></li><li class="chapter-item "><a href="timestamps-in-the-future.html"><strong aria-hidden="true">15.</strong> אימפארט/עקספארט גייט נישט צוליב צייט־שטעמפלען אין דער צוקונפט</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">תזמון</li><li class="chapter-item "><a href="anki-is-not-showing-me-all-my-cards.html"><strong aria-hidden="true">16.</strong> אנקי ווייזט מיר נישט אלע מיינע קארטלעך!</a></li><li class="chapter-item "><a href="study-in-a-particular-order.html"><strong aria-hidden="true">17.</strong> קען מען לערנען די קארטלעך אין א באשטימטן סדר?</a></li><li class="chapter-item "><a href="due-times-after-a-break.html"><strong aria-hidden="true">18.</strong> חזרה־צייטן נאך א הפסקה</a></li><li class="chapter-item "><a href="extra-copies-of-a-card-are-coming-up.html"><strong aria-hidden="true">19.</strong> נאך קאפיעס פון א קארטל ווייזן זיך</a></li><li class="chapter-item "><a href="hard-good-interval-longer-than-good-easy.html"><strong aria-hidden="true">20.</strong> דער אפשטאנד פון שווער/גוט איז לענגער ווי פון גוט/גרינג</a></li><li class="chapter-item "><a href="i-am-going-on-vacation-can-i-pause-the-scheduler.html"><strong aria-hidden="true">21.</strong> איך פאר אויף וואקאציע. קען איך אפשטעלן דעם מתזמן?</a></li><li class="chapter-item "><a href="resetting-progress-in-a-deck.html"><strong aria-hidden="true">22.</strong> צוריקשטעלן דעם פארשריט אין א פעקל</a></li><li class="chapter-item "><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html"><strong aria-hidden="true">23.</strong> אנקי־איינשטעלונגען זיך צו גרייטן פאר א גרויסער בחינה</a></li><li class="chapter-item "><a href="the-anki-2.1-scheduler.html"><strong aria-hidden="true">24.</strong> דער אנקי 2.1־מתזמן</a></li><li class="chapter-item "><a href="the-2021-scheduler.html"><strong aria-hidden="true">25.</strong> דער Anki־מתזמן v3</a></li><li class="chapter-item "><a href="what-spaced-repetition-algorithm.html"><strong aria-hidden="true">26.</strong> וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי?</a></li><li class="chapter-item "><a href="frequently-asked-questions-about-fsrs.html"><strong aria-hidden="true">27.</strong> אפט געפרעגטע שאלות וועגן FSRS</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">סינכראניזירן און AnkiWeb</li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">28.</strong> סינכראניזירן און AnkiWeb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="moving-questions-between-computers.html"><strong aria-hidden="true">28.1.</strong> ווי אזוי פירט מען די שאלות פון איין קאמפיוטער צום צווייטן?</a></li><li class="chapter-item "><a href="can-i-sync-only-some-of-my-decks.html"><strong aria-hidden="true">28.2.</strong> קען מען סינכראניזירן נאר א טייל פון מיינע פעקלעך?</a></li><li class="chapter-item "><a href="synchronizing-multiple-profiles.html"><strong aria-hidden="true">28.3.</strong> סינכראניזירן עטליכע פראפילן</a></li><li class="chapter-item "><a href="media-files-may-take-time-to-sync.html"><strong aria-hidden="true">28.4.</strong> סינכראניזירן מעדיע־טעקעס קען נעמען צייט</a></li><li class="chapter-item "><a href="sounds-or-images-are-not-appearing-on-ankiweb-or-the-mobile-clients.html"><strong aria-hidden="true">28.5.</strong> קלאנגען/בילדער ווייזן זיך נישט אין AnkiWeb אדער מאבילע אפליקאציעס</a></li><li class="chapter-item "><a href="error-establishing-a-secure-connection-when-syncing.html"><strong aria-hidden="true">28.6.</strong> תקלה ביים שאפן א זיכערע פארבינדונג ביים סינכראניזירן</a></li><li class="chapter-item "><a href="syncing-failed-connection-timed-out-errors-when-syncing.html"><strong aria-hidden="true">28.7.</strong> סינכראניזירן איז נישט געלונגען: די פארבינדונג־צייט איז אויסגעגאנגען</a></li><li class="chapter-item "><a href="ankiweb-account-removal.html"><strong aria-hidden="true">28.8.</strong> אויסמעקן אן AnkiWeb־קאנטע</a></li><li class="chapter-item "><a href="are-there-limits-on-file-sizes-on-ankiweb.html"><strong aria-hidden="true">28.9.</strong> זענען דא שיעורים פאר טעקע־גרייסן אין AnkiWeb?</a></li><li class="chapter-item "><a href="email-verification.html"><strong aria-hidden="true">28.10.</strong> באשטעטיגן אן אימעיל־אדרעס</a></li><li class="chapter-item "><a href="emails-not-being-received.html"><strong aria-hidden="true">28.11.</strong> אימעילס קומען נישט אן צוליב ספאם</a></li><li class="chapter-item "><a href="outlook-silently-discards-email.html"><strong aria-hidden="true">28.12.</strong> Outlook.com פארשווינדט אימעילס שטילערהייט</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">אנקי פארן קאמפיוטער</li><li class="chapter-item "><a href="shortcut-not-working.html"><strong aria-hidden="true">29.</strong> א קורצוועג־קנעפל ארבעט נישט</a></li><li class="chapter-item "><a href="anki-must-be-able-to-connect-to-a-local-port.html"><strong aria-hidden="true">30.</strong> אנקי מוז קענען פארבינדן זיך צו א לאקאלן פארט</a></li><li class="chapter-item "><a href="anki-says-my-clock-is-wrong.html"><strong aria-hidden="true">31.</strong> אנקי זאגט אז מיין זייגער איז נישט ריכטיג</a></li><li class="chapter-item "><a href="changing-the-interface-language.html"><strong aria-hidden="true">32.</strong> טוישן די שפראך פונעם ממשק</a></li><li class="chapter-item "><a href="my-antivirus-program-says-anki-is-infected.html"><strong aria-hidden="true">33.</strong> מיין אנטיווירוס־פראגראם זאגט אז Anki איז אנגעשטעקט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פארשידענע</li><li class="chapter-item "><a href="how-can-i-donate.html"><strong aria-hidden="true">34.</strong> ווי אזוי קען מען ביישטייערן?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">פראגעס און ענטפערס וועגן אנקי</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="באיזה-אלגוריתם-חזרות-ברווחים-אנקי-משתמש"></a></p>
+<h1 id="וועלכן-אלגאריטם-פון-חזרות-מיט-אפשטאנדן-נוצט-אנקי"><a class="header" href="#וועלכן-אלגאריטם-פון-חזרות-מיט-אפשטאנדן-נוצט-אנקי">וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי?</a></h1>
+<h2 id="sm-2"><a class="header" href="#sm-2">SM-2</a></h2>
+<p>פון ווערסיע 23.10 האט אנקי צוויי אלגאריטמען וואס מען קען נוצן. דער ערשטער איז באזירט אויף
+דעם SuperMemo 2־אלגאריטם, און דער צווייטער הייסט FSRS.</p>
+<p>אנקי'ס אלגאריטם איז אנדערש פון SM-2 אין עטליכע פרטים. בפרט:</p>
+<ul>
+<li>
+<p>SM-2 באשטימט אן ערשטן אפשטאנד פון איין טאג און דערנאך 6 טעג. מיט אנקי
+האט איר פולע קאנטראל איבער די לענג פון די ערשטע לערן־טריט.
+אנקי "פארשטייט" אז אמאל דארף מען זען א נייעם קארטל עטליכע מאל איידער
+מען קען אים געדענקען. די ערשטע "דורכפאלן" זאגן נישט אז מען דארף אייך "באשטראפן"
+דורכן ווייזן דעם נישט־געוואוסטן קארטל פילע מאל איבער עטליכע טעג.
+רעזולטאטן אינעם לערן־שטאפל שפיגלען נישט די רעזולטאטן אינעם זכרון־שטאפל.</p>
+</li>
+<li>
+<p>אנקי נוצט 4 ענטפער־אפציעס פאר חזרה־קארטלעך, נישט 6. עס איז דא נאר
+איין <em>דורכפאל</em>־אפציע, נישט 3. דער טעם איז אז דורכפאלן זענען א קליינער טייל
+פון אלע חזרות, און דערפאר קען מען צופאסן די גרינגקייט פונעם קארטל גענוג גוט
+פשוט דורך פארשידענע פאזיטיווע ענטפערס.</p>
+</li>
+<li>
+<p>א פארשפעטיגטער ענטפער אויף א קארטל ווערט גערעכנט ביים אויסרעכענען דעם קומענדיגן אפשטאנד.
+איר באקומט אזוי א "צוגאב" פאר א קארטל וואס איר האט געענטפערט שפעט אבער נאך געדענקט.</p>
+</li>
+<li>
+<p>ווי אין SM-2 שטעלט אנקי'ס דורכפאל־קנעפל לויט ברירת מחדל צוריק דעם קארטל־אפשטאנד.
+דער באניצער קען אבער קלייבן צו פארקלענערן דעם אפשטאנד אנשטאט אים אינגאנצן צוריקשטעלן.
+מען קען אויך קלייבן צו איבערחזרן נישט־געוואוסטע "אויסגעלערנטע" קארטלעך
+אויף אן אנדער טאג אנשטאט אויפן זעלבן טאג.</p>
+</li>
+<li>
+<p>דער ענטפער <em>לייכט דערמאנט</em> פארגרעסערט נישט נאר דעם גרינגקייט־פאקטאר, נאר גיט אויך א באזונדערן באונוס
+צום אויסרעכענען דעם יעצטיגן אפשטאנד. דערפאר איז דער ענטפער <em>לייכט דערמאנט</em> אביסל מער
+אגרעסיוו ווי דער געווענליכער SM-2־אלגאריטם.</p>
+</li>
+<li>
+<p>נאכאנאנדיגע דורכפאלן בשעת קארטלעך זענען אינעם לערן־שטאפל ברענגען נישט
+נאך פארקלענערונגען אין דער קארטל־גרינגקייט. א שכיח'ע טענה קעגן דעם געווענליכן SM-2־אלגאריטם
+איז אז איבערגעחזרטע דורכפאלן מאכן א קארטל שטעקן
+אין א "גיהנום פון קורצע אפשטאנדן". אין אנקי באאיינפלוסט דאס ערשטע לערנען נישט
+די גרינגקייט פונעם קארטל.</p>
+</li>
+</ul>
+<h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
+<p>FSRS שטרעבט זיך אויסצולערנען אייערע זכרון־מוסטערן און באשטימען חזרות מער ווירקזאם ווי SM-2.</p>
+<p>FSRS איז באזירט אויפן "מאדעל פון די דריי זכרון־באשטאנדטיילן". לויטן מאדעל זענען דריי משתנים
+גענוג צו באשרייבן דעם מצב פון איין זכרון אינעם מענטשלעכן מוח.
+די דריי משתנים זענען:</p>
+<ul>
+<li>
+<p>דערמאנבארקייט (R — Retrievability): די ווארשיינליכקייט אז א מענטש וועט זיך דערמאנען א געוויסע אינפארמאציע
+אין א באשטימטן מאמענט. זי ווענדט זיך אין דער צייט זינט דער לעצטער חזרה און אין דער זכרון־סטאביליטעט (S).</p>
+</li>
+<li>
+<p>סטאביליטעט (S — Stability): די צייט אין טעג וואס עס נעמט ביז דערמאנבארקייט (R) פאלט פון 100%
+צו 90%. צום ביישפיל, S = 365 הייסט אז א גאנץ יאר וועט דורכגיין איידער די ווארשיינליכקייט
+צו געדענקען א געוויסן קארטל פאלט צו 90%.</p>
+</li>
+<li>
+<p>שוועריקייט (D — Difficulty): די קאמפליצירטקייט וואס ליגט אין א געוויסער אינפארמאציע. זי שטעלט פאר ווי
+שווער עס איז צו פארגרעסערן די זכרון־סטאביליטעט נאך א חזרה.</p>
+</li>
+</ul>
+<p>אין FSRS הייסן די דריי ווערטן צוזאמען "זכרון־מצב".
+דער R־ווערט טוישט זיך יעדן טאג, בשעת D און S טוישן זיך נאר נאכן איבערחזרן א קארטל.
+יעדער קארטל האט זיינע אייגענע DSR־ווערטן. אין אנדערע ווערטער, יעדער קארטל האט אן אייגענעם
+זכרון־מצב.
+כדי גענוי צו שאצן די DSR־ווערטן, אנאליזירט FSRS דעם באניצער'ס חזרה־געשיכטע
+און נוצט מאשין־לערנען צו געפינען פאראמעטערס וואס געבן דעם
+בעסטן צופאס צו דער חזרה־געשיכטע.</p>
+<p>נעמט אין אכט אז באניצער זאלן די פאראמעטערס נישט טוישן מיט דער האנט.
+אויב איר ווילט צופאסן דעם תזמון, דארפט איר נאר אויסקלייבן א פאסיגן ווערט
+פארן געוואונטשענעם זכרון־ראטע.
+מיט FSRS קענען באניצער צילן צו א באשטימטן זכרון־ראטע, און אזוי האלטן א באלאנס
+צווישן די מאס אינפארמאציע וואס זיי געדענקען און די צאל חזרות וואס זיי דארפן מאכן.
+א העכערער זכרון־ראטע ברענגט מער חזרות א טאג.</p>
+<p>אויסער דעם וואס מען קען לייכט קאנטראלירן דעם זכרון־ראטע, האט FSRS נאך מעלות
+אין פארגלייך צו אנקי'ס אלגאריטם פון ברירת מחדל.
+מיט FSRS דארפן באניצער מאכן ווייניגער חזרות ווי מיט אנקי'ס אלגאריטם פון ברירת
+מחדל כדי צו דערגרייכן דעם זעלבן זכרון־ראטע. FSRS איז אויך פיל בעסער
+אין תזמון פון קארטלעך וואס זענען איבערגעחזרט געווארן שפעט, למשל ווען דער באניצער האט גענומען
+א הפסקה פון אנקי פאר עטליכע וואכן אדער חדשים.</p>
+<p>דא איז א איבערבליק:
+(זעט דעם חלק <a href="../manual/deck-options.html">פעקל־אפציעס</a>
+אינעם באניצער־מדריך פאר די אפציעס דערמאנט אין <em>שיפן</em> שריפט):</p>
+<p><a id="כרטיסים-בלמידהלמידה-מחדש"></a></p>
+<h2 id="קארטלעך-אין-לערנעןאיבערלערנען"><a class="header" href="#קארטלעך-אין-לערנעןאיבערלערנען">קארטלעך אין לערנען/איבערלערנען</a></h2>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+ברענגט דעם קארטל צוריק צום ערשטן טריט באשטימט אין די <a href="../manual/deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">לערן־/איבערלערן־טריט.</a></p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+איבערחזרט דעם יעצטיגן טריט נאך דעם ערשטן טריט, און איז דער דורכשניט פון
+"נאכאמאל" און "גוט".</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+פירט דעם קארטל צום <a href="../manual/deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">קומענדיגן טריט</a>.
+אויב דער קארטל איז געווען אינעם לעצטן טריט, ווערט ער א חזרה־קארטל
+און "פארענדיגט" דעם לערן־שטאפל.</p>
+</li>
+<li>
+<p>גרינג (Easy)
+מאכט דעם קארטל גלייך א חזרה־קארטל.</p>
+</li>
+</ul>
+<p>א נייער קארטל האט נישט קיין גרינגקייט־פאקטאר. וויפיל מאל איר זאלט נאר דריקן
+אויף 'נאכאמאל' אדער 'שווער', וועט דער שפעטערדיגער גרינגקייט־פאקטאר פונעם קארטל נישט באאיינפלוסט ווערן.
+דאס גילט אויך פאר איבערלערן־קארטלעך: דריקן אויף 'נאכאמאל'
+אדער 'שווער' וועט נישט באאיינפלוסן די גרינגקייט פונעם קארטל.</p>
+<p><a id="כרטיסי-חזרה"></a></p>
+<h2 id="חזרהקארטלעך"><a class="header" href="#חזרהקארטלעך">חזרה־קארטלעך</a></h2>
+<p>אין SM-2, נאכדעם וואס א קארטל "פארענדיגט" דעם לערן־שטאפל, באקומט ער א גרינגקייט־פאקטאר. די ברירת מחדל איז 2.5, אבער איר
+קענט באשטימען אן אנדער ווערט דורך די <a href="../manual/deck-options.html#%D7%A8%D7%9E%D7%AA-%D7%A7%D7%9C%D7%95%D7%AA-%D7%94%D7%AA%D7%97%D7%9C%D7%AA%D7%99%D7%AA">פעקל־אפציעס</a>.</p>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+דער קארטל גייט אריין אין איבערלערנען, דער גרינגקייט־פאקטאר ווערט פארקלענערט מיט 20
+פראצענט־פונקטן. דאס הייסט, מען רעכנט אראפ 20 פונעם <em>גרינגקייט</em>־ווערט, וואס ווערט געמאסטן
+אין פראצענט־פונקטן. דער יעצטיגער אפשטאנד ווערט געמאלט מיטן <em>נייער אפשטאנד</em>־ווערט;
+דעם אפשטאנד וועט מען נוצן ווען דער קארטל גייט ארויס פון איבערלערנען.</p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+די קארטל־גרינגקייט ווערט פארקלענערט מיט 15 פראצענט־פונקטן, און דער יעצטיגער אפשטאנד
+ווערט געמאלט מיטן <em>שווער־אפשטאנד</em>־ווערט; לויט ברירת מחדל 1.2.</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+דער יעצטיגער אפשטאנד ווערט געמאלט מיטן יעצטיגן גרינגקייט־פאקטאר. דער גרינגקייט־פאקטאר
+טוישט זיך נישט.</p>
+</li>
+<li>
+<p>גרינג (Easy)<br />
+דער יעצטיגער אפשטאנד ווערט געמאלט מיטן יעצטיגן גרינגקייט־פאקטאר מאל דעם <em>גרינג־באונוס</em>,
+און דער גרינגקייט־פאקטאר ווערט פארגרעסערט מיט 15 פראצענט־פונקטן.</p>
+</li>
+</ul>
+<p>פאר "שווער", "גוט" און "גרינג" ווערט דער קומענדיגער אפשטאנד אויך געמאלט
+מיטן <em>אפשטאנד־מאלער</em>. אויב די חזרה איז פארשפעטיגט,
+ווערן נאך טעג צוגעלייגט צום יעצטיגן אפשטאנד, ווי ערקלערט
+אין דער <a href="due-times-after-a-break.html">פריערדיגער אפט געפרעגטער שאלה.</a></p>
+<p>אין FSRS באקומט א קארטל DSR־ווערטן נאכדעם וואס מען האט אים לכל הפחות איינמאל איבערגעחזרט.</p>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+דער קארטל גייט אריין אין איבערלערנען, די סטאביליטעט פאלט שטארק,
+און די שוועריקייט וואקסט שטארק.</p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+די קארטל־סטאביליטעט וואקסט אדער בלייבט גלייך,
+און די שוועריקייט וואקסט מעסיג.</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+די קארטל־סטאביליטעט וואקסט, און די שוועריקייט קען
+אביסל וואקסן אדער פאלן.</p>
+</li>
+<li>
+<p>גרינג (Easy)<br />
+די קארטל־סטאביליטעט וואקסט שטארק, און די שוועריקייט
+פאלט מעסיג.</p>
+</li>
+</ul>
+<p><a id="מגבלות"></a></p>
+<h2 id="שיעורים"><a class="header" href="#שיעורים">שיעורים</a></h2>
+<p>ביים נוצן SM-2 זענען דא עטליכע שיעורים אויף די תזמון־ווערטן וואס א קארטל קען
+באקומען. דער גרינגקייט־פאקטאר וועט קיינמאל נישט פאלן אונטער 130%. SuperMemo־פארשונגען האבן געוויזן
+אז גרינגקייט־פאקטארן אונטער 130% מאכן קארטלעך קומען צו חזרה
+אפטער ווי געוואונטשן, און דאס שטערט באניצער. אפשטאנדן וועלן קיינמאל נישט וואקסן
+העכער דעם <em>העכסטן אפשטאנד</em>־ווערט. צום סוף, אלע נייע אפשטאנדן, אויסער "נאכאמאל",
+וועלן שטענדיג זיין לכל הפחות איין טאג לענגער פונעם פריערדיגן אפשטאנד.</p>
+<p><a id="מדוע-אנקי-אינו-משתמש-באלגוריתם-האחרון-של-supermemo"></a></p>
+<h2 id="פארוואס-נוצט-אנקי-נישט-דעם-נייעסטן-supermemoאלגאריטם"><a class="header" href="#פארוואס-נוצט-אנקי-נישט-דעם-נייעסטן-supermemoאלגאריטם">פארוואס נוצט אנקי נישט דעם נייעסטן SuperMemo־אלגאריטם?</a></h2>
+<p>דער פשוט'ער ענטפער איז אז דער נייעסטער SuperMemo־אלגאריטם איז פריוואטע אייגנטום
+און פאדערט א לייסענס. ווייל אנקי איז אן אפליקאציע מיט אן אפענעם מקור, קען ער
+נוצן נאר אלגאריטמען וואס זענען פריי פאראן, ווי
+FSRS. פארשידענע בדיקות ווייזן אז FSRS איז בערך אויפן זעלבן שטאפל ווי SM-17.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="the-2021-scheduler.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="frequently-asked-questions-about-fsrs.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="the-2021-scheduler.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="frequently-asked-questions-about-fsrs.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

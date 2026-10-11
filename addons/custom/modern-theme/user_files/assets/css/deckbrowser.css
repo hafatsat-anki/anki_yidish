@@ -1,0 +1,968 @@
+:root {
+    /* --- הגדרות צבעי גלילה חדשים --- */
+    --scrollbar-thumb: #b69a7f;       /* הידית */
+    --scrollbar-thumb-hover: #9f8066; /* הידית בהובר */
+    --scrollbar-thumb-active: #8a6c55;/* הידית בלחיצה */
+
+    --scrollbar-bg: #e8d8c2;
+    --scrollbar-bg-hover: #ddccb5;
+    --scrollbar-bg-active: #d3bfa4;
+
+}
+
+/* הגדרות מצב לילה - דריסת הצבעים הבהירים */
+body.night, .night body {
+    /* מגדירים את המסילה לצבע הרקע הכהה במקום הבז' */
+    --scrollbar: var(--canvas, #2f2f31);
+    --scrollbar-hover: var(--canvas, #2f2f31);
+    --scrollbar-active: var(--canvas, #2f2f31);
+
+    /* צבעי הידית בכהה */
+    --scrollbar-thumb: #656565;
+    --scrollbar-thumb-hover: #808080;
+    --scrollbar-thumb-active: #999999;
+}
+
+body.night {
+    background-color: var(--canvas) !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+body {
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    overflow: hidden;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body.modern-grayscale,
+body.modern-grayscale.night {
+    --state-new: #1f1f1f;
+    --state-learn: #525252;
+    --state-review: #737373;
+    --bs-primary: #333333;
+    --bs-info: #686868;
+    --bs-warning: #3f3f3f;
+    --bs-warning-text-emphasis: #202020;
+    background: #f3f3f3 !important;
+}
+
+body.modern-grayscale .navbar,
+body.modern-grayscale .stats_row,
+body.modern-grayscale .accordion-item,
+body.modern-grayscale .accordion-button,
+body.modern-grayscale .deck-toolbar-btn {
+    background-image: none !important;
+}
+
+body.modern-grayscale .stats_row {
+    border-color: #cfcfcf !important;
+    background-color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.modern-grayscale .deck_img,
+body.modern-grayscale svg,
+body.modern-grayscale img {
+    filter: grayscale(1) contrast(1.05);
+}
+html body:not(.isMac)::-webkit-scrollbar, html body:not(.isMac) *::-webkit-scrollbar{
+background: var(--scrollbar-thumb);
+border-radius: 5px;
+}
+/* --- Custom Scrollbar (מעודכן) --- */
+::-webkit-scrollbar {
+
+    width: 10px;
+    height: 10px;
+}
+html body:not(.isMac)::-webkit-scrollbar, html body:not(.isMac) *::-webkit-scrollbar:hover {
+   background: var(--scrollbar-thumb-hover);
+}
+html body:not(.isMac)::-webkit-scrollbar, html body:not(.isMac) *::-webkit-scrollbar:active {
+   background: var(--scrollbar-thumb-active);
+}
+/* מסילה (Track) */
+::-webkit-scrollbar-track {
+    background: var(--scrollbar);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+    background: var(--scrollbar-hover);
+}
+::-webkit-scrollbar-track:active {
+    background: var(--scrollbar-active);
+}
+
+/* ידית (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-active);
+}
+
+
+.deck-tree-container {
+    overflow-y: auto;
+    overflow-x: hidden; /* ביטול סרגל גלילה אופקי */
+    /* #280 — ניסיון קודם כיוון calc() ידני מול גובה ה-navbar (100vh-112px, ואז 96px,
+       ואז 95vh-96px) מתוך הנחה שהבעיה היא מיקום/גובה סטטי. לא פתר בפועל את #280
+       (השורש היה גלילה תכנותית שמתעלמת מהסרגל ה-sticky — ראו scroll-padding-top על
+       html למטה בקובץ). הוחזר ל-80vh המקורי; #283 שהוזכר כאן בטעות אינו קשור לקובץ הזה. */
+    max-height: 80vh;
+    padding-bottom: 20px;
+    /* ריפוד לצדדים כדי שטולטיפים לא ייחתכו גם כשיש overflow-x: hidden */
+    scrollbar-gutter: auto;
+}
+
+/* #280 — פאנל החפיסות נשאר במסמך רגיל; sticky-top של Bootstrap גרם לו להיצמד מעל ה-navbar במצבי רינדור מסוימים. */
+.modern-deck-tree-panel {
+    position: relative !important;
+    top: auto !important;
+    z-index: 1 !important;
+    margin-top: 4px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.modern-deck-toolbar-row {
+    position: relative;
+    z-index: 2;
+}
+
+/* #282 — עמודת הסטטיסטיקות מקבלת גלילה פנימית כדי שגם במסך נמוך אפשר להגיע לשורות התחתונות. */
+.modern-stats-col {
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    overflow-x: visible;
+    padding-bottom: 16px;
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+    margin-top: 4px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* #281 — פקדי החלון מוצגים רק במסך מלא וממוקמים בפינה שמאלית עליונה, מחוץ לפריסת החיפוש. */
+.haf-window-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    position: fixed;
+    top: 6px;
+    left: 8px;
+    z-index: 1200;
+    background: var(--bs-body-bg, rgba(255, 255, 255, 0.92));
+    border-radius: 6px;
+    padding: 1px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+}
+
+.haf-window-btn {
+    width: 30px;
+    height: 28px;
+    line-height: 1;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--bs-body-color, #202020);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.haf-window-btn:hover {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.haf-window-close:hover {
+    background: #c42b1c;
+    color: #fff;
+}
+
+body.night .haf-window-btn:hover,
+.night body .haf-window-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+body.night .haf-window-close:hover,
+.night body .haf-window-close:hover {
+    background: #c42b1c;
+    color: #fff;
+}
+
+/* --- Floating Tooltip (New Implementation) --- */
+#global_tooltip {
+    position: fixed;
+    display: none;
+    background: var(--canvas-overlay, #333);
+    color: var(--fg, #fff);
+    border: 1px solid var(--border, #555);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 99999 !important;
+    pointer-events: none; /* Mouse ignores it */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    text-align: center;
+    direction: rtl;
+}
+
+/* Hide original internal tooltips */
+.tooltiptext {
+    display: none !important;
+}
+
+/* תיקון לכפתור צור חפיסה שיהיה מתחת לתפריט העליון ולא יעלה עליו */
+.sticky-top {
+    position: sticky;
+    z-index: 900 !important; /* נמוך מהתפריט העליון */
+    background-color: transparent;
+}
+
+/* #280 — אין עוד scroll-margin קבוע: 130px פתר את החפיפה אך יצר את התקלה ההפוכה
+   שבה השורה הנבחרת ירדה רחוק מדי. smartScroll גולל כעת רק את מיכל החפיסות לפי
+   הגבולות שנמדדים בזמן אמת, בלי להזיז את מסמך ה-WebView שמתחת לסרגל העליון. */
+.accordion-button,
+.current {
+    scroll-margin: 0;
+}
+
+/* --- מצב דחוס (Compact Mode) --- */
+body.compact-mode .deck-tree-container {
+    height: auto;
+    max-height: calc(100vh - 112px);
+    scrollbar-gutter: unset; /* מסיר את הפס הלבן הקטן משמאל בגלל פס הגלילה */
+}
+
+/* #266 — במצב דחוס מסגרת החפיסות אינה נמתחת עד תחתית המסך כשיש מעט חפיסות. */
+body.compact-mode .inner {
+    min-height: unset;
+}
+
+/* שומר על יחס 80/20 במצב דחוס: עץ חיפושים רחב, סטטיסטיקות צרות */
+body.compact-mode .modern-stats-col {
+    flex: 0 0 20% !important;
+    width: 20% !important;
+    max-width: 20% !important;
+    top: unset !important;
+    margin-top: 10px;
+    min-width: 0;
+}
+
+.modern-deck-tree-wrap {
+    min-width: 0;
+}
+
+body.compact-mode .modern-stats-col .stats_row {
+    overflow: hidden; /* מונע פריצה של פריטים מגבולות התא הצר */
+    box-sizing: border-box;
+}
+
+body.compact-mode .plotlygroup {
+    min-width: 0;
+}
+
+@media (max-width: 992px) {
+    body.compact-mode .modern-stats-col {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+body.compact-mode .deck_img {
+    width: 16px !important;
+    height: 16px !important;
+}
+body.compact-mode .accordion-button {
+    padding: 2px 5px !important;
+    font-size: var(--compact-font-size, 1rem);
+    min-height: unset !important;
+}
+body.compact-mode .progress {
+    height: 0.8rem !important;
+    font-size: 9px !important;
+}
+body.compact-mode .accordion-button > .col-5 {
+    overflow: hidden;
+}
+body.compact-mode .display-6,
+body.compact-mode .display-1 {
+    font-size: 1rem !important;
+}
+/* מניעת שבירת שורה בכפתורים במצב דחוס */
+body.compact-mode .deck-buttons-col {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    white-space: nowrap !important;
+}
+body.compact-mode .count {
+    font-size: 9px !important;
+}
+body.compact-mode .deck-buttons-col svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* #261 — מספר כרטיסים חדשים מעבר למגבלה נשאר קריא גם על פס ירוק/כחול ובמצב לילה. */
+.new-beyond-count {
+    color: var(--state-new, #2ecc71);
+    font-weight: 800;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.new-beyond-count--alone {
+    color: var(--bs-primary, #55aaff);
+}
+
+body.night .new-beyond-count,
+.night .new-beyond-count {
+    text-shadow: -1px -1px 0 #050505, 1px -1px 0 #050505, -1px 1px 0 #050505, 1px 1px 0 #050505;
+}
+
+
+/* בעיה 4: במצב לא דחוס הסטטיסטיקות תפסו ~50% מהעמוד והותירו רווח גדול במרכז.
+   כעת הסטטיסטיקות מוגבלות ל-40%, ועמודת עץ-החפיסות גדלה למלא את שאר השטח (כ-60%). */
+@media (min-width: 576px) {
+    body:not(.compact-mode) .modern-stats-col {
+        flex: 0 0 47% !important;
+        width: 47% !important;
+        max-width: 47% !important;
+    }
+    body:not(.compact-mode) .modern-deck-tree-wrap {
+        flex: 1 1 0 !important;
+        width: auto !important;
+        max-width: none !important;
+        min-width: 0;
+    }
+}
+
+/* #85b — Bootstrap utilities (row, me-0, rounded, p-1, border, align-items-center) הועברו לכאן מה-HTML.
+   #124: רספונסיביות שורת חפיסה — הכפתורים לעולם לא יורדים שורה. */
+.accordion-button {
+    display: flex;
+    flex-wrap: nowrap !important;
+    margin-inline-end: 0 !important;
+    border-radius: var(--bs-border-radius) !important;
+    padding: 0.25rem !important;
+    border: var(--bs-border-width) solid var(--bs-border-color-translucent) !important;
+    align-items: center !important;
+}
+.accordion-button .col-5 {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* #385/#291 — ה-checkbox הוא הפריט הראשון ב-RTL, לכן הוא נשאר מימין;
+   align-items מרכז אותו בגובה השורה במקום להזיז אותו שמאלה/למעלה. */
+.accordion-button .deck-name-col {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    direction: rtl;
+    gap: 6px;
+    overflow: hidden;
+    min-width: 0;
+}
+.accordion-button .deck-name-content {
+    display: inline-flex;
+    align-items: center;
+    /* #385 — אין לגדול אל כל רוחב העמודה: הגדילה דחקה את מספר הכרטיסים
+       שמאלה. התוכן נשאר צמוד למספר ורק מתכווץ כשבאמת חסר מקום. */
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.accordion-button .deck-name-col .deck-select-cb {
+    flex: 0 0 18px;
+    align-self: center;
+    position: static;
+    margin: 0;
+    vertical-align: middle;
+}
+.accordion-button .deck-progress-col.col-3 {
+    flex: 0 0 auto !important;
+    width: 22% !important;
+    min-width: 60px;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+.accordion-button .deck-buttons-col.col-2 {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    white-space: nowrap !important;
+}
+.accordion-button .deck-icon-col.col-1 {
+    flex: 0 0 auto !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+
+.deck_img {
+    width: 2vw;
+    height: 2vw;
+}
+
+.stats_row {
+    border-radius: 20px;
+    border: solid 5px var(--bs-tertiary-bg);
+}
+
+.dots {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    vertical-align: middle;
+}
+
+.accordion-body {
+    padding: unset;
+    padding-right: var(--bs-accordion-body-padding-x);
+}
+
+.accordion-button {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-secondary-bg), var(--bs-bg-opacity)) !important;
+    justify-content: space-between;
+    text-align: right;
+    border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    /* כדי שהטולטיפ יופיע מעל הסרגל העליון */
+    position: unset;
+}
+.accordion-button::after {
+    content: unset !important;
+}
+
+[aria-current="page"] svg {
+    fill: none !important;
+}
+
+/* --- מצבי בחירת חפיסות (deck-mode state machine) --- */
+/* #85b — accordion-header מוזג ל-div.deck; flex+wrap מבטיח שילדים יורדים שורה */
+div.deck[data-deck-id] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.modern-deck-selection-toolbar {
+    flex-wrap: nowrap !important;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.modern-deck-selection-toolbar > * {
+    flex: 0 0 auto;
+}
+.deck-children { width: 100%; }
+/* #85b — checkbox: inline styles הועברו לכאן. מוסתר ברגיל */
+.deck-select-cb {
+    display: none;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin: auto 4px auto 2px;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+body[data-deck-mode="select"] .deck-select-cb {
+    display: inline-block !important;
+}
+/* ברגיל — מציג רק כפתורי deck-mode-normal, מסתיר select/paste */
+body .deck-mode-select,
+body .deck-mode-select-paste,
+body .deck-mode-paste {
+    display: none !important;
+}
+/* במצב בחירה (select) — מסתיר normal, מראה select + exit */
+body[data-deck-mode="select"] .deck-mode-normal {
+    display: none !important;
+}
+body[data-deck-mode="select"] .deck-mode-select {
+    display: inline-flex !important;
+}
+body[data-deck-mode="select"] .deck-mode-select-paste {
+    display: inline-flex !important;
+}
+/* במצב הדבקה (paste) — מסתיר normal ו-select, מראה paste + exit */
+body[data-deck-mode="paste"] .deck-mode-normal {
+    display: none !important;
+}
+body[data-deck-mode="paste"] .deck-mode-paste {
+    display: inline-flex !important;
+}
+body[data-deck-mode="paste"] .deck-mode-select-paste {
+    display: inline-flex !important;
+}
+body[data-deck-mode="paste"] .accordion-button.deck:hover {
+    background-color: rgba(25, 135, 84, 0.25) !important;
+    outline: 2px solid rgba(25, 135, 84, 0.6);
+    cursor: pointer;
+}
+
+.inner {
+    max-height: 95%;
+    min-height: 95%;
+    min-width: 100%;
+    width: 100%;
+    border: solid 2px #6d757c00;
+}
+.inner:hover {
+    border: solid 2px #6d757c;
+}
+
+.collapse {
+    color: var(--bg) !important;
+    text-decoration: none !important;
+    width: auto !important;
+}
+.collapse.show {
+    display: unset !important;
+}
+.collapsing {
+    transition: height 0.4s ease;
+}
+
+a.collapse-button {
+    /* #385 — עוגן בגודל קבוע מונע מ-flex למתוח את חץ פתיחת החפיסה. */
+    left: 0;
+    position: relative;
+    content: "";
+    padding: 0;
+    margin: 0 4px;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+}
+
+a.collapse-button::after {
+    aspect-ratio: 1/1;
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    inset: 3px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bs-body-color);
+    border-bottom-color: var(--shadow);
+    color: var(--bs-accordion-btn-color);
+    font-weight: 500;
+    border-radius: var(--border-radius-large);
+    box-shadow: 0px 2px 1px -1px rgb(20 20 20 / 12%),
+                0px 1px 1px 0px rgb(20 20 20 / 6%),
+                0px 1px 3px 0px rgb(20 20 20 / 4%);
+    background: var(--bs-body-color);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+a.collapse-button::after {
+    transition: all 0.4s ease;
+}
+a.collapse-button.collapsed::after {
+    transform: rotate(90deg);
+}
+
+.searchdecks {
+    cursor: unset !important;
+}
+
+.current {
+    background-color: rgb(138, 138, 138) !important;
+}
+
+.current:hover {
+    background: rgb(138, 138, 138) !important;
+}
+
+.tommorow-count {
+    --tommrow-count: rgba(223, 149, 0, 1);
+    color: var(--tommrow-count) !important;
+    border: solid 1px var(--tommrow-count);
+}
+.suspended-count {
+    --suspended-count: rgb(154, 229, 229);
+    color: var(--suspended-count) !important;
+    border: solid 1px var(--suspended-count);
+}
+.totaldeck-count {
+    --totaldeck-count: rgba(90, 90, 90, 1);
+    color: var(--totaldeck-count) !important;
+    border: solid 1px var(--totaldeck-count);
+}
+.totaldeck-count.side-count {
+    /* #132 — לפי בקשת המשתמש: רק עיגול דק בצבע תכלת, בלי רקע ובלי הדגשה. */
+    --totaldeck-count: rgb(0, 132, 148);
+    border-width: 1px;
+    background: transparent;
+    font-weight: normal;
+}
+body.night .totaldeck-count.side-count,
+.night body .totaldeck-count.side-count {
+    --totaldeck-count: rgb(154, 229, 229);
+    background: transparent;
+    font-weight: normal;
+}
+.count {
+    font-size: 12px;
+    padding: 1px;
+    border-radius: 10px;
+    margin: 1px;
+    min-width: min-content !important;
+    text-align: center !important;
+}
+
+/* #129 — כפתורי סרגל החפיסות העליון חולקים עיצוב אחד: V, צור חפיסה ואיפוס חיפוש. */
+.deck-toolbar-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 30px;
+    padding: 2px 10px !important;
+    border: 1px solid var(--bs-border-color, #b8b8b8) !important;
+    border-radius: 8px !important;
+    background: var(--bs-body-bg, #fff) !important;
+    color: var(--bs-body-color, #202020) !important;
+    text-decoration: none !important;
+    line-height: 1.2;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.deck-toolbar-btn:hover {
+    background: var(--button-gradient-start, rgba(13,110,253,0.08)) !important;
+    border-color: var(--bs-primary, #0d6efd) !important;
+}
+/* #191 — כפתורי גזור/העתק/מחק/מבנה משתמשים באותו מבנה כמו "צור חפיסה" עם צבע טקסט ומסגרת לכל פעולה. */
+.deck-toolbar-action-copy {
+    color: #0f6b4f !important;
+    border-color: #27a17a !important;
+}
+.deck-toolbar-action-copy:hover {
+    background: rgba(39, 161, 122, 0.10) !important;
+    border-color: #18845f !important;
+}
+.deck-toolbar-action-cut {
+    color: #7b4b00 !important;
+    border-color: #d28a13 !important;
+}
+.deck-toolbar-action-cut:hover {
+    background: rgba(210, 138, 19, 0.12) !important;
+    border-color: #aa6f08 !important;
+}
+.deck-toolbar-action-structure {
+    color: #245c9f !important;
+    border-color: #4b86d1 !important;
+}
+.deck-toolbar-action-structure:hover {
+    background: rgba(75, 134, 209, 0.12) !important;
+    border-color: #2f6fb9 !important;
+}
+.deck-toolbar-action-delete {
+    color: #a32731 !important;
+    border-color: #dc3545 !important;
+}
+.deck-toolbar-action-delete:hover {
+    background: rgba(220, 53, 69, 0.12) !important;
+    border-color: #b02a37 !important;
+}
+.deck-toolbar-btn .statscursor {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+body.night .deck-toolbar-btn,
+.night body .deck-toolbar-btn {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.24) !important;
+    color: var(--bs-body-color, #f0f0f0) !important;
+}
+body.night .deck-toolbar-btn:hover,
+.night body .deck-toolbar-btn:hover {
+    background: rgba(154, 229, 229, 0.14) !important;
+    border-color: rgba(154, 229, 229, 0.65) !important;
+}
+/* #191 — מצב לילה משמר בידול צבעוני בלי להפוך את הכפתורים לכרטיסים נפרדים. */
+body.night .deck-toolbar-action-copy,
+.night body .deck-toolbar-action-copy { color: #7ee0bd !important; border-color: #4cc59f !important; }
+body.night .deck-toolbar-action-cut,
+.night body .deck-toolbar-action-cut { color: #f1c36b !important; border-color: #d89c2e !important; }
+body.night .deck-toolbar-action-structure,
+.night body .deck-toolbar-action-structure { color: #9bc7ff !important; border-color: #6aa2e8 !important; }
+body.night .deck-toolbar-action-delete,
+.night body .deck-toolbar-action-delete { color: #ff9aa4 !important; border-color: #f05d6c !important; }
+
+.Firstrunlabel {
+    font-family: "SecularOne-Regular";
+    font-size: 45px !important;
+    font-weight: 700;
+    color: var(--fg);
+}
+
+.Firstrun {
+    font-size: 15px !important;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(176, 35, 35);
+    line-height: 2.5;
+}
+.Firstrun:hover {
+    text-decoration: underline;
+}
+
+.bg-new {
+    background-color: var(--state-new) !important;
+}
+.bg-learn {
+    background-color: var(--state-learn) !important;
+}
+.bg-review {
+    background-color: var(--state-review) !important;
+}
+.bg-today {
+    background-color: rgba(0, 131, 143, 0.8) !important;
+}
+
+body.modern-grayscale .bg-new {
+    background-color: #202020 !important;
+}
+body.modern-grayscale .text-primary {
+    color: #202020 !important;
+}
+body.modern-grayscale .bg-learn {
+    background-color: #4a4a4a !important;
+}
+body.modern-grayscale .text-warning {
+    color: #4a4a4a !important;
+}
+body.modern-grayscale .bg-review,
+body.modern-grayscale .bg-today {
+    background-color: #6a6a6a !important;
+}
+body.modern-grayscale .text-info,
+body.modern-grayscale .text-success {
+    color: #6a6a6a !important;
+}
+body.modern-grayscale .bg-warning,
+body.modern-grayscale .bg-info,
+body.modern-grayscale .bg-success {
+    background-color: #333333 !important;
+}
+.bg-cap-overflow {
+    background-color: rgba(120, 120, 120, 0.45) !important;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        rgba(255,255,255,0.12) 5px,
+        rgba(255,255,255,0.12) 10px
+    );
+}
+
+.fancy .button {
+    box-shadow: 0px 2px 1px -1px rgba(20, 20, 20, .12),
+                0px 1px 1px 0px rgba(20, 20, 20, .06),
+                0px 1px 3px 0px rgba(20, 20, 20, .04);
+}
+.button {
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--fg);
+}
+.button:hover {
+    background: var(--button-gradient-start);
+    border: 1px solid var(--border);
+}
+
+.button:hover {
+    background: linear-gradient(180deg, var(--button-gradient-start) 0%, var(--button-gradient-end) 100%);
+    border: 1px solid var(--shadow);
+}
+
+.fancy .button:hover {
+    box-shadow: 0px 3px 1px -2px rgba(20, 20, 20, .2),
+                0px 2px 2px 0px rgba(20, 20, 20, .14),
+                0px 1px 5px 0px rgba(20, 20, 20, .12);
+    transition: box-shadow var(--transition) linear;
+}
+/* ????? ??? ????? ?????? ???? ???? ???? */
+body.compact-mode .stats_row .row.flex-nowrap {
+    flex-wrap: wrap !important;
+}
+body.compact-mode .stats_row .row.flex-nowrap > .col,
+body.compact-mode .stats_row .row.flex-nowrap > .col.plotlygroup {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+}
+body.compact-mode .stats_row .display-6 {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+body.compact-mode #my_dataviz,
+body.compact-mode #legend {
+    text-align: center;
+}
+body.compact-mode #my_dataviz svg {
+    width: 100% !important;
+    max-width: 140px !important;
+    height: auto !important;
+    display: inline-block;
+}
+body.compact-mode #legend svg {
+    width: 100% !important;
+    max-width: 200px !important;
+    height: auto !important;
+    display: inline-block;
+}
+
+body.compact-mode #legend {
+    margin-bottom: 20px !important;
+}
+
+/* עיגול פינות סרגלי התקדמות - ניהול רדיוס */
+.progress {
+    height: 24px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    font-size: 13px !important;
+}
+
+/* deck row layout classes */
+.deck-icon-col   { padding: 0 !important; width: 12%; }
+.deck-progress-col { padding-right: calc(var(--bs-gutter-x) * .2) !important; padding-left: calc(var(--bs-gutter-x) * .2) !important; }
+.deck-progress   { height: 1.5rem !important; width: 100%; }
+.db-pb           { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; white-space: nowrap !important; gap: 2px !important; direction: ltr !important; unicode-bidi: bidi-override !important; }
+/* #85b — inline styles הועברו מ-fill_deck_btns HTML לכאן */
+.dbtns span[data-cmd] { cursor: pointer; }
+.dbtns svg     { width: 24px; height: 24px; fill: var(--bs-body-color); }
+.dbtns svg.sm  { width: 20px; height: 20px; }
+.dbtns svg.xs  { width: 16px; height: 16px; fill: currentColor; }
+
+body.modern-grayscale,
+body.modern-grayscale.night {
+    --state-new: #1f1f1f;
+    --state-learn: #525252;
+    --state-review: #737373;
+    --bs-primary: #333333;
+    --bs-info: #686868;
+    --bs-warning: #3f3f3f;
+    --bs-warning-text-emphasis: #202020;
+}
+
+body.modern-grayscale .navbar,
+body.modern-grayscale .stats_row,
+body.modern-grayscale .accordion-item,
+body.modern-grayscale .accordion-button,
+body.modern-grayscale .deck-toolbar-btn {
+    background-image: none !important;
+}
+
+body.modern-grayscale .deck_img,
+body.modern-grayscale svg,
+body.modern-grayscale img {
+    filter: grayscale(1) contrast(1.05);
+}
+
+body.modern-grayscale .bg-new {
+    background-color: #202020 !important;
+}
+body.modern-grayscale .text-primary {
+    color: #202020 !important;
+}
+body.modern-grayscale .bg-learn {
+    background-color: #4a4a4a !important;
+}
+body.modern-grayscale .text-warning {
+    color: #4a4a4a !important;
+}
+body.modern-grayscale .bg-review,
+body.modern-grayscale .bg-today {
+    background-color: #6a6a6a !important;
+}
+body.modern-grayscale .text-info,
+body.modern-grayscale .text-success {
+    color: #6a6a6a !important;
+}
+body.modern-grayscale .bg-warning,
+body.modern-grayscale .bg-info,
+body.modern-grayscale .bg-success {
+    background-color: #333333 !important;
+}
+
+/* #394 — learning שזמנו טרם הגיע: קווים אלכסוניים כמו בסרגל המבחן, גם במצב כהה. */
+.pending-learning-segment {
+    background: repeating-linear-gradient(
+        135deg,
+        #d93025 0 2px,
+        transparent 2px 3px
+    ) !important;
+    border: 1px solid #d93025 !important;
+    font-weight: 700 !important;
+}
+
+/* Yiddish labels are longer than the original labels. Keep summary panels readable. */
+.modern-stats-col .display-6 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.modern-stats-col .display-1 {
+    line-height: 1.5;
+}
+#legend svg.legend {
+    max-width: 100%;
+    height: auto;
+    font-size: 14px;
+}
+.modern-stats-col .stats_row {
+    padding: 12px !important;
+}
+.pending-learning-dot {
+    background: repeating-linear-gradient(
+        135deg,
+        #d93025 0 2px,
+        transparent 2px 3px
+    ) !important;
+    border: 1px solid #d93025 !important;
+}
+.pending-learning-count {
+    display: inline-block;
+    padding: 0 0.2rem;
+    border: 2px solid #d93025 !important;
+    border-radius: 3px;
+    color: #fff !important;
+    font-weight: 700 !important;
+    line-height: 1.1;
+    -webkit-text-stroke: 0.35px #6d0d08;
+    text-shadow: 0 0 2px var(--canvas, #fff);
+}

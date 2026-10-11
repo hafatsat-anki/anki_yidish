@@ -1,0 +1,12 @@
+{
+  "name": "אפשרויות נוספות לעריכה כגון קו חוצץ",
+  "disabled": false,
+  "mod": 0,
+  "conflicts": [
+    "mini_format_pack"
+  ],
+  "min_point_version": 231000,
+  "max_point_version": 231000,
+  "branch_index": 1,
+  "update_enabled": false
+}

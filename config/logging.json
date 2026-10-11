@@ -1,0 +1,9 @@
+{
+  "level": "WARNING",
+  "format": "[%(name)s] %(levelname)s: %(message)s",
+  "file": "auto",
+  "file_level": "INFO",
+  "file_format": "%(asctime)s [%(name)s] %(levelname)s: %(message)s",
+  "max_bytes": 5242880,
+  "backup_count": 2
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Batch Editing",
+    "package": "291119185",
+    "ankiweb_id": "291119185",
+    "author": "Glutanimate",
+    "version": "v0.4.0",
+    "homepage": "https://github.com/glutanimate/batch-editing",
+    "conflicts": [
+        "batch_editing"
+    ],
+    "mod": 1698279252,
+    "min_point_version": 49
+}

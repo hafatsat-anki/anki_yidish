@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>אנהייבן צו ארבעטן - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="צעדים-ראשונים"></a></p>
+<h1 id="ערשטע-שריט"><a class="header" href="#ערשטע-שריט">ערשטע שריט</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#אינסטאלירן-און-דערהיינטיגן">אינסטאלירן און דערהיינטיגן</a></li>
+<li class="toc-level-2"><a href="#יסודות">יסודות</a></li>
+<li class="toc-level-3"><a href="#קארטלעך">קארטלעך</a></li>
+<li class="toc-level-4"><a href="#קארטל-צושטאנדן">קארטל צושטאנדן</a></li>
+<li class="toc-level-3"><a href="#פעקלעך">פעקלעך</a></li>
+<li class="toc-level-3"><a href="#רשומות-און-פעלדער">רשומות און פעלדער</a></li>
+<li class="toc-level-3"><a href="#סארטן-קארטלעך">סארטן קארטלעך</a></li>
+<li class="toc-level-3"><a href="#סארטן-רשומות">סארטן רשומות</a></li>
+<li class="toc-level-4"><a href="#01-געווענליכע-שאלה-איין-קארטל">01 געווענליכע שאלה (איין קארטל)</a></li>
+<li class="toc-level-4"><a href="#02-שאלות-מיט-א-בילד-פונעם-בלאט-און-אן-אויספירליכע-תשובה-איין-קארטל">02 שאלות מיט א בילד פונעם בלאט און אן אויספירליכע תשובה (איין קארטל)</a></li>
+<li class="toc-level-4"><a href="#03-געווענליכע-שאלה-מיט-א-באהאלטענעם-מקור-אלס-רמז-איין-קארטל">03 געווענליכע שאלה מיט א באהאלטענעם מקור אלס רמז (איין קארטל)</a></li>
+<li class="toc-level-4"><a href="#04-שרייבט-אריין-די-תשובה-איין-קארטל">04 שרייבט אריין די תשובה (איין קארטל)</a></li>
+<li class="toc-level-4"><a href="#05-בחינה-אויף-נושאים-און-מקורות-צוויי-קארטלעך-וואו-שטייט-עס-און-וואס-שטייט-אין-א-מקור">05 בחינה אויף נושאים און מקורות (צוויי קארטלעך: וואו שטייט עס און וואס שטייט אין א מקור)</a></li>
+<li class="toc-level-4"><a href="#06-עטליכע-שאלות-און-תשובות---נאך-דער-תשובה-קומט-נאך-א-פארבינדענע-שאלה-איין-קארטל">06 עטליכע שאלות און תשובות - נאך דער תשובה קומט נאך א פארבינדענע שאלה (איין קארטל)</a></li>
+<li class="toc-level-4"><a href="#07-ווי-06-יעדע-שאלה-אלס-המשך-און-אויך-אלס-באזונדער-קארטל-ביז-10-קארטלעך">07 ווי 06: יעדע שאלה אלס המשך און אויך אלס באזונדער קארטל (ביז 10 קארטלעך)</a></li>
+<li class="toc-level-4"><a href="#08-פילט-אויס-דאס-אויסגעלאזטע---א-טייל-אינהאלט-איז-באהאלטן-דער-צאל-קארטלעך-ווענדט-זיך-אין-די-באהאלטונגען-איין-אדער-מער-אין-א-שאלה-אדער-באזונדערע-קארטלעך">08 פילט אויס דאס אויסגעלאזטע - א טייל אינהאלט איז באהאלטן (דער צאל קארטלעך ווענדט זיך אין די באהאלטונגען; איין אדער מער אין א שאלה אדער באזונדערע קארטלעך)</a></li>
+<li class="toc-level-4"><a href="#09-פילט-אויס-דאס-אויסגעלאזטע---בילד">09 פילט אויס דאס אויסגעלאזטע - בילד</a></li>
+<li class="toc-level-4"><a href="#10-שאלות-מיט-אן-אויסוואל-פון-תשובות-איין-קארטל">10 שאלות מיט אן אויסוואל פון תשובות (איין קארטל)</a></li>
+<li class="toc-level-3"><a href="#זאמלונג">זאמלונג</a></li>
+<li class="toc-level-2"><a href="#געטיילטע-פעקלעך">געטיילטע פעקלעך</a></li>
+</ul>
+</details>
+<p><a id="התקנה-ושדרוג"></a></p>
+<h2 id="אינסטאלירן-און-דערהיינטיגן"><a class="header" href="#אינסטאלירן-און-דערהיינטיגן">אינסטאלירן און דערהיינטיגן</a></h2>
+<p>די ספעציעלע <strong>אנקי אויף יידיש</strong> ווערסיע לאדט מען אראפ פון <a href="https://github.com/hafatsat-anki/anki_yidish/releases/latest">דער לעצטער אויסגאבע אינעם פראיעקט ריפא</a>. איר אינסטאלירער איז געמאכט פאר Windows 10 אדער 11, 64 ביט, און נוצט אן אייגענע דאטן טעקע.</p>
+<p>די אריגינעלע אנקי אויסגאבע פאר לימוד תורה קען מען באקומען דורך <a href="mailto:3422973@gmail.com">3422973@gmail.com</a>. נאכן שיקן אן אימעיל צו דער אדרעס זאל מען אויטאמאטיש באקומען א תשובה מיטן אינסטאלירער אדער א לינק צו אים. עס איז אויך דא אן Android ווערסיע פון דער אריגינעלער אויסגאבע, וואס מען קען באקומען דורכן זעלבן אימעיל.</p>
+<p>פאר אנווייזונגען איבער אינסטאלירן און דערהיינטיגן Anki אויפן קאמפיוטער, זעט:</p>
+<ul>
+<li><a href="./platform/windows/installing.html">Windows</a></li>
+</ul>
+<p><a id="מושגי-יסוד"></a></p>
+<h2 id="יסודות"><a class="header" href="#יסודות">יסודות</a></h2>
+<p><a id="כרטיסים"></a></p>
+<h3 id="קארטלעך"><a class="header" href="#קארטלעך">קארטלעך</a></h3>
+<p>א פאר פון א פראגע און אן ענטפער הייסט א <em>קארטל</em>. דאס איז ענליך צו א פאפיר קארטל מיט א פראגע אויף איין זייט און אן ענטפער אויף דער צווייטער. אבער אין Anki זעט א קארטל נישט אויס ווי א פיזישער קארטל, און לויט דער ברירת מחדל בלייבט די פראגע זעבאר ווען מען ווייזט דעם ענטפער. למשל, ביים לערנען דעם סדר המסכתות קענט איר זען א פראגע ווי:</p>
+<pre><code>ש: מהי המסכת הראשונה בש"ס?
+</code></pre>
+<p>נאכן באשליסן אז דער ענטפער איז ברכות, דרוקט איר “ווייזן ענטפער”, און Anki ווייזט:</p>
+<pre><code>ש: מהי המסכת הראשונה בש"ס?
+ת: ברכות
+</code></pre>
+<p>נאכן איבערקוקן אז איר געדענקט, זאגט איר Anki ווי גוט איר האט געדענקט דעם ענטפער. Anki קלייבט ווען דאס קארטל זאל ווידער קומען. למשל, Anki קען באשליסן עס צו ווייזן ווידער אין 3 טעג. מיר זאגן דעריבער אז דאס קארטל האט יעצט א 3 טאג אפשטאנד.</p>
+<p><a id="מצבי-כרטיסים"></a></p>
+<h4 id="קארטל-צושטאנדן"><a class="header" href="#קארטל-צושטאנדן">קארטל צושטאנדן</a></h4>
+<div id="types-of-cards" />
+<ul>
+<li>
+<p><strong>נייע:</strong> קארטלעך וואס איר האט אימפארטירט אדער אליין געשאפן, אבער נאך קיינמאל נישט געלערנט.</p>
+</li>
+<li>
+<p><strong>ביים לערנען:</strong> קארטלעך ערשט לעצטנס געלערנט צום ערשטן מאל, וואס זענען נאך אינעם לערנען תהליך.</p>
+</li>
+<li>
+<p><strong>אין חזרה:</strong> קארטלעך וואס איר האט שוין פארענדיגט צו לערנען. זיי קומען ווידער נאכן פארבייגיין זייער אפשטאנד. עס זענען דא צוויי סארטן:</p>
+<ul>
+<li><strong>פרישע (יונגע):</strong> קארטלעך מיט אן אפשטאנד פון ווייניגער ווי 21 טעג.</li>
+<li><strong>באפעסטיגטע (בוגר):</strong> קארטלעך מיט אן אפשטאנד פון 21 טעג אדער מער.</li>
+</ul>
+</li>
+<li>
+<p><strong>ביים איבערלערנען:</strong> קארטלעך וואס איר האט פארגעסן אין דער חזרה. זיי גייען צוריק צו איבערלערנען כדי מען זאל זיי ווידער לערנען.</p>
+</li>
+</ul>
+<p><a id="חפיסות"></a></p>
+<h3 id="פעקלעך"><a class="header" href="#פעקלעך">פעקלעך</a></h3>
+<p>א <em>פעקל</em> איז א גרופע קארטלעך, ענליך צו א טעקע אויפן קאמפיוטער. מען קען לייגן קארטלעך אין פארשידענע פעקלעך, כדי צו לערנען טיילן פון דער זאמלונג אנשטאט אלעס אויף איינמאל. יעדער פעקל קען האבן אנדערע איינשטעלונגען, ווי וויפיל נייע קארטלעך מען זאל ווייזן יעדן טאג און וויפיל צייט צו ווארטן ביז זיי קומען ווידער.</p>
+<p>פעקלעך קענען אנטהאלטן אנדערע פעקלעך, אזוי קען מען זיי ארגאניזירן אין א בוים. Anki נוצט א טאפלטן צווייפינטל (“::”) פאר די פארשידענע שטאפלען אינעם פעקלעך בוים. למשל, “ברכות::מאימתי” מיינט דעם “מאימתי” פעקל אינעם “ברכות” פעקל. אויב איר קלייבט “מאימתי”, קומען נאר קארטלעך פון דעם פרק. אויב איר קלייבט “ברכות”, קומען אלע קארטלעך וואס איר האט געשריבן אדער אימפארטירט אויף דער מסכת, אריינגערעכנט פרק מאימתי.</p>
+<p>צו אריינשטעלן פעקלעך אינעם בוים, גיט זיי נעמען מיט א טאפלטן צווייפינטל צווישן די שטאפלען, אדער שלעפט זיי אין דער פעקלעך ליסטע. א פעקל אינעווייניג אין אן אנדערן הייסט אן “אונטערפעקל”, און די אויבערשטע פעקלעך הייסן “הויפט פעקלעך”.</p>
+<p>Anki הייבט אן מיט א פעקל מיטן נאמען “ברירת מחדל”. יעדעס קארטל וואס איז עפעס אפגעטיילט געווארן פון אנדערע פעקלעך גייט אריין דארט. Anki באהאלט דעם ברירת מחדל פעקל ווען ער איז ליידיג און איר האט צוגעלייגט אנדערע פעקלעך. מען קען אויך טוישן זיין נאמען און אים נוצן פאר אנדערע קארטלעך.</p>
+<p>די פעקלעך ליסטע איז מסודר לויטן אלף בית. דאס קען געבן אן אומערווארטעטן סדר ביי נעמען מיט נומערן. למשל, “מיין פעקל 10” קומט פאר “מיין פעקל 9”, ווייל 1 קומט פאר 9. צו מאכן אז “מיין פעקל 9” זאל קומען פריער, טוישט אים צו “מיין פעקל 09”, וואס קומט פאר “מיין פעקל 10”.</p>
+<p>עס איז בעסער צו נוצן פעקלעך פאר ברייטע קאטעגאריעס, אנשטאט זייער באזונדערע נושאים ווי איין משנה אדער איין שיעור. פאר מער, זעט <a href="editing.html#%D7%A9%D7%99%D7%9E%D7%95%D7%A9-%D7%A0%D7%9B%D7%95%D7%9F-%D7%91%D7%97%D7%A4%D7%99%D7%A1%D7%95%D7%AA">ריכטיג נוצן פעקלעך</a>.</p>
+<p>פאר אינפארמאציע ווי דער פעקלעך סדר ווירקט אויפן קארטלעך לערנען סדר, זעט <a href="studying.html#%D7%A1%D7%93%D7%A8-%D7%94%D7%AA%D7%A6%D7%95%D7%92%D7%94">דער תצוגה סדר</a>.</p>
+<p><a id="רשומות-ושדות"></a></p>
+<h3 id="רשומות-און-פעלדער"><a class="header" href="#רשומות-און-פעלדער">רשומות און פעלדער</a></h3>
+<p>ביים שאפן קארטלעך וויל מען אפט מער פון איין קארטל אויפן זעלבן חומר. למשל, ביים לערנען <em>דברי אביי בדף ז</em> קען מען וועלן איין קארטל מיט די דברי אביי וואס פרעגט וואו זיי שטייען, און אן אנדערן מיטן פלאץ וואס פרעגט וואס אביי זאגט. איין קארטל בחינה’ט צי איר געדענקט די דברי אביי, און דער צווייטער צי איר געדענקט זייער פלאץ אין ש“ס.</p>
+<p>מיט פאפיר קארטלעך מוז מען אין דעם פאל שרייבן די אינפארמאציע צוויי מאל, איינמאל פאר יעדן קארטל. א טייל קארטלעך פראגראמען מאכן דאס גרינגער דורך א מעגליכקייט איבערצודרייען די פארנט און הינטן זייטן. דאס איז א פארבעסערונג קעגן פאפיר, אבער האט צוויי הויפט חסרונות:</p>
+<ul>
+<li>אזעלכע פראגראמען פאלגן נישט באזונדער נאך ווי גוט איר קענט יעדע זייט. דעריבער קומען די קארטלעך געווענליך נישט אין דער בעסטער צייט, און איר פארגעסט מער ווי געוואונטשן אדער לערנט מער ווי נויטיג.</li>
+<li>איבערדרייען פראגע און ענטפער ארבעט נאר ווען איר ווילט גענוי דעם זעלבן אינהאלט אויף יעדער זייט. מען קען דעריבער נישט, למשל, לייגן נאך אינפארמאציע אויף דער הינטערשטער זייט פון יעדן קארטל.</li>
+</ul>
+<p>Anki פארריכט דאס דורך לאזן אייך צעטיילן דעם קארטל אינהאלט אין באזונדערע פרטים. איר זאגט דערנאך Anki וועלכע פרטים איר ווילט אויף יעדן קארטל, און Anki שאפט די קארטלעך און דערהיינטיגט זיי ווען איר רעדאקטירט שפעטער.</p>
+<p>למשל, אין דעם אויבנדערמאנטן ביישפיל, אויב מיר ווילן אז דער מסכת נאמען זאל שטיין אויף יעדע זייט:</p>
+<pre><code>ש: דברי אביי
+ת: דף ז
+   מסכת שבת
+</code></pre>
+<p>און אויך אזוי:</p>
+<pre><code>ש: דף ז
+ת: דברי אביי
+   מסכת שבת
+</code></pre>
+<p>ביידע קארטלעך האבן די זעלבע דריי פארבונדענע פרטים: אינהאלט, בלאט און מסכת. צוזאמען זעען זיי אויס אזוי:</p>
+<pre><code>תוכן: דברי אביי
+דף: ז
+מסכת: שבתעמוד: 12
+</code></pre>
+<p>אין Anki הייסט אזא פארבונדענע גרופע אינפארמאציע א <em>רשומה</em>, און יעדער פרט איז אין א <em>פעלד</em>. די רשומה אינעם ביישפיל האט דריי פעלדער: “תוכן”, “דף” און “מסכת”.</p>
+<p><a id="סוגי-כרטיסים"></a></p>
+<h3 id="סארטן-קארטלעך"><a class="header" href="#סארטן-קארטלעך">סארטן קארטלעך</a></h3>
+<p>כדי Anki זאל שאפן קארטלעך פון אונזערע רשומות, דארף מען א הויפט מוסטער וואס באשטימט וועלכע פעלדער זאלן קומען פארנט און הינטן אויף יעדן קארטל. דער מוסטער הייסט א <em>סארט קארטל</em>. יעדער סארט רשומה קען האבן איין אדער מער סארטן קארטלעך. ביים צולייגן א רשומה שאפט Anki איין קארטל פאר יעדן סארט קארטל.</p>
+<p>ווען איר לייגט צו א נייע רשומה, ווערט א קארטל געשאפן לויט דעם סארט קארטל. סארטן רשומות העלפן האלטן דעם קארטל אויסשטעל אייניג און קענען פיל פארמינערן די ארבעט ביים צולייגן אינפארמאציע. זיי מאכן אויך אז פארבונדענע קארטלעך זאלן נישט קומען צו נאענט איינס צום אנדערן. מען קען פארריכטן א שרייב טעות אדער א טעות אין א פרט איין מאל, און אלע פארבונדענע קארטלעך ווערן דערהיינטיגט צוזאמען.</p>
+<p><a id="סוגי-רשומות"></a></p>
+<h3 id="סארטן-רשומות"><a class="header" href="#סארטן-רשומות">סארטן רשומות</a></h3>
+<p>Anki לאזט נוצן פארשידענע סארטן רשומות פאר פארשידענע וועגן פון לערנען. יעדער סארט רשומה האט זיינע פעלדער און סארטן קארטלעך. ביים שאפן קארטלעך איז כדאי צו נוצן דעם סארט וואס פאסט צום לערנען וועג, כדי צו פארבעסערן די חזרה און זכרון.</p>
+<p>אנקי פאר תורה קומט מיט עטליכע סארטן רשומות פאר געווענליכע תורה לערנען וועגן. ביי יעדן סארט שטייען די הויפט פעלדער און וואס עס ווערט פון זיי בשעת מען לערנט. די נעמען פון די תורה פעלדער בלייבן אין זייער אריגינעלן פארמאט, כדי אימפארט און עקזיסטירנדע רשומות זאלן ווייטער שטימען.</p>
+<details>
+<summary>פרטים פון די תורה סארטן רשומות</summary>
+<p><a id="01-שאלה-רגילה-כרטיס-אחד"></a></p>
+<h4 id="01-געווענליכע-שאלה-איין-קארטל"><a class="header" href="#01-געווענליכע-שאלה-איין-קארטל">01 געווענליכע שאלה (איין קארטל)</a></h4>
+<p>דאס איז דער פשוטער סארט רשומה פאר א שאלה און תשובה. די פעלדער זענען <strong>שאלה</strong>, <strong>תשובה</strong>, <strong>מקור</strong> און <strong>רמז</strong>. ביים לערנען קומען די שאלה און מקור, און דער רמז איז באהאלטן, אזוי אז מען עפנט אים נאר ווען מען דארף. נאכן דרוקן <strong>ווייזן ענטפער</strong> קומט די תשובה.</p>
+<p>דער סארט פאסט פאר רוב פשוטע שאלות: א דעפיניציע, א דין, א סיכום פון א גמרא נקודה, א קורצער מקור אדער א שאלה וואס דערמאנט איין קלארן רעיון.</p>
+<p><a id="02-שאלות-עם-אפשרות-לצילום-הדף-ותשובה-מורחבת-כרטיס-אחד"></a></p>
+<h4 id="02-שאלות-מיט-א-בילד-פונעם-בלאט-און-אן-אויספירליכע-תשובה-איין-קארטל"><a class="header" href="#02-שאלות-מיט-א-בילד-פונעם-בלאט-און-אן-אויספירליכע-תשובה-איין-קארטל">02 שאלות מיט א בילד פונעם בלאט און אן אויספירליכע תשובה (איין קארטל)</a></h4>
+<p>דער סארט לייגט צו ברייטערע פעלדער צו דער געווענליכער שאלה: <strong>מסכת ודף</strong>, <strong>תשובה מלאה</strong> און <strong>צילום הדף</strong>, אויסער <strong>שאלה</strong>, <strong>תשובה</strong> און <strong>רמז</strong>. אין <strong>תשובה</strong> איז כדאי צו שרייבן א קורצע תשובה וואס לאזט שנעל איבערקוקן צי איר האט געדענקט. אין <strong>תשובה מלאה</strong> קען מען צולייגן א ברייטערן מהלך, די לשון הסוגיה, הערות אדער טעמים. אין <strong>צילום הדף</strong> קען מען צולייגן א בילד וואס קומט אויף דער תשובה זייט.</p>
+<p>דער סארט פאסט בפרט פאר גמרא אדער מקורות וואו מען וויל סיי א קורצן ענטפער פאר שנעלע חזרה, און סיי א פלאץ צו עפענען דעם ברייטערן בילד ווען מען דארף.</p>
+<p><a id="03-שאלה-רגילה-עם-מקור-מוסתר-כמו-רמז-כרטיס-אחד"></a></p>
+<h4 id="03-געווענליכע-שאלה-מיט-א-באהאלטענעם-מקור-אלס-רמז-איין-קארטל"><a class="header" href="#03-געווענליכע-שאלה-מיט-א-באהאלטענעם-מקור-אלס-רמז-איין-קארטל">03 געווענליכע שאלה מיט א באהאלטענעם מקור אלס רמז (איין קארטל)</a></h4>
+<p>די פעלדער זענען <strong>שאלה</strong>, <strong>תשובה</strong>, <strong>מקור</strong> און <strong>רמז</strong>, ווי ביי 01, אבער דער מקור קומט נישט גלייך. ער איז באהאלטן ווי א רמז, און מען קען אים עפענען מיט א דרוק.</p>
+<p>דער סארט פאסט ווען מען וויל זיך בחינה’ן סיי אויפן אינהאלט און סיי אויפן מקור, אן אז דער מקור זאל אויסזאגן דעם ענטפער. למשל, א שאלה אויף א דין וואו דער פלאץ פון דער סוגיא איז א טייל פון וואס מען וויל געדענקען.</p>
+<p><a id="04-הקלד-את-התשובה-כרטיס-אחד"></a></p>
+<h4 id="04-שרייבט-אריין-די-תשובה-איין-קארטל"><a class="header" href="#04-שרייבט-אריין-די-תשובה-איין-קארטל">04 שרייבט אריין די תשובה (איין קארטל)</a></h4>
+<p>די פעלדער זענען <strong>שאלה</strong>, <strong>תשובה</strong>, <strong>מקור</strong> און <strong>רמז</strong>. ביים לערנען קומט א שרייבן פעלד פארן ווייזן דעם ענטפער. נאכן עפענען דעם ענטפער, פארגלייכט Anki וואס איר האט געשריבן מיטן <strong>תשובה</strong> פעלד.</p>
+<p>דער סארט פאסט ווען גענויקייט איז וויכטיג: קורצע לשונות, מונחים, פסוקים, סימנים, ראשי תיבות אדער תשובות וואו א קליינע טעות טוישט דעם באדייט.</p>
+<p><a id="05-מבחן-על-נושאים-ומקורות-שני-כרטיסים"></a></p>
+<h4 id="05-בחינה-אויף-נושאים-און-מקורות-צוויי-קארטלעך-וואו-שטייט-עס-און-וואס-שטייט-אין-א-מקור"><a class="header" href="#05-בחינה-אויף-נושאים-און-מקורות-צוויי-קארטלעך-וואו-שטייט-עס-און-וואס-שטייט-אין-א-מקור">05 בחינה אויף נושאים און מקורות (צוויי קארטלעך: וואו שטייט עס און וואס שטייט אין א מקור)</a></h4>
+<p>די פעלדער זענען <strong>הנושאים</strong>, <strong>מיקום (מסכת ודף / פרשה ופרק וכדו’)</strong> און <strong>רמז</strong>. פון איין רשומה ווערן צוויי קארטלעך: איינס ווייזט דעם נושא און פרעגט וואו עס שטייט, און דאס צווייטע ווייזט דעם פלאץ און פרעגט וואס שטייט דארט.</p>
+<p>דער סארט פאסט צו איבערחזרן מראי מקומות, דעם מבנה הסוגיא, סימנים אין שולחן ערוך, פרקים, פרשיות אדער סיי וועלכן חומר וואו מען דארף געדענקען סיי דעם אינהאלט און סיי זיין פלאץ.</p>
+<p><a id="06-שאלות-ותשובות-מרובות-כרטיס-אחד"></a></p>
+<h4 id="06-עטליכע-שאלות-און-תשובות---נאך-דער-תשובה-קומט-נאך-א-פארבינדענע-שאלה-איין-קארטל"><a class="header" href="#06-עטליכע-שאלות-און-תשובות---נאך-דער-תשובה-קומט-נאך-א-פארבינדענע-שאלה-איין-קארטל">06 עטליכע שאלות און תשובות - נאך דער תשובה קומט נאך א פארבינדענע שאלה (איין קארטל)</a></h4>
+<p>דער סארט האט ביז צען פארלעך פון <strong>שאלה 1</strong> ביז <strong>שאלה 10</strong> און <strong>תשובה 1</strong> ביז <strong>תשובה 10</strong>, און אויך <strong>מקור</strong>, <strong>רמז</strong> און אן אינערליכן פעלד מיטן נאמען <strong>type</strong>. ביים לערנען ווערט די ערשטע שאלה געפרעגט. נאכן ווייזן די תשובה, קען מען שטופנווייז עפענען די קומענדיגע שאלות און תשובות אויפן זעלבן קארטל.</p>
+<p>דער סארט פאסט פאר איין רצף וואס מען דארף האלטן צוזאמען: שקלא וטריא, א מהלך פון קושיא און תירוץ, עטליכע נפקא מינות פון איין דין, אדער א רייע טריט וואו יעדער פרט באקומט זיין באדייט פון די פרטים פאר אים.</p>
+<p><a id="07-שאלות-ותשובות-מרובות-בכרטיסים-נפרדים-עד-10-כרטיסים"></a></p>
+<h4 id="07-ווי-06-יעדע-שאלה-אלס-המשך-און-אויך-אלס-באזונדער-קארטל-ביז-10-קארטלעך"><a class="header" href="#07-ווי-06-יעדע-שאלה-אלס-המשך-און-אויך-אלס-באזונדער-קארטל-ביז-10-קארטלעך">07 ווי 06: יעדע שאלה אלס המשך און אויך אלס באזונדער קארטל (ביז 10 קארטלעך)</a></h4>
+<p>די פעלדער זענען ענליך צו 06: ביז צען פארלעך שאלות און תשובות, מיט <strong>מקור</strong>, <strong>רמז</strong> און <strong>type</strong>. דער חילוק איז אז דער סארט שאפט עטליכע קארטלעך. יעדער קארטל גייט נאך א שריט ווייטער אינעם רצף, אזוי אז יעדער טייל קען האבן אן אייגענע אפשאצונג און צייט פלאן.</p>
+<p>דער סארט פאסט ווען עס איז דא איין רצף, אבער נישט אלע טריט זענען גלייך שווער. אויב איר געדענקט גוט דעם אנהייב פונעם מהלך און נאר דער דריטער שריט איז שווער, וועט זיין קארטל באקומען אפטערע חזרות אן איבערצולאדן נאכאמאל און נאכאמאל דעם גאנצן רצף.</p>
+<p><a id="08-השלם-את-החסר-טקסט"></a></p>
+<h4 id="08-פילט-אויס-דאס-אויסגעלאזטע---א-טייל-אינהאלט-איז-באהאלטן-דער-צאל-קארטלעך-ווענדט-זיך-אין-די-באהאלטונגען-איין-אדער-מער-אין-א-שאלה-אדער-באזונדערע-קארטלעך"><a class="header" href="#08-פילט-אויס-דאס-אויסגעלאזטע---א-טייל-אינהאלט-איז-באהאלטן-דער-צאל-קארטלעך-ווענדט-זיך-אין-די-באהאלטונגען-איין-אדער-מער-אין-א-שאלה-אדער-באזונדערע-קארטלעך">08 פילט אויס דאס אויסגעלאזטע - א טייל אינהאלט איז באהאלטן (דער צאל קארטלעך ווענדט זיך אין די באהאלטונגען; איין אדער מער אין א שאלה אדער באזונדערע קארטלעך)</a></h4>
+<p>די פעלדער זענען <strong>טקסט</strong>, <strong>הוספות</strong>, <strong>מקור</strong> און <strong>רמז</strong>. אין <strong>טקסט</strong> צייכנט מען אן די ווערטער וואס מען וויל באהאלטן און דרוקט דעם אויסלאז קנעפל אינעם רעדאקטאר. Anki לייגט צו א סימון ווי <code>{{c1::מילה}}</code>, און יעדער נומער שאפט א פאסיגן קארטל. עטליכע ווערטער מיטן זעלבן נומער ווערן באהאלטן אויפן זעלבן קארטל; מיט פארשידענע נומערן ווערן באזונדערע קארטלעך געשאפן.</p>
+<p>דער סארט פאסט פאר ליסטעס, לשונות וואס מען דארף אויספילן, קבוע’ע זאצן, פסוקים, סדרי דינים אדער וואו דער הקשר דארף בלייבן זעבאר און מען בחינה’ט נאר א געוויסן פרט.</p>
+<p><a id="09-השלם-את-החסר---תמונה"></a></p>
+<h4 id="09-פילט-אויס-דאס-אויסגעלאזטע---בילד"><a class="header" href="#09-פילט-אויס-דאס-אויסגעלאזטע---בילד">09 פילט אויס דאס אויסגעלאזטע - בילד</a></h4>
+<p>די פעלדער זענען <strong>הסתרה</strong>, <strong>תמונה</strong>, <strong>כותרת</strong>, <strong>מקור</strong>, <strong>רמז</strong>, <strong>תוספת לתשובה</strong> און <strong>הערות</strong>. נאכן צולייגן א בילד, צייכנט מען אן טיילן צו באהאלטן. יעדער טייל אדער גרופע טיילן קען שאפן א קארטל וואו דער טייל איז באהאלטן בשעת דער שאלה און ווערט אנטפלעקט ביים תשובה.</p>
+<p>דער סארט פאסט פאר וויזועלן חומר: דיאגראמען, מאפעס, צורת הדף, מבנים, איברים, טאבעלעס, צייכענונגען אדער מקורות וואו דער זכרון ווענדט זיך אין פלאץ און אויסזען. אין די אנדערע פעלדער קען מען צולייגן א קעפל איבערן בילד, מקור, רמז און הערות פאר דער תשובה.</p>
+<p><img src="media/yi-ui-8.png" alt="דער פעקלעך פענצטער" /></p>
+<p><a id="10-שאלות-אמריקאיות-כרטיס-אחד"></a></p>
+<h4 id="10-שאלות-מיט-אן-אויסוואל-פון-תשובות-איין-קארטל"><a class="header" href="#10-שאלות-מיט-אן-אויסוואל-פון-תשובות-איין-קארטל">10 שאלות מיט אן אויסוואל פון תשובות (איין קארטל)</a></h4>
+<p>די הויפט פעלדער זענען <strong>שאלה</strong>, <strong>title</strong>, <strong>qtype</strong>, <strong>q1</strong> ביז <strong>q5</strong>, <strong>answers</strong>, <strong>sources</strong> און <strong>extra</strong>. מען שרייבט די שאלה, לייגט צו ביז פינף תשובה אויסוואלן און באשטימט דעם סארט שאלה אין <strong>qtype</strong>: <code>0</code> צו אנצייכענען ביי יעדער תשובה צי זי איז ריכטיג אדער נישט, <code>1</code> צו אנצייכענען אלע ריכטיגע תשובות, און <code>2</code> צו אויסקלייבן איין ריכטיגע תשובה. אין <strong>answers</strong> שרייבט מען די נומערן פון די ריכטיגע תשובות, למשל <code>1</code> אדער <code>1 2</code>.</p>
+<p>דער סארט פאסט פאר בחינות מיט אויסוואלן, פארגלייכן קליינע חילוקים צווישן ענליכע תשובות, אדער חזרה אויף חומר וואו מען דארף דערקענען דעם גענויען אויסוואל פון עטליכע ענליכע נוסחאות.</p>
+</details>
+<p>אויסער די סארטן וואס זענען צוגעלייגט אין דער אויסגאבע, זענען דא נאך סארטן וואס קומען מיט דער יסודות’דיגער אנקי פראגראם. ביי עקזיסטירנדע רשומות קענען די אלטע נעמען פון די סארטן און פעלדער בלייבן אין דער פריערדיגער שפראך:</p>
+<ul>
+<li><strong>פשוט</strong>
+האט “פארנט” און “הינטן” פעלדער און שאפט איין קארטל. דער טעקסט אין “פארנט” קומט אויף דער פארנט זייט, און דער טעקסט אין “הינטן” אויף דער הינטערשטער זייט.</li>
+<li><strong>פשוט (מיט א פארקערטן קארטל)</strong>
+ווי “פשוט”, אבער שאפט צוויי קארטלעך פונעם אריינגעשריבענעם טעקסט: פארנט←הינטן און הינטן←פארנט.</li>
+<li><strong>פשוט (פארקערטער קארטל לויטן וואונטש)</strong>
+ווי “פשוט”, אבער מיט א דריטן פעלד מיטן נאמען “צולייגן פארקערט”. אויב איר שרייבט עפעס אין דעם פעלד, ווערט אויך געשאפן א פארקערטער קארטל (הינטן←פארנט).</li>
+<li><strong>פשוט (אריינטייפן דעם ענטפער)</strong>
+למעשה “פשוט” מיט נאך א טעקסט פעלד אויף דער פארנט זייט, וואו מען קען שרייבן דעם ענטפער. ווען מען אנטפלעקט די הינטערשטע זייט, ווייזט Anki די חילוקים צווישן אייער טעקסט און דעם ריכטיגן ענטפער. פאר מער, זעט <a href="templates/fields.html">פעלדער ערזעצונגען</a>.</li>
+<li><strong>אויסגעלאזטע ווערטער</strong>
+א סארט רשומה וואס לאזט אויסקלייבן טעקסט און מאכן אן אויסלאז, ענליך צו 08 אויבן (למשל, “שנים אוחזין ב-[…]” ← “שנים אוחזין בטלית”). פאר מער, זעט <a href="editing.html#%D7%94%D7%A9%D7%9C%D7%9D-%D7%90%D7%AA-%D7%94%D7%97%D7%A1%D7%A8">פילט אויס דאס אויסגעלאזטע</a>.</li>
+<li><strong>פארדעקן א בילד (Image Occlusion)</strong><br />
+ווי דער אויסלאז סארט רשומה, אבער מיט בילדער אנשטאט טעקסט. דאס העלפט בפרט ביי חומר וואס פארלאזט זיך שטארק אויף בילדער. עס ארבעט ענליך צו 09, אבער איז ווייניגער רעקאמענדירט צוליב פארשידענע פראבלעמען. פאר אנווייזונגען, זעט <a href="editing.html#%D7%94%D7%A1%D7%AA%D7%A8%D7%AA-%D7%AA%D7%9E%D7%95%D7%A0%D7%94">פארדעקן א בילד</a> אינעם מדריך.</li>
+</ul>
+<p>רשומות און סארטן רשומות זענען פאר דער גאנצער זאמלונג און נישט באגרעניצט צו איין פעקל. מען קען דעריבער נוצן פארשידענע סארטן רשומות אין איין פעקל, אדער לייגן קארטלעך פון דער זעלבער רשומה אין פארשידענע פעקלעך. ביים צולייגן רשומות קען מען אויסקלייבן סיי דעם סארט רשומה און סיי דעם פעקל, און די בחירות זענען אינגאנצן אומאפהענגיג. מען קען אויך <a href="browsing.html#%D7%A8%D7%A9%D7%95%D7%9E%D7%95%D7%AA">טוישן דעם סארט רשומה פון רשומות</a> נאכן זיי שוין שאפן.</p>
+<p><a id="אוסף"></a></p>
+<h3 id="זאמלונג"><a class="header" href="#זאמלונג">זאמלונג</a></h3>
+<p>אייער <em>זאמלונג</em> איז אלע חומר געהיטן אין Anki: קארטלעך, רשומות, פעקלעך, סארטן רשומות, פעקל אויסוואלן אא“וו.</p>
+<p><a id="חפיסות-משותפות"></a></p>
+<h2 id="געטיילטע-פעקלעך"><a class="header" href="#געטיילטע-פעקלעך">געטיילטע פעקלעך</a></h2>
+<p>דער גרינגסטער וועג אנצוהייבן מיט Anki איז צו נוצן א קארטלעך פעקל וואס אן אנדערער האט געשריבן:</p>
+<ol>
+<li>דרוקט “מעניו” אויבן רעכטס און דערנאך די שאלות זאמלונג.</li>
+<li>ווען איר געפינט א פעקל וואס אינטערעסירט אייך, דרוקט “באשטעטיגן” צו אימפארטירן דאס פעקל. זעט <a href="question-bank.html#%D7%94%D7%90%D7%A4%D7%A9%D7%A8%D7%95%D7%99%D7%95%D7%AA-%D7%9C%D7%A4%D7%A0%D7%99-%D7%94%D7%90%D7%99%D7%A9%D7%95%D7%A8">די אויסוואלן אינעם מאגר פענצטער</a>.</li>
+<li>דרוקט צוויי מאל אויף א פעקל צו אימפארטירן אים אין Anki. אויב איר האט באקומען א פעקל פון אן אנדערן, עפנט דעם הויפט מעניו און קלייבט <strong>אימפארטירן</strong>.</li>
+</ol>
+<p>שאפן אן אייגענעם פעקל איז דער ווירקזאמסטער וועג צו לערנען א קאמפליצירטן נושא. רוב תורה און הלכה נושאים קען מען נישט לערנען ווירקזאם אן פארשטיין זייער הסבר און הקשר. אויך צווינגט דאס אליין אריינלייגן אינפארמאציע אייך אויסצוקלייבן די הויפט נקודות, און דאס ברענגט צו א בעסערער הבנה.</p>
+<pre><code>לערנט נישט אויב איר פארשטייט נישט.
+--SuperMemo
+</code></pre>
+<p>רוב געטיילטע פעקלעך ווערן געשאפן דורך מענטשן וואס לערנען דעם חומר אויסער Anki, למשל פון ספרים און שיעורים. זיי קלייבן די אינטערעסאנטע נקודות און לייגן זיי אריין אין Anki. זיי קענען נישט מאכן אן עקסטרע מי צוצולייגן הינטערגרונט אדער הסברים, ווייל זיי פארשטייען שוין דעם חומר. ווען אן אנדערער נוצט זייער פעקל, קען עס דעריבער זיין זייער שווער צוליב די פעלנדיגע הינטערגרונט און הסברים.</p>
+<p>דאס מיינט נישט אז געטיילטע פעקלעך האבן נישט קיין תועלת. אויב איר האט ווייניג צייט, לערנט א געוויסן ספר און איינער האט געטיילט א שאלות פעקל פון יענעם ספר, קען עס שפארן צייט. פאר פשוטע נושאים וואס זענען בלויז א ליסטע פאקטן דארף מען מסתמא נישט קיין אויסערליכן חומר. אבער ביי קאמפליצירטע נושאים זאל מען נוצן געטיילטע פעקלעך אלס א <em>צוגאב</em> צום אויסערליכן חומר און נישט אלס א <em>ערזעצונג</em> דערפאר.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="platform/windows/damaged_collection.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="getting-help.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="platform/windows/damaged_collection.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="getting-help.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

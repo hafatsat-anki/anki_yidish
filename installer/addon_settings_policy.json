@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "package_meta_fields": [
+    "name", "homepage", "human_version", "mod", "conflicts",
+    "min_point_version", "max_point_version", "branch_index", "update_enabled"
+  ],
+  "forced_disabled": ["_shared_libs", "external-editor"],
+  "package_config": {
+    "modern-theme": [["distribution_version"], ["beta", "feedback_email"]]
+  },
+  "migration_markers": {
+    "edit-field-review": [{"path": ["version"], "initial": {"major": 0, "minor": 0}}]
+  },
+  "user_data_files": {
+    "new-search": ["saved_terms.json"],
+    "note-trash": ["user_files/deleted_notes.json"],
+    "external-import": ["user_files/window_state.json"]
+  },
+  "user_data_aliases": {
+    "new-search": ["10101חיפוש_חדש"],
+    "note-trash": ["note_trash"],
+    "external-import": ["ייבוא שאלות מקובץ חיצוני לפי בחירה"]
+  }
+}

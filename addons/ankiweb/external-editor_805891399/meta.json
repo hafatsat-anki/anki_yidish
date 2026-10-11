@@ -1,0 +1,10 @@
+{
+  "name": "עורך מתקדם",
+  "mod": 0,
+  "min_point_version": 66,
+  "max_point_version": 250800,
+  "branch_index": 0,
+  "disabled": false,
+  "conflicts": [],
+  "update_enabled": false
+}

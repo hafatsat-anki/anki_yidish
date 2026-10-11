@@ -1,0 +1,11 @@
+{
+    "name": "Duplicate and Reorder",
+    "package": "duplicate_and_reorder",
+    "ankiweb_id": "",
+    "author": "Redgis",
+    "version": "HEAD",
+    "homepage": "https://gitlab.com/redgis/anki-duplicate-and-reorder",
+    "conflicts": [
+    ],
+    "mod": 1602867399
+}

@@ -1,0 +1,300 @@
+/* All buttons at the bottom of the review screen
+   (including the "Edit" and "More" button) */
+/* body {
+  min-height: 110px;
+} */
+
+button {
+  min-height: 45px;
+  width: 5vw;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent !important;
+  margin-top: 26px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  font-weight: bold;
+  color: rgba(70, 70, 70, 1);
+  padding: revert !important;
+  /* border: none; */
+  /* border: 1px solid transparent; */
+}
+/* button:hover {
+    background: var(--button-gradient-start);
+     border: 1px solid var(--border); 
+} */
+
+.nobold {
+  font-size: 14px !important;
+  font-weight: bold;
+  color: rgba(120, 120, 120, 1);
+  margin-top: 8px;
+}
+
+.hebdate {
+  font-size: 12px !important;
+  font-weight: bold;
+  color: rgba(175, 175, 175, 1);
+}
+
+/* All rating buttons */
+#middle button {
+  width: 6vw;
+  color: white !important;
+  margin-top: 21px !important;
+}
+
+/* the "Show Answer" button */
+button#ansbut{
+  /* position: relative; */
+  /* margin-top: 14px !important; */
+  width: 27vw;
+  background-color: rgba(90, 90, 90, 1) !important;
+  outline: none;
+  font-size: 15px;
+}
+button#ansbut:hover {
+  border: 1px solid transparent;
+}
+
+/* the "Good" button */
+#defease {
+  background-color: #4caf50 !important;
+  outline: none;
+  top: 0.6em;
+}
+
+/* the "Again" button */
+button[onclick*="ease1"]:not(#defease) {
+  background-color: #d32f2f !important;
+  outline: none;
+  top: 0.6em;
+}
+
+/* the "Hard" button */
+button[onclick*="ease2"]:not(#defease) {
+  background-color: #337636 !important;
+  outline: none;
+  top: 0.6em;
+}
+
+/* the "Easy" button */
+button[onclick*="ease3"]:not(#defease),
+button[onclick*="ease4"]:not(#defease) {
+  background-color: #62e166 !important;
+  outline: none;
+  top: 0.6em;
+}
+
+/* the "Edit" button */
+button[onclick*="edit"] {
+}
+
+/* the "More" button */
+button[onclick*="more"] {
+}
+
+.remains:hover {
+  cursor: pointer !important;
+  font-weight: bold;
+}
+.new-count {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  background-color: var(--state-new) !important;
+  /* background-color: rgba(104, 115, 173, 1); */
+  color: rgb(255, 255, 255, 1) !important;
+}
+.learn-count {
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  background-color: var(--state-learn) !important;
+  /* background-color: rgba(171, 64, 49, 1); */
+  color: rgb(255, 255, 255, 1) !important;
+}
+.review-count {
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  background-color: var(--state-review) !important;
+  /* background-color: rgba(39, 132, 120, 1); */
+  color: rgb(255, 255, 255, 1) !important;
+}
+
+/* progress bar style when inside counts-bar */
+.counts-bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 26px;
+  width: 27vw;
+  margin: 8px auto 0;
+}
+
+.counts-bar .progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+  min-width: fit-content;
+  padding: 0 4px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  color: rgb(255, 255, 255, 1) !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+.nobold{
+  top: -10px !important;
+}
+.stattxt {
+  top: -4px !important;
+}
+/* .stat{padding-top:10px  !important;}
+.stat2{padding-top:6px} */
+
+.stat2 {
+  padding-top: 9px;
+}
+
+.nightMode button {
+  border: none;
+  margin-top: 19px !important;
+  color: white;
+}
+
+@media (max-width: 920px) {
+  button:not(.fullscreen) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #middle button {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+}
+
+@media (max-width: 690px) {
+  button[onclick*="undo"] {
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 808px) {
+  .stat {
+    margin: 0px !important;
+    display: initial !important;
+  }
+  button {
+    min-width: fit-content;
+    margin-top: 32px !important;
+  }
+  .buttonbar1 {
+    top: -29px !important;
+  }
+  #middle button {
+    margin-top: 21px;
+    margin-bottom: 0px;
+	margin-left: 0px;
+    margin-right: 0px;
+  }
+      .nobold {
+    font-size: 1.5vw !important;
+  }
+  .hebdate {
+    font-size: 1.1vw !important;
+  }
+}
+@media (max-width: 583px) {
+  .stat {
+    margin: 0px !important;
+    display: initial !important;
+  }
+  button {
+    min-width: fit-content;
+  }
+    .nobold {
+    font-size: 2vw !important;
+  }
+  .hebdate {
+    font-size: 1.1vw !important;
+  }
+  #middle button {
+    margin-bottom: 0px !important;
+  }
+  button[onclick*="undo"] {
+    min-width: 30px !important;
+    font-size: 6px !important;
+  }
+}
+@media (max-width: 570px) {
+  #defbut {
+    font-size:10px ;
+  }
+}
+@media (max-width: 524px) {
+  button {
+    zoom: 0.7;
+    margin-top: 67px !important;
+  }
+  .buttonbar1 {
+    zoom: 1;
+    margin-top: 32px !important;
+  }
+  #middle button {
+    zoom: 1;
+    margin-top: 21px !important;
+  }
+  #defbut {
+    font-size:8px ;
+  }
+}
+
+/* #284 — large-buttons לא הופך את טבלת bottom-bar ל-flex; כלי הצד צפים מעל הכפתורים ולא מזיזים אותם. */
+#innertable,
+#innertable tbody,
+#innertable tr {
+  width: 100% !important;
+}
+
+#innertable tr {
+}
+
+#innertable #bottom-toolbar {
+  display: block !important;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 0 !important;
+  min-width: 0 !important;
+  height: 0;
+  overflow: visible !important;
+  pointer-events: none;
+}
+
+#innertable #bottom-toolbar .buttonbar1 {
+  pointer-events: auto;
+}
+
+#innertable #middle {
+  width: auto !important;
+  overflow: hidden !important;
+}
+
+#innertable .stat button {
+  max-width: clamp(44px, 8vw, 96px) !important;
+  min-width: 44px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}

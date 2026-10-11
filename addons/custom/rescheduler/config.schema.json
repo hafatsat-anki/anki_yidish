@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Change Due+Ivl from reviewer (Touch-Friendly)",
+    "properties": {
+        "access_dialog_from_reviewer": {
+            "type": "string",
+            "default": "c",
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "add_entry_to_context_menu": {
+            "type": "boolean",
+            "default": true,
+            "description": ""
+        },
+        "add_num_area_to_dialog": {
+            "type": "boolean",
+            "default": false,
+            "description": ""
+        },
+        "default accept is ivl and due": {
+            "type": "boolean",
+            "default": true,
+            "description": ""
+        },
+        "focus_lineedit": {
+            "type": "string",
+            "default": "r",
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "one_more_day": {
+            "type": "string",
+            "default": "f",
+            "maxLength": 8,
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "one_less_day": {
+            "type": "string",
+            "default": "d",
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "quick_buttons__left__change_due_and_interval": {
+            "type": "array",
+            "description": "",
+            "items": {
+                "type": "object",
+                "required": ["key", "label", "ivl"],
+                "additionalProperties": false,
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "ivl": {
+                        "type": "integer",
+                        "minimum": 1
+                    }
+                }
+            }
+        },
+        "quick_buttons__right__change_due_only": {
+            "type": "array",
+            "description": "",
+            "items": {
+                "type": "object",
+                "required": ["key", "label", "ivl"],
+                "additionalProperties": false,
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    },
+                    "ivl": {
+                        "type": "integer",
+                        "maximum": -1
+                    }
+                }
+            }
+        },
+        "relearn_key": {
+            "type": "string",
+            "default": "a",
+            "maxLength": 3,
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "secondary_accept_1": {
+            "type": "string",
+            "default": "e",
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "secondary_accept_2": {
+            "type": "string",
+            "default": "space",
+            "pattern": "^([a-zA-Z0-9äÄöÖüÜ]|F[1-9]|F1[0-2]|space|SPACE|Space|tab|Tab|TAB|capslock|CapsLock|CAPSLOCK|#|-|_)$",
+            "description": ""
+        },
+        "show_tooltip": {
+            "type": "boolean",
+            "default": true,
+            "description": ""
+        }
+    }
+}

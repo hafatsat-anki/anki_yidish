@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>לערנען - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="למידה"></a></p>
+<h1 id="לערנען"><a class="header" href="#לערנען">לערנען</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#פעקלעך">פעקלעך</a></li>
+<li class="toc-level-2"><a href="#פראגעס">פראגעס</a></li>
+<li class="toc-level-2"><a href="#ענטפער-קנעפלעך">ענטפער קנעפלעך</a></li>
+<li class="toc-level-3"><a href="#ענטפער-קנעפלעך-און-פארשריט-תצוגה">ענטפער קנעפלעך און פארשריט תצוגה</a></li>
+<li class="toc-level-2"><a href="#צופעליגקייט-פאקטאר">צופעליגקייט פאקטאר</a></li>
+<li class="toc-level-2"><a href="#רעדאקטירן-און-נאך">רעדאקטירן און נאך</a></li>
+<li class="toc-level-2"><a href="#דער-תצוגה-סדר">דער תצוגה סדר</a></li>
+<li class="toc-level-2"><a href="#פארבונדענע-קארטלעך-און-באזייטיגן-ביז-מארגן">פארבונדענע קארטלעך און באזייטיגן ביז מארגן</a></li>
+<li class="toc-level-2"><a href="#קורצוועג-קנעפלעך">קורצוועג קנעפלעך</a></li>
+<li class="toc-level-2"><a href="#א-הויפן-פארשפעטיגטע-חזרות">א הויפן פארשפעטיגטע חזרות</a></li>
+<li class="toc-level-2"><a href="#דער-פעקל-סיכום">דער פעקל סיכום</a></li>
+</ul>
+</details>
+<p>ווען איר האט געפונען א פעקל אויף א נושא וואס איר לערנט, אדער אריינגעלייגט עטליכע רשומות, איז צייט אנצוהייבן לערנען.</p>
+<p><a id="חפיסות"></a></p>
+<h2 id="פעקלעך"><a class="header" href="#פעקלעך">פעקלעך</a></h2>
+<p>לערנען אין אנקי איז באגרעניצט צום יעצטיגן אויסגעקליבענעם פעקל און אלע זיינע אונטערפעקלעך. אינעם פעקלעך פענצטער קלייבט מען דעם פעקל, זעט וויפיל קארטלעך ווארטן פאר היינט און עפנט פעולות ווי צולייגן, דורכבלעטערן, פילטערן און פעקל אויסוואלן.</p>
+<p>פאר פרטים איבער די קנעפלעך אין דער פעקל שורה, פארשריט לייסטן, היץ מאפע, צוזאמענגעדריקטער מצב און גראע שאטירונגען, זעט <a href="deck-browser.html">דער פעקלעך פענצטער</a>.</p>
+<p><a id="שאלות"></a></p>
+<h2 id="פראגעס"><a class="header" href="#פראגעס">פראגעס</a></h2>
+<p>ווען א קארטל קומט, ווערט ערשט נאר די פראגע געוויזן. נאכן טראכטן פונעם ענטפער, דרוקט <strong>ווייזן ענטפער</strong> אדער <kbd>רווח</kbd>. דער ענטפער קומט דערנאך. עס איז אין ארדענונג אויב עס נעמט א ביסל צייט זיך דערמאנען. אבער אלס אלגעמיינער כלל, אויב איר קענט נישט ענטפערן אין בערך 10 סעקונדעס, איז מסתמא בעסער צו ווייזן דעם ענטפער אנשטאט ווייטער זיך אנשטרענגען צו געדענקען.</p>
+<p><a id="כפתורי-תשובה"></a></p>
+<h2 id="ענטפער-קנעפלעך"><a class="header" href="#ענטפער-קנעפלעך">ענטפער קנעפלעך</a></h2>
+<p>נאכן ווייזן דעם ענטפער, פארגלייכט אייער געדאכטן ענטפער מיט דעם געוויזענעם און קלייבט איינס פון די פאלגנדע קנעפלעך.</p>
+<ul>
+<li>
+<p><strong>נאכאמאל</strong>: קלייבט ווען אייער ענטפער איז נישט ריכטיג אדער איר האט זיך נישט געקענט דערמאנען. ביי א טיילווייז ריכטיגן ענטפער זאל מען זיין שטרענג מיט זיך: אויב דאס וואלט געהייסן א דורכפאל אין אמת’ן לעבן אויסער אנקי, הייסט עס אויך א דורכפאל אין אנקי. געווענליך נוצט מען דעם קנעפל בערך 5–20% פון די מאל.</p>
+<p>קורצוועג קנעפל: <kbd>1</kbd></p>
+</li>
+<li>
+<p><strong>שווער</strong>: קלייבט ווען אייער ענטפער איז ריכטיג, אבער איר האט געהאט ספיקות אדער עס האט גענומען לאנג זיך דערמאנען.</p>
+<p>קורצוועג קנעפל: <kbd>2</kbd></p>
+</li>
+<li>
+<p><strong>גוט</strong>: קלייבט ווען אייער ענטפער איז ריכטיג, אבער עס האט געפאדערט א ביסל מחשבה זיך דערמאנען. ביים ריכטיגן נוצן אנקי איז דאס דער מערסט גענוצטער קנעפל. געווענליך נוצט מען אים בערך 80–95% פון די מאל.</p>
+<p>קורצוועג קנעפל: <kbd>3</kbd>, <kbd>רווח</kbd>, <kbd>Enter</kbd></p>
+</li>
+<li>
+<p><strong>גרינג</strong>: קלייבט ווען אייער ענטפער איז ריכטיג און איר האט זיך דערמאנט אן קיין אנשטרענגונג.</p>
+<p>קורצוועג קנעפל: <kbd>4</kbd></p>
+</li>
+</ul>
+<p>אויב פיר ענטפער קנעפלעך זענען אייך שווער צו נוצן, קען מען נוצן נאר <strong>נאכאמאל</strong> און <strong>גוט</strong>: <strong>נאכאמאל</strong> פאר נישט ריכטיגע ענטפערס, און <strong>גוט</strong> פאר ריכטיגע.</p>
+<p>איבער יעדן ענטפער קנעפל שטייט ווען דאס קארטל וועט נאכאמאל קומען אויב איר קלייבט יענעם קנעפל. פאר די איינשטעלונגען וואס באשטימען די קומענדיגע חזרה אפשטאנדן, זעט <a href="deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">לערנען טריט</a>, <a href="deck-options.html#%D7%A9%D7%92%D7%99%D7%90%D7%95%D7%AA">פארגעסונגען</a>, <a href="deck-options.html#fsrs">FSRS</a> און <a href="deck-options.html#%D7%9E%D7%AA%D7%A7%D7%93%D7%9D">פארגעשריטן</a> אינעם פעקל אויסוואלן פרק.</p>
+<p><a id="כפתורי-תשובה-ותצוגת-התקדמות"></a></p>
+<h3 id="ענטפער-קנעפלעך-און-פארשריט-תצוגה"><a class="header" href="#ענטפער-קנעפלעך-און-פארשריט-תצוגה">ענטפער קנעפלעך און פארשריט תצוגה</a></h3>
+<p>אויב איר ווילט א פשוטערע בחירה, כדי נישט געפרואווט צו ווערן צו דרוקן שווער אנשטאט נאכאמאל ווען איר קענט נישט דעם ענטפער, עפנט <strong>הויפט מעניו &gt; איינשטעלונגען &gt; חזרה</strong> און צייכנט אן <strong>ווייזן נאר צוויי ענטפער קנעפלעך</strong>. דער חזרה פענצטער וועט דערנאך ווייזן <strong>איך ווייס</strong> / <strong>איך ווייס נישט</strong>. נוצט <strong>איך ווייס נישט</strong> ווען איר האט נישט געקענט ענטפערן, און <strong>איך ווייס</strong> ווען איר האט געוואוסט. אויך די קורצוועגן בלייבן באקוועם: <kbd>1</kbd> איז א נעגאטיווער ענטפער, און די אנדערע הויפט ענטפער קנעפלעך פירן צו א פאזיטיוון ענטפער.</p>
+<p>אונטן אינעם לערנען פענצטער איז דא א פארשריט לייסט וואס ווייזט וויפיל קארטלעך איר זענט שוין דורכגעגאנגען און וויפיל בלייבן אינעם יעצטיגן רונדע. צו ווייזן אדער באהאלטן די לייסט, עפנט <strong>הויפט מעניו &gt; איינשטעלונגען &gt; אויסזען</strong> און טוישט <strong>ווייזן פארשריט לייסט</strong>.</p>
+<p>בשעת א בחינה קומט אויך א קליינע סימבאלן לייסט איבער די ענטפער קנעפלעך. די סימבאלן זענען פאר שנעלע פעולות אויפן יעצטיגן קארטל: דער פירעק מיטן בלייפעדער ווייזט אדער באהאלט א פעלד צו פריי שרייבן דעם ענטפער, כדי איר זאלט קענען פאר זיך שרייבן דעם ענטפער פארן דרוקן <strong>ווייזן ענטפער</strong>. מען קען עס נוצן אויך ביי געווענליכע קארטלעך וואס האבן נישט דעם באזונדערן שרייבן תשובה סארט רשומה. דער שפיל סימבאל שפילט נאכאמאל דעם קול אדער ווידיא פונעם קארטל; דער געבויגענער פייל נעמט צוריק די לעצטע פעולה אדער גייט צוריק צו דער פריערדיגער פראגע; דער באזייטיגן סימבאל שטופט דאס קארטל אדער די רשומה ביז מארגן; דער קיילעכדיגער פייל עפנט ניי באשטימען א צייט פלאן מיט דער האנט; און דער שטערן צייכנט אן אדער נעמט אראפ דעם סימון פון דער יעצטיגער רשומה, כדי איר זאלט זי שפעטער קענען געפינען אין דורכבלעטערן.</p>
+<p>![די סימבאלן לייסט בשעת א בחינה](media/סרגל אפשרויות במבחן.png)</p>
+<p><a id="גורם-אקראיות"></a></p>
+<h2 id="צופעליגקייט-פאקטאר"><a class="header" href="#צופעליגקייט-פאקטאר">צופעליגקייט פאקטאר</a></h2>
+<p>ווען איר קלייבט אן ענטפער קנעפל אויף א חזרה קארטל, לייגט Anki אויך צו א קליינע מאס “צופעליגקייט”. דאס פארמיידט אז קארטלעך וואס זענען געוויזן געווארן אינעם זעלבן צייט און באקומען די זעלבע אפשאצונגען זאלן בלייבן צוזאמען און שטענדיג קומען אין דעם זעלבן חזרה טאג.</p>
+<p>דעריבער, אפילו איר דרוקט גוט אויף עטליכע פראגעס וואס זענען צוגעקומען אינעם זעלבן צייט, קען יעדע קומען אין אן אנדער צייט.</p>
+<p>לערנען קארטלעך באקומען אויך ביז 5 מינוט צוגעלייגטע ווארט צייט, כדי זיי זאלן נישט שטענדיג קומען אינעם זעלבן סדר. די ענטפער קנעפלעך ווייזן אבער נישט דעם צוגעלייגטן צייט. מען קען דאס נישט אויסלעשן.</p>
+<p><a id="עריכה-ועוד"></a></p>
+<h2 id="רעדאקטירן-און-נאך"><a class="header" href="#רעדאקטירן-און-נאך">רעדאקטירן און נאך</a></h2>
+<p>מען קען דרוקן <strong>רעדאקטירן</strong> אונטן רעכטס צו רעדאקטירן די יעצטיגע רשומה. נאכן פארענדיגן גייט מען צוריק צום לערנען. דער רעדאקטירן פענצטער ארבעט זייער ענליך צו <a href="editing.html#%D7%94%D7%95%D7%A1%D7%A4%D7%AA-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D-%D7%95%D7%A8%D7%A9%D7%95%D7%9E%D7%95%D7%AA">צולייגן רשומות</a>.</p>
+<p>נעבן אים איז <strong>שיקט צום באארבעטן</strong>. דאס ברענגט די רשומה אין א באזונדערן פעקל וואו די רשומות ווערן געהיטן באזונדער. עס איז געמאכט פאר ווען איר טרעפט אינעם בחינה א רשומה וואס דארף א באזונדערע רעדאקציע, און איר ווילט נישט אפשטעלן דעם בחינה עס יעצט צו באארבעטן. די רשומה גייט צוריק אין דעם יעצטיגן פעקל נאכן איר חזרן איין מאל אינעם באזונדערן פעקל.</p>
+<p>נעבן אים איז <strong>אינפארמאציע</strong>, וואס עפנט א פענצטער ביי דער רעכטער זייט מיט פרטים איבערן יעצטיגן קארטל.</p>
+<p><img src="media/yi-guide-30.svg" alt="קארטל אינפארמאציע" /></p>
+<p>לינקס פון די ענטפער קנעפלעך איז <strong>איבערשפרינגען</strong>, וואס ברענגט אייך צו דער קומענדיגער פראגע.</p>
+<p>נעבן אים איז <strong>צוריקנעמען די לעצטע פעולה / צוריק צו דער פריערדיגער פראגע</strong>. דאס נעמט צוריק די לעצטע פעולה. אויב די לעצטע פעולה איז געווען דרוקן אן ענטפער קנעפל, וועט עס צוריקברענגען די פריערדיגע פראגע און צוריקנעמען אייער אפשאצונג. אויב די לעצטע פעולה איז געווען רעדאקטירן, גייט דאס קארטל צוריק צו זיין אריגינעלן צושטאנד, און אזוי ווייטער.</p>
+<p>מען קען רעדאקטירן געוויסע פעלדער גלייך אינעם חזרה פענצטער, אן אפשטעלן דאס לערנען און עפענען א פולן רעדאקטירן פענצטער. פאר א קליינעם תיקון ווי ניקוד, א שרייב טעות אדער נוסח, דרוקט אינעם פעלד וואס מען קען רעדאקטירן, טוישט וואס מען דארף און זיכערט אפ. דערנאך קומט מען צוריק צום זעלבן קארטל און קען ווייטער לערנען.</p>
+<p>אויב איר רעדאקטירט מנוקד’דיגע עברית בשעת חזרה, דרוקט מיטן רעכטן מייז קנעפל אינעם רעדאקטירבארן פעלד. אינעם מעניו וועלן קומען ניקוד און טעמי המקרא סימנים, ווי אינעם רעדאקטאר מעניו. קלייבט דעם סימן, און ער גייט אריין ביים סמן. אזוי קען מען פארריכטן א קליינע ניקוד טעות אן צו עפענען דעם פולן רעדאקטירן פענצטער.</p>
+<p>אונטן לינקס אינעם לערנען פענצטער איז <strong>נאך אויסוואלן</strong>. עס גיט נאך פעולות אויפן יעצטיגן קארטל אדער רשומה:</p>
+<ul>
+<li>
+<p><a href="editing.html#%D7%A9%D7%99%D7%9E%D7%95%D7%A9-%D7%91%D7%93%D7%92%D7%9C%D7%99%D7%9D"><strong>אנצייכענען א קארטל מיט א פאן</strong></a>: לייגט צו אדער נעמט אראפ א קאלירטן סימן אויפן קארטל. פאנען ווערן געוויזן ביים לערנען, און מען קען זוכן אנגעצייכנטע קארטלעך אין דורכבלעטערן. דאס העלפט ווען איר ווילט שפעטער טון עפעס אויפן קארטל, ווי זוכן א ווארט. מען קען אויך טוישן די פאנען נעמען אין <a href="browsing.html">דורכבלעטערן</a>.</p>
+</li>
+<li>
+<p><strong>באזייטיגן א קארטל / רשומה ביז מארגן</strong>: באהאלט א קארטל אדער אלע קארטלעך פון דער יעצטיגער רשומה ביז צומארגנס. צו צוריקנעמען דאס פריער, דרוקט “צוריקברענגען פון באזייטיגן” אינעם <a href="studying.html#%D7%A1%D7%99%D7%9B%D7%95%D7%9D-%D7%94%D7%97%D7%A4%D7%99%D7%A1%D7%94">סיכום</a> פענצטער. דאס העלפט ווען איר קענט יעצט נישט ענטפערן אדער ווילט צוריקקומען אן אנדער מאל. פארבונדענע קארטלעך פון דער זעלבער רשומה קענען אויך ווערן <a href="studying.html#%D7%90%D7%97%D7%99%D7%9D-%D7%95%D7%94%D7%98%D7%9E%D7%A0%D7%94">אויטאמאטיש באזייטיגט</a>.</p>
+</li>
+<li>
+<p><strong>צוריקשטעלן צייט פלאן (פארגעסן קארטל)</strong>: ברענגט דאס יעצטיגע קארטל צום <a href="browsing.html#%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">סוף פונעם נייע קארטלעך ריי</a>.</p>
+<p>“צוריקשטעלן אריגינעלן פלאץ” לאזט צוריקשטעלן דאס קארטל צו זיין אריגינעלן פלאץ ביים צוריקשטעלן.</p>
+<p>“צוריקשטעלן צאל חזרות און פארגעסונגען” שטעלט ביידע ציילערס צו נול, אויב דער אויסוואל איז אנגעצונדן. עס נעמט נישט אראפ די חזרות היסטאריע אונטן אינעם קארטל אינפארמאציע פענצטער.</p>
+</li>
+<li>
+<p><strong>שטעלן א חזרה דאטום</strong>: לאזט באשטימען אן אייגענעם דאטום פארן יעצטיגן קארטל ווען די צייטן איבער די ענטפער קנעפלעך פאסן נישט פאר דעם באזונדערן פאל. מען קען שרייבן א צאל טעג, א דאטום אדער א טעג פארנעם ווי <code>7-14</code>. די פעולה שרייבט נישט איין קיין ענטפער און ערזעצט נישט <strong>נאכאמאל</strong>, <strong>גוט</strong> און <strong>גרינג</strong>. זי טוישט נאר ווען דאס קארטל וועט צוריקקומען. דערפאר איז כדאי עס בעיקר צו נוצן פאר א בחינה, א באוואוסטזיניגע אפשטופונג פון א קארטל אדער א באזונדערן צייט פלאן תיקון.</p>
+</li>
+<li>
+<p><strong>אפשטעלן א קארטל / רשומה</strong>: באהאלט דאס קארטל אדער אלע קארטלעך פון דער יעצטיגער רשומה ביז מען ברענגט זיי צוריק מיט דער האנט, דורך דרוקן דעם אפשטעלן קנעפל אין דורכבלעטערן. דאס העלפט צו נישט חזרן די רשומה א תקופה אן איר אויסצומעקן.</p>
+</li>
+<li>
+<p><strong>אפציעס</strong>: רעדאקטירט די <a href="deck-options.html">אויסוואלן</a> פונעם יעצטיגן פעקל.</p>
+</li>
+<li>
+<p><strong>קארטל אינפארמאציע</strong>: ווייזט <a href="stats.html#%D7%9E%D7%99%D7%93%D7%A2-%D7%A2%D7%9C-%D7%9B%D7%A8%D7%98%D7%99%D7%A1">סטאטיסטיק</a> איבערן קארטל.</p>
+</li>
+<li>
+<p><strong>פריערדיגער קארטל אינפארמאציע</strong>: ווייזט <a href="stats.html#%D7%9E%D7%99%D7%93%D7%A2-%D7%A2%D7%9C-%D7%9B%D7%A8%D7%98%D7%99%D7%A1">סטאטיסטיק</a> איבערן פריערדיגן קארטל.</p>
+</li>
+<li>
+<p><a href="editing.html#%D7%94%D7%AA%D7%92%D7%99%D7%AA-%D7%9E%D7%A1%D7%95%D7%9E%D7%9F"><strong>אנצייכענען א רשומה</strong></a>: לייגט צו דעם “אנגעצייכנט” צעטל צו דער יעצטיגער רשומה, כדי גרינג צו געפינען זי אין דורכבלעטערן. דאס איז ענליך צו אנצייכענען איינציגע קארטלעך מיט א פאן, אבער נוצט א צעטל. אויב די רשומה האט עטליכע קארטלעך, וועלן אלע קומען ביים זוכן דעם “marked” צעטל. רוב באניצער וועלן בעסער נוצן פאנען.</p>
+</li>
+<li>
+<p><strong>שאפן א קאפיע</strong>: עפנט א <a href="browsing.html#%D7%9E%D7%A6%D7%99%D7%90%D7%AA-%D7%9B%D7%A4%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA">קאפיע</a> פון דער יעצטיגער רשומה אינעם רעדאקטאר. מען קען איר א ביסל טוישן צו גרינג באקומען פארשידענע ווערסיעס פון די קארטלעך. לויט דער ברירת מחדל קומט די קאפיע אינעם זעלבן פעקל ווי דער אריגינעל.</p>
+</li>
+<li>
+<p><strong>אויסמעקן רשומה</strong>: מעקט אויס די רשומה מיט אלע אירע קארטלעך.</p>
+</li>
+<li>
+<p><strong>נאכאמאל אפשפילן קול</strong>: אויב דאס קארטל האט קול פארנט אדער הינטן, שפילט אים נאכאמאל.</p>
+</li>
+<li>
+<p><strong>אפשטעלן קול צייטווייליג</strong>: שטעלט צייטווייליג אפ דעם קול ווען עס שפילט.</p>
+</li>
+<li>
+<p><strong>קול -5 סעקונדעס / +5 סעקונדעס</strong>: שפרינגט צוריק אדער פאראויס 5 סעקונדעס אינעם קול וואס שפילט יעצט.</p>
+</li>
+<li>
+<p><strong>רעקארדירן אייער קול</strong>: רעקארדירט פונעם מיקראפאן כדי צו איבערקוקן אייער אויסשפראך. די רעקארדירונג איז צייטווייליג און פארשווינדט ביים קומענדיגן קארטל. צו שטענדיג צולייגן קול צום קארטל, טוט עס אינעם רעדאקטירן פענצטער.</p>
+</li>
+<li>
+<p><strong>נאכאמאל אפשפילן אייגענעם קול</strong>: שפילט נאכאמאל די צייטווייליגע רעקארדירונג פון <strong>רעקארדירן אייער קול</strong>, כדי צו פארגלייכן מיט דער תשובה אדער דער געוואונטשענער אויסשפראך. אויב איר האט נישט רעקארדירט אויפן יעצטיגן קארטל, איז נישט דא וואס אפצושפילן.</p>
+</li>
+<li>
+<p><strong>אויטאמאטיש ווייטערגיין</strong>: מאכט אז אנקי זאל אויטאמאטיש ווייזן די קומענדיגע פראגע אדער ענטפער נאך א צייט וואס מען קען באשטימען אין די <a href="deck-options.html">פעקל אויסוואלן</a>.</p>
+</li>
+<li>
+<p><strong>באשטימען א דאטום מיט דער האנט</strong>: עפנט א באקוועמען פענצטער צום ניי באשטימען דעם יעצטיגן קארטל’ס צייט פלאן. אנשטאט געדענקען דעם סינטאקס, קען מען מסודר אויסקלייבן אדער שרייבן א דאטום און פארנעם. דאס איז נאך א פעולה בשעת דער בחינה און נישט קיין פעקל איינשטעלונג. נוצט עס ווען איר ווילט באשטימען ווען דאס קארטל זאל צוריקקומען, אנשטאט טוישן דעם פעקל’ס קבוע’ן לערנען וועג.</p>
+</li>
+<li>
+<p><strong>באהאלט די תשובה</strong>: לאזט באהאלטן דעם ענטפער נאכן דרוקן “ווייזן ענטפער”.</p>
+</li>
+<li>
+<p><strong>פראגעס געענטפערט אין דער בחינה</strong>: האלטן דעם מייז איבער דעם אויסוואל עפנט א מעניו מיט די פראגעס וואס זענען שוין געענטפערט געווארן אינעם יעצטיגן בחינה. דרוקן אויף א פראגע עפנט דורכבלעטערן מיט יענער פראגע. דאס העלפט אויב איר דערמאנט זיך צו רעדאקטירן עפעס וואס איר זענט שוין דורכגעגאנגען, אדער טרעפט א טאפלטע רשומה אא“וו.</p>
+</li>
+</ul>
+<p><a id="סדר-התצוגה"></a></p>
+<h2 id="דער-תצוגה-סדר"><a class="header" href="#דער-תצוגה-סדר">דער תצוגה סדר</a></h2>
+<p>אנקי ווייזט קארטלעך פונעם אויסגעקליבענעם פעקל און אלע זיינע אונטערפעקלעך. דעריבער, אויב איר קלייבט “אורח חיים”, קומען אויך די אונטערפעקלעך “אורח חיים::דיני השכמת הבוקר” און “אורח חיים::דיני ציצית::סימן ח”.</p>
+<p>לויט דער ברירת מחדל נעמט אנקי נייע קארטלעך פון די פעקלעך לויטן אלף בית. אינעם אויבנדערמאנטן ביישפיל באקומט מען ערשט “אורח חיים”, דערנאך “דיני ציצית” און צום סוף “סימן ח”. מען קען דערמיט באשטימען דעם סדר דורך לייגן וויכטיגערע קארטלעך אין פעקלעך וואס קומען העכער אין דער ליסטע. ביים אלף בית סארטירן קומט “-” פאר די אותיות און “~” נאך זיי. דעריבער קען מען רופן א פעקל “-דיני ציצית” כדי ער זאל קומען ערשט, און אן אנדערן “~דיני השכמת הבוקר” כדי ער זאל קומען נאכן גאנצן רעשט.</p>
+<p>נייע קארטלעך און חזרות ווערן גענומען באזונדער. אנקי ווארט נישט אז ביידע רייען זאלן זיין ליידיג פארן גיין צום קומענדיגן פעקל. מען קען דעריבער זען נייע קארטלעך פון איין פעקל צוזאמען מיט חזרות פון אן אנדערן. אויב איר ווילט דאס נישט, דרוקט גלייך אויפן פעקל וואס איר ווילט לערנען אנשטאט אויף זיין הויפט פעקל.</p>
+<p>לערנען קארטלעך זענען זייער צייט עמפינדליך. מען נעמט זיי דערפאר פון אלע פעקלעך צוזאמען און ווייזט זיי לויט דעם סדר ווען זיי ווערן גרייט.</p>
+<p>צו באשטימען דעם סדר, זעט <a href="./deck-options.html#%D7%A1%D7%93%D7%A8-%D7%97%D7%96%D7%A8%D7%94">חזרה סדר אין די פעקל אויסוואלן</a>. פאר א גענויערן סדר פון נייע קארטלעך, קען מען עס טוישן אין <a href="browsing.html">דורכבלעטערן</a>.</p>
+<p><a id="אחים-והטמנה"></a></p>
+<h2 id="פארבונדענע-קארטלעך-און-באזייטיגן-ביז-מארגן"><a class="header" href="#פארבונדענע-קארטלעך-און-באזייטיגן-ביז-מארגן">פארבונדענע קארטלעך און באזייטיגן ביז מארגן</a></h2>
+<p>ווי דערמאנט אין די <a href="getting-started.html">יסודות</a>, קען אנקי שאפן מער פון איין קארטל פאר יעדן אריינגעלייגטן פרט, ווי פארנט←הינטן און הינטן←פארנט, אדער צוויי פארשידענע אויסלאזן פונעם זעלבן טעקסט. די פארבונדענע קארטלעך הייסן “ברידער”.</p>
+<p>ווען איר ענטפערט אויף א קארטל מיט ברידער, קען אנקי זיי פארמיידן פון קומען אינעם זעלבן לערנען רונדע דורך אויטאמאטיש באזייטיגן זיי ביז מארגן. די קארטלעך בלייבן באהאלטן ביז דער זייגער הייבט אן א נייעם טאג, אדער ביז איר ברענגט זיי צוריק מיט דער האנט דורך <strong>צוריקברענגען פון באזייטיגן</strong> אונטן אינעם <a href="studying.html#%D7%A1%D7%99%D7%9B%D7%95%D7%9D-%D7%94%D7%97%D7%A4%D7%99%D7%A1%D7%94">פעקל סיכום</a>. אנקי באזייטיגט ברידער אפילו פון אן אנדער פעקל, למשל ווען איר נוצט <a href="templates/intro.html">פעקל איבערשרייבן</a>.</p>
+<p>מען קען אנצינדן באזייטיגן אין די <a href="deck-options.html">פעקל אויסוואלן</a>. עס זענען דא באזונדערע איינשטעלונגען פאר נייע קארטלעך און חזרות.</p>
+<p>אנקי באזייטיגט נאר ברידער וואס זענען נייע אדער חזרה קארטלעך. עס באהאלט נישט לערנען קארטלעך, ווייל זייער צייט איז קריטיש. אבער ווען איר לערנט א לערנען קארטל, ווערן זיינע נייע און חזרה ברידער יא באזייטיגט.</p>
+<p>מען קען נישט סיי באזייטיגן און סיי אפשטעלן א קארטל אויף איינמאל. אפשטעלן א באזייטיגט קארטל נעמט אים ארויס פון באזייטיגן. מען קען נישט באזייטיגן אפגעשטעלטע קארטלעך.</p>
+<p><a id="קיצורי-מקלדת"></a></p>
+<h2 id="קורצוועג-קנעפלעך"><a class="header" href="#קורצוועג-קנעפלעך">קורצוועג קנעפלעך</a></h2>
+<p>רוב געווענליכע אנקי פעולות האבן קורצוועג קנעפלעך. מען קען רוב פון זיי געפינען אינעם ממשק: מעניו זאכן ווייזן זייער קורצוועג נעבן זיי, און האלטן דעם מייז איבער א קנעפל ווייזט געווענליך דעם קורצוועג אין א קליינעם שוועבנדיגן פענצטער.</p>
+<p>מען קען טוישן די קורצוועגן דורך <strong>איינשטעלן קורצוועג קנעפלעך</strong> אינעם הויפט מעניו. פאר אן הסבר, זעט <a href="misc.html#%D7%A7%D7%99%D7%A6%D7%95%D7%A8%D7%99-%D7%9E%D7%A7%D7%A9%D7%99%D7%9D">קורצוועג קנעפלעך</a>.</p>
+<p>ביים לערנען ווייזן <kbd>רווח</kbd> אדער <kbd>Enter</kbd> דעם ענטפער. ווען דער ענטפער איז שוין זעבאר, קען מען מיט <kbd>רווח</kbd> אדער <kbd>Enter</kbd> אויסקלייבן ‘גוט’. <kbd>1</kbd> ביז <kbd>4</kbd> קלייבן א באזונדערן אפשאצונג קנעפל. פאר אסאך מענטשן איז באקוועם צו ענטפערן רוב קארטלעך מיט <kbd>רווח</kbd> און האלטן איין פינגער אויף <kbd>1</kbd> פאר ווען מען פארגעסט.</p>
+<p><a id="צבירת-פיגור"></a></p>
+<h2 id="א-הויפן-פארשפעטיגטע-חזרות"><a class="header" href="#א-הויפן-פארשפעטיגטע-חזרות">א הויפן פארשפעטיגטע חזרות</a></h2>
+<p>ווען חזרות הויפענען זיך אן, גיט אנקי לויט דער ברירת מחדל א קדימה פאר די קארטלעך וואס האבן דאס לענגסטע געווארט. דער סדר מאכט אז קיין קארטל זאל נישט בלייבן ווארטן אן א גרענעץ. אבער אויב איר לייגט צו נייע קארטלעך, וועלן זייערע חזרות ערשט קומען נאכן פארענדיגן דעם הויפן.</p>
+<p>ווען איר ענטפערט אויף קארטלעך וואס האבן שוין א צייט געווארט, נעמט אנקי דעם פארשפעטיגונג אין חשבון ביים באשטימען דער קומענדיגער צייט. דעריבער, ווען איר קומט צוריק נאך א לאנגע הפסקה, דארף מען נישט אנהייבן פון דאסניי; מען קען פשוט ווייטערגיין פון וואו מען האט געהאלטן.</p>
+<p><a id="סיכום-החפיסה"></a></p>
+<h2 id="דער-פעקל-סיכום"><a class="header" href="#דער-פעקל-סיכום">דער פעקל סיכום</a></h2>
+<p>נאך דער חזרה זעט איר א פענצטער וואס ווייזט וויפיל קארטלעך עס זענען דא צום לערנען היינט. דאס הייסט “דער פעקל סיכום”:</p>
+<p><img src="media/yi-guide-31.svg" alt="" /></p>
+<p>די קארטלעך זענען צעטיילט אין <a href="getting-started.html#%D7%9E%D7%A6%D7%91%D7%99-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">דריי סארטן</a>: נייע, ביים לערנען און פאר חזרה. אויב איר האט אנגעצונדן <a href="#%D7%90%D7%97%D7%99%D7%9D-%D7%95%D7%94%D7%98%D7%9E%D7%A0%D7%94">באזייטיגן ברידער</a> אין די פעקל אויסוואלן, קענט איר זען אין גרא וויפיל קארטלעך וועלן ווערן באזייטיגט:</p>
+<p><img src="media/yi-guide-32.svg" alt="לערנען סיכום מיט באזייטיגטע קארטלעך" /></p>
+<p>צו אנהייבן א לערנען רונדע, דרוקט <strong>לערנען יעצט</strong>. אנקי וועט ווייטער ווייזן קארטלעך ביז אלע קארטלעך באשטימט פאר היינט זענען פארטיג.</p>
+<p>בשעת איר לערנט קען מען צוריקגיין צום סיכום מיט <kbd>S</kbd>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="deck-browser.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="editing.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="deck-browser.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="editing.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

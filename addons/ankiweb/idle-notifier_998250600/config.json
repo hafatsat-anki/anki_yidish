@@ -1,0 +1,8 @@
+{
+  "alarmFile": "",
+  "runOnMobile": false,
+  "idleAlarm": true,
+  "idleTimerTime": 30,
+  "resumeFeedback": true,
+  "alarm_toggle": 0
+}

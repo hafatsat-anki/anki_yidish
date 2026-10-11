@@ -1,0 +1,12 @@
+[book]
+title = "פראגעס און ענטפערס וועגן אנקי"
+language = "yi"
+text-direction = "rtl"
+
+[output.html]
+theme = "theme"
+additional-js = ["lunr.js", "lunr.stemmer.support.js", "lunr.he.js"]
+
+[output.html.fold]
+enable = true
+level = 0

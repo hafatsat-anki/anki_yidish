@@ -1,0 +1,1131 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>פראגעס און ענטפערס וועגן אנקי</title>
+    <meta name="robots" content="noindex">
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">מבוא צו אפט געפרעגטע שאלות</a></li><li class="chapter-item affix "><a href="getting-help.html">באקומען הילף</a></li><li class="chapter-item affix "><a href="when-problems-occur.html">ווען עס קומען פראבלעמען</a></li><li class="chapter-item affix "><a href="restoring-an-automatic-backup-recovering-from-data-loss.html">צוריקברענגען אן אויטאמאטישן גיבוי נאך פארלוסט פון דאטן</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">קארטלעך און רשומות</li><li class="chapter-item "><a href="linking-cards-together.html"><strong aria-hidden="true">1.</strong> קען מען פארבינדן קארטלעך איינער מיטן צווייטן?</a></li><li class="chapter-item "><a href="can-i-reveal-parts-of-a-card-one-at-a-time.html"><strong aria-hidden="true">2.</strong> קען מען אנטפלעקן טיילן פון א קארטל איינס נאכן צווייטן?</a></li><li class="chapter-item "><a href="cards-are-reversed-appearing-twice.html"><strong aria-hidden="true">3.</strong> פארקערטע קארטלעך / קארטלעך ווייזן זיך צוויי מאל</a></li><li class="chapter-item "><a href="errors-when-recording.html"><strong aria-hidden="true">4.</strong> תקלות ביים רעקארדירן</a></li><li class="chapter-item "><a href="multiple-choice-questions.html"><strong aria-hidden="true">5.</strong> שאלות מיט עטליכע אויסקלייב־ענטפערס</a></li><li class="chapter-item "><a href="no-cloze-found-on-card.html"><strong aria-hidden="true">6.</strong> קיין אויסגעלאזטע ווערטער זענען נישט געפונען געווארן אינעם קארטל</a></li><li class="chapter-item "><a href="printing-cards-in-your-collection.html"><strong aria-hidden="true">7.</strong> דרוקן קארטלעך פון אייער אוסף</a></li><li class="chapter-item "><a href="removing-duplicate-note-types.html"><strong aria-hidden="true">8.</strong> אראפנעמען דאפלטע סארטן רשומות</a></li><li class="chapter-item "><a href="some-updates-were-ignored-because-the-note-type-has-changed.html"><strong aria-hidden="true">9.</strong> טייל דערהיינטיגונגען זענען איגנארירט געווארן ווייל דער סארט רשומה האט זיך געטוישט</a></li><li class="chapter-item "><a href="sounds-or-images-have-gone-missing.html"><strong aria-hidden="true">10.</strong> מעדיע־טעקעס פון קול/בילדער זענען פארשוואונדן!</a></li><li class="chapter-item "><a href="sticky-fields.html"><strong aria-hidden="true">11.</strong> ווען מען לייגט צו א נייעם קארטל, ווערן געוויסע פעלדער נישט אויסגעליידיגט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פעקלעך</li><li class="chapter-item "><a href="hiding-decks.html"><strong aria-hidden="true">12.</strong> באהאלטן פעקלעך</a></li><li class="chapter-item "><a href="how-do-i-move-cards-between-decks.html"><strong aria-hidden="true">13.</strong> ווי אזוי פירט מען קארטלעך אריבער צווישן פעקלעך?</a></li><li class="chapter-item "><a href="merging-or-combining-two-decks.html"><strong aria-hidden="true">14.</strong> צונויפמישן/צונויפשטעלן צוויי פעקלעך</a></li><li class="chapter-item "><a href="timestamps-in-the-future.html"><strong aria-hidden="true">15.</strong> אימפארט/עקספארט גייט נישט צוליב צייט־שטעמפלען אין דער צוקונפט</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">תזמון</li><li class="chapter-item "><a href="anki-is-not-showing-me-all-my-cards.html"><strong aria-hidden="true">16.</strong> אנקי ווייזט מיר נישט אלע מיינע קארטלעך!</a></li><li class="chapter-item "><a href="study-in-a-particular-order.html"><strong aria-hidden="true">17.</strong> קען מען לערנען די קארטלעך אין א באשטימטן סדר?</a></li><li class="chapter-item "><a href="due-times-after-a-break.html"><strong aria-hidden="true">18.</strong> חזרה־צייטן נאך א הפסקה</a></li><li class="chapter-item "><a href="extra-copies-of-a-card-are-coming-up.html"><strong aria-hidden="true">19.</strong> נאך קאפיעס פון א קארטל ווייזן זיך</a></li><li class="chapter-item "><a href="hard-good-interval-longer-than-good-easy.html"><strong aria-hidden="true">20.</strong> דער אפשטאנד פון שווער/גוט איז לענגער ווי פון גוט/גרינג</a></li><li class="chapter-item "><a href="i-am-going-on-vacation-can-i-pause-the-scheduler.html"><strong aria-hidden="true">21.</strong> איך פאר אויף וואקאציע. קען איך אפשטעלן דעם מתזמן?</a></li><li class="chapter-item "><a href="resetting-progress-in-a-deck.html"><strong aria-hidden="true">22.</strong> צוריקשטעלן דעם פארשריט אין א פעקל</a></li><li class="chapter-item "><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html"><strong aria-hidden="true">23.</strong> אנקי־איינשטעלונגען זיך צו גרייטן פאר א גרויסער בחינה</a></li><li class="chapter-item "><a href="the-anki-2.1-scheduler.html"><strong aria-hidden="true">24.</strong> דער אנקי 2.1־מתזמן</a></li><li class="chapter-item "><a href="the-2021-scheduler.html"><strong aria-hidden="true">25.</strong> דער Anki־מתזמן v3</a></li><li class="chapter-item "><a href="what-spaced-repetition-algorithm.html"><strong aria-hidden="true">26.</strong> וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי?</a></li><li class="chapter-item "><a href="frequently-asked-questions-about-fsrs.html"><strong aria-hidden="true">27.</strong> אפט געפרעגטע שאלות וועגן FSRS</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">סינכראניזירן און AnkiWeb</li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">28.</strong> סינכראניזירן און AnkiWeb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="moving-questions-between-computers.html"><strong aria-hidden="true">28.1.</strong> ווי אזוי פירט מען די שאלות פון איין קאמפיוטער צום צווייטן?</a></li><li class="chapter-item "><a href="can-i-sync-only-some-of-my-decks.html"><strong aria-hidden="true">28.2.</strong> קען מען סינכראניזירן נאר א טייל פון מיינע פעקלעך?</a></li><li class="chapter-item "><a href="synchronizing-multiple-profiles.html"><strong aria-hidden="true">28.3.</strong> סינכראניזירן עטליכע פראפילן</a></li><li class="chapter-item "><a href="media-files-may-take-time-to-sync.html"><strong aria-hidden="true">28.4.</strong> סינכראניזירן מעדיע־טעקעס קען נעמען צייט</a></li><li class="chapter-item "><a href="sounds-or-images-are-not-appearing-on-ankiweb-or-the-mobile-clients.html"><strong aria-hidden="true">28.5.</strong> קלאנגען/בילדער ווייזן זיך נישט אין AnkiWeb אדער מאבילע אפליקאציעס</a></li><li class="chapter-item "><a href="error-establishing-a-secure-connection-when-syncing.html"><strong aria-hidden="true">28.6.</strong> תקלה ביים שאפן א זיכערע פארבינדונג ביים סינכראניזירן</a></li><li class="chapter-item "><a href="syncing-failed-connection-timed-out-errors-when-syncing.html"><strong aria-hidden="true">28.7.</strong> סינכראניזירן איז נישט געלונגען: די פארבינדונג־צייט איז אויסגעגאנגען</a></li><li class="chapter-item "><a href="ankiweb-account-removal.html"><strong aria-hidden="true">28.8.</strong> אויסמעקן אן AnkiWeb־קאנטע</a></li><li class="chapter-item "><a href="are-there-limits-on-file-sizes-on-ankiweb.html"><strong aria-hidden="true">28.9.</strong> זענען דא שיעורים פאר טעקע־גרייסן אין AnkiWeb?</a></li><li class="chapter-item "><a href="email-verification.html"><strong aria-hidden="true">28.10.</strong> באשטעטיגן אן אימעיל־אדרעס</a></li><li class="chapter-item "><a href="emails-not-being-received.html"><strong aria-hidden="true">28.11.</strong> אימעילס קומען נישט אן צוליב ספאם</a></li><li class="chapter-item "><a href="outlook-silently-discards-email.html"><strong aria-hidden="true">28.12.</strong> Outlook.com פארשווינדט אימעילס שטילערהייט</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">אנקי פארן קאמפיוטער</li><li class="chapter-item "><a href="shortcut-not-working.html"><strong aria-hidden="true">29.</strong> א קורצוועג־קנעפל ארבעט נישט</a></li><li class="chapter-item "><a href="anki-must-be-able-to-connect-to-a-local-port.html"><strong aria-hidden="true">30.</strong> אנקי מוז קענען פארבינדן זיך צו א לאקאלן פארט</a></li><li class="chapter-item "><a href="anki-says-my-clock-is-wrong.html"><strong aria-hidden="true">31.</strong> אנקי זאגט אז מיין זייגער איז נישט ריכטיג</a></li><li class="chapter-item "><a href="changing-the-interface-language.html"><strong aria-hidden="true">32.</strong> טוישן די שפראך פונעם ממשק</a></li><li class="chapter-item "><a href="my-antivirus-program-says-anki-is-infected.html"><strong aria-hidden="true">33.</strong> מיין אנטיווירוס־פראגראם זאגט אז Anki איז אנגעשטעקט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פארשידענע</li><li class="chapter-item "><a href="how-can-i-donate.html"><strong aria-hidden="true">34.</strong> ווי אזוי קען מען ביישטייערן?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">פראגעס און ענטפערס וועגן אנקי</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="שאלות-נפוצות"></a></p>
+<h1 id="אפט-געפרעגטע-שאלות"><a class="header" href="#אפט-געפרעגטע-שאלות">אפט געפרעגטע שאלות</a></h1>
+<p>די אפט געפרעגטע שאלות זענען א צוגאב צום הויפט־מדריך. ווען דער ענטפער פאדערט א פולע ערקלערונג פון אן אפעראציע אינעם פראגראם, פירט דער לינק צום פאסיגן פרק אינעם <a href="../manual/intro.html">מדריך</a>. ווען עס רעדט זיך וועגן א באשטימטער תקלה אדער מצב, געפינט זיך דער ענטפער דא אינעם שו"ת.</p>
+<p>די הויפט־נושאים זענען קארטלעך און רשומות, פעקלעך, תזמון, סינכראניזירן און AnkiWeb, פראבלעמען אינעם קאמפיוטער־פראגראם און פארשידענע שאלות. נוצט דעם תוכן הענינים צו דערגרייכן דעם געוואונטשענעם נושא.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="קבלת-עזרה"></a></p>
+<h1 id="באקומען-הילף"><a class="header" href="#באקומען-הילף">באקומען הילף</a></h1>
+<p><a id="קבלת-עזרה-1"></a></p>
+<h1 id="באקומען-הילף-1"><a class="header" href="#באקומען-הילף-1">באקומען הילף</a></h1>
+<p>פאר שטיצע, א תקלה־באריכט און אנווייזונגען ווי אזוי צו פרעגן א קלארע שאלה, זעט <a href="../manual/getting-help.html">באקומען הילף אינעם מדריך</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="כאשר-מתעוררות-בעיות"></a></p>
+<h1 id="ווען-עס-קומען-פראבלעמען"><a class="header" href="#ווען-עס-קומען-פראבלעמען">ווען עס קומען פראבלעמען</a></h1>
+<p><a id="כאשר-מתעוררות-בעיות-1"></a></p>
+<h1 id="ווען-עס-קומען-פראבלעמען-1"><a class="header" href="#ווען-עס-קומען-פראבלעמען-1">ווען עס קומען פראבלעמען</a></h1>
+<p>פאר אלגעמיינע בדיקות, עפענען אן תוספים, איבערקוקן די דאטאבאנק און צוזאמעננעמען אינפארמאציע פאר שטיצע, זעט <a href="../manual/troubleshooting.html">לייזן פראבלעמען אינעם מדריך</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שחזור-גיבוי-אוטומטי-התאוששות-מאובדן-נתונים"></a></p>
+<h1 id="צוריקברענגען-אן-אויטאמאטישן-גיבוי-נאך-פארלוסט-פון-דאטן"><a class="header" href="#צוריקברענגען-אן-אויטאמאטישן-גיבוי-נאך-פארלוסט-פון-דאטן">צוריקברענגען אן אויטאמאטישן גיבוי נאך פארלוסט פון דאטן</a></h1>
+<p>אמאל קען אייער אוסף שטארק געשעדיגט ווערן. צום ביישפיל:</p>
+<ul>
+<li>איר האט בטעות אויסגעמעקט א סארט קארטל אדער הונדערטער קארטלעך, און נישט באמערקט אין צייט צוריקצונעמען די אפעראציע.</li>
+<li>אייער אוסף איז פארדארבן געווארן.</li>
+<li>עס איז געשען א סינכראניזיר־תקלה, און איר האט בטעות איבערגעשריבן אסאך חזרות וואס איר האט געמאכט אויף אן אנדער מיטל.</li>
+<li>...אדער עפעס אנדערש וואס לאזט אייך מיט פארלוירענע דאטן.</li>
+</ul>
+<p>אנקי מאכט אויטאמאטיש א גיבוי פון אייער אוסף יעדעס מאל וואס איר פארמאכט דעם פראגראם אדער סינכראניזירט. AnkiMobile מאכט גיבויים מיט באשטימטע אפשטאנדן און פארן סינכראניזירן. לויט ברירת מחדל האלט אנקי 30 גיבויים. פאר אינפארמאציע וועגן צוריקברענגען אן אויטאמאטישן גיבוי, זעט דעם פאסיגן בלאט:</p>
+<ul>
+<li>צוריקברענגען א <a href="../manual/backups.html">גיבוי וואס אנקי האט געשאפן אויף אייער קאמפיוטער</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="האם-ניתן-לקשר-בין-כרטיסים"></a></p>
+<h1 id="קען-מען-פארבינדן-קארטלעך-איינער-מיטן-צווייטן"><a class="header" href="#קען-מען-פארבינדן-קארטלעך-איינער-מיטן-צווייטן">קען מען פארבינדן קארטלעך איינער מיטן צווייטן?</a></h1>
+<p>אנקי שטיצט פארבינדן קארטלעך פון דער זעלבער רשומה, אבער נישט קארטלעך וואס האבן נישט קיין שייכות.</p>
+<p>צום ביישפיל קען מען אין סארט קארטל 05 אריינגעבן א נושא און א מקור. אנקי וועט אמאל פרעגן וואו דער נושא שטייט, און אמאל וואס עס שטייט אין דעם מקור.</p>
+<p>אין דעם אויבנדערמאנטן מצב קען אנקי צעשפרייטן די חזרות אויף די צוויי שוועסטער־קארטלעך, אז זיי זאלן נישט קומען איינס נאכן צווייטן.</p>
+<p>געוויסע מענטשן ווילן אויסברייטערן די פארבינדונג צווישן סיי וועלכע קארטלעך. זיי ווילן קענען זאגן אנקי: "נאכדעם וואס דו ווייזט מיר דעם קארטל, ווייז מיר יענעם", אדער "ווייז מיר נישט יענעם קארטל ביז איך קען דעם קארטל גענוג גוט". טעארעטיש קען דאס אויסזען ווי א גוטער געדאנק, אבער למעשה איז עס נישט פראקטיש.</p>
+<p>ערשטנס, אנדערש ווי ביי די אויבנדערמאנטע שוועסטער־קארטלעך, וועט איר דארפן באשטימען אלע פארבינדונגען אליין. אריינגעבן נייע רשומות וועט ווערן קאמפליצירט, ווייל איר וועט דארפן זוכן אין דעם איבעריגן פעקל און באשטימען פארבינדונגען צווישן דעם אלטן און נייעם חומר.</p>
+<p>צווייטנס, געדענקט אז אנקי נוצט אן אלגאריטם צו באשטימען די בעסטע צייט אייך ווידער צו ווייזן חומר. צולייגן תנאים וואס לאזן קארטלעך דערשיינען פריער אדער שפעטער ווי זייער פאסיגע צייט, וועט מאכן די חזרות־מיט־אפשטאנדן־סיסטעם ווייניגער ווירקזאם. דאס וועט ברענגען מער ארבעט ווי נויטיג, אדער קארטלעך וואס ווערן פארגעסן.</p>
+<p>דער ווירקזאמסטער וועג צו נוצן אנקי איז צו מאכן יעדע רשומה אומאפהענגיג פון אנדערע רשומות. אנשטאט פרובירן צו פארבינדן ענליכע ווערטער, איז בעסער צו קענען באשטימען די אונטערשיידן צווישן זיי. ענליכע ווערטער קען מען זעלטן אינגאנצן איינטוישן; געווענליך האבן זיי קליינע אונטערשיידן אין באדייט, און א זאץ קען ווערן מאדנע ווען מען טוישט איין ענליכן ווארט מיט אן אנדערן.</p>
+<p>ווי א המשך צום פריערדיגן ביישפיל, שטעלט זיך פאר אז איר ווילט לערנען א נאענטן אבער נישט ממש גלייכן נושא. אין אנהייב וועט לייכט זיין באשטימען די אונטערשיידן. ווי איר גייט אבער ווייטער, וועט באשטימען די אונטערשיידן צווישן ענליכע נושאים ווערן א שווערער עול.</p>
+<p>וועגן דעם וואונטש אז שווערער חומר זאל קומען נאך גרינגערן: לויט ברירת מחדל ווערן נייע קארטלעך געוויזן אינעם סדר ווי זיי זענען צוגעלייגט געווארן צום פעקל. אויב אייערע לערן־מאטעריאלן אדער אינפארמאציע־מקורות זענען ריכטיג איינגעשטעלט לויט אייער שטאפל, זאל דער חומר דערשיינען פון גרינג צו שווער.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="האם-ניתן-לחשוף-חלקים-של-כרטיס-אחד-בכל-פעם"></a></p>
+<h1 id="קען-מען-אנטפלעקן-טיילן-פון-א-קארטל-איינס-נאכן-צווייטן"><a class="header" href="#קען-מען-אנטפלעקן-טיילן-פון-א-קארטל-איינס-נאכן-צווייטן">קען מען אנטפלעקן טיילן פון א קארטל איינס נאכן צווייטן?</a></h1>
+<p>געווענליכע קארטלעך, סיי פון פאפיר און סיי אין Anki, האבן א פארנט־זייט און א הינטער־זייט: פארנט ווערט געוויזן די שאלה אדער דער רמז, און הינטן דער ענטפער. אמאל וויל מען צולייגן נאך טריט צום ענטפער. צום ביישפיל, מען קען וועלן ווייזן א באגריף פארנט, דערנאך ווייזן א דעפיניציע מיט איין דרוק אויפן קנעפל, דערנאך א ביישפיל־זאץ מיט נאך א דרוק, און אזוי ווייטער.</p>
+<p>בכלל איז דאס נישט קיין גוטער געדאנק. ווי מער קאמפליצירט אייערע קארטלעך זענען, אלץ שווערער איז זיי צו געדענקען און אלץ ווייניגער ווירקזאם ווערט זייער תזמון. דער אונטערשייד צווישן די צייט צו לערנען און איבערחזרן א קליינע צאל קאמפליצירטע קארטלעך, און די צייט צו לערנען א גרעסערע צאל פיל פשוט'ערע קארטלעך מיט דער זעלבער אינפארמאציע, קען זיין איבערראשנד גרויס.</p>
+<p>דערפאר שטיצט Anki נישט מער ווי צוויי זייטן פון א קארטל. אינעם ביישפיל פון ווערטער אין א פרעמדער שפראך קענט איר ליבערשט שאפן עטליכע <a href="../manual/templates/intro.html">סארטן קארטלעך</a>, אז איר זאלט געפרעגט ווערן וועגן יעדן פרט אין א באזונדערן קארטל. איין קארטל קען ווייזן דעם ווארט און בעטן א דעפיניציע; אן אנדער קען ווייזן דעם ביישפיל־זאץ מיטן ווארט אויסגעלאזט און פרעגן וועלכער ווארט פאסט לויטן שכל, און אזוי ווייטער.</p>
+<p>הגם די אפציע איז נישט רעקאמענדירט, איז אזא אפציע דא אין דער אנקי־ווערסיע פאר זכרון הלימוד, אין די סארטן קארטלעך 06 און 07. זיי זענען בעיקר פאר באשטימטע פעלער וואו עס איז נישטא קיין אנדער וועג איבערצוחזרן דעם געלערנטן חומר, אבער עס איז נישט אזוי ווירקזאם.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="כרטיסים-הפוכים-מופיעים-פעמיים"></a></p>
+<h1 id="פארקערטע-קארטלעך--קארטלעך-ווייזן-זיך-צוויי-מאל"><a class="header" href="#פארקערטע-קארטלעך--קארטלעך-ווייזן-זיך-צוויי-מאל">פארקערטע קארטלעך / קארטלעך ווייזן זיך צוויי מאל</a></h1>
+<p>מען קען איינשטעלן אנקי צו ווייזן קארטלעך סיי אין דער געווענליכער ריכטונג און סיי פארקערט. אויב איר ווילט נאר קארטלעך פון פארנט-&gt;הינטן, קענט איר אויסמעקן דעם פארקערטן קארטל.</p>
+<p>אויב איר האט צוגעלייגט קארטלעך צו די סארטן רשומות <code>בסיסי (והפוך)</code> אדער <code>בסיסי (הפוך אופציונלי)</code>, קענט איר זיי טוישן צום פשוט'ן סארט רשומה. קלייבט זיי אויס אינעם דורכבלעטער־עקראן, און נוצט דעם מעניו־איינטראג 'טוישן סארט רשומה'. קלייבט אויס אייער פשוט'ן סארט רשומה, און קלייבט צו האלטן קארטל 1 און אוועקלאזן קארטל 2.</p>
+<p>אויב איר האט געטוישט די פשוט'ע קארטל־תבנית און צוגעלייגט א נישט־געוואונטשענע פארקערטע ריכטונג, קענט איר דאס צוריקטוישן:</p>
+<ul>
+<li>דריקט אויפן קנעפל 'פארוואלטן סארטן רשומות' אינעם טעקע־מעניו פונעם רעדאקטירער</li>
+<li>אויבן וועט איר זען איין אדער עטליכע לשוניות, וואס שטעלן פאר יעדן סארט קארטל וואס וועט געשאפן ווערן. געפינט דעם סארט קארטל וואס איר ווילט נישט, דריקט אויפן קנעפל 'אפציעס', און נעמט אראפ די נישט־געוואונטשענע קארטל־תבנית.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שגיאות-בעת-הקלטה"></a></p>
+<h1 id="תקלות-ביים-רעקארדירן"><a class="header" href="#תקלות-ביים-רעקארדירן">תקלות ביים רעקארדירן</a></h1>
+<p>אויב איר האט פראבלעמען מיטן רעקארדירן קול אין אנקי, מאכט זיכער אז:</p>
+<ul>
+<li>א מיקראפאן איז פארבונדן צום קאמפיוטער</li>
+<li>דער מיקראפאן איז באשטימט אלס דער רעקארדיר־מיטל פון ברירת מחדל אין די קלאנג־איינשטעלונגען פונעם סיסטעם</li>
+<li>קיין אנדער פראגראם נוצט נישט דעם מיקראפאן — איר וועט אפשר דארפן פארמאכן דעם אנדערן פראגראם וואס נוצט אים. אויב דאס העלפט נישט, פרובירט איבערצושטארטן דעם קאמפיוטער.</li>
+</ul>
+<p>אויב איר באקומט דעם מעלדונג <code>IOError: [Errno Unanticipated host error] -9999</code> אין Windows 10, מאכט זיכער אז איר האט געגעבן אנקי רשות צו נוצן דעם מיקראפאן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שאלות-רבות-ברירה"></a></p>
+<h1 id="שאלות-מיט-עטליכע-אויסקלייבענטפערס"><a class="header" href="#שאלות-מיט-עטליכע-אויסקלייבענטפערס">שאלות מיט עטליכע אויסקלייב־ענטפערס</a></h1>
+<p>שאלות מיט עטליכע אויסקלייב־ענטפערס, אויך גערופן אמעריקאנער שאלות, זענען נישט דער ווירקזאמסטער וועג צו לערנען. זיי זענען פארשפרייט אין מוסדות־לימוד ווייל עס איז לייכט זיי צו איבערקוקן, און זיי לאזן דעם לערנענדיקן ווייזן אז ער דערקענט דעם ריכטיגן ענטפער, אפילו ווען ער קען אים נישט אליין ארויסגעבן.</p>
+<p>ווען מען דארף אויסקלייבן פון עטליכע ענטפערס, איז לייכט "ארומצוגיין" די שאלה: מען קען טרעפן דעם ריכטיגן ענטפער אויב מען קען די אנדערע געוויזענע אפציעס. ווען מענטשן מאכן אזעלכע בחינות, קען דער מחבר שאפן קלוגע פארפירנדיגע ענטפערס וואס זענען ענליך צום ריכטיגן ענטפער, און אזוי שווערער מאכן דאס טרעפן. קאמפיוטערס זענען נישט אזוי גוט דערין.</p>
+<p>אויב איר לערנט פאר א בחינה און האט א מוסטער־בחינה מיט אויסקלייב־שאלות, ווי אינעם פאלגנדן ביישפיל:</p>
+<pre><code>ש: לאיזו חיה יש צוואר ארוך במיוחד?
+
+ת: 1. קוף. 2. ג'ירפה. 3. חמור. 4. חילזון.
+</code></pre>
+<p>איז דער רעקאמענדירטער וועג אריינצוגעבן די שאלה אין אנקי צו אוועקלאזן די נישט־ריכטיגע ענטפערס, און אנשטאט דעם מאכן א פשוט'ן שאלה/ענטפער־קארטל:</p>
+<pre><code>ש: לאיזו חיה יש צוואר ארוך במיוחד?
+
+ת: ג'ירפה.
+</code></pre>
+<p>אין דער אנקי־ווערסיע איז אויך דא סארט קארטל 10, וואס שטיצט די אפציע. עס איז אבער ווייניגער ראטזאם דאס צו נוצן, ווי אויבן ערקלערט.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="לא-נמצא-קלוז-בכרטיס"></a></p>
+<h1 id="קיין-אויסגעלאזטע-ווערטער-זענען-נישט-געפונען-געווארן-אינעם-קארטל"><a class="header" href="#קיין-אויסגעלאזטע-ווערטער-זענען-נישט-געפונען-געווארן-אינעם-קארטל">קיין אויסגעלאזטע ווערטער זענען נישט געפונען געווארן אינעם קארטל</a></h1>
+<p><a id="כרטיסים-ריקים-בודדים"></a></p>
+<h2 id="באזונדערע-ליידיגע-קארטלעך"><a class="header" href="#באזונדערע-ליידיגע-קארטלעך">באזונדערע ליידיגע קארטלעך</a></h2>
+<p>ווען מען שאפט קארטלעך מיט אויסגעלאזטע ווערטער, ווערט יעדער נומער פון דער אויסלאזונג א באזונדערער קארטל. צום ביישפיל וועט דער פאלגנדער טעקסט שאפן דריי קארטלעך:</p>
+<pre><code>{{c1::זאת}} היא {{c2::דוגמא}} {{c3::פשוטה}}.
+</code></pre>
+<p>אויב איר רעדאקטירט דעם טעקסט שפעטער און נעמט אראפ אדער טוישט דעם נומער פון דער אויסלאזונג, קען דער פריער געשאפענער קארטל ווערן ליידיג. צום ביישפיל:</p>
+<pre><code>{{c1::זאת}} היא {{c2::דוגמא}}
+</code></pre>
+<p>און</p>
+<pre><code>{{c1::זאת}} היא {{c2::דוגמא}} {{c1::פשוטה}}.
+</code></pre>
+<p>ביידע ענדערונגען וועלן מאכן קארטל 3 ליידיג. ווען איר וועט זען קארטל 3, וועט איר באקומען א מעלדונג אז דער קארטל איז ליידיג. מען קען נוצן "ליידיגע קארטלעך" אין מעניו &gt; אוסף־מכשירים אינעם הויפטפענסטער פון דער קאמפיוטער־ווערסיע, כדי אראפצונעמען ליידיגע קארטלעך. קוקט ערשט איבער די געמאלדענע ליידיגע קארטלעך; אין פאל פון א ספק, מאכט א גיבוי מיטן מעניו־איינטראג "עקספארטירן" איידער איר גייט ווייטער.</p>
+<p><a id="כל-כרטיסי-ההשלמות-ריקים"></a></p>
+<h2 id="אלע-קארטלעך-מיט-אויסגעלאזטע-ווערטער-זענען-ליידיג"><a class="header" href="#אלע-קארטלעך-מיט-אויסגעלאזטע-ווערטער-זענען-ליידיג">אלע קארטלעך מיט אויסגעלאזטע ווערטער זענען ליידיג</a></h2>
+<p>אויב איר האט בטעות געטוישט אייער קארטל־תבנית, קען דאס אפהאלטן די אויסלאזונגען פון זיך ריכטיג ווייזן. אויב דאס איז געשען, רעדאקטירט איינעם פון די פראבלעמאטישע קארטלעך און שרייבט זיך אויף דעם נאמען פונעם ערשטן פעלד; געווענליך הייסט ער "Text". דערנאך:</p>
+<ul>
+<li>
+<p>דריקט אויפן קנעפל "קארטלעך..."</p>
+</li>
+<li>
+<p>טוישט דעם פארנט־טעקסט צו:</p>
+<pre><code>{{cloze:Text}}
+</code></pre>
+</li>
+<li>
+<p>טוישט דעם הינטער־טעקסט צום זעלבן.</p>
+</li>
+</ul>
+<p>אויב אייער פעלד האט געהייסן אנדערש ווי "Text", טוישט דעם ווארט "Text" צום פעלד־נאמען.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הדפסת-כרטיסיות-באוסף-שלכם"></a></p>
+<h1 id="דרוקן-קארטלעך-פון-אייער-אוסף"><a class="header" href="#דרוקן-קארטלעך-פון-אייער-אוסף">דרוקן קארטלעך פון אייער אוסף</a></h1>
+<p>געוויסע מענטשן האבן ליב צו דרוקן די קארטלעך פון זייער אוסף, כדי זיי איבערצוקוקן אויף פאפיר אדער פאר אנדערע סיבות. איידער איר טוט דאס, נעמט אין אכט אז אנקי איז די מערסטע ווירקזאם ווען מען לערנט נאר דורך דעם פראגראם. לערנען א ליסטע פון אייערע קארטלעך וועט אייך בהכרח מאכן לערנען מיט ווייניגער פאסיגע אפשטאנדן ווי די וואס אנקי שלאגט פאר.</p>
+<p>עס איז דא א דרוק־אפציע אינעם מעניו, וואס לאזט דרוקן שאלות לויט פארשידענע אפציעס, ווי פעקל, תזמון־דאטום און נאך. אויב איר ווילט דרוקן געוויסע שאלות לויט א פילטער וואס איז נישטא אינעם דרוק־עקראן, קענט איר שאפן א געפילטערטן פעקל מיט די געוואונטשענע שאלות און דערנאך אויסקלייבן דעם פעקל אינעם דרוק־עקראן.</p>
+<p>אויסער דרוקן קען מען אויך פון דעם פענסטער עקספארטירן צו Word, PDF און נאך, און אויך עקספארטירן אין א פארמאט וואס דער פראגראם "קל לזכור" קען אימפארטירן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הסרת-סוגי-רשומות-כפולים"></a></p>
+<h1 id="אראפנעמען-דאפלטע-סארטן-רשומות"><a class="header" href="#אראפנעמען-דאפלטע-סארטן-רשומות">אראפנעמען דאפלטע סארטן רשומות</a></h1>
+<p>נאכן נוצן אנקי א וויילע קענט איר געפינען עטליכע סארטן רשומות מיטן זעלבן נאמען, און אנדערע אותיות נאכדעם, ווי <code>Basic-908e4</code>, <code>Cloze-37a28</code> אדער <code>Image Occlusion++++</code>. דאס קען געשען ווען מען אימפארטירט א געטיילטן פעקל מיט א סארט רשומה וואס האט דעם זעלבן נאמען ווי א סארט וואס איז שוין אין אייער אוסף, אדער ווען מען שאפט א סארט רשומה מיט א דאפלטן נאמען. אנקי לייגט צו אותיות צום נאמען כדי נישט צונויפצומישן אדער איבערצושרייבן דעם עקזיסטירנדיגן סארט רשומה.</p>
+<p>הגם די "דאפלטע" סארטן רשומות שעדיגן געווענליך נישט, קען דאס זיין אביסל צעמישנדיג אויב איר ווייסט נישט וועלכן סארט רשומה איר נוצט. כדי דאס מסדר צו זיין, קענט איר טון די פאלגנדע טריט:</p>
+<ol>
+<li>פארגלייכט די פעלדער, קארטל־תבניות און אויסזען פון יעדן סארט רשומה, דורך דריקן אויף <kbd>פעלדער</kbd> און <kbd>קארטלעך</kbd> אינעם פענסטער 'פארוואלטן סארטן רשומות' (רשומות ← פארוואלטן סארטן רשומות).
+<ul>
+<li>אויב זיי זענען גלייך, באשליסט וועלכן סארט רשומה אויסצומעקן, און דריקט אויף <kbd>טוישן נאמען</kbd> אים איבערצורופן, אז איר זאלט וויסן וועלכער איז צום אויסמעקן; צום ביישפיל לייגט צו <code>-למחיקה</code> צום נאמען.</li>
+<li>אויב זיי זענען נישט גלייך, גיט איינעם פון זיי א מער באשרייבנדיגן נאמען, און האלט ביידע.</li>
+</ul>
+</li>
+<li>אינעם דורכבלעטער־פענסטער, אינעם לינקן זייט־שטאנג, קלייבט דעם סארט רשומות וואס איר ווילט אויסמעקן. דערנאך קלייבט 'רעדאקטירן' ← 'אויסקלייבן אלעס', צו אויסקלייבן אלע זיינע רשומות/קארטלעך.</li>
+<li>קלייבט 'רשומות' ← 'טוישן סארט רשומה', און קלייבט דעם סארט רשומה וואס איר האלט אינעם אויסקלייב־מעניו רעכטס אויפן עקראן. [דער טריט וועט פאדערן סינכראניזירן אין איין ריכטונג ביים קומענדיגן סינכראניזירן מיט AnkiWeb. אויב איר האט נישט־סינכראניזירטן פארשריט אויף אנדערע מיטלען, שטעלט זיך דא אפ און סינכראניזירט אייערע מיטלען. אנקי וועט ווייזן א ווארענונג דערוועגן.] מאכט זיכער אז די פעלדער און תבניות זענען פארבונדן ווי איר ערווארט. דריקט אויף 'אפזיכערן'.</li>
+<li>טוט איבער טריט 2 און 3 פאר יעדן אנדערן סארט רשומה וואס איר ווילט אויסמעקן.</li>
+<li>עפנט ווידער דעם פענסטער 'פארוואלטן סארטן רשומות', און מעקט אויס די סארטן רשומות וואס ווערן שוין נישט גענוצט. נעבן יעדן וועט שטיין אז ער ווערט גענוצט דורך "[0 רשומות]".</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="התעלמו-מעדכונים-מסוימים-מפני-שסוג-הרשומה-השתנה"></a></p>
+<h1 id="טייל-דערהיינטיגונגען-זענען-איגנארירט-געווארן-ווייל-דער-סארט-רשומה-האט-זיך-געטוישט"><a class="header" href="#טייל-דערהיינטיגונגען-זענען-איגנארירט-געווארן-ווייל-דער-סארט-רשומה-האט-זיך-געטוישט">"טייל דערהיינטיגונגען זענען איגנארירט געווארן ווייל דער סארט רשומה האט זיך געטוישט"</a></h1>
+<p>ביים אימפארטירן א געטיילטן פעקל וואס איז שוין אמאל אימפארטירט געווארן, קען אנקי דערהיינטיגן אייערע עקזיסטירנדיגע קארטלעך נאר אויב:</p>
+<ul>
+<li>דער נאמען, די צאל און דער סדר פון די פעלדער האבן זיך נישט געטוישט</li>
+<li>דער נאמען, די צאל און דער סדר פון די קארטל־תבניות האבן זיך נישט געטוישט</li>
+</ul>
+<p>ענדערונגען אינעם פארנט־ און הינטער־תבנית וועלן נישט אפהאלטן דערהיינטיגונגען.</p>
+<p>אויב די פעלדער אדער קארטל־תבניות האבן זיך געטוישט און איר ווילט אנווענדן דערהיינטיגונגען, וועט איר דארפן טוישן דעם סארט רשומה אין אייער אוסף, אז ער זאל פאסן צום סארט אינעם פעקל וואס איר פרובירט אימפארטירן. איר קענט אימפארטירן דעם געטיילטן פעקל אין א נייעם פראפיל, זיך אויפשרייבן די פעלדער און קארטל־תבניות פונעם סארט רשומה, און זיי דערנאך פארגלייכן מיטן סארט רשומה אין אייער פראפיל.</p>
+<p>אויב איר ווילט נישט קיין דערהיינטיגונגען, נאר צולייגן די נייע קארטלעך, קען מען מאכן דעם אימפארט ארבעטן דורך אויסמעקן דעם אלטן סארט רשומה אין 'מכשירים &gt; פארוואלטן סארטן רשומות'. דאס וועט אויסמעקן אלע קארטלעך וואס זענען פארבונדן צו אים. אויב איר ווילט האלטן די עקזיסטירנדיגע קארטלעך, וועט איר דארפן מיט דער האנט נוצן 'טוישן סארט רשומה' אינעם דורכבלעטערער, און זיי אריבערפירן צו א נייעם סארט רשומה.</p>
+<p>נעמט אין אכט: אויב דער פעקל־משתף האט גענוצט 'טוישן סארט רשומה' אין זיין אוסף, האט ער שטענדיג איבערגעריסן די פארבינדונג צווישן אייער קאפיע און זיין. מען וועט נישט קענען דערהיינטיגן דורך אימפארטירן א <code>.apkg</code>־טעקע, אפילו אויב די פעלדער און קארטל־תבניות פון אייער סארט רשומה זענען גלייך.</p>
+<p>אויב איינער פון די פעלדער אינעם געטיילטן פעקל האט זיך נישט געטוישט, קען מען אויך אנווענדן דערהיינטיגונגען דורך טעקסט־אימפארט. נאכן אימפארטירן דעם געטיילטן פעקל אין א צייטווייליגן פראפיל, נוצט 'טעקע &gt; עקספארטירן' צו אפזיכערן די רשומות אין <code>txt</code>־פארמאט. דערנאך קענט איר אין אייער אריגינעלן פראפיל אימפארטירן די טעקסט־טעקע, און פארגלייכן לויט א פעלד וואס האט זיך נישט געטוישט. טעקסט־אימפארט ארבעט נאר מיט איין סארט רשומה אויף אמאל. אויב דער אראפגעלאדענער געטיילטער פעקל האט עטליכע סארטן רשומות, וועט איר דארפן טון דעם פראצעס פאר יעדן סארט באזונדער. פאר מער אינפארמאציע זעט <a href="../manual/importing/packaged-decks.html#%D7%A2%D7%93%D7%9B%D7%95%D7%9F">דערהיינטיגן פארפאקטע פעקלעך</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="קבצי-מדיה-שמעתמונה-נעלמו"></a></p>
+<h1 id="מעדיעטעקעס-פון-קולבילדער-זענען-פארשוואונדן"><a class="header" href="#מעדיעטעקעס-פון-קולבילדער-זענען-פארשוואונדן">מעדיע־טעקעס פון קול/בילדער זענען פארשוואונדן!</a></h1>
+<p>אנקי האלט די קול־ און בילד־טעקעס פון אייערע קארטלעך אויפן קאמפיוטער, אין אייער <a href="../manual/files.html#%D7%A0%D7%AA%D7%95%D7%A0%D7%99-%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9">אנקי־תיקיה</a>, אינעם וועג <code>User 1/collection.media</code>. אויב איר מעקט אויס טעקעס פון דעם תיקיה, וועט אנקי פארשרייבן אז זיי זענען אראפגענומען געווארן, און ביים קומענדיגן סינכראניזירן זיי אויך אראפנעמען פון אייערע אנדערע מיטלען. אמאל מאכן באניצער סדר אין זייערע קאמפיוטער־טעקעס און מעקן בטעות אויס די קול־ און בילד־טעקעס וואס זייערע קארטלעך נוצן. דערנאך שפילן קלאנגען זיך נישט אפ און בילדער ווייזן זיך נישט. דאס איז בפרט לייכט בטעות צו טון אויף Mac מיט דער Finder־פונקציע "אלע מיינע טעקעס", אבער עס קען אויך געשען אויף אנדערע פלאטפארמען.</p>
+<p>איר קענט נוצן אנקי'ס פונקציע <code>כלי מאגר&gt;בדיקת מדיה</code> צו געפינען וועלכע בילדער פעלן אינעם אוסף, דורכן איבערקוקן דעם חלק "גענוצט אין קארטלעך אבער פעלט אינעם מעדיע־תיקיה".</p>
+<p>אויב איר האט בטעות אויסגעמעקט די טעקעס וואס אייערע קארטלעך האבן גענוצט, קענט איר זיי אפשר צוריקברענגען פונעם מיחזור־קעסטל / פאפיר־קארב, אויב ער איז נאך נישט אויסגעליידיגט געווארן. זיי צוריקשטעלן אינעם <code>collection.media</code>־תיקיה זאל מאכן די מעדיע ווידער ארבעטן.</p>
+<p>אויב איר קענט נישט צוריקבאקומען אייער מעדיע פון קיין מיטל, קענען מיר זי אפשר צוריקברענגען פאר אייך פון די AnkiWeb־גיבויים, אויב זי איז לעצטנס אויסגעמעקט געווארן.</p>
+<p>אויב איר האט פארלוירן אייערע קול־ און בילד־טעקעס אבער באקומען זיי פון א געטיילטן פעקל, און דער פעקל איז נאך פאראן, קענט איר אים אימפארטירן אין א נייעם פראפיל. דערנאך קאפירט זיינע קול־ און בילד־טעקעס צום אריגינעלן אוסף, כדי צוריקצוברענגען די דאטן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="כאשר-מוסיפים-כרטיס-חדש-שדות-מסוימים-לא-מתאפסים"></a></p>
+<h1 id="ווען-מען-לייגט-צו-א-נייעם-קארטל-ווערן-געוויסע-פעלדער-נישט-אויסגעליידיגט"><a class="header" href="#ווען-מען-לייגט-צו-א-נייעם-קארטל-ווערן-געוויסע-פעלדער-נישט-אויסגעליידיגט">ווען מען לייגט צו א נייעם קארטל, ווערן געוויסע פעלדער נישט אויסגעליידיגט!</a></h1>
+<p>אנקי שטיצט דאס באשטימען קלעביגע פעלדער גלייך אינעם רעדאקטיר־פענסטער פון ווערסיע 2.1.45 און ווייטער. מען קען איינשאלטן אדער אויסשאלטן די פונקציע
+דורך דריקן אויפן שטיפט־סימבאל רעכטס פונעם פעלד.</p>
+<p>אויב דער שטיפט־סימבאל איז נישט אקטיוו, וועט אנקי אויסליידיגן דעם פעלד נאכן צולייגן א רשומה.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הסתרת-חפיסות"></a></p>
+<h1 id="באהאלטן-פעקלעך"><a class="header" href="#באהאלטן-פעקלעך">באהאלטן פעקלעך</a></h1>
+<p>אויב איר פלאנט א געוויסן פעקל נישט צו לערנען א וויילע, אבער איר ווילט אים נישט אויסמעקן, ווילט איר אים אפשר <em>באהאלטן</em>. עס זענען דא צוויי וועגן דאס צו טון.</p>
+<p><strong>א) עקספארטירן און אויסמעקן דעם פעקל.</strong></p>
+<ol>
+<li>קלייבט טעקע ← עקספארטירן. קלייבט <code>חבילת חפיסה של אנקי (*.apkg)</code> אינעם אויסקלייב־מעניו <em>עקספארט־פארמאט</em>.</li>
+<li>קלייבט דעם פעקל וואס איר ווילט אראפנעמען אינעם אויסקלייב־מעניו <em>ארייננעמען</em>.</li>
+<li>מאכט זיכער אז <em>ארייננעמען תזמון־אינפארמאציע</em> און <em>ארייננעמען מעדיע</em> זענען אנגעצייכנט. אנדערש וועט איר פארלירן אייער חזרה־געשיכטע, און אפשר אויך אייער מעדיע, ווען איר וועט ווידער וועלן נוצן דעם פעקל.</li>
+<li>דריקט אויף עקספארטירן און אפזיכערט די apkg־טעקע אין א פלאץ וואו איר וועט זי קענען ווידער געפינען.</li>
+<li>צום סוף, מעקט אויס דעם פעקל פון אייער אוסף.</li>
+</ol>
+<p>איר קענט צוריקברענגען דעם פעקל צום אוסף דורך קלייבן טעקע ← אימפארטירן און נאכאמאל אימפארטירן דעם פעקל. ער וועט צוריקקומען מיטן זעלבן נאמען וואס ער האט געהאט ביים עקספארטירן.</p>
+<p><strong>ב) שאפן א "נישט אין באנוץ"־פעקל.</strong></p>
+<p>מען קען שאפן א בוים פון פעקלעך אין אנקי דורך שלעפן און אראפלאזן פעקלעך אינעם פעקלעך־ליסטע. מיט דער פונקציע צוזאמען מיט גרופעס אפציעס קען מען באהאלטן פעקלעך וואס מען פלאנט נישט צו נוצן:</p>
+<ol>
+<li>דריקט אויף <em>שאפן פעקל</em> און לייגט צו א פעקל מיטן נאמען "נישט אין באנוץ", "באהאלטן" אדער עפעס ענליך. מען קען צולייגן א טילדע (~) פארן נאמען, למשל "~נישט אין באנוץ", כדי דער פעקל זאל דערשיינען אונטן אין דער ליסטע.</li>
+<li>שלעפט און לאזט אראפ דעם פעקל וואס איר ווילט באהאלטן אונטערן נייעם פעקל. דערנאך מאכט דעם "נישט אין באנוץ"־פעקל צוזאמענגעפאלט דורך דריקן אויפן מינוס־סימן נעבן זיין נאמען.</li>
+<li>איר קענט זיך דא אפשטעלן אויב דאס איז גענוג פאר אייך. אויב איר לאזט דאס אזוי, וועט אבער די צאל קארטלעך צו חזרה נאך אלץ געוויזן ווערן. אויב איר ווילט אויך אראפנעמען די צאל, גייט ווייטער צו טריט 4.</li>
+<li>דריקט אויפן אפציעס־קנעפל נעבן דעם "נישט אין באנוץ"־פעקל און קלייבט אפציעס.</li>
+<li>דריקט אויפן אפציעס־קנעפל אויבן רעכטס און לייגט צו א נייע גרופע אפציעס; איר קענט זי רופן "פעקל נישט אין באנוץ" אדער אן ענליכן נאמען.</li>
+<li>אין דער לשונית נייע קארטלעך שטעלט די שיעור נייע קארטלעך/טאג צו 0. אין דער לשונית חזרות שטעלט די העכסטע שיעור חזרות/טאג צו 0.</li>
+</ol>
+<p>כדי צוריקצוברענגען דעם פעקל, שלעפט און לאזט אים אראפ צוריק אינעם הויפט־פעקלעך־ליסטע. מען קען אים שלעפן צום אויבערשטן אדער אונטערשטן עק פון דער ליסטע כדי אנצוקומען צום הויפט־שטאפל. איר קענט איבערלאזן דעם "נישט אין באנוץ"־פעקל פאר שפעטערדיגן באנוץ.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="איך-מעבירים-כרטיסים-בין-חפיסות"></a></p>
+<h1 id="ווי-אזוי-פירט-מען-קארטלעך-אריבער-צווישן-פעקלעך"><a class="header" href="#ווי-אזוי-פירט-מען-קארטלעך-אריבער-צווישן-פעקלעך">ווי אזוי פירט מען קארטלעך אריבער צווישן פעקלעך?</a></h1>
+<p>איר קענט וועלן אריבערפירן קארטלעך צווישן פעקלעך פאר פארשידענע סיבות, צום ביישפיל:</p>
+<ul>
+<li>איר האט זיי בטעות אריינגעלייגט אינעם נישט־ריכטיגן פעקל</li>
+<li>איר האט געשאפן איין גרויסן פעקל און ווילט אים צעטיילן אין עטליכע קלענערע פעקלעך</li>
+<li>איר האט געשאפן עטליכע קליינע פעקלעך און ווילט זיי צונויפשטעלן אין איין גרעסערן פעקל</li>
+</ul>
+<p>אינעם <a href="../manual/browsing.html">דורכבלעטערער</a> איז דא די אפציע <strong>טוישן פעקל</strong> אינעם מעניו־שטאנג פאר אזעלכע אפעראציעס.</p>
+<p>זעט אויך <a href="merging-or-combining-two-decks.html">צונויפמישן/צונויפשטעלן צוויי פעקלעך</a> פאר מער גענויע אנווייזונגען פאר דעם מצב.</p>
+<hr />
+<p>אויב איר ווילט אריבערפירן קארטלעך צווישן <em>פראפילן</em>, אדער זיי טיילן מיט אנדערע מענטשן, קענט איר נוצן אנקי'ס <a href="../manual/exporting.html">עקספארט־פונקציע</a> צו עקספארטירן א פארפאקטער פעקל. אויב איר ווילט טיילן אדער אריבערפירן צו א נייעם פראפיל נאר א טייל קארטלעך פון א פעקל, קענט איר ערשט נוצן די אויבנדערמאנטע אפציע 'טוישן פעקל' און זיי אריבערפירן צו א צייטווייליגן פעקל, און דערנאך עקספארטירן דעם פעקל.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="מיזוגאיחוד-של-שתי-חפיסות"></a></p>
+<h1 id="צונויפמישןצונויפשטעלן-צוויי-פעקלעך"><a class="header" href="#צונויפמישןצונויפשטעלן-צוויי-פעקלעך">צונויפמישן/צונויפשטעלן צוויי פעקלעך</a></h1>
+<p>אנקי האט נישט קיין באזונדערע פונקציע צו צונויפשטעלן פעקלעך, אבער מען קען דאס לייכט טון דורך אריבערפירן אלע קארטלעך פון איין פעקל צום צווייטן. פאלגט די פאלגנדע טריט:</p>
+<ol>
+<li>עפנט דעם דורכבלעטערער — דריקט אויף <strong>דורכבלעטערן</strong> אויבן אינעם אנקי־הויפטפענסטער — און קלייבט איינעם פון די פעקלעך וואס איר ווילט צונויפמישן אינעם לינקן פענסטערל.</li>
+<li>קלייבט אלע קארטלעך (רעדאקטירן ← אויסקלייבן אלעס, אדער Ctrl-A) און דריקט אויף <strong>טוישן פעקל</strong> אינעם מעניו־שטאנג. קלייבט דעם צווייטן פעקל און דריקט אויף <strong>אריבערפירן קארטלעך</strong>.</li>
+<li>אויב איר ווילט צונויפמישן מער ווי צוויי פעקלעך, טוט איבער טריט 1 און 2 לויטן צורך, ביז איר האט נאר איין פעקל.</li>
+<li>פארמאכט דעם דורכבלעטערער צו צוריקגיין צום פעקלעך־ליסטע, און מעקט אויס יעדן ליידיגן פעקל דורך דריקן אויפן איינשטעלונגען־קנעפל רעכטס פון אים. אנקי וועט אייך ווארענען אויב איר פרובירט אויסצומעקן א פעקל וואס האט נאך קארטלעך.</li>
+</ol>
+<p>זעט אויך <a href="how-do-i-move-cards-between-decks.html">ווי אזוי פירט מען קארטלעך אריבער צווישן פעקלעך?</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="כשל-בייבואייצוא-עקב-חותמות-זמן-עתידיות"></a></p>
+<h1 id="אימפארטעקספארט-גייט-נישט-צוליב-צייטשטעמפלען-אין-דער-צוקונפט"><a class="header" href="#אימפארטעקספארט-גייט-נישט-צוליב-צייטשטעמפלען-אין-דער-צוקונפט">אימפארט/עקספארט גייט נישט צוליב צייט־שטעמפלען אין דער צוקונפט</a></h1>
+<p>געוויסע געטיילטע פעקלעך האבן קארטלעך/רשומות מיט נישט־ריכטיגע שאפונג־דאטומען, למשל זיי זאגן אז די קארטלעך זענען געשאפן געווארן אין יאר 40000 אנשטאט 2023. דאס ברענגט פארשידענע פראבלעמען, און אלע קארטלעך וואס ווערן געשאפן נאכן אימפארטירן אזא פעקל באקומען ענליכע נישט־ריכטיגע צייט־שטעמפלען.</p>
+<p>כדי דער פראבלעם זאל זיך נישט פארשפרייטן, לאזן די נייערע Anki־ווערסיעס נישט עקספארטירן פעקלעך מיט נישט־ריכטיגע דאטומען.</p>
+<p><a id="בעת-ייצוא"></a></p>
+<h2 id="ביים-עקספארטירן"><a class="header" href="#ביים-עקספארטירן">ביים עקספארטירן</a></h2>
+<p>אויב איר באקומט דעם מעלדונג ביים עקספארטירן, קענט איר דאס פארריכטן מיט איינעם פון די פאלגנדע וועגן:</p>
+<ul>
+<li>אין דער קאמפיוטער־ווערסיע 2.1.61 און ווייטער, נוצט דעם מעניו־איינטראג מכשירים &gt; איבערקוקן די דאטאבאנק.</li>
+<li>אין AnkiMobile פון ווערסיע 2.0.90 און ווייטער, נוצט "איבערקוקן די דאטאבאנק" אינעם איינשטעלונגען־עקראן.</li>
+</ul>
+<p><a id="בעת-ייבוא"></a></p>
+<h2 id="ביים-אימפארטירן"><a class="header" href="#ביים-אימפארטירן">ביים אימפארטירן</a></h2>
+<p>די Anki־ווערסיעס דערמאנט אינעם פריערדיגן חלק קענען שוין אויטאמאטיש פארריכטן פראבלעמאטישע פעקלעך ביים אימפארטירן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="אנקי-לא-מראה-לי-את-כל-הכרטיסים-שלי"></a></p>
+<h1 id="אנקי-ווייזט-מיר-נישט-אלע-מיינע-קארטלעך"><a class="header" href="#אנקי-ווייזט-מיר-נישט-אלע-מיינע-קארטלעך">אנקי ווייזט מיר נישט אלע מיינע קארטלעך!</a></h1>
+<p><a id="אנקי-מחליט-אילו-כרטיסים-אתם-רואים"></a></p>
+<h2 id="אנקי-באשליסט-וועלכע-קארטלעך-איר-זעט"><a class="header" href="#אנקי-באשליסט-וועלכע-קארטלעך-איר-זעט">אנקי באשליסט וועלכע קארטלעך איר זעט</a></h2>
+<p>אנקי איז געמאכט אייך צו העלפן געדענקען גרויסע מאסן חומר אויף א לאנגע צייט. דערפאר ארבעט ער אנדערש ווי א געווענליכער קארטלעך־פראגראם.</p>
+<p>אין א געווענליכן קארטלעך־פראגראם זעט איר די זעלבע גרופע קארטלעך נאכאמאל און נאכאמאל, און באשליסט ווען אויפצוהערן. אזוי איבערחזרן חומר — "אריינשטופן" — איז געווענליך וואס מיר זענען געוואוינט, און פאר פילע מענטשן איז דאס דער נאטירליכער וועג צו לערנען.</p>
+<p>עס איז נאר דא איין פראבלעם מיט דעם וועג: ער איז נישט זייער ווירקזאם! פארשונגען האבן געוויזן אז מען קען באקומען בעסערע רעזולטאטן דורך צולייגן א ווארטן צווישן יעדע חזרה אויף א פרט, אנשטאט אים איבערחזרן עטליכע מאל אין א קורצע צייט. דער ווארטן צווישן חזרות הייסט "חזרות מיט אפשטאנדן".</p>
+<p>אין אנקי, אנשטאט דורכגיין דעם חומר ביז איר באשליסט אויפצוהערן, קלייבט אנקי וועלכע קארטלעך איר דארפט זען. אויב איר האט פארגעסן א קארטל און געדריקט "נאכאמאל", וועט ער באלד ווידער געוויזן ווערן. נאכדעם וואס איר האט דעם קארטל ריכטיג געדענקט מיט אן אפשטאנד פון 10 מינוט, וועט אנקי אים נישט ווידער ווייזן ביז מארגן. אויב איר ענטפערט אויך דעמאלט ריכטיג, וועט דער ווארטן וואקסן יעדעס מאל.</p>
+<p>אויב חזרות מיט אפשטאנדן זענען נייע פאר אייך, זענט איר אפשר מסופק און שפירט נאך אז אריינשטופן חומר וועט אייך מער העלפן. איר זענט נישט אליין: פארשונגען האבן געוויזן אז מענטשן נעמען אן אז אריינשטופן איז מער ווירקזאם, אפילו ווען די רעזולטאטן ווייזן אז חזרות מיט אפשטאנדן ארבעטן למעשה בעסער. האלט אן אפענעם קאפ און פרובירט די שיטה פאר עטליכע וואכן איידער איר באשליסט וועלכער וועג איז דער בעסטער פאר אייך.</p>
+<p>אויב איר האט א בחינה אין עטליכע טעג, איז דאס מסתמא נישט די בעסטע צייט אנצוהייבן מיט אנקי. הגם אנקי האט מכשירים ארומצוגיין דעם געווענליכן תזמון פאר נאענטע בחינות, נעמט צייט זיך אויסצולערנען ווי זיי צו נוצן, און זיי זענען שווערפאליג פאר א טעגליכן באנוץ. אויב איר האט באלד א בחינה, איז אפשר כדאי צו לערנען ווי פריער און צוריקקומען צו אנקי ווען איר זענט אונטער ווייניגער דרוק.</p>
+<p><a id="כרטיסים-חדשים"></a></p>
+<h2 id="נייע-קארטלעך"><a class="header" href="#נייע-קארטלעך">נייע קארטלעך</a></h2>
+<p>לויט ברירת מחדל וועט אנקי ווייזן ביז 20 נייע קארטלעך יעדן טאג. דער טעם פונעם שיעור איז אז מען וועט די קארטלעך דארפן איבערחזרן אין די קומענדיגע טעג — למשל מארגן, דערנאך נאך עטליכע טעג, און אזוי ווייטער. יעדן טאג וואס איר נוצט אנקי וועלן נאך 20 נייע קארטלעך צוקומען, און די חזרות וועלן זיך צוזאמענקלייבן. אויב איר לייגט צו 20 נייע קארטלעך יעדן טאג, קענט איר אין די ערשטע שטאפלען ערווארטן אז די טעגליכע חזרות וועלן וואקסן ביז בערך 200 קארטלעך א טאג.</p>
+<p>מען קען העכערן די צאל נייע קארטלעך יעדן טאג דורך צופאסן די פעקל־אפציעס אדער נוצן "לערנען לויט אייגענע וואונטשן". זייט אבער פארזיכטיג: אויב איר פרובירט לערנען צו פילע נייע קארטלעך אויף אמאל, וועט איר געפינען אז די שפעטערדיגע חזרות זענען א שווערע ארבעט, און צום סוף וועט איר דעם חומר ווידער פארגעסן. הגם איר ווילט זיכער שוין אנהייבן לערנען אייער חומר, איז ראטזאם צו פרובירן אנקי מיט די ברירות מחדל פאר א וואך אדער צוויי איידער איר טוישט די שיעורים.</p>
+<p>אין דער אנקי־ווערסיע פאר זכרון הלימוד איז דער שיעור לויט ברירת מחדל אויסגעשאלטן. מען קען אים צוריקשטעלן אין די <a href="../manual/deck-options.html">פעקל־אפציעס</a>.</p>
+<h2 id="חזרות"><a class="header" href="#חזרות">חזרות</a></h2>
+<p>אנקי וועט ווייזן קארטלעך וואס איר האט שוין איבערגעחזרט ווען ער האלט אז איר גייט זיי פארגעסן. די אפשטאנדן הייבן זיך אן פון איין טאג, אבער קענען וואקסן צו חדשים אדער יארן אויב איר ענטפערט א קארטל ריכטיג נאכאמאל און נאכאמאל.</p>
+<p>אויב איר האט נישט באלד א בחינה, איז בעסער איבערצוחזרן קארטלעך לויט אנקי'ס תזמון. פרובירט זיך צוריקצוהאלטן פון איבערחזרן חומר עטליכע מאל אים צו פארשטארקן: עס איז ווירקזאמער פשוט אביסל צו ווארטן ווי זען דעם זעלבן אינהאלט נאכאמאל און נאכאמאל. אויב איר האט פרייע צייט, קלערט צו צולייגן נאך נייע קארטלעך צו אנקי אדער לערנען אנדערע זאכן.</p>
+<p>אויב איר האט א נאענטע בחינה און דארפט איבערחזרן דעם חומר פריער, קענט איר זאגן אנקי אז איר ווילט <a href="../manual/filtered-decks.html">איבערחזרן אויסער דעם געווענליכן תזמון</a>. אויב איר ווילט נאר שנעל דורכבלעטערן עטליכע קארטלעך, איבערצוקוקן טעותים נאכן זיי שאפן אדער כאפן אן אלגעמיינעם בליק אויפן אינהאלט, קענט איר נוצן דעם <strong>פארויסבליק</strong>־קנעפל אויבן רעכטס אינעם דורכבלעטער־עקראן.</p>
+<p><a id="ספירת-הכרטיסים-יורדת-ביותר-מאחד"></a></p>
+<h2 id="די-קארטלצאל-גייט-אראפ-מיט-מער-ווי-איינס"><a class="header" href="#די-קארטלצאל-גייט-אראפ-מיט-מער-ווי-איינס">די קארטל־צאל גייט אראפ מיט מער ווי איינס</a></h2>
+<p>אויב איר זעט אז די קארטל־צאל גייט אראפ מיט מער ווי איינס נאך געוויסע אפעראציעס ווי צוריקנעמען (undo), קוקט איבער צי אייער רשומה דארף שאפן עטליכע קארטלעך, און צי איינער איז ליידיג אדער פולט נישט די תנאים פון דער תבנית. קרעדיט: דער אלטער Anki־שטיצע־ארטיקל וועגן פארקערטע קארטלעך וואס האבן זיך נישט געוויזן האט ערקלערט אז קארטלעך ווערן געשאפן נאר ווען די תבנית האט א גילטיגן אינהאלט. דערפאר קען טוישן א פעלד אדער צוריקנעמען אן אפעראציע מאכן קארטלעך פארשווינדן אויב די תבנית גיט שוין נישט ארויס קיין שאלה.</p>
+<p><a id="קישורים-קשורים"></a></p>
+<h2 id="פארבונדענע-לינקס"><a class="header" href="#פארבונדענע-לינקס">פארבונדענע לינקס</a></h2>
+<p><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html">אנקי־איינשטעלונגען זיך צו גרייטן פאר א גרויסער בחינה</a></p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="האם-ניתן-ללמוד-את-הכרטיסים-בסדר-מסוים"></a></p>
+<h1 id="קען-מען-לערנען-די-קארטלעך-אין-א-באשטימטן-סדר"><a class="header" href="#קען-מען-לערנען-די-קארטלעך-אין-א-באשטימטן-סדר">קען מען לערנען די קארטלעך אין א באשטימטן סדר?</a></h1>
+<p><a id="כרטיסים-חדשים"></a></p>
+<h2 id="נייע-קארטלעך-1"><a class="header" href="#נייע-קארטלעך-1">נייע קארטלעך</a></h2>
+<p>לויט ברירת מחדל ווערן נייע קארטלעך געוויזן לויט זייער ריי־נומער. אויב איר עפנט
+דעם "דורכבלעטערן"־עקראן און קוקט אין דער "ריי"־זייל, וועט איר זען אז נייע קארטלעך האבן נומערן
+ווי <code>חדש #1</code>, <code>חדש #2</code> און אזוי ווייטער. אנקי וועט ערשט ווייזן דעם קארטל מיטן
+קלענסטן ריי־נומער. אויב איר ווילט טוישן דעם סדר, קלייבט איין אדער עטליכע קארטלעך,
+און נוצט דערנאך "טוישן פלאץ" אינעם "קארטלעך"־מעניו.</p>
+<p>די צאל נייע קארטלעך וואס וועט געוויזן ווערן יעדן טאג ווענדט זיך אין די טעגליכע שיעורים
+וואס איר האט באשטימט אין די פעקל־אפציעס.</p>
+<p>ווען איר האט עטליכע קארטלעך פאר איין רשומה — צום ביישפיל סיי פארנט-&gt;הינטן
+און סיי הינטן-&gt;פארנט, אדער עטליכע אויסלאזונגען אין איין רשומה — וועלן די קארטלעך
+האבן דעם זעלבן "נייע"־נומער. איר קענט וועלן זיי ווייזן אויף אנדערע טעג,
+מיט אפשטאנדן איינער פונעם צווייטן, אדער נאכאנאנד, לויט אייערע וואונטשן.</p>
+<ul>
+<li>כדי די קארטלעך זאלן קומען אויף אנדערע טעג, שאלט איין "באזייטיגן ביז מארגן" אין די פעקל־אפציעס.</li>
+<li>שוועסטער־קארטלעך ווערן לויט ברירת מחדל געוויזן מיט אפשטאנדן איינער פונעם צווייטן.</li>
+<li>כדי די קארטלעך זאלן קומען איינס נעבן צווייטן, שאלט איין דעם <a href="./the-2021-scheduler.html">מתזמן v3</a>,
+און טוישט דערנאך דעם סארטיר־סדר אין די פעקל־אפציעס, אינעם חלק "ווייז־סדר".</li>
+</ul>
+<h2 id="חזרות-1"><a class="header" href="#חזרות-1">חזרות</a></h2>
+<p>ווייל אנקי <a href="./anki-is-not-showing-me-all-my-cards.html">איז געמאכט אייך צו ווייזן קארטלעך ווידער ווען איר גייט זיי פארגעסן</a>,
+קען מען נישט האלטן דעם אריגינעלן סדר ווען קארטלעך קומען ווידער צו חזרה,
+ווייל זיי קענען זיין באשטימט אויף אנדערע טעג. דערפאר דארפט איר
+רעדאקטירן אייערע קארטלעך, אז זיי זאלן נישט זיך פארלאזן אויף א צוזאמענהאנג אדער דערויף אז
+אנדערע קארטלעך זענען שוין געזען געווארן; אנדערש וועט אייך שווער זיין זיי איבערצוחזרן.</p>
+<p>אויב איר האט א חזרות־צבר, איז דא א געוויסע בייגזאמקייט אינעם סדר וואס
+די חזרה־קארטלעך ווערן געוויזן. נאכן איינשאלטן דעם <a href="./the-2021-scheduler.html">מתזמן v3</a>, קוקט
+אין די ווייז־אפציעס אין די פעקל־אפציעס.</p>
+<p>הגם דער געווענליכער חזרה־פראצעס וועט נישט ווייזן קארטלעך לויטן סדר, קענט איר נוצן
+דעם <a href="../manual/browsing.html">"דורכבלעטערן"־עקראן</a> צו סארטירן אייערע קארטלעך אין א באשטימטן
+סדר, און דערנאך נוצן דעם "פארויסבליק"־קנעפל זיי דורכצוגיין אין דעם סדר.
+דאס גייט ארום דעם געווענליכן אנקי־לערן־פראצעס, און וועט נישט טוישן דעם תזמון
+פון די קארטלעך אדער זייער חזרה־געשיכטע.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="זמני-חזרה-לאחר-הפסקה"></a></p>
+<h1 id="חזרהצייטן-נאך-א-הפסקה"><a class="header" href="#חזרהצייטן-נאך-א-הפסקה">חזרה־צייטן נאך א הפסקה</a></h1>
+<p>ווען מען נוצט אנקי יעדן טאג, באקומט א קארטל א לענגערן אפשטאנד יעדעס מאל וואס מען ענטפערט ריכטיג. לאמיר אננעמען אז דריקן 'גוט' דאפלט בערך דעם אפשטאנד. אזוי ווארט מען 5 טעג, דערנאך 10 טעג, 20 טעג, 40 טעג, און אזוי ווייטער.</p>
+<p>ווען מענטשן קומען צוריק צו זייער פעקל נאך וואכן אדער חדשים אן לערנען, זענען זיי אפט איבערראשט ווי לאנג די אפשטאנדן זענען געווארן. דאס איז ווייל אנקי נעמט אין באטראכט די אמת'ע צייט וואס מען האט דעם קארטל נישט געזען, נישט נאר די צייט צו וועלכער ער איז באשטימט געווארן. אויב דער קארטל איז געווען באשטימט צו חזרה נאך 5 טעג אבער איר האט א חודש נישט געלערנט, וועט דער קומענדיגער אפשטאנד זיין נענטער צו 60 טעג ווי צו 10 טעג.</p>
+<p>דאס איז גוט. אויב איר האט געקענט געדענקען א קארטל נאך א חודש ווארטן, איז מסתבר אז איר וועט אים געדענקען אויך נאך א לענגערן ווארטן. די זעלבע יסודות וואס מאכן די חזרות־מיט־אפשטאנדן־שיטה (SRS) ווירקזאם ביים געווענליכן באנוץ, געלטן אויך נאך א פארשפעטיגונג. עס האט אויך נישט קיין גרויסן שכל באשטימען א קארטל אויף נאך 10 טעג אויב איר האט אים לייכט געענטפערט נאך א גאנצן חודש; דאס וואלט געווען ווי צוריקגיין.</p>
+<p>צוריקשטעלן דעם פעקל איז א נאך ערגערער לייזונג. נאכן צוריקקומען פון א לאנגע הפסקה האט איר אפשר פארגעסן אסאך קארטלעך, אבער ווארשיינליך נישט אלע. צוריקשטעלן דעם גאנצן פעקל הייסט פארברענגען צייט צו לערנען חומר וואס איר קענט שוין.</p>
+<p>איר קענט געפינען פארשפעטיגטע קארטלעך וואס איר האט געדענקט, אבער נישט באקוועם, ווייל איר האט זיי נישט איבערגעחזרט אין זייער צייט. דערפאר באהאנדלט אנקי די פארשפעטיגונג אנדערש לויט אייער ענטפער. ביי 'גרינג' ווערן דער לעצטער אפשטאנד און די גאנצע פארשפעטיגונג צוגערעכנט צוזאמען צום קומענדיגן אפשטאנד. ביי 'גוט' ווערט נאר האלב פון דער פארשפעטיגונג גערעכנט. ביי 'שווער' ווערט די צוגעלייגטע פארשפעטיגונג בכלל נישט גערעכנט. אויב א קארטל האט געדארפט קומען נאך 5 טעג און איר האט אים געענטפערט 20 טעג שפעט, וועלן די קומענדיגע חזרה־צייטן זיין בערך:</p>
+<ul>
+<li>
+<p>שווער: 5 * 1.2 = 6 טעג</p>
+</li>
+<li>
+<p>גוט: (5 + 20/2) * 2.5 = 37.5 טעג</p>
+</li>
+<li>
+<p>גרינג: (5 + 20) * 3.25 = 81.25 טעג</p>
+</li>
+</ul>
+<p>די גענויע ציפערן ווענדן זיך אין אייער פריערדיגע רעזולטאטן מיטן קארטל און די איינשטעלונגען פונעם פעקל.</p>
+<p>אויב איר האט אנגעצייכנט א קארטל אלס 'שווער', איז דער קומענדיגער אפשטאנד פארזיכטיג, און קיין צוגעלייגטער אפשטאנד ווערט נישט גערעכנט. ביי 'גוט' איז דער קומענדיגער אפשטאנד נאר בערך 50% גרעסער. 'גרינג' פארגרעסערט דעם אפשטאנד שטארק, ווי געווענליך.</p>
+<p>דערפאר איז ראטזאם צו לערנען ווי געווענליך ביים צוריקקומען צו אנקי נאך א הפסקה. אויב איר מוזט אבער ממש צוריקשטעלן דעם פעקל, קענט איר אויסקלייבן די קארטלעך אינעם דורכבלעטערער און נוצן <strong>קארטלעך</strong>-&gt;<strong>פארגעסן</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="מופיעים-עותקים-נוספים-של-כרטיס"></a></p>
+<h1 id="נאך-קאפיעס-פון-א-קארטל-ווייזן-זיך"><a class="header" href="#נאך-קאפיעס-פון-א-קארטל-ווייזן-זיך">נאך קאפיעס פון א קארטל ווייזן זיך</a></h1>
+<p>אמאל האט איר אפשר רעדאקטירט א סארט רשומה און דערנאך באמערקט אז עטליכע קארטלעך זענען דאפלט; אמאל קענען אפילו זיין נאך מער קאפיעס.</p>
+<p>מען קען דאס פארריכטן אזוי:</p>
+<ol>
+<li>געפינט איינעם פון די דאפלטע קארטלעך אינעם דורכבלעטערער.</li>
+<li>דריקט אויפן קנעפל 'קארטלעך'.</li>
+<li>קלייבט אויס יעדן סארט קארטל נאכאנאנד אינעם אויבערשטן אויסקלייב־פעלד, און פארגלייכט דעם אינהאלט פון די תבנית־פעלדער און פונעם קארטל־פארויסבליק. אויב די סארטן קארטלעך זענען גלייך, מעקט אויס איינעם פון זיי (אפציעס ← אויסמעקן).</li>
+</ol>
+<p>דאס זאל אראפנעמען אלע דאפלטע קארטלעך וואס נוצן דעם סארט רשומה. אויב איר האט נאך אלץ פראבלעמען, קען דער פראבלעם זיין אין עטליכע סארטן רשומות; אין אזא פאל קענט איר איבערחזרן די טריט מיט א קארטל פונעם אנדערן סארט רשומה.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="מרווח-קשהטוב-ארוך-יותר-ממרווח-טובקל"></a></p>
+<h1 id="דער-אפשטאנד-פון-שווערגוט-איז-לענגער-ווי-פון-גוטגרינג"><a class="header" href="#דער-אפשטאנד-פון-שווערגוט-איז-לענגער-ווי-פון-גוטגרינג">דער אפשטאנד פון 'שווער'/'גוט' איז לענגער ווי פון 'גוט'/'גרינג'</a></h1>
+<p>ווען א קארטל איז אין לערנען:</p>
+<ul>
+<li>'נאכאמאל' וועט זיין דער ערשטער לערן־טריט</li>
+<li>'שווער' וועט איבערחזרן דעם יעצטיגן לערן־טריט; אינעם ערשטן טריט איז ער אבער דער דורכשניט פון די ערשטע צוויי טריט</li>
+<li>'גוט' וועט זיין דער קומענדיגער לערן־טריט, אדער דער אפשטאנד פאר אן אויסגעלערנטן קארטל אויב אלע לערן־טריט זענען פארטיג</li>
+<li>'גרינג' וועט זיין דער 'גרינג־אפשטאנד'</li>
+</ul>
+<p>אויב די <a href="../manual/deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">לערן־טריט</a> זענען לענגער ווי <a href="../manual/deck-options.html#%D7%9E%D7%A8%D7%95%D7%95%D7%97-%D7%A1%D7%99%D7%95%D7%9D-%D7%9C%D7%9E%D7%99%D7%93%D7%94">דער אפשטאנד פאר אן אויסגעלערנטן קארטל אדער דער גרינג־אפשטאנד</a>, קען 'שווער'/'גוט' ווייזן לענגערע אפשטאנדן ווי 'גוט'/'גרינג'.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="אני-יוצא-לחופשה-האם-אני-יכול-להשהות-את-המתזמן"></a></p>
+<h1 id="איך-פאר-אויף-וואקאציע-קען-איך-אפשטעלן-דעם-מתזמן"><a class="header" href="#איך-פאר-אויף-וואקאציע-קען-איך-אפשטעלן-דעם-מתזמן">איך פאר אויף וואקאציע. קען איך אפשטעלן דעם מתזמן?</a></h1>
+<p>צוריקקומען פון וואקאציע און געפינען אנקי אין גענוי דעם זעלבן מצב ווי איר האט אים געלאזט קען קלינגען צוציענדיג. ליידער, הגם מען קען לייכט באפעלן דעם קאמפיוטער אפצושטעלן זיינע שאצונגען פון אייער פארגעס־גיכקייט, קען מען אייער זכרון נישט אפשטעלן. זכרונות וועלן ווייטער שוואכער ווערן אויב איר מאכט נישט קיין חזרות. אויב איר שטעלט אפ דעם מתזמן, וועט איר אפשטופן די חזרה אויף יעדן קארטל אינעם פעקל, און אזוי פארגרעסערן דעם שאנס אים צו פארגעסן — אפילו די קארטלעך וואס וואלטן געווענליך געקומען נאכן צוריקקומען פון וואקאציע.</p>
+<p>אנקי האט די פונקציע "באשטימען דעם חזרה־דאטום" אינעם דורכבלעטער־עקראן, וואס לאזט טוישן דעם חזרה־דאטום פון קארטלעך. מען קען זי נוצן צו פארפריערן די חזרה, כדי צו קענען מער לערנען פאר דער וואקאציע, אדער אפשטופן צו א שפעטערן דאטום. טוט ענדערונגען פארזיכטיג: אויב איר טוישט די חזרה־דאטומען צו שטארק, איז דא א גוטער שאנס אז איר וועט די קארטלעך פארגעסן און דארפן זיי פונדאסניי לערנען.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="איפוס-התקדמות-בחפיסה"></a></p>
+<h1 id="צוריקשטעלן-דעם-פארשריט-אין-א-פעקל"><a class="header" href="#צוריקשטעלן-דעם-פארשריט-אין-א-פעקל">צוריקשטעלן דעם פארשריט אין א פעקל</a></h1>
+<p>אמאל ווילט איר אפשר "צוריקשטעלן" א טייל פון אייער אוסף, אז די קארטלעך זאלן ווידער ווערן נייע און דער תזמון־אלגאריטם זאל אנהייבן פון אנהייב. צום ביישפיל האט איר אינגאנצן געטוישט אדער דערהיינטיגט א קארטל און דארפט אים פונדאסניי לערנען. אדער האט איר שנעל דורכגעגאנגען עטליכע קארטלעך אן זיי באמת לערנען, נאר צו כאפן א בליק אדער פארשטיין ווי אנקי ארבעט.</p>
+<p><strong>עס איז נישט ראטזאם צוריקצושטעלן א טייל פונעם אוסף ווייל איר זענט געבליבן הינטערשטעליג.</strong> הגם שווער קען זיין זיך צו ערהוילן פון א גרויסן חזרות־צבר, איז אויסמעקן דעם גאנצן פארשריט דאס ערגסטע וואס איר קענט טון: איר וועט נאך געדענקען אסאך פון די קארטלעך, אבער מוזן אלעס אנהייבן פון אנהייב, הגם איר וואלט פשוט געקענט דריקן "גרינג". אנשטאט דעם, שטעלט אפשר א <a href="../manual/deck-options.html#%D7%9E%D7%92%D7%91%D7%9C%D7%95%D7%AA-%D7%99%D7%95%D7%9E%D7%99%D7%95%D7%AA">טעגליכן חזרות־שיעור</a> — "העכסטע צאל חזרות א טאג" אין די אפציעס — און לערנט א באשטימטע צאל פארשפעטיגטע קארטלעך יעדן טאג ביז איר כאפט זיך אויף.</p>
+<p><a id="איפוס-כרטיסים-בתוך-אנקי"></a></p>
+<h2 id="צוריקשטעלן-קארטלעך-אין-אנקי"><a class="header" href="#צוריקשטעלן-קארטלעך-אין-אנקי">צוריקשטעלן קארטלעך אין אנקי</a></h2>
+<ol>
+<li>געפינט אינעם דורכבלעטערער די קארטלעך וואס איר ווילט צוריקשטעלן.</li>
+<li>צייכנט אן אלע קארטלעך און קלייבט <strong>קארטלעך</strong>-&gt;<strong>צוריקשטעלן</strong>; אין עלטערע ווערסיעס <strong>קארטלעך</strong>-&gt;<strong>פארגעסן</strong>.</li>
+</ol>
+<p>ווען איר טוט דאס, וועט Anki די קארטלעך צוריק מאכן נייע. אויב איר דריקט אויף <strong>אינפארמאציע</strong> אינעם דורכבלעטערער, וועט איר זען א פארשרייבונג פון אלע פריערדיגע חזרות. די געשיכטע וועט אבער נישט באאיינפלוסן דעם תזמון: די קארטלעך וועלן באהאנדלט ווערן גענוי ווי נייע קארטלעך.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הגדרות-לשימוש-באנקי-כהכנה-למבחן-גדול"></a></p>
+<h1 id="אנקיאיינשטעלונגען-זיך-צו-גרייטן-פאר-א-גרויסער-בחינה"><a class="header" href="#אנקיאיינשטעלונגען-זיך-צו-גרייטן-פאר-א-גרויסער-בחינה">אנקי־איינשטעלונגען זיך צו גרייטן פאר א גרויסער בחינה</a></h1>
+<p>אויב איר האט אנגעהויבן נוצן אנקי זיך צו גרייטן פאר א גרויסער בחינה וואס וועט זיין אין עטליכע וואכן אדער חדשים, ווילט איר אפשר וויסן ווי בעסטן איינצושטעלן דעם פראגראם. אנקי'ס ברירות מחדל זענען בעיקר פאר לערנען און געדענקען אינפארמאציע אויף א לאנגע צייט, אבער דאס איז געווענליך אויך דער בעסטער וועג זיך צו גרייטן פאר א בחינה. איר דארפט נאר זיכער מאכן צו ענדיגן דעם חומר גענוג פרי, כדי צו זיין גרייט פאר דער בחינה.</p>
+<p><a id="כמה-כרטיסים-חדשים-ללמוד-ביום"></a></p>
+<h2 id="וויפיל-נייע-קארטלעך-זאל-מען-לערנען-א-טאג"><a class="header" href="#וויפיל-נייע-קארטלעך-זאל-מען-לערנען-א-טאג">וויפיל נייע קארטלעך זאל מען לערנען א טאג?</a></h2>
+<p>די וויכטיגסטע שאלה איז וויפיל נייע קארטלעך איר דארפט לערנען יעדן טאג, כדי גרייט צו זיין ביז דער בחינה. א זייער פשוט'ער וועג דאס אויסצורעכענען איז צעטיילן די גאנצע צאל קארטלעך מיט די איבעריגע לערן־טעג. איידער איר טוט דאס, איז אבער ראטזאם צוצופאסן די צאל לערן־טעג:</p>
+<ul>
+<li>אויב איר האט גענוג צייט, איז געווענליך ראטזאם איבערצולאזן צוויי ביז פיר וואכן צווישן דעם לערנען דעם לעצטן נייעם חומר און דער בחינה. אזוי וועט איר האבן צייט זיך גוט איינצופרעגן אין דעם גאנצן חומר און שפירן זיכער דערין, און אויך מאכן נאך א חזרה גלייך פאר דער בחינה. דערפאר איז כדאי אראפצורעכענען 14 ביז 30 טעג פון די איבעריגע טעג.</li>
+<li>אויב איר זענט ווי רוב מענטשן, וועט איר מסתמא אמאל פארפאסן עטליכע לערן־טעג. פלאנט דערפאר פאראויס און רעכנט אראפ עטליכע טעג, כדי נישט מער הינטערשטעליג צו ווערן ווען דאס געשעט.</li>
+<li>אויב איר ערווארט צו צולייגן נאך קארטלעך ביז דער בחינה, נעמט אין חשבון די מאס צוגעלייגטן חומר וואס איר פלאנט.</li>
+</ul>
+<p>נאך די צופאסונגען קענט איר צעטיילן די גאנצע צאל קארטלעך אינעם פעקל מיט דער צוגעפאסטער צאל טעג, און אזוי באקומען וויפיל נייע קארטלעך איר דארפט לערנען א טאג. מען קען באשטימען די צאל אין דער לשונית <strong>נייע קארטלעך</strong> אינעם פעקל־אפציעס־עקראן. כדי צו וויסן וויפיל נייע קארטלעך זענען אינעם פעקל, קלייבט אים אינעם פעקלעך־ליסטע, דריקט <strong>דורכבלעטערן</strong> אויבן אינעם פענסטער, דריקט Enter צו זוכן דעם יעצטיגן פעקל, און קוקט אויפן קעפל־שטאנג.</p>
+<p><a id="ביצוע-חזרה-נוספת"></a></p>
+<h2 id="מאכן-נאך-א-חזרה"><a class="header" href="#מאכן-נאך-א-חזרה">מאכן נאך א חזרה</a></h2>
+<p>אויב איר האט פארענדיגט אלע נייע קארטלעך און האט נאך צייט, און אייער בחינה וועט זיין אין עטליכע טעג, ווילט איר אפשר שנעל דורכגיין אלע אדער א טייל קארטלעך, כדי צו רענענען די וואס איר האט פארגעסן זינט דער לעצטער חזרה. איר קענט נוצן אנקי'ס <a href="../manual/filtered-decks.html#%D7%9C%D7%99%D7%9E%D7%95%D7%93-%D7%9E%D7%95%D7%AA%D7%90%D7%9D-%D7%90%D7%99%D7%A9%D7%99%D7%AA">לערנען לויט אייגענע וואונטשן</a> צו לערנען נאך קארטלעך. זעט דעם פארבונדענעם חלק אינעם מדריך פאר אנווייזונגען און די אפציעס וואס זענען פאראן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="גרסאות-ישנות-של-המתזמן"></a></p>
+<h1 id="עלטערע-ווערסיעס-פונעם-מתזמן"><a class="header" href="#עלטערע-ווערסיעס-פונעם-מתזמן">עלטערע ווערסיעס פונעם מתזמן</a></h1>
+<p>דער חלק האט אינפארמאציע וועגן מתזמן־ווערסיעס וואס זענען שוין נישט אקטועל.</p>
+<h2 id="מתזמן-v1"><a class="header" href="#מתזמן-v1">מתזמן v1</a></h2>
+<p><a id="כרטיסי-חזרה"></a></p>
+<h3 id="חזרהקארטלעך"><a class="header" href="#חזרהקארטלעך">חזרה־קארטלעך</a></h3>
+<ul>
+<li>ווען א פעקל האט אונטערפעקלעך, קומען די קארטלעך פון יעדן פעקל אין זיין ריי.</li>
+<li>דער מתזמן v1 לייגט די שיעורים פונעם הויפט־פעקל אויף די אונטערפעקלעך, אומאפהענגיג פון וועלכן פעקל איר האט געדריקט צו לערנען.</li>
+</ul>
+<p><a id="כרטיסי-למידה-מחדש"></a></p>
+<h3 id="קארטלעך-אין-לערנען-אדער-איבערלערנען"><a class="header" href="#קארטלעך-אין-לערנען-אדער-איבערלערנען">קארטלעך אין לערנען אדער איבערלערנען</a></h3>
+<ul>
+<li>דער <strong>גרינג</strong>־קנעפל ווערט נישט געוויזן ווען דער קארטל איז אין איבערלערנען. אין לערנען ווערן סיי <strong>גרינג</strong> און סיי <strong>שווער</strong> נישט געוויזן.</li>
+<li>די קארטל־צאל ווייזט וויפיל חזרות מען דארף צו ענדיגן אלע קארטלעך אין דער ריי, נישט די צאל קארטלעך. דערפאר קען איין קארטל אין לערנען אדער איבערלערנען גערעכנט ווערן עטליכע מאל.</li>
+<li>אפשטעלן אדער באזייטיגן ביז מארגן א קארטל אין לערנען אדער איבערלערנען ברענגט אים צוריק צום נייע־קארטלעך־ריי אדער חזרות־ריי.</li>
+</ul>
+<p><a id="כרטיסים-חדשים"></a></p>
+<h3 id="נייע-קארטלעך-2"><a class="header" href="#נייע-קארטלעך-2">נייע קארטלעך</a></h3>
+<ul>
+<li>דער מתזמן v1 לייגט די שיעורים פונעם הויפט־פעקל אויף די אונטערפעקלעך, אומאפהענגיג פון וועלכן פעקל איר האט געדריקט צו לערנען.</li>
+</ul>
+<p><a id="חפיסות-מסוננות"></a></p>
+<h3 id="געפילטערטע-פעקלעך"><a class="header" href="#געפילטערטע-פעקלעך">געפילטערטע פעקלעך</a></h3>
+<ul>
+<li>
+<p>קארטלעך ווערן געוויזן מער ענליך צו זייער געווענליכער תצוגה, אבער דאס לערנען האט זייטיגע השפעות, און דער אריגינעלער פלאץ פון נייע קארטלעך גייט פארלוירן ווען מען לערנט זיי.</p>
+</li>
+<li>
+<p>די אפציע פון אייגענע טריט לאזט אייך איבערגיין די טריט פונעם היים־פעקל און געבן אייגענע טריט אנשטאט זיי. די געגעבענע טריט געלטן סיי פאר קארטלעך אין לערנען, סיי פאר פארגעסענע חזרות און סיי פאר פריע חזרות.</p>
+</li>
+<li>
+<p>אויב איר שאפט, בויט איבער, ליידיגט אויס אדער מעקט אויס א געפילטערטן פעקל בשעת קארטלעך זענען נאך אין לערנען, ווערן זיי נייע קארטלעך. ביי נישט־געוואוסטע חזרות אין איבערלערנען ווערן אלע איבעריגע איבערלערן־טריט איבערגעהיפט.</p>
+</li>
+<li>
+<p>מען קען קארטלעך נישט באזייטיגן ביז מארגן אדער אפשטעלן בשעת זיי זענען אין א געפילטערטן פעקל.</p>
+</li>
+<li>
+<p>געפילטערטע פעקלעך האבן נאר איין פילטער.</p>
+</li>
+<li>
+<p>געפילטערטע פעקלעך קענען נישט אריינציען קארטלעך וואס זענען אין לערנען אדער איבערלערנען.</p>
+</li>
+<li>
+<p>געפילטערטע פעקלעך ווייזן נישט אלע 4 ענטפער־קנעפלעך ווען איבער־תזמון איז אויסגעשאלטן.</p>
+</li>
+</ul>
+<p><a id="גורם-האקראיות"></a></p>
+<h3 id="דער-צופעליגקייטפאקטאר"><a class="header" href="#דער-צופעליגקייטפאקטאר">דער צופעליגקייט־פאקטאר</a></h3>
+<ul>
+<li>דער צופעליגקייט־פאקטאר ווערט נישט אריינגערעכנט אין דער קומענדיגער חזרה־צייט וואס ווערט געוויזן העכער די ענטפער־קנעפלעך. אויב איר באמערקט א קליינעם אונטערשייד צווישן וואס איר האט אויסגעקליבן און די אמת'ע אפשטאנדן פון אייערע קארטלעך, איז דאס מסתמא דער טעם.</li>
+</ul>
+<h2 id="מתזמן-v2"><a class="header" href="#מתזמן-v2">מתזמן v2</a></h2>
+<p><a id="כרטיסי-חזרה-1"></a></p>
+<h3 id="חזרהקארטלעך-1"><a class="header" href="#חזרהקארטלעך-1">חזרה־קארטלעך</a></h3>
+<ul>
+<li>
+<p>ווען א פעקל האט אונטערפעקלעך, ווערן די חזרה־קארטלעך צוזאמענגענומען פון אלע אונטערפעקלעך אויף אמאל.</p>
+</li>
+<li>
+<p>דער חזרות־שיעור ווערט גענומען פונעם פעקל וואס איר האט געדריקט צו לערנען. אויב איר האט א פעקלעך־בוים אב::ילד::נכד און קלייבט "ילד", ווערן די שיעורים וואס איר האט באשטימט אויף "אב" און "נכד" נישט גערעכנט.</p>
+</li>
+</ul>
+<p><a id="כרטיסים-חדשים-1"></a></p>
+<h3 id="נייע-קארטלעך-3"><a class="header" href="#נייע-קארטלעך-3">נייע קארטלעך</a></h3>
+<ul>
+<li>דער מתזמן v2 לייגט די שיעורים פונעם הויפט־פעקל אויף די אונטערפעקלעך, אומאפהענגיג פון וועלכן פעקל איר האט געדריקט צו לערנען.</li>
+</ul>
+<p><a id="חפיסות-מסוננות-1"></a></p>
+<h3 id="געפילטערטע-פעקלעך-1"><a class="header" href="#געפילטערטע-פעקלעך-1">געפילטערטע פעקלעך</a></h3>
+<ul>
+<li>געפילטערטע פעקלעך ווייזן נישט אלע 4 ענטפער־קנעפלעך ווען איבער־תזמון איז אויסגעשאלטן.</li>
+</ul>
+<p><a id="גורם-האקראיות-1"></a></p>
+<h3 id="דער-צופעליגקייטפאקטאר-1"><a class="header" href="#דער-צופעליגקייטפאקטאר-1">דער צופעליגקייט־פאקטאר</a></h3>
+<ul>
+<li>דער צופעליגקייט־פאקטאר ווערט נישט אריינגערעכנט אין דער קומענדיגער חזרה־צייט וואס ווערט געוויזן העכער די ענטפער־קנעפלעך. אויב איר באמערקט א קליינעם אונטערשייד צווישן וואס איר האט אויסגעקליבן און די אמת'ע אפשטאנדן פון אייערע קארטלעך, איז דאס מסתמא דער טעם.</li>
+</ul>
+<p><a id="עדכון-מ-v1-ל-v2"></a></p>
+<h2 id="דערהיינטיגן-פון-v1-צו-v2"><a class="header" href="#דערהיינטיגן-פון-v1-צו-v2">דערהיינטיגן פון v1 צו v2</a></h2>
+<p>אויב איר סינכראניזירט מיט AnkiWeb, פאדערט דער דערהיינטיגונג ארויפלאדן אין איין ריכטונג צו AnkiWeb.
+מאכט זיכער אז אלע אייערע מיטלען זענען סינכראניזירט פארן דערהיינטיגן; אנדערש קענט איר
+בטעות איבערשרייבן ענדערונגען פון אייערע אנדערע מיטלען.</p>
+<p>פארן דערהיינטיגן איז ראטזאם צו עקספארטירן א גיבוי. אין דער קאמפיוטער־ווערסיע
+קענט איר נוצן <strong>טעקע &gt; עקספארטירן</strong> צו שאפן א <code>.colpkg</code>־טעקע מיט אלע
+פעקלעך און זייער תזמון. אין AnkiMobile קענט איר נוצן <strong>צולייגן/עקספארטירן</strong> צו עקספארטירן
+א <code>.colpkg</code>־טעקע. אינעם נישט־ווארשיינליכן פאל פון פראבלעמען, קענט איר צוריקברענגען
+פון דעם גיבוי.</p>
+<p>נאכן דערהיינטיגן, סינכראניזירט און קלייבט <strong>ארויפלאדן</strong> צו שיקן דעם דערהיינטיגטן אוסף
+צו AnkiWeb. דערנאך סינכראניזירט יעדן אנדערן מיטל וואס איר נוצט,
+און קלייבט <strong>אראפלאדן</strong> אויף יעדן איינעם, צו צוריקברענגען אלע אין סינכראניזירונג.</p>
+<h3 id="anki-2141--ankimobile-2075"><a class="header" href="#anki-2141--ankimobile-2075">Anki 2.1.41+ / AnkiMobile 2.0.75+</a></h3>
+<p>כדי צו דערהיינטיגן, דריקט אויפן דערהיינטיגונג־מעלדונג אינעם פעקלעך־ליסטע.</p>
+<p>אנדערש ווי אין פריערדיגע Anki־ווערסיעס, וועלן קארטלעך אין לערנען נישט צוריקגעשטעלט ווערן,
+און קארטלעך אין געפילטערטע פעקלעך וועלן בלייבן געפילטערט. דער נייער מתזמן באהאנדלט געפילטערטע פעקלעך
+אנדערש, און דערפאר וועלן אייגענע טריט וואס איר האט באשטימט אפשר שוין נישט געלטן. געפילטערטע פעקלעך
+מיט איבער־תזמון איינגעשאלטן וועלן אבער נישט צוריקשטעלן לערן־קארטלעך.</p>
+<p>נאכן דערהיינטיגן קען מען נישט צוריקגיין צום אלטן מתזמן. מען קען טאקע
+צוריקגיין צו אן עלטערער Anki־ווערסיע אויפן קאמפיוטער און דערנאך
+טוישן דעם מתזמן אין די איינשטעלונגען. נעמט אבער אין אכט אז דאס וועט פאדערן
+צוריקשטעלן אייערע לערן־קארטלעך און געפילטערטע פעקלעך.</p>
+<p><a id="גרסאות-anki-מוקדמות-יותר"></a></p>
+<h3 id="פריערדיגע-ankiווערסיעס"><a class="header" href="#פריערדיגע-ankiווערסיעס">פריערדיגע Anki־ווערסיעס</a></h3>
+<p>Anki־ווערסיעס פריער ווי 2.1.41 שטעלן צוריק אלע קארטלעך אין לערנען פארן דערהיינטיגן, און פירן אלע
+קארטלעך פון געפילטערטע פעקלעך צוריק צו זייערע אריגינעלע פעקלעך. דאס איז פראבלעמאטיש פאר
+מענטשן מיט לענגערע לערן־טריט. אויב איר זענט אין דעם מצב, איז ראטזאם
+צו דערהיינטיגן מיט ווערסיע 2.1.41 אדער נייער.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="המתזמן-v3-של-anki"></a></p>
+<h1 id="דער-ankiמתזמן-v3"><a class="header" href="#דער-ankiמתזמן-v3">דער Anki־מתזמן v3</a></h1>
+<p>דער מתזמן פון 2021 ("v3") איז אן דערהיינטיגונג פונעם <a href="./the-anki-2.1-scheduler.html">מתזמן פון Anki 2.1</a> ("v2").</p>
+<p><a id="הפעלה"></a></p>
+<h2 id="איינשאלטן"><a class="header" href="#איינשאלטן">איינשאלטן</a></h2>
+<p>פון Anki/AnkiMobile 23.10 און AnkiDroid 2.17 איז דער מתזמן v3 די ברירת מחדל און די איינציגסטע אפציע.</p>
+<p>אין עלטערע ווערסיעס קען מען טוישן דעם מתזמן אינעם איינשטעלונגען־עקראן.</p>
+<h2 id="תאימות"><a class="header" href="#תאימות">תאימות</a></h2>
+<p>די מתזמנים v2 און v3 זענען תואם איינער מיטן צווייטן. מען קען טוישן צווישן זיי אן א פולער סינכראניזירונג. עס וועט נישט ברענגען תזמון־פראבלעמען אויב איר נוצט v3 אויף איין מיטל און סינכראניזירט מיט אן אנדער מיטל וואס נוצט v2.</p>
+<p>געשטיצטע ווערסיעס:</p>
+<ul>
+<li>Anki: 2.1.45+</li>
+<li>AnkiMobile: 2.0.75+</li>
+<li>AnkiWeb: געשטיצט</li>
+<li>AnkiDroid: 2.17.0+</li>
+</ul>
+<p>ווייל דער מתזמן v3 נוצט אן אנדער וועג צו צוזאמעננעמען און סארטירן קארטלעך, קענען א v2־קליענט און א v3־קליענט ווייזן אן אנדערע צאל קארטלעך צו חזרה אין א געוויסן טאג, און אויך זיי ווייזן אין אן אנדער סדר.</p>
+<p><a id="שינויים"></a></p>
+<h2 id="ענדערונגען"><a class="header" href="#ענדערונגען">ענדערונגען</a></h2>
+<p><a id="ביטול-פעולה-אחרונה"></a></p>
+<h3 id="צוריקנעמען-די-לעצטע-אפעראציע"><a class="header" href="#צוריקנעמען-די-לעצטע-אפעראציע">צוריקנעמען די לעצטע אפעראציע</a></h3>
+<p>דער מתזמן v3 נוצט אנקי'ס נייע צוריקנעם־אינפראסטרוקטור: מען קען ענטפערן א קארטל, באזייטיגן אן אנדער קארטל ביז מארגן, ענטפערן נאך א קארטל, און דערנאך צוריקנעמען יעדע אפעראציע אין איר ריי. פריערדיגע מתזמנים האבן באהאנדלט צוריקנעמען א חזרה און אנדערע אפעראציעס באזונדער. דערפאר האט מאכן איין סארט אפעראציע אויסגעליידיגט די צוריקנעם־געשיכטע פונעם אנדערן סארט.</p>
+<p><a id="מגבלות-יומיות"></a></p>
+<h3 id="טעגליכע-שיעורים"><a class="header" href="#טעגליכע-שיעורים">טעגליכע שיעורים</a></h3>
+<p>לויט ברירת מחדל גילט דער חזרות־שיעור אינעם מתזמן v3 אויך פאר נייע קארטלעך. דערפאר ווערן נייע קארטלעך ווייניגער געוויזן אדער אפגעשטעלט ווען איר האט א חזרות־צבר. צום ביישפיל, אויב די שיעורים זענען 200 חזרה־קארטלעך און 20 נייע, און איר האט 190 חזרה־קארטלעך צו טון, וועלן נאר 10 נייע קארטלעך געוויזן ווערן. דאס האלט אפ דעם צבר פון וואקסן.</p>
+<p>אויב איר טרעפט דעם מצב, איז דער רעקאמענדירטער וועג צו העכערן אייער חזרות־שיעור און דורכגיין דעם עקזיסטירנדיגן צבר איידער איר לייגט צו נאך נייע קארטלעך. אויב איר זענט זיכער אז איר ווילט צולייגן נייע קארטלעך טראץ דעם צבר, קענט איר איינשאלטן "נייע קארטלעך איגנארירן דעם חזרות־שיעור" אין די פעקל־אפציעס.</p>
+<p>די שיעורים פון יעדן פעקל וועלן באשטימען די צאל קארטלעך וואס ווערן צוזאמענגענומען פון אים און זיינע אונטערפעקלעך. די שיעורים ווערן גענוצט פונעם פעקל וואס איר קלייבט. אויב איר קלייבט אן אונטערפעקל, וועלן די שיעורים פון זיינע הויפטפעקלעך נישט געלטן. צום ביישפיל, אויב די שיעורים זענען:</p>
+<ul>
+<li>אב: 100</li>
+<li>אב::ילד: 30</li>
+<li>אב::ילד::נכד1: 50</li>
+<li>אב::ילד::נכד2: 5</li>
+<li>אב::ילד::נכד3: 200</li>
+</ul>
+<p>דעמאלט:</p>
+<ul>
+<li>אויב איר קלייבט "נכד3", באקומט איר ביז 200 קארטלעך.</li>
+<li>אויב איר קלייבט "נכד2", באקומט איר ביז 5 קארטלעך.</li>
+<li>אויב איר קלייבט "נכד1", באקומט איר ביז 50 קארטלעך.</li>
+<li>אויב איר קלייבט "ילד", באקומט איר ביז 30 קארטלעך פונעם "ילד"־פעקל און זיינע אונטערפעקלעך. נישט מער ווי 5 קארטלעך וועלן קומען פון "נכד2".</li>
+<li>אויב איר קלייבט "אב", באקומט איר ביז 100 קארטלעך, מיט העכסטנס 30 פון "ילד" און זיינע אונטערפעקלעך.</li>
+</ul>
+<p>אין פריערדיגע אנקי־ווערסיעס האט דער מתזמן v3 נישט געהאלטן די שיעורים פון מיטל־פעקלעך. ווען מען האט געדריקט א הויפט־פעקל, האבן די שיעורים פונעם קינד־פעקל נישט באאיינפלוסט די צאל קארטלעך וואס מען האט גענומען פון די אייניקל־פעקלעך.</p>
+<p><a id="מיון"></a></p>
+<h3 id="סארטירן"><a class="header" href="#סארטירן">סארטירן</a></h3>
+<p>נאך פעקל־אפציעס זענען צוגעלייגט געווארן צו באשטימען דעם ווייז־סדר פון נייע קארטלעך און חזרה־קארטלעך. מען קען אויסמישן נייע קארטלעך פון עטליכע פעקלעך, און לויטן וואונטש סארטירן חזרה־קארטלעך לויט אפשטאנד אדער אונטערפעקל.</p>
+<p>ווען באזייטיגן שוועסטער־קארטלעך ביז מארגן איז אויסגעשאלטן, קען מען מיטן מתזמן v3 באשטימען צי "שוועסטער"־קארטלעך פון דער זעלבער רשומה ווערן געוויזן צוזאמען, דורכן צופאסן דעם ווייז־סדר.</p>
+<p>די אפציעס וואס באשטימען דאס אויסמישן נייע קארטלעך און איבער־טאג־לערן־קארטלעך זענען אריבערגעפירט געווארן פונעם איינשטעלונגען־עקראן צו די פעקל־אפציעס. מען וועט נוצן די אפציעס פונעם פעקל וואס איר קלייבט צו לערנען.</p>
+<p><a id="הטמנה"></a></p>
+<h3 id="באזייטיגן-ביז-מארגן"><a class="header" href="#באזייטיגן-ביז-מארגן">באזייטיגן ביז מארגן</a></h3>
+<p>ווען באזייטיגן ביז מארגן איז איינגעשאלטן, ווערן קארטלעך שוין אויסגעלאזט פונעם קארטל־חשבון ביים אנהייבן א לערן־סבב. אמאל, אויב איר האט געהאט 10 פארנט־קארטלעך און 10 פארקערטע, האט די צאל זיך אנגעהויבן מיט 20 און אראפגעגאנגען בשעת דער חזרה. מיט v3 וועט זי גלייך אנהייבן מיט 10.</p>
+<p>ווייל מען היפט איבער שוועסטער־קארטלעך ביים דריקן אויף א פעקל, וועלן די צאלן אינעם פעקלעך־ליסטע זיין אנדערש ווי די צאלן נאכן דריקן דעם פעקל. דער איבערבליק־עקראן וועט זאגן די צאל קארטלעך וואס האבן געווארט אבער זענען איבערגעהיפט געווארן.</p>
+<p>לערן־קארטלעך וואס גייען אריבער א טאג־גרענעץ — "איבער־טאג־לערן־קארטלעך" — קען מען באזייטיגן ביז מארגן ווי חזרה־קארטלעך און נייע קארטלעך.</p>
+<p><a id="סטיית-זמנים-אקראית-fuzz"></a></p>
+<h3 id="צופעליגע-צייטסטיה-fuzz"><a class="header" href="#צופעליגע-צייטסטיה-fuzz">צופעליגע צייט־סטיה (Fuzz)</a></h3>
+<p>די קליינע צופעליגע צייט־סטיה וואס ווערט צוגעלייגט צו אפשטאנדן ווערט איצט געוויזן אויף די ענטפער־קנעפלעך, אנשטאט נאר אנווענדן זי ביים ענטפערן.</p>
+<p>אויך דער וועג וויאזוי מען רעכנט די צייט־סטיה איז פארבעסערט געווארן. קארטלעך מיט אפשטאנדן אונטער א וואך באקומען א סטיה מיט א מער גלייכן וואג, און די מאס סטיה וואקסט מער גלייכמעסיג ווי די אפשטאנדן וואקסן.</p>
+<p><a id="למידה-בין-יומית"></a></p>
+<h3 id="לערנען-איבער-דער-טאגגרענעץ"><a class="header" href="#לערנען-איבער-דער-טאגגרענעץ">לערנען איבער דער טאג־גרענעץ</a></h3>
+<p>איבער־טאג־לערן־קארטלעך זענען איצט אונטערן חזרות־שיעור. ווען Anki באשליסט וואס פאסט אינעם שיעור, נעמט ער ערשט צוזאמען איבער־טאג־לערן־קארטלעך, דערנאך חזרה־קארטלעך, און צום סוף נייע קארטלעך.</p>
+<p><a id="חפיסות-מסוננות"></a></p>
+<h3 id="געפילטערטע-פעקלעך-2"><a class="header" href="#געפילטערטע-פעקלעך-2">געפילטערטע פעקלעך</a></h3>
+<p>געפילטערטע פעקלעך מיט איבער־תזמון אויסגעשאלטן ווייזן 4 ענטפער־קנעפלעך. מען קען באשטימען א ווארטן פאר יעדן קנעפל. באשטימען דעם ווארטן צו 0 פאר אן ענטפער־קנעפל הייסט אז דער קנעפל וועט צוריקברענגען דעם קארטל צום היים־פעקל.</p>
+<p>אין פריערדיגע ווערסיעס האט מען געקענט באשטימען א ווארטן פאר "נאכאמאל". "שווער" האט גענוצט 1.5x דעם ווארטן, "גוט" האט גענוצט 2x דעם ווארטן, און "גרינג" האט צוריקגעברענגט דעם קארטל צום היים־פעקל.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="באיזה-אלגוריתם-חזרות-ברווחים-אנקי-משתמש"></a></p>
+<h1 id="וועלכן-אלגאריטם-פון-חזרות-מיט-אפשטאנדן-נוצט-אנקי"><a class="header" href="#וועלכן-אלגאריטם-פון-חזרות-מיט-אפשטאנדן-נוצט-אנקי">וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי?</a></h1>
+<h2 id="sm-2"><a class="header" href="#sm-2">SM-2</a></h2>
+<p>פון ווערסיע 23.10 האט אנקי צוויי אלגאריטמען וואס מען קען נוצן. דער ערשטער איז באזירט אויף
+דעם SuperMemo 2־אלגאריטם, און דער צווייטער הייסט FSRS.</p>
+<p>אנקי'ס אלגאריטם איז אנדערש פון SM-2 אין עטליכע פרטים. בפרט:</p>
+<ul>
+<li>
+<p>SM-2 באשטימט אן ערשטן אפשטאנד פון איין טאג און דערנאך 6 טעג. מיט אנקי
+האט איר פולע קאנטראל איבער די לענג פון די ערשטע לערן־טריט.
+אנקי "פארשטייט" אז אמאל דארף מען זען א נייעם קארטל עטליכע מאל איידער
+מען קען אים געדענקען. די ערשטע "דורכפאלן" זאגן נישט אז מען דארף אייך "באשטראפן"
+דורכן ווייזן דעם נישט־געוואוסטן קארטל פילע מאל איבער עטליכע טעג.
+רעזולטאטן אינעם לערן־שטאפל שפיגלען נישט די רעזולטאטן אינעם זכרון־שטאפל.</p>
+</li>
+<li>
+<p>אנקי נוצט 4 ענטפער־אפציעס פאר חזרה־קארטלעך, נישט 6. עס איז דא נאר
+איין <em>דורכפאל</em>־אפציע, נישט 3. דער טעם איז אז דורכפאלן זענען א קליינער טייל
+פון אלע חזרות, און דערפאר קען מען צופאסן די גרינגקייט פונעם קארטל גענוג גוט
+פשוט דורך פארשידענע פאזיטיווע ענטפערס.</p>
+</li>
+<li>
+<p>א פארשפעטיגטער ענטפער אויף א קארטל ווערט גערעכנט ביים אויסרעכענען דעם קומענדיגן אפשטאנד.
+איר באקומט אזוי א "צוגאב" פאר א קארטל וואס איר האט געענטפערט שפעט אבער נאך געדענקט.</p>
+</li>
+<li>
+<p>ווי אין SM-2 שטעלט אנקי'ס דורכפאל־קנעפל לויט ברירת מחדל צוריק דעם קארטל־אפשטאנד.
+דער באניצער קען אבער קלייבן צו פארקלענערן דעם אפשטאנד אנשטאט אים אינגאנצן צוריקשטעלן.
+מען קען אויך קלייבן צו איבערחזרן נישט־געוואוסטע "אויסגעלערנטע" קארטלעך
+אויף אן אנדער טאג אנשטאט אויפן זעלבן טאג.</p>
+</li>
+<li>
+<p>דער ענטפער <em>לייכט דערמאנט</em> פארגרעסערט נישט נאר דעם גרינגקייט־פאקטאר, נאר גיט אויך א באזונדערן באונוס
+צום אויסרעכענען דעם יעצטיגן אפשטאנד. דערפאר איז דער ענטפער <em>לייכט דערמאנט</em> אביסל מער
+אגרעסיוו ווי דער געווענליכער SM-2־אלגאריטם.</p>
+</li>
+<li>
+<p>נאכאנאנדיגע דורכפאלן בשעת קארטלעך זענען אינעם לערן־שטאפל ברענגען נישט
+נאך פארקלענערונגען אין דער קארטל־גרינגקייט. א שכיח'ע טענה קעגן דעם געווענליכן SM-2־אלגאריטם
+איז אז איבערגעחזרטע דורכפאלן מאכן א קארטל שטעקן
+אין א "גיהנום פון קורצע אפשטאנדן". אין אנקי באאיינפלוסט דאס ערשטע לערנען נישט
+די גרינגקייט פונעם קארטל.</p>
+</li>
+</ul>
+<h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
+<p>FSRS שטרעבט זיך אויסצולערנען אייערע זכרון־מוסטערן און באשטימען חזרות מער ווירקזאם ווי SM-2.</p>
+<p>FSRS איז באזירט אויפן "מאדעל פון די דריי זכרון־באשטאנדטיילן". לויטן מאדעל זענען דריי משתנים
+גענוג צו באשרייבן דעם מצב פון איין זכרון אינעם מענטשלעכן מוח.
+די דריי משתנים זענען:</p>
+<ul>
+<li>
+<p>דערמאנבארקייט (R — Retrievability): די ווארשיינליכקייט אז א מענטש וועט זיך דערמאנען א געוויסע אינפארמאציע
+אין א באשטימטן מאמענט. זי ווענדט זיך אין דער צייט זינט דער לעצטער חזרה און אין דער זכרון־סטאביליטעט (S).</p>
+</li>
+<li>
+<p>סטאביליטעט (S — Stability): די צייט אין טעג וואס עס נעמט ביז דערמאנבארקייט (R) פאלט פון 100%
+צו 90%. צום ביישפיל, S = 365 הייסט אז א גאנץ יאר וועט דורכגיין איידער די ווארשיינליכקייט
+צו געדענקען א געוויסן קארטל פאלט צו 90%.</p>
+</li>
+<li>
+<p>שוועריקייט (D — Difficulty): די קאמפליצירטקייט וואס ליגט אין א געוויסער אינפארמאציע. זי שטעלט פאר ווי
+שווער עס איז צו פארגרעסערן די זכרון־סטאביליטעט נאך א חזרה.</p>
+</li>
+</ul>
+<p>אין FSRS הייסן די דריי ווערטן צוזאמען "זכרון־מצב".
+דער R־ווערט טוישט זיך יעדן טאג, בשעת D און S טוישן זיך נאר נאכן איבערחזרן א קארטל.
+יעדער קארטל האט זיינע אייגענע DSR־ווערטן. אין אנדערע ווערטער, יעדער קארטל האט אן אייגענעם
+זכרון־מצב.
+כדי גענוי צו שאצן די DSR־ווערטן, אנאליזירט FSRS דעם באניצער'ס חזרה־געשיכטע
+און נוצט מאשין־לערנען צו געפינען פאראמעטערס וואס געבן דעם
+בעסטן צופאס צו דער חזרה־געשיכטע.</p>
+<p>נעמט אין אכט אז באניצער זאלן די פאראמעטערס נישט טוישן מיט דער האנט.
+אויב איר ווילט צופאסן דעם תזמון, דארפט איר נאר אויסקלייבן א פאסיגן ווערט
+פארן געוואונטשענעם זכרון־ראטע.
+מיט FSRS קענען באניצער צילן צו א באשטימטן זכרון־ראטע, און אזוי האלטן א באלאנס
+צווישן די מאס אינפארמאציע וואס זיי געדענקען און די צאל חזרות וואס זיי דארפן מאכן.
+א העכערער זכרון־ראטע ברענגט מער חזרות א טאג.</p>
+<p>אויסער דעם וואס מען קען לייכט קאנטראלירן דעם זכרון־ראטע, האט FSRS נאך מעלות
+אין פארגלייך צו אנקי'ס אלגאריטם פון ברירת מחדל.
+מיט FSRS דארפן באניצער מאכן ווייניגער חזרות ווי מיט אנקי'ס אלגאריטם פון ברירת
+מחדל כדי צו דערגרייכן דעם זעלבן זכרון־ראטע. FSRS איז אויך פיל בעסער
+אין תזמון פון קארטלעך וואס זענען איבערגעחזרט געווארן שפעט, למשל ווען דער באניצער האט גענומען
+א הפסקה פון אנקי פאר עטליכע וואכן אדער חדשים.</p>
+<p>דא איז א איבערבליק:
+(זעט דעם חלק <a href="../manual/deck-options.html">פעקל־אפציעס</a>
+אינעם באניצער־מדריך פאר די אפציעס דערמאנט אין <em>שיפן</em> שריפט):</p>
+<p><a id="כרטיסים-בלמידהלמידה-מחדש"></a></p>
+<h2 id="קארטלעך-אין-לערנעןאיבערלערנען"><a class="header" href="#קארטלעך-אין-לערנעןאיבערלערנען">קארטלעך אין לערנען/איבערלערנען</a></h2>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+ברענגט דעם קארטל צוריק צום ערשטן טריט באשטימט אין די <a href="../manual/deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">לערן־/איבערלערן־טריט.</a></p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+איבערחזרט דעם יעצטיגן טריט נאך דעם ערשטן טריט, און איז דער דורכשניט פון
+"נאכאמאל" און "גוט".</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+פירט דעם קארטל צום <a href="../manual/deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">קומענדיגן טריט</a>.
+אויב דער קארטל איז געווען אינעם לעצטן טריט, ווערט ער א חזרה־קארטל
+און "פארענדיגט" דעם לערן־שטאפל.</p>
+</li>
+<li>
+<p>גרינג (Easy)
+מאכט דעם קארטל גלייך א חזרה־קארטל.</p>
+</li>
+</ul>
+<p>א נייער קארטל האט נישט קיין גרינגקייט־פאקטאר. וויפיל מאל איר זאלט נאר דריקן
+אויף 'נאכאמאל' אדער 'שווער', וועט דער שפעטערדיגער גרינגקייט־פאקטאר פונעם קארטל נישט באאיינפלוסט ווערן.
+דאס גילט אויך פאר איבערלערן־קארטלעך: דריקן אויף 'נאכאמאל'
+אדער 'שווער' וועט נישט באאיינפלוסן די גרינגקייט פונעם קארטל.</p>
+<p><a id="כרטיסי-חזרה"></a></p>
+<h2 id="חזרהקארטלעך-2"><a class="header" href="#חזרהקארטלעך-2">חזרה־קארטלעך</a></h2>
+<p>אין SM-2, נאכדעם וואס א קארטל "פארענדיגט" דעם לערן־שטאפל, באקומט ער א גרינגקייט־פאקטאר. די ברירת מחדל איז 2.5, אבער איר
+קענט באשטימען אן אנדער ווערט דורך די <a href="../manual/deck-options.html#%D7%A8%D7%9E%D7%AA-%D7%A7%D7%9C%D7%95%D7%AA-%D7%94%D7%AA%D7%97%D7%9C%D7%AA%D7%99%D7%AA">פעקל־אפציעס</a>.</p>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+דער קארטל גייט אריין אין איבערלערנען, דער גרינגקייט־פאקטאר ווערט פארקלענערט מיט 20
+פראצענט־פונקטן. דאס הייסט, מען רעכנט אראפ 20 פונעם <em>גרינגקייט</em>־ווערט, וואס ווערט געמאסטן
+אין פראצענט־פונקטן. דער יעצטיגער אפשטאנד ווערט געמאלט מיטן <em>נייער אפשטאנד</em>־ווערט;
+דעם אפשטאנד וועט מען נוצן ווען דער קארטל גייט ארויס פון איבערלערנען.</p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+די קארטל־גרינגקייט ווערט פארקלענערט מיט 15 פראצענט־פונקטן, און דער יעצטיגער אפשטאנד
+ווערט געמאלט מיטן <em>שווער־אפשטאנד</em>־ווערט; לויט ברירת מחדל 1.2.</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+דער יעצטיגער אפשטאנד ווערט געמאלט מיטן יעצטיגן גרינגקייט־פאקטאר. דער גרינגקייט־פאקטאר
+טוישט זיך נישט.</p>
+</li>
+<li>
+<p>גרינג (Easy)<br />
+דער יעצטיגער אפשטאנד ווערט געמאלט מיטן יעצטיגן גרינגקייט־פאקטאר מאל דעם <em>גרינג־באונוס</em>,
+און דער גרינגקייט־פאקטאר ווערט פארגרעסערט מיט 15 פראצענט־פונקטן.</p>
+</li>
+</ul>
+<p>פאר "שווער", "גוט" און "גרינג" ווערט דער קומענדיגער אפשטאנד אויך געמאלט
+מיטן <em>אפשטאנד־מאלער</em>. אויב די חזרה איז פארשפעטיגט,
+ווערן נאך טעג צוגעלייגט צום יעצטיגן אפשטאנד, ווי ערקלערט
+אין דער <a href="due-times-after-a-break.html">פריערדיגער אפט געפרעגטער שאלה.</a></p>
+<p>אין FSRS באקומט א קארטל DSR־ווערטן נאכדעם וואס מען האט אים לכל הפחות איינמאל איבערגעחזרט.</p>
+<p>אויב איר דריקט אויף…</p>
+<ul>
+<li>
+<p>נאכאמאל (Again)<br />
+דער קארטל גייט אריין אין איבערלערנען, די סטאביליטעט פאלט שטארק,
+און די שוועריקייט וואקסט שטארק.</p>
+</li>
+<li>
+<p>שווער (Hard)<br />
+די קארטל־סטאביליטעט וואקסט אדער בלייבט גלייך,
+און די שוועריקייט וואקסט מעסיג.</p>
+</li>
+<li>
+<p>גוט (Good)<br />
+די קארטל־סטאביליטעט וואקסט, און די שוועריקייט קען
+אביסל וואקסן אדער פאלן.</p>
+</li>
+<li>
+<p>גרינג (Easy)<br />
+די קארטל־סטאביליטעט וואקסט שטארק, און די שוועריקייט
+פאלט מעסיג.</p>
+</li>
+</ul>
+<p><a id="מגבלות"></a></p>
+<h2 id="שיעורים"><a class="header" href="#שיעורים">שיעורים</a></h2>
+<p>ביים נוצן SM-2 זענען דא עטליכע שיעורים אויף די תזמון־ווערטן וואס א קארטל קען
+באקומען. דער גרינגקייט־פאקטאר וועט קיינמאל נישט פאלן אונטער 130%. SuperMemo־פארשונגען האבן געוויזן
+אז גרינגקייט־פאקטארן אונטער 130% מאכן קארטלעך קומען צו חזרה
+אפטער ווי געוואונטשן, און דאס שטערט באניצער. אפשטאנדן וועלן קיינמאל נישט וואקסן
+העכער דעם <em>העכסטן אפשטאנד</em>־ווערט. צום סוף, אלע נייע אפשטאנדן, אויסער "נאכאמאל",
+וועלן שטענדיג זיין לכל הפחות איין טאג לענגער פונעם פריערדיגן אפשטאנד.</p>
+<p><a id="מדוע-אנקי-אינו-משתמש-באלגוריתם-האחרון-של-supermemo"></a></p>
+<h2 id="פארוואס-נוצט-אנקי-נישט-דעם-נייעסטן-supermemoאלגאריטם"><a class="header" href="#פארוואס-נוצט-אנקי-נישט-דעם-נייעסטן-supermemoאלגאריטם">פארוואס נוצט אנקי נישט דעם נייעסטן SuperMemo־אלגאריטם?</a></h2>
+<p>דער פשוט'ער ענטפער איז אז דער נייעסטער SuperMemo־אלגאריטם איז פריוואטע אייגנטום
+און פאדערט א לייסענס. ווייל אנקי איז אן אפליקאציע מיט אן אפענעם מקור, קען ער
+נוצן נאר אלגאריטמען וואס זענען פריי פאראן, ווי
+FSRS. פארשידענע בדיקות ווייזן אז FSRS איז בערך אויפן זעלבן שטאפל ווי SM-17.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שאלות-נפוצות-על-fsrs"></a></p>
+<h1 id="אפט-געפרעגטע-שאלות-וועגן-fsrs"><a class="header" href="#אפט-געפרעגטע-שאלות-וועגן-fsrs">אפט געפרעגטע שאלות וועגן FSRS</a></h1>
+<hr />
+<p>שאלה 1: מיין ערשטער אפשטאנד פאר <strong>גוט</strong> איז 3–5 טעג, און פאר <strong>גרינג</strong> מער ווי א וואך! איז דאס נארמאל?</p>
+<p>ענטפער 1: יא. FSRS האט א נטיה צו געבן לענגערע ערשטע אפשטאנדן ווי SM-2, אבער ביי אויסגעלערנטע קארטלעך איז פארקערט — FSRS איז מער פארזיכטיג.</p>
+<p>אויב איר ווילט פארקירצן די אפשטאנדן, קענט איר העכערן דעם געוואונטשענעם זכרון־ראטע. נעמט אבער אין אכט אז דאס וועט פארקירצן אלע אפשטאנדן, נישט נאר די ערשטע.</p>
+<hr />
+<p>שאלה 2: וועט FSRS ארבעטן ריכטיג אויב איך נוץ נאר <strong>נאכאמאל</strong> און <strong>גוט</strong>?</p>
+<p>ענטפער 2: יא. אין געוויסע פעלער קען FSRS אפילו זיין מער גענוי ווען מען נוצט נאר <strong>נאכאמאל</strong> און <strong>גוט</strong>.</p>
+<hr />
+<p>שאלה 3: איז בעסער צו נוצן די זעלבע פאראמעטערס פאר אלע מיינע פעקלעך, אדער שאפן עטליכע גרופעס איינשטעלונגען מיט אנדערע פאראמעטערס?</p>
+<p>ענטפער 3: דאס ווענדט זיך אינגאנצן אין ווי ענליך אייער לערן־מאטעריאל איז. צום ביישפיל, אויב איר לערנט אגדתות און סוגיות, איז ראטזאם צו נוצן צוויי אנדערע גרופעס איינשטעלונגען מיט אנדערע פאראמעטערס. אויב איר האט צוויי פעקלעך מיט נושאים פון ענליכן שוועריקייט, איז כדאי צו נוצן די זעלבע גרופע איינשטעלונגען פאר ביידע. בכלל איז געווענליך בעסער צו נוצן אנדערע גרופעס איינשטעלונגען.</p>
+<hr />
+<p>שאלה 4: ווי אפט דארף איך פונדאסניי אפטימיזירן די פאראמעטערס?</p>
+<p>ענטפער 4: איינמאל א חודש זאל גענוג זיין. א מער פארגעשריטענער כלל איז צו אפטימיזירן ווען די צאל חזרות דאפלט זיך: נאך 100 חזרות, דערנאך נאך 200, דערנאך נאך 400, און אזוי ווייטער. דער כלל פון "איינמאל א חודש" איז אבער פשוט'ער.</p>
+<hr />
+<p>שאלה 5: נעמט FSRS אין באטראכט ווי לאנג עס נעמט מיר איבערצוחזרן א קארטל?</p>
+<p>ענטפער 5: ניין, FSRS נוצט נאר די לענג פון די אפשטאנדן און די אפשאצונגען. די צייט וואס איר גיט פאר חזרות ווערט אבער יא גענוצט ביים אויסרעכענען דעם בעסטן זכרון־ראטע מיט דער פונקציע "אויסרעכענען דעם קלענסטן רעקאמענדירטן זכרון־ראטע".</p>
+<hr />
+<p>שאלה 6: דארף איך 1000 חזרות איידער איך קען אפטימיזירן די פאראמעטערס?</p>
+<p>ענטפער 6: אזוי איז געווען אין פריערדיגע Anki־ווערסיעס. אין Anki 24.06.3 און נייערע ווערסיעס קען מען נוצן דעם אפטימיזירער מיט סיי וועלכער צאל חזרות.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="סנכרון-ו-ankiweb"></a></p>
+<h1 id="סינכראניזירן-און-ankiweb"><a class="header" href="#סינכראניזירן-און-ankiweb">סינכראניזירן און AnkiWeb</a></h1>
+<p>די בלעטער אין דער גרופע באהאנדלען דאס אריבערפירן דעם אוסף צווישן קאמפיוטערס, סינכראניזירן דורך AnkiWeb, מעדיע, אן אימעיל־קאנטע און פארבינדונג־תקלות.</p>
+<p>אויב איר ווילט ארבעטן מיטן זעלבן אוסף אויף עטליכע קאמפיוטערס, איז דער געווענליכער וועג איינצושטעלן סינכראניזירן לויט די אנווייזונגען אינעם <a href="../manual/syncing.html">סינכראניזיר־מדריך</a>. אויב איר ווילט נאר א איינמאליגע אריבערפירונג, זעט <a href="moving-questions-between-computers.html">ווי אזוי פירט מען די שאלות פון איין קאמפיוטער צום צווייטן?</a>.</p>
+<p>פאר גרויסע אפעראציעס, ווי אריבערגיין צו א נייעם קאמפיוטער, צונויפמישן אוספים אדער סינכראניזירן אין איין ריכטונג, איז ראטזאם צו שאפן א לאקאלן גיבוי, אז איר זאלט האבן צו וואס צוריקצוגיין אין פאל פון א טעות.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="איך-מעבירים-את-השאלות-ממחשב-למחשב"></a></p>
+<h1 id="ווי-אזוי-פירט-מען-די-שאלות-פון-איין-קאמפיוטער-צום-צווייטן"><a class="header" href="#ווי-אזוי-פירט-מען-די-שאלות-פון-איין-קאמפיוטער-צום-צווייטן">ווי אזוי פירט מען די שאלות פון איין קאמפיוטער צום צווייטן?</a></h1>
+<p>דער רעקאמענדירטער וועג אריבערצופירן שאלות צווישן קאמפיוטערס איז סינכראניזירן דורך AnkiWeb:</p>
+<ol>
+<li>אויפן אלטן קאמפיוטער עפנט <strong>הויפט־מעניו &gt; עקספארטירן</strong>.</li>
+<li>קלייבט צו עקספארטירן אלע פעקלעך, מיט תזמון־אינפארמאציע און מעדיע־טעקעס, און אפזיכערט א <code>apkg</code>־טעקע.</li>
+<li>פירט די טעקע אריבער צום נייעם קאמפיוטער מיט א פונדרויסנדיגן דיסק, א נעץ־דרייוו אדער אן אנדער לאקאלן מיטל.</li>
+<li>אויפן נייעם קאמפיוטער עפנט <strong>הויפט־מעניו &gt; אימפארטירן</strong> און קלייבט די טעקע.</li>
+</ol>
+<p>אויב איר ווילט נישט נוצן עקספארט און אימפארט, קענט איר מאכן א איינמאליגע אריבערפירונג דורך סינכראניזירן:</p>
+<img src="media/sync-button.png" alt="דער סינכראניזיר־קנעפל" style="zoom:67%;" />
+<ol>
+<li>עפנט אנקי אויפן אלטן קאמפיוטער און דריקט אויפן סינכראניזיר־קנעפל.</li>
+<li>פארבינדט זיך צו אייער AnkiWeb־קאנטע.</li>
+<li>אויב דאס איז דאס ערשטע מאל, קלייבט <strong>ארויפלאדן</strong> צו שיקן דעם אוסף פונעם אלטן קאמפיוטער צו AnkiWeb.</li>
+<li>אינסטאלירט אנקי אויפן נייעם קאמפיוטער און עפנט אים.</li>
+<li>דריקט אויף סינכראניזירן, פארבינדט זיך צו דער זעלבער קאנטע, און קלייבט <strong>אראפלאדן</strong> צו באקומען דעם אוסף פונעם אלטן קאמפיוטער.</li>
+<li>דערנאך סינכראניזירט אויף ביידע קאמפיוטערס ביים אנהייבן און ענדיגן ארבעטן, כדי די ענדערונגען זאלן בלייבן דערהיינטיגט.</li>
+</ol>
+<p>נעמט אין אכט: אויב אויף ביידע קאמפיוטערס זענען שוין דא אנדערע שאלות, קלייבט נישט ארויפלאדן אדער אראפלאדן אן איבערקוקן. אין אזא פאל ליינט ערשט <a href="../manual/syncing.html#%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%94%D7%AA%D7%A0%D7%92%D7%A9%D7%95%D7%99%D7%95%D7%AA">צונויפמישן קאנפליקטן</a>, כדי נישט בטעות אויסצומעקן ארבעט פון איינעם פון די צוויי זייטן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="האם-ניתן-לסנכרן-רק-חלק-מהחפיסות-שלי"></a></p>
+<h1 id="קען-מען-סינכראניזירן-נאר-א-טייל-פון-מיינע-פעקלעך"><a class="header" href="#קען-מען-סינכראניזירן-נאר-א-טייל-פון-מיינע-פעקלעך">קען מען סינכראניזירן נאר א טייל פון מיינע פעקלעך?</a></h1>
+<p>אנקי אפזיכערט אלע אייערע פעקלעך אין איין אוסף־טעקע, און דערפאר איז נישטא קיין וועג צו סינכראניזירן נאר א טייל פונעם אוסף. עס זענען אבער דא עטליכע אומוועגן וואס קענען העלפן:</p>
+<p><strong>נוצן צוויי פראפילן.</strong> מען קען האלטן די פעקלעך וואס איר ווילט נישט סינכראניזירן אין א באזונדערן פראפיל. מען קען שאפן און פארוואלטן פראפילן דורך קלייבן מעניו ← טוישן פראפיל. דאס איז נוצליך אויב איר האט אסאך מעדיע וואס איר דארפט נישט אויפן צווייטן מיטל, אדער אויב איר קענט נישט ארויפלאדן געוויסע דאטן צו AnkiWeb צוליב זיכערקייט אדער געהיימקייט. דער חסרון איז אבער אז איר וועט דארפן טוישן צווישן פראפילן צו לערנען אלע אייערע פעקלעך, און איר וועט נישט לייכט קענען באקומען צוזאמענגעשטעלטע סטאטיסטיק.</p>
+<p>אויב איר באשליסט צו נוצן צוויי פראפילן, קענט איר לייכט אריבערפירן דאטן צווישן זיי דורך עקספארטירן .apkg־טעקעס מיט תזמון־אינפארמאציע און מעדיע.</p>
+<p><strong>נוצן אונטערפעקלעך.</strong> אויב דער הויפט־טעם וואס איר ווילט נישט סינכראניזירן אלע פעקלעך איז פשוט אז איר דארפט א טייל נישט אויפן צווייטן מיטל און ווילט נישט אנפילן דעם עקראן, קענט איר זיי לאזן אינעם אוסף און סינכראניזירן, אבער האלטן אין א באזונדערן פעקל אויף דער זייט. איין וועג איז צו שאפן א פעקל מיטן נאמען <code>~ Desktop Only</code> אדער עפעס ענליך, און ארונטערצושלעפן אלע פעקלעך וואס זענען נאר פארן קאמפיוטער. די טילדע (~) האלט אים אונטן אינעם פעקלעך־ליסטע; מען קען נוצן אן אונטערשטע שטריך (_) אויב מען וויל אים אויבן, אדער גארנישט צולייגן אויב מען וויל אים סארטירן מיט די אנדערע פעקלעך. דערנאך קענט איר האלטן דעם פעקל צוזאמענגעפאלט אויפן צווייטן מיטל. הגם די אינפארמאציע וועט נאך סינכראניזירט ווערן, וועט איר זי נישט דארפן זען.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="סנכרון-פרופילים-מרובים"></a></p>
+<h1 id="סינכראניזירן-עטליכע-פראפילן"><a class="header" href="#סינכראניזירן-עטליכע-פראפילן">סינכראניזירן עטליכע פראפילן</a></h1>
+<p><strong>פראפילן</strong> זענען א פונקציע געמאכט כדי עטליכע מענטשן זאלן קענען לערנען מיט אנקי אויף דעם זעלבן מיטל. זיי קענען אויך נוצליך זיין פאר בדיקות און ענליכע צוועקן, אבער דאס איז נישט זייער הויפט־ציל. עס איז <em>נישט</em> ראטזאם צו נוצן פראפילן צו צעטיילן אייער אינהאלט, ווייל דאס איז נישט נויטיג און באגרעניצט אייער מעגליכקייט צו זען סטאטיסטיק און אריבערפירן אינהאלט. AnkiDroid שטיצט אויך נישט פראפילן.</p>
+<p>אנקי איז געבויט אז יעדער פראפיל זאל סינכראניזירט ווערן מיט איין AnkiWeb־קאנטע. אזוי קען יעדער באניצער האבן זיין אייגענע קאנטע און זי נוצן אויף יעדן מיטל וואס ער וויל.</p>
+<p>אויב איר האט געשאפן עטליכע פראפילן פאר זיך אליין, איז דער בעסטער וועג זיי צונויפצומישן אין איין פראפיל. מען קען דאס טון דורך עקספארטירן א פעקל פון פראפיל א' און אים דערנאך אימפארטירן אין פראפיל ב'. טוט דאס איבער מיט אלע אנדערע פעקלעך פון פראפיל א', ביז דער גאנצער אינהאלט איז אין פראפיל ב'. אנדערש, מיט דער עקספארט־אפציע אינעם מעניו, קען מען עקספארטירן א פעקל־טעקע — נישט קיין אוסף־טעקע! — און אויסקלייבן אלע פעקלעך צום עקספארטירן.</p>
+<p>אויב איר האט אנדערע באניצער אויפן קאמפיוטער, דארף יעדער באניצער איינשטעלן אן אייגענע AnkiWeb־קאנטע פאר זיין פראפיל. פרובירן צו סינכראניזירן אנדערע פראפילן מיט דער זעלבער AnkiWeb־קאנטע וועט ברענגען פארלוסט פון דאטן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="סנכרון-קבצי-מדיה-עשוי-לארוך-זמן"></a></p>
+<h1 id="סינכראניזירן-מעדיעטעקעס-קען-נעמען-צייט"><a class="header" href="#סינכראניזירן-מעדיעטעקעס-קען-נעמען-צייט">סינכראניזירן מעדיע־טעקעס קען נעמען צייט</a></h1>
+<p>די נייערע ווערסיעס פון אנקי און AnkiMobile סינכראניזירן קלאנגען און בילדער אין הינטערגרונט, און לאזן אייך ווייטער נוצן די אפליקאציע בשעת זיי ווערן אריבערגעפירט. ביז די מעדיע־טעקעס ווערן אריבערגעפירט, קענען קלאנגען זיך נישט אפשפילן און בילדער זיך נישט ווייזן אויב די טעקעס זענען נאך נישט דא.</p>
+<p>אויב איר טאפקט/דריקט אויפן סינכראניזיר־קנעפל ווען א לאד־סימבאל ווערט געוויזן נעבן אים, וועלן מער פרטים וועגן דער סינכראניזיר־פארשריט ווערן געוויזן. אויב איר ווארט אז קלאנגען/בילדער זאלן אנהייבן ארבעטן, ווארט ביז דער פענסטער ווייזט "מעדיע־סינכראניזירן איז פארטיג". דער מעלדונג באדייט אז אלע מעדיע־טעקעס זענען אריבערגעפירט געווארן צו אדער פון אייער מיטל, און דערנאך זאל די מעדיע ארבעטן ריכטיג ביים לערנען.</p>
+<h2 id="ankimobile"><a class="header" href="#ankimobile">AnkiMobile</a></h2>
+<p>אויסלעשן דעם מיטל'ס עקראן אדער אריבערגיין צו אן אנדער אפליקאציע וועט אפשטעלן דאס סינכראניזירן. ווען איר וועט ווידער סינכראניזירן, וועט דאס אראפלאדן ווייטערגיין פון וואו עס האט זיך אפגעשטעלט.</p>
+<p>אויב איר האט אסאך מעדיע־טעקעס, קען דאס ערשטע סינכראניזירן נעמען אסאך צייט. AnkiMobile פון ווערסיע 2.0.64 און ווייטער וועט האלטן דעם עקראן אנגעצונדן ווען דער מעדיע־סינכראניזיר־עקראן איז אפן. עלטערע AnkiMobile־ווערסיעס האבן דאס נישט געטון; אויב איר נוצט אן אלטע ווערסיע און לאזט דעם מיטל אן השגחה, קען דער עקראן זיך אויסלעשן און איבערהאקן דאס סינכראניזירן. מען קען איבערקוקן
+די ווערסיע אינעם עקראן 'איינשטעלונגען &gt; וועגן'. אויב איר האט אן אלטע ווערסיע, קען מען אראפלאדן דעם בחינם'דיגן דערהיינטיגונג דורך זוכן AnkiMobile אינעם אפליקאציע־געשעפט.</p>
+<p><a id="מעקב-אחר-ההתקדמות"></a></p>
+<h2 id="נאכפאלגן-דעם-פארשריט"><a class="header" href="#נאכפאלגן-דעם-פארשריט">נאכפאלגן דעם פארשריט</a></h2>
+<p>דער מעדיע־סינכראניזיר־עקראן וועט ווייזן א וואקסנדע צאל בשעת דער פראצעס גייט אן. אויב די צאל צוגעלייגטע/אוועקגענומענע טעקעס
+טוישט זיך נישט א לאנגע צייט, קענט איר דריקן אויפן אפזאג־קנעפל צו אפשטעלן דאס סינכראניזירן, און דערנאך סינכראניזירן
+נאכאמאל כדי ווייטערצוגיין פון וואו איר האט זיך אפגעשטעלט.</p>
+<p><a id="אם-הבעיות-נמשכות"></a></p>
+<h2 id="אויב-די-פראבלעמען-גייען-ווייטער-אן"><a class="header" href="#אויב-די-פראבלעמען-גייען-ווייטער-אן">אויב די פראבלעמען גייען ווייטער אן</a></h2>
+<p>אויב קלאנגען אדער בילדער ווייזן זיך נישט נאכדעם וואס "מעדיע־סינכראניזירן איז פארטיג" ווערט געוויזן, מאכט זיכער אז דאס סינכראניזירן קלאנגען און בילדער איז איינגעשאלטן אינעם איינשטעלונגען־עקראן פון יעדע אנקי־ווערסיע וואס איר נוצט. נוצט אויך "איבערקוקן מעדיע" אינעם מכשירים־מעניו צו זען צי טעקעס פעלן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="צליליםתמונות-לא-מופיעים-ב-ankiweb-או-באפליקציות-למכשירים-ניידים"></a></p>
+<h1 id="קלאנגעןבילדער-ווייזן-זיך-נישט-אין-ankiweb-אדער-מאבילע-אפליקאציעס"><a class="header" href="#קלאנגעןבילדער-ווייזן-זיך-נישט-אין-ankiweb-אדער-מאבילע-אפליקאציעס">קלאנגען/בילדער ווייזן זיך נישט אין AnkiWeb אדער מאבילע אפליקאציעס</a></h1>
+<p>אויב איר האט געשאפן אייער פעקל דורך אימפארטירן א טעקסט־טעקע, אדער אראפגעלאדן א געטיילטן פעקל וואס איז געשאפן געווארן אזוי, קען זיין אז די טעקע־נעמען אין Anki פאסן נישט צו די נעמען אויפן קאמפיוטער. געוויסע קאמפיוטערס זעען "file.jpg", "file.JPG" און "FILE.JPG" ווי די זעלבע טעקע, אבער אנדערע נישט. אויב דער פעקל ווייזט צו "dog.jpg" אבער די טעקע אויפן דיסק הייסט "dog.JPG", וועלן געוויסע מיטלען, אריינגערעכנט AnkiWeb, נישט קענען ווייזן דאס בילד.</p>
+<p>כדי זיכער צו מאכן אז דאס איז דער פראבלעם, רעדאקטירט א קארטל וואס ווייזט זיך נישט ריכטיג אין דער קאמפיוטער־ווערסיע. אויב דער קול ארבעט נישט, וועט איר זען א לינק ווי <code>[sound:hello.mp3]</code>. אויב איר זעט א צעבראכענעם בילד־לינק, דריקט אינעם פעלד, דערנאך אויפן אראפ־פייל אויבן רעכטס, קלייבט "רעדאקטירן HTML" (Edit HTML), און זוכט א טעקסט וואס זעט אויס אזוי:</p>
+<pre><code class="language-html">&lt;img src="cat.jpg" /&gt;
+</code></pre>
+<p>שרייבט זיך אויף דעם טעקע־נאמען.</p>
+<p>דערנאך עפנט אייער <a href="../manual/files.html#%D7%A0%D7%AA%D7%95%D7%A0%D7%99-%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9">אוסף־מעדיע־תיקיה</a> און געפינט די טעקע צו וועלכער מען ווייזט. אויב די טעקע נוצט נישט ממש די זעלבע גרויסע און קליינע אותיות, האט איר געפונען דעם פראבלעם.</p>
+<p>מאכט אויך זיכער אז איר האט <a href="../manual/media.html#%D7%91%D7%93%D7%99%D7%A7%D7%AA-%D7%9E%D7%93%D7%99%D7%94">איבערגעקוקט די מעדיע</a>.</p>
+<p>אויב עס רעדט זיך פון א געטיילטן פעקל, באריכט דעם פראבלעם צום פעקל־מחבר. אויב די אונטערשיידן צווישן גרויסע און קליינע אותיות זענען איבעראל גלייך, קענט איר פרובירן פארריכטן דעם פראבלעם מיט אנקי'ס זוכן־און־טוישן־פונקציע אינעם דורכבלעטערער. צום ביישפיל, אויב דער לינק ווייזט צו "a.JPG" אבער די טעקע אויפן דיסק הייסט "a.jpg", קענט איר דריקן "דורכבלעטערן", אויסקלייבן אלע קארטלעך און נוצן זוכן און טוישן צו טוישן JPG צו jpg.</p>
+<p>אויב דאס ערקלערט נישט אייער פראבלעם, קוקט איבער אז דער טעקע־סיסטעם אויפן קאמפיוטער איז נישט vfat/fat32. Anki קען איצט נישט דערקענען ענדערונגען אינעם מעדיע־תיקיה ווען ער איז אויף אזא טעקע־סיסטעם, און דערפאר וועט מעדיע־סינכראניזירן נישט ארבעטן. אן אומוועג ווערט געפלאנט פאר א צוקונפטיגע ווערסיע.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שגיאה-ביצירת-חיבור-מאובטח-בסנכרון"></a></p>
+<h1 id="תקלה-ביים-שאפן-א-זיכערע-פארבינדונג-ביים-סינכראניזירן"><a class="header" href="#תקלה-ביים-שאפן-א-זיכערע-פארבינדונג-ביים-סינכראניזירן">"תקלה ביים שאפן א זיכערע פארבינדונג" ביים סינכראניזירן</a></h1>
+<p>דער תקלה קומט ווען אנקי פרובירט פארבינדן זיך צו AnkiWeb און באקומט אן אומגילטיגן ענטפער. ער קען קומען פון:</p>
+<ul>
+<li>אן אנטיווירוס־פראגראם אדער פייערוואל אויף אייער קאמפיוטער</li>
+<li>א געפילטערטע נעץ־פארבינדונג ווי נטפרי</li>
+<li>א נישט־סטאבילע נעץ־פארבינדונג</li>
+</ul>
+<p><strong>אנטיווירוס/פייערוואל/VPN/פראקסי</strong></p>
+<p>אנטיווירוס־פראגראמען, פייערוואלס און VPN קענען אפט ברענגען פראבלעמען ווען זיי פילטערן דעם נעץ־פארקער.</p>
+<p>דאס ערשטע וואס איז כדאי צו פרובירן איז צולייגן אן אויסנאם פאר אנקי.</p>
+<p>אויב דאס העלפט נישט, פרובירט צייטווייליג אויסשאלטן אייער אנטיווירוס.</p>
+<p>ליידער זענען דא אנטיווירוס־פראגראמען וואס הערן נישט אינגאנצן אויף ארבעטן ווען מען שאלט זיי אויס. מיר האבן געזען פעלער וואו דער איינציגער וועג צו לייזן דעם פראבלעם איז געווען אינגאנצן אראפנעמען דעם אנטיווירוס־פראגראם. מיר ערווארטן נישט אז איר זאלט אויפהערן נוצן אייער אנטיווירוס נאר צו עפענען אנקי. אויב די פריערדיגע עצות האבן אבער נישט געהאלפן, איז כדאי צו פרובירן אים אראפנעמען און איבערצושטארטן דעם קאמפיוטער, כדי צו זען צי דאס לייזט דעם פראבלעם. אויב יא, פארבינדט זיך מיט דער אנטיווירוס־פירמע און באריכט דעם תקלה.</p>
+<p><strong>א געפילטערטע נעץ־פארבינדונג ווי נטפרי</strong></p>
+<p>אין געפילטערטע נעצן ווי נטפרי גייט די זיכערע פארבינדונג דורך א פילטער וואס ווייזט דעם פראגראם א לאקאלע זיכערקייט־תעודה. דער בראוזער קען געווענליך די תעודה נאכן אינסטאלירן נטפרי, אבער Anki נוצט אויך Python־ספריות, און אמאל ווייסט Python נישט ווי צו נוצן די תעודה. אין אזא פאל גייט דאס סינכראניזירן נישט, הגם דער אינטערנעט אליין ארבעט.</p>
+<p>אין Windows עפנט א קאמאנד־שורה אלס מנהל: זוכט cmd, קלייבט "עפענען אלס מנהל", און פירט אויס:</p>
+<pre><code class="language-bat">setx REQUESTS_CA_BUNDLE "%ProgramData%\NetFree\CA\netfree-ca-bundle-curl.crt" /m
+</code></pre>
+<p>דערנאך פארמאכט Anki און עפנט אים נאכאמאל. אויב איר האט אים געעפנט פון א טערמינאל, פארמאכט אויך דעם טערמינאל און עפנט א נייעם, כדי דער נייער סביבה־משתנה זאל אריינגעלאדן ווערן.</p>
+<p>אין Linux, אויב די נטפרי־תעודה איז שוין אינסטאלירט אינעם סיסטעם'ס תעודות־מאגר, קען מען צולייגן פארן יעצטיגן באניצער:</p>
+<pre><code class="language-sh">echo 'export REQUESTS_CA_BUNDLE=/usr/lib/ssl/certs/ca-certificates.crt' &gt;&gt; ~/.profile
+</code></pre>
+<p>דערנאך גייט ארויס און אריין נאכאמאל, אדער עפנט א נייעם טערמינאל פארן עפענען Anki.</p>
+<p>אין macOS האלט די נטפרי־תעודה־טעקע אין א פעסטן פלאץ, און לייגט צו אין דער שעל'ס אנהייב־טעקע, למשל <code>~/.zshenv</code>, א שורה וואס ווייזט צו איר:</p>
+<pre><code class="language-sh">export REQUESTS_CA_BUNDLE=/path/to/netfree-ca-bundle.crt
+</code></pre>
+<p>טוישט דעם וועג צום אמת'ן וועג פון דער תעודה־טעקע. דערנאך עפנט Anki נאכאמאל. אויב איר זענט נישט זיכער וועלכע טעקע Python נוצט, קען מען אין די פארגעשריטענע אפציעס איבערקוקן דעם וועג וואס די ספריה <code>certifi</code> גיט צוריק מיט <code>certifi.where()</code>. געווענליך איז אבער בעסער צו ווייזן <code>REQUESTS_CA_BUNDLE</code> צו דער נטפרי־תעודות־טעקע ווי רעדאקטירן אינערליכע Anki־טעקעס.</p>
+<p><strong>נישט־סטאבילער אינטערנעט</strong></p>
+<p>אויב אייער WiFi אדער אינטערנעט־פארבינדונג האט פראבלעמען, קענען די AnkiWeb־מעלדונגען אנקומען געשעדיגט אדער בכלל נישט אנקומען, און דאס קען ברענגען דעם תקלה־מעלדונג. עס איז אפשר כדאי צו איבערקוקן צי עס איז דא פארלוסט פון דאטן־פעקלעך:</p>
+<p><a href="syncing-failed-connection-timed-out-errors-when-syncing.html">זעט דא</a></p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שגיאות-הסנכרון-נכשל-הזמן-המוקצב-לחיבור-פג-בעת-סנכרון"></a></p>
+<h1 id="תקלות-סינכראניזירן-איז-נישט-געלונגען-די-פארבינדונגצייט-איז-אויסגעגאנגען"><a class="header" href="#תקלות-סינכראניזירן-איז-נישט-געלונגען-די-פארבינדונגצייט-איז-אויסגעגאנגען">תקלות 'סינכראניזירן איז נישט געלונגען: די פארבינדונג־צייט איז אויסגעגאנגען'</a></h1>
+<p><strong>אנטיווירוס/פייערוואל אין Windows און אין געשעפט־/שולע־נעצן</strong></p>
+<p>אויב דאס סינכראניזירן זעט אויס ווי עס גייט בכלל נישט פאראויס, קען זיין אז Anki איז אינגאנצן בלאקירט פון פארבינדן זיך צום אינטערנעט. אין אזא פאל וועט איר אפשר דארפן צולייגן אן אויסנאם אין אייער אנטיווירוס/פייערוואל, אדער בעטן הילף פון אייערע נעץ־מנהלים. פאר מער אינפארמאציע זעט:</p>
+<p><a href="error-establishing-a-secure-connection-when-syncing.html">תקלה ביים שאפן א זיכערע פארבינדונג ביים סינכראניזירן</a></p>
+<p><strong>אויב דאס סינכראניזירן גייט יא אביסל פאראויס</strong></p>
+<p>ביים סינכראניזירן שיקט Anki מעלדונגען צו AnkiWeb. די מעלדונגען גייען געווענליך דורך עטליכע נעצן און לענדער איידער זיי קומען אן צו AnkiWeb. אויב איינער פון די נעצן צווישן אייך און די AnkiWeb־סערווערס האט פראבלעמען, קען דאס ברענגען לאנגזאמע פארבינדונגען אדער פארבינדונגען וואס רייסן זיך פלוצלינג אפ.</p>
+<p>א שכיח'ער טעם איז א פראבלעם ביי איינעם פון אייער אינטערנעט־ספק'ס אינטערנאציאנאלע פארבינדונגען. ווען דאס געשעט, קענט איר אפשר גיין צו רוב אנדערע וועבזייטלעך אן פראבלעמען, ווייל זיי ווערן געהאוסט אין אנדערע געאגראפישע פלעצער און זייערע פארבינדונגען נוצן אנדערע נעצן. אזעלכע פראבלעמען ווערן געווענליך געלייזט אין עטליכע שעה ביז עטליכע טעג.</p>
+<p>אמאל זענען די פראבלעמען מער לאקאל. אויב איר זענט פארבונדן צו א ווייטן אדער איבערגעלאדענעם Wi-Fi־נעץ, קען דאס אויך מאכן די AnkiWeb־פארבינדונג נישט־סטאביל.</p>
+<p>נישט־סטאבילע פארבינדונגען ווערן מער באמערקבאר ווי מער דאטן מען פירט אריבער. אויב איר האט פארלוסט פון דאטן־פעקלעך (packet loss), קענט איר אפשר לאדן ankiweb.net ריכטיג רוב מאל, אבער נאך האבן פראבלעמען ביים סינכראניזירן — בפרט אויב איר האט א גרויסע מאס דאטן אריבערצופירן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הסרת-חשבון-ankiweb"></a></p>
+<h1 id="אויסמעקן-אן-ankiwebקאנטע"><a class="header" href="#אויסמעקן-אן-ankiwebקאנטע">אויסמעקן אן AnkiWeb־קאנטע</a></h1>
+<p>ווייל AnkiWeb איז א בחינם'דיגע דינסט, דארף זיין בעלים פון צייט צו צייט אויסמעקן דאטן פון נישט־גענוצטע קאנטעס, כדי צו פארקלענערן די הוצאות. ווי עס שטייט אין די תנאי השירות, קענען אייערע דאטן אויסגעמעקט ווערן אויב איר האט נישט אריינגעגאנגען אין אייער קאנטע אדער סינכראניזירט אין די לעצטע 6 חדשים.</p>
+<p>נאכדעם וואס אייערע פעקל־דאטן זענען אויסגעגאנגען, קען מען זיי נישט צוריקבאקומען פון AnkiWeb. איר קענט זיי אבער אפשר צוריקבאקומען אויב איר האט א לאקאלע קאפיע.</p>
+<p><a id="מה-נמחק"></a></p>
+<h3 id="וואס-ווערט-אויסגעמעקט"><a class="header" href="#וואס-ווערט-אויסגעמעקט">וואס ווערט אויסגעמעקט</a></h3>
+<p>אויב אייער AnkiWeb־קאנטע איז אויסגעגאנגען, ווערט נאר די קאפיע פון אייערע דאטן אין AnkiWeb אויסגעמעקט. אלע קארטלעך וואס איר האט אפגעזיכערט אויף אייער קאמפיוטער אדער טאבלעט וועלן בלייבן אויף די מיטלען.</p>
+<p><a id="חזרה-לשימוש-ב-ankiweb-לאחר-מחיקת-הנתונים"></a></p>
+<h3 id="ווידער-נוצן-ankiweb-נאכן-אויסמעקן-די-דאטן"><a class="header" href="#ווידער-נוצן-ankiweb-נאכן-אויסמעקן-די-דאטן">ווידער נוצן AnkiWeb נאכן אויסמעקן די דאטן</a></h3>
+<p>אויב אייער קאנטע־דאטן זענען אויסגעמעקט געווארן צוליב נישט־אקטיוויטעט, קענט איר זיי אפשר נאך צוריקבאקומען אויב איר האט א קאפיע אויפן קאמפיוטער אדער מאבילן מיטל. עפנט Anki אדער AnkiMobile/AnkiDroid און קוקט צי אייערע דאטן זענען נאך דארט. אויב איר האט געהאט דאטן אויפן מיטל אבער בטעות זיי איבערגעשריבן ביים סינכראניזירן, קענט איר זיי אפשר צוריקברענגען פון אן <a href="restoring-an-automatic-backup-recovering-from-data-loss.html">אויטאמאטישן גיבוי</a>.</p>
+<p>אויב איר ווילט ווידער סינכראניזירן די דאטן מיט AnkiWeb, הייבט אן מיט אריינגיין אין ankiweb.net מיט אייער אימעיל. אויב אייער קאנטע־פרטים זענען ריכטיג, וועט איר זען אז איר האט 0 קארטלעך.</p>
+<p>ווען איר האט גילטיגע AnkiWeb־אריינגאנג־פרטים, קענט איר סינכראניזירן פונעם קאמפיוטער אדער מאבילן מיטל, אריינגעבן אייערע פרטים, און דערנאך קלייבן "ארויפלאדן" צו שיקן אייערע דאטן צוריק צו AnkiWeb. מאכט זיכער אז איר קלייבט ארויפלאדן: קלייבן אראפלאדן וועט איבערשרייבן אייער לאקאלן אינהאלט מיטן ליידיגן AnkiWeb־אוסף.</p>
+<p><a id="הימנעות-ממחיקת-החשבון"></a></p>
+<h3 id="פארמיידן-דאס-אויסמעקן-די-קאנטע"><a class="header" href="#פארמיידן-דאס-אויסמעקן-די-קאנטע">פארמיידן דאס אויסמעקן די קאנטע</a></h3>
+<p>יעדעס מאל וואס איר באזוכט ankiweb.net אדער נוצט די סינכראניזיר־אפציע אין Anki, AnkiMobile אדער AnkiDroid, ווערט אייער קאנטע אויטאמאטיש אנגעצייכנט אלס אקטיוו. די מאבילע אפליקאציעס סינכראניזירן נישט אויטאמאטיש, און דערפאר וועט בלויז לערנען מיט זיי נישט אנצייכענען אייער AnkiWeb־קאנטע אלס אקטיוו, ביז איר דריקט אויפן סינכראניזיר־קנעפל.</p>
+<p>אויב אייער קאנטע איז נישט געווען אקטיוו פאר 6 חדשים אדער מער, און איר האט גענוצט די דינסט פאר א וואך אדער מער, וועלן מיר שיקן אן אימעיל אז די דאטן וועלן באלד אויסגעמעקט ווערן. אויב איר ווילט האלטן אייער קאנטע אקטיוו, גייט אריין אין ankiweb.net און לערנט איין קארטל, אדער סינכראניזירט איינעם פון אייערע מיטלען אין 30 טעג.</p>
+<p><a id="גיבוי-האוסף-שלכם"></a></p>
+<h3 id="מאכן-א-גיבוי-פון-אייער-אוסף"><a class="header" href="#מאכן-א-גיבוי-פון-אייער-אוסף">מאכן א גיבוי פון אייער אוסף</a></h3>
+<p>אויב איר פלאנט נישט צו לערנען א תקופה, אדער האט באקומען א נישט־אקטיוויטעט־מעלדונג און ווילט נישט גלייך ווידער אקטיווירן די קאנטע, מאכט זיכער אז איר האט א קאפיע פונעם אוסף אויפן לאקאלן קאמפיוטער אדער מאבילן מיטל. אייערע דאטן זאלן שוין זיין אויפן מיטל אויב איר האט גענוצט אנקי'ס סינכראניזיר־אפציע. אויב איר האט ביז יעצט גענוצט נאר AnkiWeb, אינסטאלירט די קאמפיוטער־ווערסיע אדער א מאבילע אפליקאציע און סינכראניזירט מיט AnkiWeb צו אראפלאדן אייערע דאטן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="האם-ישנן-הגבלות-על-גודלי-קבצים-ב-ankiweb"></a></p>
+<h1 id="זענען-דא-שיעורים-פאר-טעקעגרייסן-אין-ankiweb"><a class="header" href="#זענען-דא-שיעורים-פאר-טעקעגרייסן-אין-ankiweb">זענען דא שיעורים פאר טעקע־גרייסן אין AnkiWeb?</a></h1>
+<p>אוספים אין AnkiWeb זענען באגרעניצט צו א צוזאמענגעדריקטער גרייס פון 100 מעגאבייט (MB), און אן אומצוזאמענגעדריקטער גרייס פון 250 מעגאבייט (MB). דער שיעור נעמט אריין דעם טעקסט אין אייערע קארטלעך און די תזמון־אינפארמאציע, אבער נישט קול־ און בילד־טעקעס, ווייל זיי ווערן אפגעזיכערט באזונדער.</p>
+<p>רוב באניצער וועלן קיינמאל נישט אנקומען צום שיעור. 25,000 קארטלעך פון א דורכשניטליכער גרייס, מיט א חזרה־געשיכטע פון עטליכע יארן, וועלן נעמען בערך 25 מעגאבייט (MB). כדי אנצוקומען צום שיעור דארף מען געווענליך קאפירן גרויסע מאסן טעקסט אין יעדן קארטל, אדער אנפילן דעם אוסף מיט הונדערטער טויזנטער נייע קארטלעך וואס מען לערנט נישט למעשה.</p>
+<p>איצט איז נישטא קיין שיעור אויף דער גאנצער מעדיע־גרייס, הגם יעדע באזונדערע מעדיע־טעקע איז באגרעניצט צו 100 מעגאבייט (MB).</p>
+<p>ווי מער מען וועט נוצן Anki און AnkiWeb, קען מען אמאל איינפירן א פרייז־סיסטעם: פשוט'ע קאנטעס מיט א קליינעם פלאץ וועלן זיין בחינם, און שווערערע באניצער וועלן קענען צאלן פאר נאך אפזיכער־פלאץ.</p>
+<p>אויב איר האט דערגרייכט דעם אוסף־גרייס־שיעור, וועט איר זען מעלדונגען אז דער אוסף איז נישט אין א צוזאמענשטימענדיגן מצב ביים ארויפלאדן אין איין ריכטונג צו AnkiWeb. מען קען נישט העכערן דעם שיעור, ווייל אזעלכע גרויסע אוספים מאכן AnkiWeb לאנגזאם פאר אנדערע באניצער. אויב איר האט אימפארטירט אינהאלט פון א גאנצן ווערטערבוך, וועט איר דארפן אריבערפירן עטליכע נישט־גענוצטע קארטלעך צו א באזונדערן פעקל, עקספארטירן דעם פעקל, און אים דערנאך אויסמעקן פונעם אוסף. דערנאך קענט איר נוצן מעניו &gt; אוסף־מכשירים &gt; איבערקוקן די דאטאבאנק, כדי צו באפרייען דעם פלאץ וואס די אויסגעמעקטע קארטלעך האבן גענומען.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="אימות-כתובת-אימייל"></a></p>
+<h1 id="באשטעטיגן-אן-אימעילאדרעס"><a class="header" href="#באשטעטיגן-אן-אימעילאדרעס">באשטעטיגן אן אימעיל־אדרעס</a></h1>
+<p>אמאל האט AnkiWeb נישט שטרענג פארלאנגט צו באשטעטיגן אייער אימעיל־אדרעס. ביים עפענען א קאנטע האט מען געשיקט אן אימעיל, אבער נישט פארלאנגט אן ענטפער. דער פראבלעם דערמיט איז אז אימעיל־ספקים האבן נישט ליב ווען מען שיקט צו אומגילטיגע אדרעסן. אויב זיי באשליסן אז דער יחס צווישן גילטיגע און אומגילטיגע אדרעסן איז נישט גוט גענוג, קענען אונזערע דינסט־מעלדונגען אנקומען אין ספאם אדער אינגאנצן בלאקירט ווערן.</p>
+<p>דערפאר האבן מיר געמוזט אנהייבן באשטעטיגן אייער אימעיל־אדרעס איינמאל א יאר. ווען איר דריקט אויפן לינק אינעם באשטעטיגונג־אימעיל, ווייזט דאס אונז אז אייער אדרעס איז נאך אקטועל און אז איר קענט אונז. אזוי קענען מיר שפעטער שיקן דינסט־מעלדונגען, למשל ביים צוריקשטעלן א פאסווארט, מיט א גענוגן זיכערקייט אז די אימעילס וועלן נישט צוריקקומען מיט א תקלה.</p>
+<p>נעמט אין אכט אז אונזער פריוואטקייט־פאליסי האט זיך נישט געטוישט: מיר וועלן נוצן אייער אימעיל־אדרעס נאר פאר מעלדונגען וואס האבן צו טון מיט Anki.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="הודעות-דואל-לא-מתקבלות-עקב-ספאם"></a></p>
+<h1 id="אימעילס-קומען-נישט-אן-צוליב-ספאם"><a class="header" href="#אימעילס-קומען-נישט-אן-צוליב-ספאם">אימעילס קומען נישט אן צוליב "ספאם"</a></h1>
+<p>געוויסע אימעיל־ספקים, געווענליך פון א שולע אדער געשעפט, געבן איבער די ספאם־בדיקות צו אנדערע פירמעס. טייל פון די פירמעס קענען זיין זייער שטרענג אין זייער קאמף קעגן ספאם, און ליידער ווערן אומשולדיגע דינסטן ווי AnkiWeb אויך געשעדיגט: זיי קענען ווערן בלאקירט ווייל אן אנדער קליענט אינעם זעלבן נעץ האט געשיקט נישט־פאסיגן אימעיל.</p>
+<p>אויב איר האט אן אימעיל־אדרעס ביי אן אנדער ספק, איז דער שנעלסטער וועג צו נוצן די לשונית "קאנטע" אין AnkiWeb און טוישן צו אייער אנדערן אימעיל־אדרעס.</p>
+<p>אויב איר האט נישט קיין אנדער אימעיל־אדרעס, קענט איר בעטן אייער אימעיל־ספק אראפצונעמען 23.249.217.77 פון זיין בלאקיר־ליסטע. דאס איז א באזונדערע IP־אדרעס וואס ווערט גענוצט נאר דורך AnkiWeb, און זי ווערט געהאוסט אין דער Amazon־נעץ. אויב אייער ספק קען נישט לייזן דעם פראבלעם, עפנט אנשטאט דעם א בחינם'דיגן אימעיל ביי א דינסט ווי gmail.com, ווייל זיי באקומען פארלעסלעך די אימעילס וואס מיר שיקן.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="outlookcom-מעלים-אימיילים-בשקט"></a></p>
+<h1 id="outlookcom-פארשווינדט-אימעילס-שטילערהייט"><a class="header" href="#outlookcom-פארשווינדט-אימעילס-שטילערהייט">Outlook.com פארשווינדט אימעילס שטילערהייט</a></h1>
+<p>די אימעיל־סערווערס פון Microsoft ברענגען נישט אלעמאל אימעילס פארלעסלעך אן. אויפן אינטערנעט זענען דא פילע באריכטן פון אימעילס וואס זענען מיט הצלחה אנגעקומען צו די Microsoft־סערווערס, אבער ווערן נישט געוויזן אינעם באניצער'ס אנקומענדיגן פאסט — אפילו נישט אינעם ספאם־תיקיה.</p>
+<p>איר קענט אפשר ארומגיין דעם פראבלעם דורך דריקן אויפן צאנראד־סימבאל אינעם אנקומענדיגן פאסט, גיין צו "זיכערע און בלאקירטע שיקער", און צולייגן <code>noreply@ankiweb.net</code> צו דער ליסטע פון זיכערע שיקער. דערנאך קענט איר גיין צום AnkiWeb־באשטעטיגונג־בלאט און אים רענענען ביז אן אנדער באשטעטיגונג־אימעיל ווערט געשיקט.</p>
+<p>אויב דער פראבלעם גייט ווייטער אן, וועט איר דארפן נוצן אן אנדער אימעיל־ספק, למשל א בחינם'דיגע gmail.com־קאנטע, וואס ברענגט אימעילס פארלעסלעך אן.</p>
+<p>באשטעטיגן אייער אימעיל־אדרעס קען זיין באלעסטיגנד, אבער איר מוזט האבן א וועג פון פארבינדונג וואס ארבעט. אן דעם וועט איר נישט קענען צוריקבאקומען אייער קאנטע אויב איר פארגעסט דעם פאסווארט.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="מקש-קיצור-לא-עובד"></a></p>
+<h1 id="א-קורצוועגקנעפל-ארבעט-נישט"><a class="header" href="#א-קורצוועגקנעפל-ארבעט-נישט">א קורצוועג־קנעפל ארבעט נישט</a></h1>
+<p>ווארשיינליך כאפט אן אנדער פראגראם אויף אייער קאמפיוטער דעם קורצוועג. צום ביישפיל האבן געוויסע באניצער לעצטנס באריכט אז דער פראגראם פון זייער AMD/ATI־גראפיק־קארטל "גנב'עט" דעם קורצוועג פאר אויסלאזן ווערטער. ווען זיי שאלטן אויס דעם קורצוועג אין דעם פראגראם'ס איינשטעלונגען, ארבעט דער קנעפל ווידער אין אנקי.</p>
+<p>אויב איר האט ענליכע פראבלעמען, פרובירט צייטווייליג פארמאכן אדער אויסשאלטן אנדערע פראגראמען וואס לויפן אויפן קאמפיוטער, ביז איר געפינט דעם גורם.</p>
+<p>אויב איר נוצט תוספים אין אנקי, פרובירט אויך זיי אויסצושאלטן כדי אויסצושליסן זיי אלס דעם גורם.</p>
+<p>אין געוויסע פעלער קען א נישט־ענגלישער קלאוויאטור־אויסלייג ברענגען דעם פראבלעם.</p>
+<p>עס איז אויך ראטזאם איבערצוקוקן אינעם קורצוועג־פארוואלטער אינעם מעניו, צי אן אנדער קורצוועג איז באשטימט צום געוואונטשענעם קנעפל.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="אנקי-חייב-להיות-מסוגל-להתחבר-לפורט-מקומי"></a></p>
+<h1 id="אנקי-מוז-קענען-פארבינדן-זיך-צו-א-לאקאלן-פארט"><a class="header" href="#אנקי-מוז-קענען-פארבינדן-זיך-צו-א-לאקאלן-פארט">אנקי מוז קענען פארבינדן זיך צו א לאקאלן פארט</a></h1>
+<p>ביים עפענען אנקי 2.1 הערט ער צו א פארט אויף localhost פאר בקשות פונעם באניצער־ממשק. אויב א פראקסי־סערווער איז איינגעשטעלט אויף אייער קאמפיוטער, גייט אריין אין די פראקסי־איינשטעלונגען און מאכט זיכער אז די אפציע "איבערהיפן דעם פראקסי־סערווער פאר לאקאלע אדרעסן" איז איינגעשאלטן. אנדערש וועט די לאקאלע פארבינדונג פונעם אנקי־ממשק דורכגיין דעם פראקסי, און אנקי וועט נישט קענען ארבעטן.</p>
+<p>דער פראבלעם קען אויך קומען ווען אייער פייערוואל בלאקירט לאקאלע פארבינדונגען — דאס קען געשען אויך מיט פילטערס באזירט אויף Netspark, ווי נתיב, אתרוג וכדומה — אדער ווען איר נוצט א VPN וואס שיקט לאקאלן פארקער אין א נישט־ריכטיגן וועג.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="אנקי-טוען-שהשעון-שלי-שגוי"></a></p>
+<h1 id="אנקי-זאגט-אז-מיין-זייגער-איז-נישט-ריכטיג"><a class="header" href="#אנקי-זאגט-אז-מיין-זייגער-איז-נישט-ריכטיג">אנקי זאגט אז מיין זייגער איז נישט ריכטיג</a></h1>
+<p>כדי אייער תזמון זאל זיך נישט צעמישן, פאדערט אנקי אז דער זייגער פון אייער מיטל זאל זיין ריכטיג איינגעשטעלט. אלע פאלגנדע פרטים מוזן זיין ריכטיג:</p>
+<ul>
+<li>די צייט, אריינגערעכנט טאג/נאכט</li>
+<li>דער דאטום</li>
+<li>דער צייט־זאנע</li>
+<li>זומער־צייט</li>
+</ul>
+<p>אויב איר באקומט א תקלה־מעלדונג אז דער זייגער איז נישט ריכטיג, קוקט איבער אז אלע אויבנדערמאנטע פרטים זענען ריכטיג איינגעשטעלט. אפילו אויב דער סיסטעם ווייזט וואס זעט אויס ווי די ריכטיגע צייט, קען דער קאמפיוטער אינעווייניג פארשטיין די צייט נישט ריכטיג אויב די איינשטעלונגען זענען נישט ריכטיג.</p>
+<p><strong>"וואס זאל איך טון אויב מיין לאנד האט יעצט געטוישט די כללים פון זומער־צייט?"</strong></p>
+<p>ווען מען טוישט די כללים פון זומער־צייט, קען נעמען צייט ביז פירמעס ווי Windows און Apple דערהיינטיגן זייערע אפעריר־סיסטעמען לויט די נייע כללים. צו ארומגיין דעם פראבלעם קענט איר אויסקלייבן אן אנדער צייט־זאנע מיטן זעלבן UTC־אפשטאנד ווי אייער יעצטיגע פלאץ, און דערנאך איינשטעלן דעם זייגער אז ער זאל ווייזן די ריכטיגע צייט. צום ביישפיל:</p>
+<ul>
+<li>ביי אייך איז 10:00 אינדערפרי</li>
+<li>איר האט איבערגעקוקט די קאארדינירטע וועלט־צייט (UTC), און געזען אז דארט איז יעצט חצות:</li>
+<li>דאס הייסט אז איר זענט צען שעה פאראויס פון דער וועלט־צייט, און אייער UTC־אפשטאנד איז +10:00</li>
+<li>זוכט אין די סיסטעם־איינשטעלונגען א צייט־זאנע פון +10:00</li>
+<li>נאכן איינשטעלן דעם צייט־זאנע, שטעלט דעם זייגער אז ער זאל ווייזן די ריכטיגע צייט</li>
+</ul>
+<p><strong>"פארוואס לאזט אנקי מיר נישט איגנארירן דעם תקלה?"</strong></p>
+<p>אויב איר לערנט ווען דער זייגער איז נישט ריכטיג איינגעשטעלט, קען אייער פארשריט זיך צעמישן ווען איינס פון די פאלגנדע זאכן געשעט:</p>
+<ul>
+<li>דער זייגער שטעלט זיך אויטאמאטיש צוריק צו דער ריכטיגער צייט ביים דערהיינטיגן דעם אפעריר־סיסטעם</li>
+<li>איר באשליסט צו לערנען אויף עטליכע מיטלען און עקספארטירט פון איינעם צום צווייטן</li>
+<li>איר גייט אריבער צו א נייעם קאמפיוטער נאכדעם וואס דער אלטער איז צעבראכן געווארן</li>
+<li>איר טוישט די צייט מיט דער האנט, ווייל אנדערע אפליקאציעס באמערקן אויך אז דער זייגער איז נישט ריכטיג</li>
+</ul>
+<p>אנקי וויל נישט זיך עפענען, ווייל א נישט־ריכטיגער זייגער וועט אויך ברענגען פראבלעמען ווי נישט־ריכטיגע צייט־שטעמפלען פון טעקע־ענדערונגען. עס איז בעסער צו פארריכטן דעם פראבלעם ווי איגנארירן אים און ריזיקירן שפעטערדיגע פראבלעמען.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="שינוי-שפת-הממשק"></a></p>
+<h1 id="טוישן-די-שפראך-פונעם-ממשק"><a class="header" href="#טוישן-די-שפראך-פונעם-ממשק">טוישן די שפראך פונעם ממשק</a></h1>
+<p>לויט ברירת מחדל ווייזט אנקי דעם ממשק־טעקסט, ווי מעניוס און דיאלאג־פענסטערס, אין דער שפראך וואס איר האט אויסגעקליבן ביים ערשטן עפענען דעם פראגראם. אויב איר האט אויסגעקליבן א נישט־ריכטיגע שפראך אדער ווילט נוצן עטליכע שפראכן, קען מען טוישן די שפראך אינעם אנקי־איינשטעלונגען־עקראן. נאכן אויסקלייבן א נייע שפראך דארף מען איבערצושטארטן אנקי, כדי די נייע שפראך זאל אריינגיין אין קראפט.</p>
+<p>אויב איר האט נארוואס אנגעהויבן נוצן אנקי, נוצט נאכן איבערצושטארטן מעניו &gt; טוישן פראפיל צו שאפן א נייעם פראפיל מיט דער אויסגעקליבענער שפראך. אנדערש וועלן פרטים ווי פעלד־נעמען בלייבן אין דער פריערדיגער שפראך.</p>
+<p>נעמט אין אכט אז די באזונדערע אידישע ווערסיע פון אנקי פאר זכרון הלימוד שטיצט דעם גאנצן ממשק נאר אין אידיש, און שטעלט אידיש אויטאמאטיש איין. טוישן צו אן אנדער שפראך אין דער ווערסיע איז נישט געשטיצט און קען ברענגען פארשידענע תקלות אין דער תצוגה.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="תוכנת-האנטי-וירוס-שלי-אומרת-ש-anki-נגועה"></a></p>
+<h1 id="מיין-אנטיווירוספראגראם-זאגט-אז-anki-איז-אנגעשטעקט"><a class="header" href="#מיין-אנטיווירוספראגראם-זאגט-אז-anki-איז-אנגעשטעקט">מיין אנטיווירוס־פראגראם זאגט אז Anki איז אנגעשטעקט!</a></h1>
+<p>אנטיווירוס־פראגראמען מאכן אמאל טעותים. דאס איז בפרט שכיח ווען מיר געבן ארויס א נייע ווערסיע: טייל אנטיווירוס־פראגראמען נעמען אן אז ווייל די נייע ווערסיע איז נאך נישט געזען געווארן, מוז זי זיין געפערליך. מיר זענען מקפיד אויף זיכערקייט, און דער שאנס אז א ווירוס זאל אריינקומען אין אן Anki־ווערסיע איז זייער קליין. אויב איר האט באקומען א ווארענונג פון אייער אנטיווירוס־פראגראם, פארבינדט זיך מיטן אנטיווירוס־ספק און לאזט אים וויסן וועגן דער פאלשער ווארענונג (false positive).</p>
+<div style="break-before: page; page-break-before: always;"></div><p><a id="איך-אפשר-לתרום-לעזור"></a></p>
+<h1 id="ווי-אזוי-קען-מען-ביישטייערן--העלפן"><a class="header" href="#ווי-אזוי-קען-מען-ביישטייערן--העלפן">ווי אזוי קען מען ביישטייערן / העלפן?</a></h1>
+<p>בס"ד ווערט די אנקי־הפצה מיט אירע צוגאבן געפירט דורך וואלונטירן, און דעריבער דארף מען נישט פינאנצירן די אנטוויקלונג.</p>
+<p>איר קענט אבער העלפן דורך פארשפרייטן דעם פראגראם. מען קען דרוקן א מודעה, וואס פאסט אויך פאר א שווארץ־ווייסן פרינטער, דורך דער אפציע "זכה את הרבים" אינעם הילף־מעניו.</p>
+<p>אויך, אויב איר האט געשריבן שאלות און האלט אז זיי פאסן צום מאגר, קענט איר מזכה זיין די רבים דורך זיי שיקן צו אונז, כדי זיי צוצולייגן צו דער קומענדיגער אנקי־ווערסיע.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <script>
+            window.addEventListener('load', function () {
+                window.setTimeout(window.print, 100);
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

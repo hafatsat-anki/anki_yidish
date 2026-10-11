@@ -1,0 +1,31 @@
+[book]
+language = "yi"
+title = "מדריך פאר אנקי אויפן זכרון הלימוד"
+
+text-direction = "rtl"
+[build]
+create-missing = false
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.3" # do not edit: managed by `mdbook-admonish install`
+
+[output.html]
+default-theme = "light"
+additional-css = ["css/misc.css", "css/mdbook-admonish.css"]
+smart-punctuation = true
+theme = "theme"
+additional-js = ["lunr.js", "lunr.stemmer.support.js", "lunr.he.js"]
+[output.linkcheck]
+optional = true
+warning-policy = "warn"
+follow-web-links = true
+
+
+[output.html.fold]
+enable = true
+level = 0

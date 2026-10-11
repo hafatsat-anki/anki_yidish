@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>הינטערגרונט - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="רקע"><a class="header" href="#רקע">רקע</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#בחינת-שליפה-אקטיבית">בחינת שליפה אקטיבית</a></li>
+<li class="toc-level-2"><a href="#השתמש-או-אבד">השתמש או אבד</a></li>
+<li class="toc-level-2"><a href="#חזרה-במרווחים">חזרה במרווחים</a></li>
+<li class="toc-level-2"><a href="#למה-אנקי">למה אנקי?</a></li>
+</ul>
+</details>
+<p>אנקי היא תוכנה המקלה על זכירת דברים. מכיוון שהיא יעילה הרבה יותר משיטות לימוד מסורתיות, אתם יכולים לקצר משמעותית את זמן הלימוד שלכם, או להגדיל משמעותית את כמות החומר שאתם לומדים.</p>
+<p>כל מי שצריך לזכור דברים בלימודו יכול להפיק תועלת מאנקי. מכיוון שהיא מתאימה לכל תוכן ותומכת בתמונות ושמע, האפשרויות הן אינסופיות. לדוגמה:</p>
+<ul>
+<li>חזרה על לימוד גמרא</li>
+<li>שינון מילים בארמית</li>
+<li>שליטה בזכרון חזותי כמו מידות הכלים במקדש</li>
+<li>שליטה בטקסטים ארוכים</li>
+<li>אפילו חזרה על טעמי המקרא!</li>
+</ul>
+<p>ישנם שני מושגים פשוטים מאחורי אנקי: <strong>בחינת שליפה אקטיבית</strong> ו<strong>חזרה במרווחים</strong>. הם אינם ידועים לרוב הלומדים, למרות היותם מתועדים היטב בספרות המדעית. הבנה של אופן פעולתם של מושגים אלה תהפוך אתכם ללומדים יעילים יותר.</p>
+<h2 id="בחינת-שליפה-אקטיבית"><a class="header" href="#בחינת-שליפה-אקטיבית">בחינת שליפה אקטיבית</a></h2>
+<p>_<em>בחינת שליפה אקטיבית</em> פירושה שנשאלת שאלה ואתה מנסה לזכור את התשובה. זאת בניגוד ל<em>לימוד פסיבי</em>, שבו אנו קוראים, צופים או מאזינים למשהו מבלי לעצור ולשקול אם אנו יודעים את התשובה. מחקרים הראו כי בחינת שליפה אקטיבית יעילה הרבה יותר בבניית זיכרונות חזקים מאשר לימוד פסיבי. יש לכך שתי סיבות:</p>
+<ul>
+<li>פעולת השליפה עצמה <em>מחזקת</em> את הזיכרון, ומגדילה את הסיכויים שנוכל לזכור אותו שוב.</li>
+<li>כאשר איננו מסוגלים לענות על שאלה, זה אומר לנו שעלינו לחזור לחומר כדי לחזור או ללמוד אותו מחדש.</li>
+</ul>
+<p>סביר להניח שנתקלתם בבחינת שליפה אקטיבית בשנות הלימודים שלכם מבלי לשים לב. כאשר מורים טובים נותנים לכם סדרת שאלות לענות עליהן לאחר לימוד, או עורכים לכם מבחנים שבועיים, הם לא עושים זאת רק כדי לראות אם הבנתם את החומר או לא. על ידי בחינתכם, הם מגדילים את הסיכויים שתוכלו לזכור את החומר בעתיד.</p>
+<p>דרך טובה לשלב בחינת שליפה אקטיבית בלימודים שלכם היא להשתמש ב<em>כרטיסים</em>. עם כרטיסי נייר, אתם כותבים שאלה בצד אחד של הכרטיס, ואת התשובה בצד השני. על ידי אי-הפיכת הכרטיס עד שנזכרתם בתשובה, אתם יכולים ללמוד דברים בצורה יעילה יותר מאשר חזרה על ידי קריאה פסיבית.</p>
+<h2 id="השתמש-או-אבד"><a class="header" href="#השתמש-או-אבד">השתמש או אבד</a></h2>
+<p>המוח שלנו הוא מכונה יעילה, והוא שוכח במהירות מידע שאינו נראה שימושי. סביר להניח שאינכם זוכרים מה אכלתם לארוחת ערב ביום שני לפני שבועיים, כי מידע זה בדרך כלל אינו שימושי. עם זאת, אם הלכתם לאירוע גדול באותו יום וביליתם את השבועיים האחרונים בלספר לאנשים כמה הוא היה מיוחד, סביר להניח שתזכרו זאת בפירוט רב.</p>
+<p>מדיניות “השתמש או אבד” של המוח חלה על כל מה שאנחנו לומדים. אם תקדישו אחר צהריים לשינון כמה ידיעות, ואז לא תחשבו על החומר הזה במשך שבועיים, כנראה שתשכחו את רובו. למעשה, מחקרים מראים שאנו שוכחים כ-75% מהחומר הנלמד תוך 48 שעות. זה יכול להיראות די מדכא כשצריך ללמוד הרבה מידע!</p>
+<p>עם זאת, הפתרון פשוט: <em>חזרה</em>. על ידי חזרה על מידע שנלמד לאחרונה, אנו יכולים להפחית מאוד את השכחה.</p>
+<p>הבעיה היחידה היא שלאורך זמן, חזרה לא הייתה מעשית במיוחד. אם אתם משתמשים בכרטיסי נייר, קל לדפדף בכולם אם יש לכם רק 30 מהם לסקור, אך כשהמספר גדל ל-300 או 3000, זה הופך במהירות לבלתי ניתן לניהול.</p>
+<h2 id="חזרה-במרווחים"><a class="header" href="#חזרה-במרווחים">חזרה במרווחים</a></h2>
+<p>_<em>אפקט הריווח</em> דווח בשנת 1885 על ידי פסיכולוג גרמני בשם הרמן אבינגהאוס. הוא הבחין שאנו נוטים לזכור דברים בצורה יעילה יותר אם אנו מרווחים את החזרות לאורך זמן, במקום ללמוד מספר פעמים בבת אחת. מאז שנות ה-30, היו מספר הצעות לניצול אפקט הריווח לשיפור הלמידה, במה שזכה לכינוי <em>חזרה במרווחים</em>.</p>
+<p>דוגמה אחת הייתה בשנת 1972, כאשר מדען גרמני בשם סבסטיאן לייטנר הפך פופולרית שיטה של חזרה במרווחים עם כרטיסים נייר. על ידי הפרדת כרטיסי הנייר לסדרה של קופסאות, והעברת הכרטיסים לקופסה אחרת בכל חזרה מוצלחת או לא מוצלחת, ניתן היה לראות במבט חטוף הערכה גסה של כמה טוב כרטיס ידוע ומתי יש לחזור עליו שוב. זה היה שיפור גדול על פני קופסה אחת של כרטיסים, והוא אומץ באופן נרחב על ידי תוכנות כרטיסים ממוחשבות. עם זאת, זוהי גישה גסה למדי, שכן היא אינה יכולה לתת לך תאריך מדויק שבו עליך לחזור על משהו שוב, והיא אינה פועלת היטב עם חומר בדרגות קושי שונות.</p>
+<p>ההתפתחויות הגדולות ביותר ב-30 השנים האחרונות הגיעו ממחברי SuperMemo, תוכנת כרטיסים מסחרית המיישמת חזרה במרווחים. SuperMemo הייתה חלוצה בתפיסה של מערכת שעוקבת אחר הזמן האידיאלי לחזור על חומר וממטבת את עצמה על סמך ביצועי המשתמש.</p>
+<p>במערכת החזרה במרווחים של SuperMemo, בכל פעם שאתה עונה על שאלה, אתה אומר לתוכנה כמה טוב הצלחת לזכור אותה - האם שכחת לחלוטין, עשית טעות קטנה, זכרת בקושי, זכרת בקלות וכו’. התוכנה משתמשת במשוב זה כדי להחליט על הזמן האופטימלי להראות לך את השאלה שוב. מכיוון שזיכרון מתחזק בכל פעם שאתה שולף אותו בהצלחה, הזמן בין החזרות הולך ומתארך - כך שאתה עשוי לראות שאלה בפעם הראשונה היום, ואז 3 ימים לאחר מכן, 15 ימים לאחר מכן, 45 ימים לאחר מכן, וכן הלאה.</p>
+<p>זו הייתה מהפכה בלמידה, שכן פירוש הדבר היה שניתן ללמוד ולשמר חומר במאמץ המינימלי המוחלט הדרוש. הסלוגן של SuperMemo מסכם זאת: עם חזרה במרווחים, אתה יכול: “לשכוח מלשכוח”.</p>
+<h2 id="למה-אנקי"><a class="header" href="#למה-אנקי">למה אנקי?</a></h2>
+<p>אף שאין להכחיש את ההשפעה העצומה שהייתה ל-SuperMemo על התחום, היא אינה חפה מבעיות. התוכנה זוכה לעתים קרובות לביקורת על היותה מלאת באגים וקשה לניווט. היא פועלת רק על מחשבי Windows. זוהי תוכנה קניינית, כלומר משתמשי הקצה אינם יכולים להרחיב אותה או לגשת לנתונים הגולמיים. ובעוד שגרסאות ישנות מאוד הפכו לזמינות בחינם, הן מוגבלות למדי לשימוש מודרני.</p>
+<p>אנקי מטפלת בבעיות אלה. ישנם לקוחות חינמיים של אנקי הזמינים בפלטפורמות רבות. והיא מעודכנת תדיר.</p>
+<p>מערכת החזרה במרווחים של אנקי מבוססת על גרסה ישנה יותר של אלגוריתם SuperMemo בשם <a href="../faq/what-spaced-repetition-algorithm.html">SM-2</a>. לאחרונה, אלגוריתם חדש בשם <a href="deck-options.html#fsrs">FSRS</a> שולב כחלופה לאלגוריתם SM-2 הוותיק.</p>
+<p>גירסא זו של אנקי- שאליה מצורף מדריך זה- מבוססת על גירסת Anki הגלובלית עם שיפורים שונים המתאימים אותה במיוחד ללומדי התורה.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="intro.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="platform/intro.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="intro.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="platform/intro.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

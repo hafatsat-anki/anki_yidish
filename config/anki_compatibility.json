@@ -1,0 +1,19 @@
+{
+  "target_anki_version": "25.09",
+  "min_anki_version": "24.06",
+  "notes": "After Stage 3 API migration, all addons support modern Anki (24.06+). Version scheme changed from 2.1.XX to YY.MM.X in Anki 24.x.",
+  "addon_overrides": {
+    "354407385": {
+      "enabled": true,
+      "reason": ""
+    },
+    "1566569834": {
+      "enabled": true,
+      "reason": ""
+    },
+    "46611790": {
+      "enabled": true,
+      "reason": ""
+    }
+  }
+}

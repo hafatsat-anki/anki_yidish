@@ -1,0 +1,15 @@
+{
+  "conflicts": [
+    "review_heatmap",
+    "1722241614",
+    "723520343"
+  ],
+  "homepage": "https://github.com/glutanimate/review-heatmap",
+  "mod": 0,
+  "min_point_version": 49,
+  "name": "לוח שנה לפי אחוזים",
+  "max_point_version": 54,
+  "branch_index": 1,
+  "disabled": false,
+  "update_enabled": false
+}

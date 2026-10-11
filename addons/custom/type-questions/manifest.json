@@ -1,0 +1,12 @@
+{
+  "package": "answer_input_box",
+  "name": "אריינטייפן אן ענטפער",
+  "mod": 100,
+  "version": "1.0.0",
+  "min_point_version": 45,
+  "max_point_version": 99,
+  "author": "Your Name",
+  "description": "לייגט צו א באקוועמען טייפ פעלד אויפן פראגע עקראן",
+  "conflicts": [],
+  "branch_index": 0
+}

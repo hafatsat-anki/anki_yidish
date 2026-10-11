@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>סטאטיסטיק - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="מידע-על-כרטיס-גרפים-וסטטיסטיקה"></a></p>
+<h1 id="קארטל-אינפארמאציע-גראפן-און-סטאטיסטיק"><a class="header" href="#קארטל-אינפארמאציע-גראפן-און-סטאטיסטיק">קארטל אינפארמאציע, גראפן און סטאטיסטיק</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#קארטל-אינפארמאציע">קארטל אינפארמאציע</a></li>
+<li class="toc-level-2"><a href="#סטאטיסטיק">סטאטיסטיק</a></li>
+<li class="toc-level-2"><a href="#אויסקלייבן-פעקלעך-זאמלונג">אויסקלייבן פעקלעך / זאמלונג</a></li>
+<li class="toc-level-3"><a href="#פעקל">פעקל</a></li>
+<li class="toc-level-3"><a href="#זאמלונג">זאמלונג</a></li>
+<li class="toc-level-3"><a href="#היסטאריע">היסטאריע</a></li>
+<li class="toc-level-3"><a href="#נאך">נאך</a></li>
+<li class="toc-level-2"><a href="#היינט">היינט</a></li>
+<li class="toc-level-3"><a href="#צאל-נאכאמאל">צאל "נאכאמאל"</a></li>
+<li class="toc-level-3"><a href="#לערנען-חזרה-איבערלערנען-געפילטערט">לערנען, חזרה, איבערלערנען, געפילטערט</a></li>
+<li class="toc-level-2"><a href="#די-גראפן">די גראפן</a></li>
+<li class="toc-level-3"><a href="#קומענדיגע-חזרות">קומענדיגע חזרות</a></li>
+<li class="toc-level-3"><a href="#קאלענדאר">קאלענדאר</a></li>
+<li class="toc-level-3"><a href="#חזרות">חזרות</a></li>
+<li class="toc-level-3"><a href="#צאל-קארטלעך">צאל קארטלעך</a></li>
+<li class="toc-level-3"><a href="#חזרה-צייט">חזרה צייט</a></li>
+<li class="toc-level-3"><a href="#חזרה-אפשטאנדן">חזרה אפשטאנדן</a></li>
+<li class="toc-level-3"><a href="#קארטל-גרינגקייט">קארטל גרינגקייט</a></li>
+<li class="toc-level-3"><a href="#קארטל-פעסטקייט">קארטל פעסטקייט</a></li>
+<li class="toc-level-3"><a href="#קארטל-שוועריגקייט">קארטל שוועריגקייט</a></li>
+<li class="toc-level-3"><a href="#שאנס-צו-געדענקען">שאנס צו געדענקען</a></li>
+<li class="toc-level-3"><a href="#צעטיילונג-לויט-שעהן">צעטיילונג לויט שעה'ן</a></li>
+<li class="toc-level-3"><a href="#ענטפער-קנעפלעך">ענטפער קנעפלעך</a></li>
+<li class="toc-level-3"><a href="#אמתע-געדענק-ראטע-טאבעלע">אמת'ע געדענק ראטע טאבעלע</a></li>
+</ul>
+</details>
+<p><a id="מידע-על-כרטיס"></a></p>
+<h2 id="קארטל-אינפארמאציע"><a class="header" href="#קארטל-אינפארמאציע">קארטל אינפארמאציע</a></h2>
+<p>מען קען ווייזן קארטל אינפארמאציע דורך <strong>קארטלעך &gt; אינפארמאציע</strong> אינעם מעניו, דורך דרוקן מיטן רעכטן מייז קנעפל אויפן קארטל און אויסקלייבן <strong>אינפארמאציע</strong>, אדער דורך <kbd>I</kbd> אינעם לערנען פענצטער.</p>
+<img src="media/yi-guide-28.svg" style="zoom:50%;" />
+<p>עטליכע באמערקונגען:</p>
+<p><strong>פלאץ</strong><br />
+ווייזט דעם סדר ווען דאס קארטל וועט קומען צווישן אנדערע נייע קארטלעך. מען קען טוישן דעם פלאץ אין דורכבלעטערן. נאכן לערנען דאס קארטל ווערט דער פלאץ נישט גענוצט, חוץ אויב מען שטעלט דאס קארטל מיט דער האנט צוריק צו ‘נייע’.</p>
+<p><strong>אפשטאנד</strong><br />
+די ווארט צייט פון איין חזרה ביז דער קומענדיגער.</p>
+<p><strong>גרינגקייט</strong><br />
+די געשאצטע מאס וויפיל דער אפשטאנד וועט וואקסן ווען מען ענטפערט אויף א חזרה קארטל מיטן “גוט” קנעפל.</p>
+<p>דער אונטערשטער טייל ווייזט דעם קארטל’ס חזרות היסטאריע. ‘אפשאצונג’ ווייזט וועלכן קנעפל מען האט געדרוקט (1 = נאכאמאל, 4 = גרינג). ווען מען באשטימט א נייעם צייט פלאן מיט דער האנט דורך “צוריקשטעלן” אדער “שטעלן א חזרה דאטום”, שטייט דער סארט אלס ‘מיט דער האנט’ און די אפשאצונג איז 0.</p>
+<p><a id="סטטיסטיקה"></a></p>
+<h2 id="סטאטיסטיק"><a class="header" href="#סטאטיסטיק">סטאטיסטיק</a></h2>
+<p>מען קען עפענען דעם סטאטיסטיק פענצטער דורך דרוקן <strong>סטאטיסטיק</strong> אויבן אינעם הויפט פענצטער, אדער <kbd>T</kbd>.</p>
+<p><img src="media/yi-guide-29.svg" alt="" /></p>
+<p>די חזרות היץ מאפע ווערט ערקלערט ביי <a href="deck-browser.html#%D7%9E%D7%A4%D7%AA-%D7%97%D7%95%D7%9D">דער פעקלעך פענצטער</a>, און זי קומט אויפן הויפט פענצטער און אינעם פעקל סיכום. דער סטאטיסטיק פענצטער אליין איז בעיקר פאר גראפן, פארטיילונגען און מער אויספירליכע באריכטן איבער אייער לערנען מיט דער צייט.</p>
+<p><a id="בחירת-חפיסות-אוסף"></a></p>
+<h2 id="אויסקלייבן-פעקלעך--זאמלונג"><a class="header" href="#אויסקלייבן-פעקלעך--זאמלונג">אויסקלייבן פעקלעך / זאמלונג</a></h2>
+<p><a id="חפיסה"></a></p>
+<h3 id="פעקל"><a class="header" href="#פעקל">פעקל</a></h3>
+<p>לויט דער ברירת מחדל ווייזט דער סטאטיסטיק פענצטער דאטן פונעם יעצטיגן אויסגעקליבענעם פעקל און אלע זיינע אונטערפעקלעך. מען קען אבער אויסקלייבן יעדן פעקל פון דער זאמלונג דורך שרייבן זיין נאמען אינעם טעקסט פעלד אויבן, אדער מיטן פעקל אויסוואל אונטן.</p>
+<p><a id="אוסף"></a></p>
+<h3 id="זאמלונג"><a class="header" href="#זאמלונג">זאמלונג</a></h3>
+<p>אויב איר צייכנט אן דעם קעסטל, וועט די סטאטיסטיק זיין פאר אייער גאנצע זאמלונג. מען קען אויך ווייזן גראפן פאר סיי וועלכן זוכן דורך צולייגן פילטערס אינעם זוכן פעלד אויבן.</p>
+<p><a id="היסטוריה"></a></p>
+<h3 id="היסטאריע"><a class="header" href="#היסטאריע">היסטאריע</a></h3>
+<p>לויט דער ברירת מחדל ווייזט Anki סטאטיסטיק פאר די לעצטע 12 חדשים. אויבן קען מען דאס טוישן צו דער גאנצער היסטאריע אדער דער גאנצער לעבנס צייט פונעם פעקל. דער “היינט” טייל אויבן ווערט פארשטייט זיך נישט געטוישט דורך דעם אויסוואל.</p>
+<p><a id="עוד"></a></p>
+<h3 id="נאך"><a class="header" href="#נאך">נאך</a></h3>
+<ul>
+<li>דרוקן “אפזיכערן אלס PDF” אונטן זיכערט אפ א PDF דאקומענט פון דער סטאטיסטיק אין א טעקע אויפן דעסקטאפ, כדי גרינג צו טיילן די סטאטיסטיק מיט אנדערע.</li>
+<li>ווען מען מעקט אויס רשומות, בלייבט זייער חזרות היסטאריע אין Anki. זי ווערט נישט אריינגערעכנט אין א באזונדערן פעקל’ס סטאטיסטיק, ווייל Anki קען נישט וויסן אין וועלכן פעקל די אויסגעמעקטע קארטלעך זענען געווען. זי ווערט אבער אריינגערעכנט אין דער סטאטיסטיק פון דער גאנצער זאמלונג.</li>
+</ul>
+<p><a id="היום"></a></p>
+<h2 id="היינט"><a class="header" href="#היינט">היינט</a></h2>
+<p>אויבן אינעם סטאטיסטיק פענצטער איז דא א קורצע ליסטע פון סטאטיסטיק איבער די חזרות וואס איר האט פארענדיגט היינט. א “חזרה” מיינט דא “איין ענטפער אויף א קארטל”. דאס זעלבע קארטל קען דעריבער ווערן געציילט אלס עטליכע חזרות אויב מען האט עס געדארפט זען עטליכע מאל. אויך ענטפערן אויף א לערנען קארטל ווערט געציילט אלס א “חזרה”. דא זענען עטליכע פרטים וועמענס באדייט קען נישט זיין גלייך קלאר:</p>
+<p><a id="ספירת-שוב"></a></p>
+<h3 id="צאל-נאכאמאל"><a class="header" href="#צאל-נאכאמאל">צאל “נאכאמאל”</a></h3>
+<p>דאס איז דער צאל חזרות וואס איר האט נישט געקענט (דאס הייסט, געדרוקט ‘נאכאמאל’). דער פראצענט ריכטיגע ענטפערס דערנאך איז דער צאל קארטלעך וואס איר האט <em>נישט</em> דורכגעפאלן, צעטיילט דורכן גאנצן צאל קארטלעך וואס איר האט געלערנט.</p>
+<p><a id="למידה-חזרה-למידה-מחדש-מסונן"></a></p>
+<h3 id="לערנען-חזרה-איבערלערנען-געפילטערט"><a class="header" href="#לערנען-חזרה-איבערלערנען-געפילטערט">לערנען, חזרה, איבערלערנען, געפילטערט</a></h3>
+<p>דער צאל חזרות וואס זענען געווען לערנען קארטלעך, חזרה קארטלעך, קארטלעך ביים איבערלערנען, אדער קארטלעך געלערנט אין א געפילטערטן פעקל פאר זייער באשטימטער חזרה צייט.</p>
+<p>די סטאטיסטיק פון היינט איז נישט קיין גוטער אלגעמיינער מאס פון אייער לערנען פארשריט. יעדער האט גוטע און שווערע טעג, און א נידריגער הצלחה פראצענט אין איין טאג איז נישט קיין סיבה צו זארגן. די אנדערע סטאטיסטיק, וואס נעמט אריין לענגערע תקופות, גיט מער נוצליכע אינפארמאציע אויב איר ווילט צופאסן אייערע לערנען געוואוינהייטן אדער צייט פלאן איינשטעלונגען לויט אייערע רעזולטאטן.</p>
+<p>די “היינט” סטאטיסטיק ווערט נישט געטוישט דורך דער תקופה וואס איר קלייבט אונטן אינעם פענצטער.</p>
+<p><a id="הגרפים"></a></p>
+<h2 id="די-גראפן"><a class="header" href="#די-גראפן">די גראפן</a></h2>
+<p><a id="צפי-חזרות"></a></p>
+<h3 id="קומענדיגע-חזרות"><a class="header" href="#קומענדיגע-חזרות">קומענדיגע חזרות</a></h3>
+<p>דער גראף ווייזט א שאצונג פונעם צאל חזרות פאר א טאג אין דער צוקונפט, אויב איר וועט נישט לערנען נייע קארטלעך און נישט פארגעסן קיין קארטלעך. די זיילן און דער לינקער אקס ווייזן וויפיל קארטלעך וועלן ווערן גרייט צו חזרה יעדן טאג אויב איר לערנט אלע קארטלעך טעגליך. דער גראער שאטירטער טייל און דער רעכטער אקס ווייזן וויפיל קארטלעך וועלן זיין גרייט אין יענעם טאג אויב איר לערנט גארנישט ביז דעמאלט.
+דער פאראויסשאצונג גראף רעכנט נישט קארטלעך וואס זענען שוין פארשפעטיגט; א גרויסער הויפן פון פארשפעטיגטע קארטלעך וועט דעריבער נישט ווערן געוויזן.</p>
+<p>טעגליכער עול איז א שאצונג פונעם דורכשניטליכן צאל חזרה קארטלעך פאר א טאג. אויב איר האט נישט קיין פארשפעטיגטן הויפן, זאל דער טעגליכער עול זיין בערך גלייך צו אייער צאל חזרה קארטלעך.</p>
+<p><a id="לוח-שנה"></a></p>
+<h3 id="קאלענדאר"><a class="header" href="#קאלענדאר">קאלענדאר</a></h3>
+<p>דער גראף ווייזט די פריערדיגע חזרה טעטיגקייט. האלטן דעם מייז איבער א טאג לאזט אייך זען דעם צאל חזרות אין יענעם טאג. דרוקט אויף א וואכן טאג צו שטעלן אים אלס ערשטן טאג.</p>
+<h3 id="חזרות"><a class="header" href="#חזרות">חזרות</a></h3>
+<p>דער גראף ציילט וויפיל קארטל חזרות איר האט געטון. די זיילן קענען באדייטן טעג, וואכן אדער חדשים, לויט דער תקופה וואס איר האט אויסגעקליבן אונטן. די פארשידענע קאלירן ווייזן וויפיל פון די קארטלעך וואס איר האט געענטפערט יעדן טאג זענען געווען <a href="getting-started.html#%D7%9E%D7%A6%D7%91%D7%99-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">באפעסטיגטע</a>, פרישע, ביים איבערלערנען אדער ביים לערנען. עס איז אויך דא א באזונדערע גרופע פאר קארטלעך געענטפערט אין א געפילטערטן אדער שינון פעקל פאר זייער חזרה צייט. דער גראער שאטירטער טייל און דער רעכטער אקס ווייזן דעם צוזאמענגעציילטן סך הכל פאר יעדן סארט חזרה ווי די צייט גייט ווייטער אינעם גראף. ביים טאג 0 זעט מען דעריבער דעם סך הכל פאר דער גאנצער געוויזענער תקופה.</p>
+<p><a id="ספירת-כרטיסים"></a></p>
+<h3 id="צאל-קארטלעך"><a class="header" href="#צאל-קארטלעך">צאל קארטלעך</a></h3>
+<p>דער קיילעכדיגער דיאגראם ווייזט וועלכער פראצענט פון אייער פעקל אדער זאמלונג איז באפעסטיגטע קארטלעך, קארטלעך וואס איר האט נאך נישט געזען, פרישע / לערנען קארטלעך און אפגעשטעלטע קארטלעך. צו רעכענען גענויער, ווייזט דער שליסל דעם גענויען צאל קארטלעך אין יעדער קאטעגאריע, און דער גאנצער צאל קארטלעך שטייט ביי דער זייט.</p>
+<p><a id="זמן-חזרה"></a></p>
+<h3 id="חזרה-צייט"><a class="header" href="#חזרה-צייט">חזרה צייט</a></h3>
+<p>דער גראף ארבעט ווי ‘צאל חזרות’, אבער עס רעכנט וויפיל צייט איר האט גענוצט פאר יעדן קארטל, אנשטאט דעם צאל געענטפערטע קארטלעך.</p>
+<p><a id="מרווחי-חזרה"></a></p>
+<h3 id="חזרה-אפשטאנדן"><a class="header" href="#חזרה-אפשטאנדן">חזרה אפשטאנדן</a></h3>
+<p>דער גראף ווייזט וויפיל קארטלעך האבן א געוויסן אפשטאנד (די ווארט צייט צווישן צוויי חזרות). דער גראער שאטירטער טייל און דער רעכטער אקס ווייזן וועלכער פראצענט פון אייערע קארטלעך האט אן אפשטאנד קלענער אדער גלייך צו דער צייט אונטער יענעם פינטל. די אויסגעקליבענע תקופה ווירקט דא אנדערש ווי ביי אנדערע גראפן: אנשטאט באשטימען וועלכע קארטלעך אדער לערנען תקופה מען נעמט אריין, באגרעניצט זי די געוויזענע אפשטאנדן. למשל, אפשטאנדן פון 14 חדשים ווערן נישט געוויזן אויף א גראף פון איין יאר.</p>
+<p><a id="קלות-כרטיס"></a></p>
+<h3 id="קארטל-גרינגקייט"><a class="header" href="#קארטל-גרינגקייט">קארטל גרינגקייט</a></h3>
+<p>דער גראף ווייזט וויפיל קארטלעך האבן א געוויסן גרינגקייט פאקטאר. מען זעט אויך די דורכשניטליכע גרינגקייט פונעם אויסגעקליבענעם פעקל אדער זאמלונג.</p>
+<p><a id="יציבות-כרטיס"></a></p>
+<h3 id="קארטל-פעסטקייט"><a class="header" href="#קארטל-פעסטקייט">קארטל פעסטקייט</a></h3>
+<p>ווערט נאר געוויזן ווען FSRS איז אנגעצונדן. פעסטקייט ווערט באשטימט אלס די צייט וואס עס נעמט אז דער שאנס צו געדענקען זאל פאלן פון 100% צו 90%.</p>
+<p><a id="קושי-כרטיס"></a></p>
+<h3 id="קארטל-שוועריגקייט"><a class="header" href="#קארטל-שוועריגקייט">קארטל שוועריגקייט</a></h3>
+<p>ווערט נאר געוויזן ווען FSRS איז אנגעצונדן. שוועריגקייט באשטימט ווי שנעל דער קארטל אפשטאנד וואקסט נאך יעדער חזרה.</p>
+<p><a id="יכולת-שליפה"></a></p>
+<h3 id="שאנס-צו-געדענקען"><a class="header" href="#שאנס-צו-געדענקען">שאנס צו געדענקען</a></h3>
+<p>ווערט נאר געוויזן ווען FSRS איז אנגעצונדן. “קענען זיך דערמאנען” און “דער שאנס זיך דערמאנען” באדייטן דא די זעלבע זאך.</p>
+<p>געשאצטע גאנצע ידיעה איז דער גאנצער צאל קארטלעך וואס איר געדענקט מסתמא יעצט. מען רעכנט דאס דורך מולטיפליצירן דעם דורכשניטליכן שאנס צו געדענקען מיטן צאל קארטלעך וואס איר האט שוין געחזרט כאטש איינמאל.</p>
+<p><a id="פילוח-שעתי"></a></p>
+<h3 id="צעטיילונג-לויט-שעהן"><a class="header" href="#צעטיילונג-לויט-שעהן">צעטיילונג לויט שעה’ן</a></h3>
+<p>דער גראף ווייזט דעם פראצענט געלונגענע חזרות אין געוויסע שעה’ן.</p>
+<ol>
+<li>דער X אקס (אונטן): די שעה פונעם טאג.</li>
+<li>דער Y אקס (רעכטס): דער צאל געלערנטע קארטלעך.</li>
+<li>דער צווייטער Y אקס (לינקס): דער הצלחה פראצענט.</li>
+</ol>
+<p>די בלויע זיילן ווייזן וויפיל חזרות איר האט געטון אין יענער שעה, כדי צו וויסן ווי שטארק מען קען זיך פארלאזן אויף די רעזולטאטן. דער גראער שאטירטער טייל ווייזט דעם פראצענט געלונגענע חזרות (ווען איר האט נישט געדרוקט <em>נאכאמאל</em>) אין יענער שעה.</p>
+<p><a id="כפתורי-תשובה"></a></p>
+<h3 id="ענטפער-קנעפלעך"><a class="header" href="#ענטפער-קנעפלעך">ענטפער קנעפלעך</a></h3>
+<p>דער גראף ווייזט וויפיל מאל איר האט אויסגעקליבן ‘נאכאמאל’, ‘שווער’, ‘גוט’ אדער ‘גרינג’ ביים לערנען נייע / לערנען קארטלעך, פרישע און <a href="getting-started.html#%D7%9E%D7%A6%D7%91%D7%99-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">באפעסטיגטע</a>. Anki ווייזט אויך דעם פראצענט ריכטיגע חזרות פאר יעדן סארט קארטל.</p>
+<p><a id="טבלת-שימור-אמיתי"></a></p>
+<h3 id="אמתע-געדענק-ראטע-טאבעלע"><a class="header" href="#אמתע-געדענק-ראטע-טאבעלע">אמת’ע געדענק ראטע טאבעלע</a></h3>
+<p>די טאבעלע ווייזט אייער געדענק ראטע פאר פארשידענע קארטלעך און תקופות. א קארטל איז “באפעסטיגט” ווען זיין אפשטאנד איז ≥21 טעג. נאר איין חזרה א טאג, די ערשטע, ווערט געציילט. ‘נאכאמאל’ ווערט גערעכנט אלס “פארגעסן”; ‘שווער’, ‘גוט’ און ‘גרינג’ אלס “געוואוסט”. מען קען מיט דער טאבעלע איבערקוקן ווי גוט <a href="../faq/what-spaced-repetition-algorithm.html">Anki’ס אפשטאנד חזרות אלגאריטם</a> ארבעט פאר אייך.</p>
+<p>אויב איר נוצט FSRS, זאל אייער אמת’ע געדענק ראטע זיין נאענט צו דער <a href="deck-options.html#%D7%A9%D7%99%D7%9E%D7%95%D7%A8-%D7%A8%D7%A6%D7%95%D7%99">געוואונטשענער געדענק ראטע</a>. דאטן פון איין טאג האבן ווייניג באדייט, דעריבער איז בעסער צו קוקן אויף חודש’ליכע דאטן. אויב אייער אמת’ע געדענק ראטע שטימט נישט גוט מיט דער געוואונטשענער ראטע, זענען דא עטליכע אלגעמיינע עצות:</p>
+<ol>
+<li>פארבעסערט אייערע FSRS פאראמעטערס.</li>
+<li>נוצט באזונדערע פאראיינשטעלונגען מיט אייגענע פאראמעטערס פאר פארשידענע נושאים.</li>
+<li>שטעלט אפ אדער שרייבט איבער <a href="leeches.html">עלוקות</a>.</li>
+<li>מאכט זיכער אז איר <a href="studying.html#%D7%9B%D7%A4%D7%AA%D7%95%D7%A8%D7%99-%D7%AA%D7%A9%D7%95%D7%91%D7%94">נוצט די ענטפער קנעפלעך ווי זיי זענען געמאכט</a>.</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="files.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="media.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="files.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="media.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

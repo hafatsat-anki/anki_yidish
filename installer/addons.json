@@ -1,0 +1,297 @@
+[
+  {
+    "source": "addons/ankiweb/advanced-browser_874215009",
+    "deploy": "874215009",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/review-heatmap_1771074083",
+    "deploy": "1771074083",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/batch-editing_291119185",
+    "deploy": "291119185",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/multi-window_354407385",
+    "deploy": "354407385",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/study-key_1024346707",
+    "deploy": "1024346707",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/defer-cards_149564514",
+    "deploy": "149564514",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/progress-bar_1685464019",
+    "deploy": "1685464019",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/large-buttons_1829090218",
+    "deploy": "1829090218",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/hide-answer-buttons_1931020967",
+    "deploy": "1931020967",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/remove-clozes_1966460736",
+    "deploy": "1966460736",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/deck-browser-counts_1997961715",
+    "deploy": "1997961715",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/unicode-normalize_2065559429",
+    "deploy": "2065559429",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/mini-format-pack_295889520",
+    "deploy": "295889520",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/find-replace_307397307",
+    "deploy": "307397307",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/inspector-window_404783644",
+    "deploy": "404783644",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/fast-bar_46611790",
+    "deploy": "46611790",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/deck-name-display_699175524",
+    "deploy": "699175524",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/deck-shortcuts_734297936",
+    "deploy": "734297936",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/external-editor_805891399",
+    "deploy": "805891399",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/comfort-toolkit_847766233",
+    "deploy": "847766233",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/idle-notifier_998250600",
+    "deploy": "998250600",
+    "disabled": false
+  },
+  {
+    "source": "addons/ankiweb/empty-addon_1566569834",
+    "deploy": "1566569834",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/shortcut-manager",
+    "deploy": "shortcut-manager",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/remove-buttons",
+    "deploy": "remove-buttons",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/modern-theme",
+    "deploy": "modern-theme",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/font-size",
+    "deploy": "font-size",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/new-search",
+    "deploy": "new-search",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/edit-field-review",
+    "deploy": "edit-field-review",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/rescheduler",
+    "deploy": "rescheduler",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/new-design",
+    "deploy": "new-design",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/answer-reducer",
+    "deploy": "answer-reducer",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/disable-updates",
+    "deploy": "disable-updates",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/fsrs-guard",
+    "deploy": "fsrs-guard",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/xml-converter",
+    "deploy": "xml-converter",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/auto-save-editor",
+    "deploy": "auto-save-editor",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/add-table",
+    "deploy": "add-table",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/note-trash",
+    "deploy": "note-trash",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/browser-checkboxes",
+    "deploy": "browser-checkboxes",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/refresh-browser",
+    "deploy": "refresh-browser",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/duplicate-reorder",
+    "deploy": "duplicate-reorder",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/bottom-bar",
+    "deploy": "bottom-bar",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/print-addon",
+    "deploy": "print-addon",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/batch-note-edit",
+    "deploy": "batch-note-edit",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/highlight-search",
+    "deploy": "highlight-search",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/type-questions",
+    "deploy": "type-questions",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/auto-advance",
+    "deploy": "auto-advance",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/filtered-deck-browser",
+    "deploy": "filtered-deck-browser",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/addon-search-bar",
+    "deploy": "addon-search-bar",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/zoom-settings",
+    "deploy": "zoom-settings",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/question-skip-fix",
+    "deploy": "question-skip-fix",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/default-deck",
+    "deploy": "default-deck",
+    "disabled": false
+  },
+  {
+    "source": "addons/torah/question-bank",
+    "deploy": "question-bank",
+    "disabled": false
+  },
+  {
+    "source": "addons/torah/torah-cards",
+    "deploy": "torah-cards",
+    "disabled": false
+  },
+  {
+    "source": "addons/torah/guides-framework",
+    "deploy": "guides-framework",
+    "disabled": false
+  },
+  {
+    "source": "addons/torah/hebrew-date",
+    "deploy": "hebrew-date",
+    "disabled": false
+  },
+  {
+    "source": "addons/torah/external-import",
+    "deploy": "external-import",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/niqqud-reviewer",
+    "deploy": "niqqud-reviewer",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/pdf-viewer",
+    "deploy": "pdf-viewer",
+    "disabled": false
+  },
+  {
+    "source": "addons/custom/yiddish-core",
+    "deploy": "yiddish-core",
+    "disabled": false
+  }
+]

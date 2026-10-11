@@ -1,0 +1,13 @@
+{
+  "mod": 0,
+  "conflicts": [
+    "batch_editing"
+  ],
+  "name": "החלפת מילים לכמה כרטיסים בבת אחת",
+  "min_point_version": 49,
+  "max_point_version": 231000,
+  "branch_index": 1,
+  "disabled": false,
+  "update_enabled": false,
+  "homepage": "https://github.com/glutanimate/batch-editing"
+}

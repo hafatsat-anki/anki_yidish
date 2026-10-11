@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>אויסמעקן אן AnkiWeb־קאנטע - פראגעס און ענטפערס וועגן אנקי</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">מבוא צו אפט געפרעגטע שאלות</a></li><li class="chapter-item affix "><a href="getting-help.html">באקומען הילף</a></li><li class="chapter-item affix "><a href="when-problems-occur.html">ווען עס קומען פראבלעמען</a></li><li class="chapter-item affix "><a href="restoring-an-automatic-backup-recovering-from-data-loss.html">צוריקברענגען אן אויטאמאטישן גיבוי נאך פארלוסט פון דאטן</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">קארטלעך און רשומות</li><li class="chapter-item "><a href="linking-cards-together.html"><strong aria-hidden="true">1.</strong> קען מען פארבינדן קארטלעך איינער מיטן צווייטן?</a></li><li class="chapter-item "><a href="can-i-reveal-parts-of-a-card-one-at-a-time.html"><strong aria-hidden="true">2.</strong> קען מען אנטפלעקן טיילן פון א קארטל איינס נאכן צווייטן?</a></li><li class="chapter-item "><a href="cards-are-reversed-appearing-twice.html"><strong aria-hidden="true">3.</strong> פארקערטע קארטלעך / קארטלעך ווייזן זיך צוויי מאל</a></li><li class="chapter-item "><a href="errors-when-recording.html"><strong aria-hidden="true">4.</strong> תקלות ביים רעקארדירן</a></li><li class="chapter-item "><a href="multiple-choice-questions.html"><strong aria-hidden="true">5.</strong> שאלות מיט עטליכע אויסקלייב־ענטפערס</a></li><li class="chapter-item "><a href="no-cloze-found-on-card.html"><strong aria-hidden="true">6.</strong> קיין אויסגעלאזטע ווערטער זענען נישט געפונען געווארן אינעם קארטל</a></li><li class="chapter-item "><a href="printing-cards-in-your-collection.html"><strong aria-hidden="true">7.</strong> דרוקן קארטלעך פון אייער אוסף</a></li><li class="chapter-item "><a href="removing-duplicate-note-types.html"><strong aria-hidden="true">8.</strong> אראפנעמען דאפלטע סארטן רשומות</a></li><li class="chapter-item "><a href="some-updates-were-ignored-because-the-note-type-has-changed.html"><strong aria-hidden="true">9.</strong> טייל דערהיינטיגונגען זענען איגנארירט געווארן ווייל דער סארט רשומה האט זיך געטוישט</a></li><li class="chapter-item "><a href="sounds-or-images-have-gone-missing.html"><strong aria-hidden="true">10.</strong> מעדיע־טעקעס פון קול/בילדער זענען פארשוואונדן!</a></li><li class="chapter-item "><a href="sticky-fields.html"><strong aria-hidden="true">11.</strong> ווען מען לייגט צו א נייעם קארטל, ווערן געוויסע פעלדער נישט אויסגעליידיגט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פעקלעך</li><li class="chapter-item "><a href="hiding-decks.html"><strong aria-hidden="true">12.</strong> באהאלטן פעקלעך</a></li><li class="chapter-item "><a href="how-do-i-move-cards-between-decks.html"><strong aria-hidden="true">13.</strong> ווי אזוי פירט מען קארטלעך אריבער צווישן פעקלעך?</a></li><li class="chapter-item "><a href="merging-or-combining-two-decks.html"><strong aria-hidden="true">14.</strong> צונויפמישן/צונויפשטעלן צוויי פעקלעך</a></li><li class="chapter-item "><a href="timestamps-in-the-future.html"><strong aria-hidden="true">15.</strong> אימפארט/עקספארט גייט נישט צוליב צייט־שטעמפלען אין דער צוקונפט</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">תזמון</li><li class="chapter-item "><a href="anki-is-not-showing-me-all-my-cards.html"><strong aria-hidden="true">16.</strong> אנקי ווייזט מיר נישט אלע מיינע קארטלעך!</a></li><li class="chapter-item "><a href="study-in-a-particular-order.html"><strong aria-hidden="true">17.</strong> קען מען לערנען די קארטלעך אין א באשטימטן סדר?</a></li><li class="chapter-item "><a href="due-times-after-a-break.html"><strong aria-hidden="true">18.</strong> חזרה־צייטן נאך א הפסקה</a></li><li class="chapter-item "><a href="extra-copies-of-a-card-are-coming-up.html"><strong aria-hidden="true">19.</strong> נאך קאפיעס פון א קארטל ווייזן זיך</a></li><li class="chapter-item "><a href="hard-good-interval-longer-than-good-easy.html"><strong aria-hidden="true">20.</strong> דער אפשטאנד פון שווער/גוט איז לענגער ווי פון גוט/גרינג</a></li><li class="chapter-item "><a href="i-am-going-on-vacation-can-i-pause-the-scheduler.html"><strong aria-hidden="true">21.</strong> איך פאר אויף וואקאציע. קען איך אפשטעלן דעם מתזמן?</a></li><li class="chapter-item "><a href="resetting-progress-in-a-deck.html"><strong aria-hidden="true">22.</strong> צוריקשטעלן דעם פארשריט אין א פעקל</a></li><li class="chapter-item "><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html"><strong aria-hidden="true">23.</strong> אנקי־איינשטעלונגען זיך צו גרייטן פאר א גרויסער בחינה</a></li><li class="chapter-item "><a href="the-anki-2.1-scheduler.html"><strong aria-hidden="true">24.</strong> דער אנקי 2.1־מתזמן</a></li><li class="chapter-item "><a href="the-2021-scheduler.html"><strong aria-hidden="true">25.</strong> דער Anki־מתזמן v3</a></li><li class="chapter-item "><a href="what-spaced-repetition-algorithm.html"><strong aria-hidden="true">26.</strong> וועלכן אלגאריטם פון חזרות מיט אפשטאנדן נוצט אנקי?</a></li><li class="chapter-item "><a href="frequently-asked-questions-about-fsrs.html"><strong aria-hidden="true">27.</strong> אפט געפרעגטע שאלות וועגן FSRS</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">סינכראניזירן און AnkiWeb</li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">28.</strong> סינכראניזירן און AnkiWeb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="moving-questions-between-computers.html"><strong aria-hidden="true">28.1.</strong> ווי אזוי פירט מען די שאלות פון איין קאמפיוטער צום צווייטן?</a></li><li class="chapter-item "><a href="can-i-sync-only-some-of-my-decks.html"><strong aria-hidden="true">28.2.</strong> קען מען סינכראניזירן נאר א טייל פון מיינע פעקלעך?</a></li><li class="chapter-item "><a href="synchronizing-multiple-profiles.html"><strong aria-hidden="true">28.3.</strong> סינכראניזירן עטליכע פראפילן</a></li><li class="chapter-item "><a href="media-files-may-take-time-to-sync.html"><strong aria-hidden="true">28.4.</strong> סינכראניזירן מעדיע־טעקעס קען נעמען צייט</a></li><li class="chapter-item "><a href="sounds-or-images-are-not-appearing-on-ankiweb-or-the-mobile-clients.html"><strong aria-hidden="true">28.5.</strong> קלאנגען/בילדער ווייזן זיך נישט אין AnkiWeb אדער מאבילע אפליקאציעס</a></li><li class="chapter-item "><a href="error-establishing-a-secure-connection-when-syncing.html"><strong aria-hidden="true">28.6.</strong> תקלה ביים שאפן א זיכערע פארבינדונג ביים סינכראניזירן</a></li><li class="chapter-item "><a href="syncing-failed-connection-timed-out-errors-when-syncing.html"><strong aria-hidden="true">28.7.</strong> סינכראניזירן איז נישט געלונגען: די פארבינדונג־צייט איז אויסגעגאנגען</a></li><li class="chapter-item "><a href="ankiweb-account-removal.html"><strong aria-hidden="true">28.8.</strong> אויסמעקן אן AnkiWeb־קאנטע</a></li><li class="chapter-item "><a href="are-there-limits-on-file-sizes-on-ankiweb.html"><strong aria-hidden="true">28.9.</strong> זענען דא שיעורים פאר טעקע־גרייסן אין AnkiWeb?</a></li><li class="chapter-item "><a href="email-verification.html"><strong aria-hidden="true">28.10.</strong> באשטעטיגן אן אימעיל־אדרעס</a></li><li class="chapter-item "><a href="emails-not-being-received.html"><strong aria-hidden="true">28.11.</strong> אימעילס קומען נישט אן צוליב ספאם</a></li><li class="chapter-item "><a href="outlook-silently-discards-email.html"><strong aria-hidden="true">28.12.</strong> Outlook.com פארשווינדט אימעילס שטילערהייט</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">אנקי פארן קאמפיוטער</li><li class="chapter-item "><a href="shortcut-not-working.html"><strong aria-hidden="true">29.</strong> א קורצוועג־קנעפל ארבעט נישט</a></li><li class="chapter-item "><a href="anki-must-be-able-to-connect-to-a-local-port.html"><strong aria-hidden="true">30.</strong> אנקי מוז קענען פארבינדן זיך צו א לאקאלן פארט</a></li><li class="chapter-item "><a href="anki-says-my-clock-is-wrong.html"><strong aria-hidden="true">31.</strong> אנקי זאגט אז מיין זייגער איז נישט ריכטיג</a></li><li class="chapter-item "><a href="changing-the-interface-language.html"><strong aria-hidden="true">32.</strong> טוישן די שפראך פונעם ממשק</a></li><li class="chapter-item "><a href="my-antivirus-program-says-anki-is-infected.html"><strong aria-hidden="true">33.</strong> מיין אנטיווירוס־פראגראם זאגט אז Anki איז אנגעשטעקט!</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">פארשידענע</li><li class="chapter-item "><a href="how-can-i-donate.html"><strong aria-hidden="true">34.</strong> ווי אזוי קען מען ביישטייערן?</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">פראגעס און ענטפערס וועגן אנקי</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="הסרת-חשבון-ankiweb"></a></p>
+<h1 id="אויסמעקן-אן-ankiwebקאנטע"><a class="header" href="#אויסמעקן-אן-ankiwebקאנטע">אויסמעקן אן AnkiWeb־קאנטע</a></h1>
+<p>ווייל AnkiWeb איז א בחינם'דיגע דינסט, דארף זיין בעלים פון צייט צו צייט אויסמעקן דאטן פון נישט־גענוצטע קאנטעס, כדי צו פארקלענערן די הוצאות. ווי עס שטייט אין די תנאי השירות, קענען אייערע דאטן אויסגעמעקט ווערן אויב איר האט נישט אריינגעגאנגען אין אייער קאנטע אדער סינכראניזירט אין די לעצטע 6 חדשים.</p>
+<p>נאכדעם וואס אייערע פעקל־דאטן זענען אויסגעגאנגען, קען מען זיי נישט צוריקבאקומען פון AnkiWeb. איר קענט זיי אבער אפשר צוריקבאקומען אויב איר האט א לאקאלע קאפיע.</p>
+<p><a id="מה-נמחק"></a></p>
+<h3 id="וואס-ווערט-אויסגעמעקט"><a class="header" href="#וואס-ווערט-אויסגעמעקט">וואס ווערט אויסגעמעקט</a></h3>
+<p>אויב אייער AnkiWeb־קאנטע איז אויסגעגאנגען, ווערט נאר די קאפיע פון אייערע דאטן אין AnkiWeb אויסגעמעקט. אלע קארטלעך וואס איר האט אפגעזיכערט אויף אייער קאמפיוטער אדער טאבלעט וועלן בלייבן אויף די מיטלען.</p>
+<p><a id="חזרה-לשימוש-ב-ankiweb-לאחר-מחיקת-הנתונים"></a></p>
+<h3 id="ווידער-נוצן-ankiweb-נאכן-אויסמעקן-די-דאטן"><a class="header" href="#ווידער-נוצן-ankiweb-נאכן-אויסמעקן-די-דאטן">ווידער נוצן AnkiWeb נאכן אויסמעקן די דאטן</a></h3>
+<p>אויב אייער קאנטע־דאטן זענען אויסגעמעקט געווארן צוליב נישט־אקטיוויטעט, קענט איר זיי אפשר נאך צוריקבאקומען אויב איר האט א קאפיע אויפן קאמפיוטער אדער מאבילן מיטל. עפנט Anki אדער AnkiMobile/AnkiDroid און קוקט צי אייערע דאטן זענען נאך דארט. אויב איר האט געהאט דאטן אויפן מיטל אבער בטעות זיי איבערגעשריבן ביים סינכראניזירן, קענט איר זיי אפשר צוריקברענגען פון אן <a href="restoring-an-automatic-backup-recovering-from-data-loss.html">אויטאמאטישן גיבוי</a>.</p>
+<p>אויב איר ווילט ווידער סינכראניזירן די דאטן מיט AnkiWeb, הייבט אן מיט אריינגיין אין ankiweb.net מיט אייער אימעיל. אויב אייער קאנטע־פרטים זענען ריכטיג, וועט איר זען אז איר האט 0 קארטלעך.</p>
+<p>ווען איר האט גילטיגע AnkiWeb־אריינגאנג־פרטים, קענט איר סינכראניזירן פונעם קאמפיוטער אדער מאבילן מיטל, אריינגעבן אייערע פרטים, און דערנאך קלייבן "ארויפלאדן" צו שיקן אייערע דאטן צוריק צו AnkiWeb. מאכט זיכער אז איר קלייבט ארויפלאדן: קלייבן אראפלאדן וועט איבערשרייבן אייער לאקאלן אינהאלט מיטן ליידיגן AnkiWeb־אוסף.</p>
+<p><a id="הימנעות-ממחיקת-החשבון"></a></p>
+<h3 id="פארמיידן-דאס-אויסמעקן-די-קאנטע"><a class="header" href="#פארמיידן-דאס-אויסמעקן-די-קאנטע">פארמיידן דאס אויסמעקן די קאנטע</a></h3>
+<p>יעדעס מאל וואס איר באזוכט ankiweb.net אדער נוצט די סינכראניזיר־אפציע אין Anki, AnkiMobile אדער AnkiDroid, ווערט אייער קאנטע אויטאמאטיש אנגעצייכנט אלס אקטיוו. די מאבילע אפליקאציעס סינכראניזירן נישט אויטאמאטיש, און דערפאר וועט בלויז לערנען מיט זיי נישט אנצייכענען אייער AnkiWeb־קאנטע אלס אקטיוו, ביז איר דריקט אויפן סינכראניזיר־קנעפל.</p>
+<p>אויב אייער קאנטע איז נישט געווען אקטיוו פאר 6 חדשים אדער מער, און איר האט גענוצט די דינסט פאר א וואך אדער מער, וועלן מיר שיקן אן אימעיל אז די דאטן וועלן באלד אויסגעמעקט ווערן. אויב איר ווילט האלטן אייער קאנטע אקטיוו, גייט אריין אין ankiweb.net און לערנט איין קארטל, אדער סינכראניזירט איינעם פון אייערע מיטלען אין 30 טעג.</p>
+<p><a id="גיבוי-האוסף-שלכם"></a></p>
+<h3 id="מאכן-א-גיבוי-פון-אייער-אוסף"><a class="header" href="#מאכן-א-גיבוי-פון-אייער-אוסף">מאכן א גיבוי פון אייער אוסף</a></h3>
+<p>אויב איר פלאנט נישט צו לערנען א תקופה, אדער האט באקומען א נישט־אקטיוויטעט־מעלדונג און ווילט נישט גלייך ווידער אקטיווירן די קאנטע, מאכט זיכער אז איר האט א קאפיע פונעם אוסף אויפן לאקאלן קאמפיוטער אדער מאבילן מיטל. אייערע דאטן זאלן שוין זיין אויפן מיטל אויב איר האט גענוצט אנקי'ס סינכראניזיר־אפציע. אויב איר האט ביז יעצט גענוצט נאר AnkiWeb, אינסטאלירט די קאמפיוטער־ווערסיע אדער א מאבילע אפליקאציע און סינכראניזירט מיט AnkiWeb צו אראפלאדן אייערע דאטן.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="syncing-failed-connection-timed-out-errors-when-syncing.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="are-there-limits-on-file-sizes-on-ankiweb.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="syncing-failed-connection-timed-out-errors-when-syncing.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="are-there-limits-on-file-sizes-on-ankiweb.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

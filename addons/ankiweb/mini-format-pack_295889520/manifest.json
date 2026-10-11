@@ -1,0 +1,13 @@
+{
+    "name": "Mini Format Pack",
+    "package": "295889520",
+    "ankiweb_id": "295889520",
+    "author": "Glutanimate",
+    "version": "v1.0.0",
+    "homepage": "https://github.com/glutanimate/mini-format-pack",
+    "conflicts": [
+        "mini_format_pack"
+    ],
+    "mod": 1698947604,
+    "min_point_version": 49
+}

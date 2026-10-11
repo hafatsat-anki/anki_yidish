@@ -1,0 +1,679 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>פעקל-איינשטעלונגען - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="אפשרויות-חפיסה"></a></p>
+<h1 id="פעקל-אפציעס"><a class="header" href="#פעקל-אפציעס">פעקל אפציעס</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#פאראיינשטעלונג">פאראיינשטעלונג</a></li>
+<li class="toc-level-2"><a href="#אונטערפעקלעך">אונטערפעקלעך</a></li>
+<li class="toc-level-2"><a href="#טעגליכע-גרענעצן">טעגליכע גרענעצן</a></li>
+<li class="toc-level-3"><a href="#נייע-קארטלעך-א-טאג">נייע קארטלעך א טאג</a></li>
+<li class="toc-level-3"><a href="#מערסטע-חזרות-א-טאג">מערסטע חזרות א טאג</a></li>
+<li class="toc-level-3"><a href="#טעגליכע-גרענעצן-לויט-פעקל">טעגליכע גרענעצן לויט פעקל</a></li>
+<li class="toc-level-3"><a href="#נייע-קארטלעך-איגנארירן-די-חזרה-גרענעץ">נייע קארטלעך איגנארירן די חזרה גרענעץ</a></li>
+<li class="toc-level-3"><a href="#גרענעצן-הייבן-זיך-אן-פון-אויבן">גרענעצן הייבן זיך אן פון אויבן</a></li>
+<li class="toc-level-2"><a href="#נייע-קארטלעך">נייע קארטלעך</a></li>
+<li class="toc-level-3"><a href="#לערן-טריט">לערן טריט</a></li>
+<li class="toc-level-4"><a href="#טאג-גרענעצן">טאג גרענעצן</a></li>
+<li class="toc-level-3"><a href="#אפשטאנד-ביים-ענדיגן-לערנען">אפשטאנד ביים ענדיגן לערנען</a></li>
+<li class="toc-level-3"><a href="#אפשטאנד-פאר-גרינג">אפשטאנד פאר גרינג</a></li>
+<li class="toc-level-3"><a href="#סדר-פון-אריינלייגן">סדר פון אריינלייגן</a></li>
+<li class="toc-level-2"><a href="#פארגעסונגען">פארגעסונגען</a></li>
+<li class="toc-level-3"><a href="#איבערלערן-טריט">איבערלערן טריט</a></li>
+<li class="toc-level-3"><a href="#קלענסטער-אפשטאנד">קלענסטער אפשטאנד</a></li>
+<li class="toc-level-3"><a href="#עלוקות">עלוקות</a></li>
+<li class="toc-level-2"><a href="#סדר-פון-ווייזן">סדר פון ווייזן</a></li>
+<li class="toc-level-3"><a href="#סדר-פון-נעמען-נייע-קארטלעך">סדר פון נעמען נייע קארטלעך</a></li>
+<li class="toc-level-3"><a href="#סארטיר-סדר-פאר-נייע-קארטלעך">סארטיר סדר פאר נייע קארטלעך</a></li>
+<li class="toc-level-3"><a href="#סדר-פון-נייע-קארטלעךחזרות">סדר פון נייע קארטלעך/חזרות</a></li>
+<li class="toc-level-3"><a href="#סדר-פון-לערנען-פון-פריערדיגע-טעגחזרות">סדר פון לערנען פון פריערדיגע טעג/חזרות</a></li>
+<li class="toc-level-3"><a href="#סארטיר-סדר-פאר-חזרות">סארטיר סדר פאר חזרות</a></li>
+<li class="toc-level-2"><a href="#באזייטיגן-ביז-מארגן">באזייטיגן ביז מארגן</a></li>
+<li class="toc-level-2"><a href="#קול">קול</a></li>
+<li class="toc-level-2"><a href="#זייגערס">זייגערס</a></li>
+<li class="toc-level-3"><a href="#אינערליכער-זייגער">אינערליכער זייגער</a></li>
+<li class="toc-level-3"><a href="#זייגער-אויפן-עקרן">זייגער אויפן עקרן</a></li>
+<li class="toc-level-2"><a href="#אויטאמאטיש-ווייטערגיין">אויטאמאטיש ווייטערגיין</a></li>
+<li class="toc-level-2"><a href="#גרינגע-טעג">גרינגע טעג</a></li>
+<li class="toc-level-2"><a href="#fsrs">FSRS</a></li>
+<li class="toc-level-3"><a href="#א-קורצער-מדריך">א קורצער מדריך</a></li>
+<li class="toc-level-3"><a href="#געוואונטשענע-געדענק-ראטע">געוואונטשענע געדענק ראטע</a></li>
+<li class="toc-level-3"><a href="#fsrs-פאראמעטערס">FSRS פאראמעטערס</a></li>
+<li class="toc-level-3"><a href="#ניי-באשטימען-חזרה-צייטן-ביים-טוישן">ניי באשטימען חזרה צייטן ביים טוישן</a></li>
+<li class="toc-level-3"><a href="#דער-סימולאטאר">דער סימולאטאר</a></li>
+<li class="toc-level-4"><a href="#לערנען-און-איבערלערנען-טריט">לערנען און איבערלערנען טריט</a></li>
+<li class="toc-level-2"><a href="#פארגעשריטן">פארגעשריטן</a></li>
+<li class="toc-level-3"><a href="#גרעסטער-אפשטאנד">גרעסטער אפשטאנד</a></li>
+<li class="toc-level-3"><a href="#פריערדיגע-געדענק-ראטע">פריערדיגע געדענק ראטע</a></li>
+<li class="toc-level-3"><a href="#איגנארירן-חזרות-פאר">איגנארירן חזרות פאר</a></li>
+<li class="toc-level-3"><a href="#אנהייב-גרינגקייט">אנהייב גרינגקייט</a></li>
+<li class="toc-level-3"><a href="#גרינג-צוגאב">גרינג צוגאב</a></li>
+<li class="toc-level-3"><a href="#אפשטאנד-פאקטאר">אפשטאנד פאקטאר</a></li>
+<li class="toc-level-3"><a href="#שווער-אפשטאנד">שווער אפשטאנד</a></li>
+<li class="toc-level-3"><a href="#נייער-אפשטאנד">נייער אפשטאנד</a></li>
+<li class="toc-level-3"><a href="#אייגענע-חזרה-פלאנירונג">אייגענע חזרה פלאנירונג</a></li>
+</ul>
+</details>
+<p>פעקל אפציעס באשטימען בעיקר ווי אנקי פלאנירט די קארטלעך. עס איז כדאי צו נוצן די ברירות מחדל פאר עטליכע וואכן, כדי זיך באקענען מיט אנקי איידער מען הייבט אן צופאסן די אויסוואלן. מאכט זיכער אז איר פארשטייט די אויסוואלן פארן זיי טוישן, ווייל טעותן קענען פארמינערן אנקי’ס ווירקזאמקייט.</p>
+<p>אויפן קאמפיוטער, טוט איינס פון די פאלגנדע צו עפענען די פעקל אפציעס:</p>
+<ul>
+<li>דרוקט מיטן רעכטן מייז קנעפל אויפן געוואונטשענעם פעקל אינעם הויפט פענצטער.</li>
+<li>דרוקט דערנאך <strong>אפציעס</strong> אונטן אינעם פענצטער.</li>
+<li>אדער דרוקט <strong>נאך &gt; אפציעס</strong> בשעת א בחינה.</li>
+</ul>
+<p><a id="קבוצת-הגדרות"></a></p>
+<h2 id="פאראיינשטעלונג"><a class="header" href="#פאראיינשטעלונג">פאראיינשטעלונג</a></h2>
+<p>אנקי לאזט טיילן אויסוואלן צווישן פארשידענע פעקלעך, כדי גרינג צו דערהיינטיגן אסאך פעקלעך אויף איינמאל. דערפאר ווערן די אויסוואלן געגרופירט אין <em>פאראיינשטעלונגען</em>. אויב איר טוישט אן אויסוואל אין א פאראיינשטעלונג, גייט די ענדערונג אן אויף אלע פעקלעך וואס נוצן זי. אלע נייע פעקלעך נוצן “ברירת מחדל”.</p>
+<p>צו טוישן די אויסוואלן אין איין פעקל אן צו טוישן אנדערע, דרוקט דעם פייל סימבאל אויבן רעכטס אינעם פעקל אפציעס פענצטער. מען קען טון די פאלגנדע:</p>
+<ul>
+<li><strong>אפזיכערן</strong>: זיכערט אפ אלע ענדערונגען אין די פעקל אפציעס.</li>
+<li><strong>צולייגן פאראיינשטעלונג</strong>: לייגט צו א נייע פאראיינשטעלונג פאר דעם פעקל מיט די ברירת מחדל אויסוואלן.</li>
+<li><strong>קאפירן פאראיינשטעלונג</strong>: קאפירט די יעצטיגע פאראיינשטעלונג, נוצליך ווען מען וויל טוישן א טייל אויסוואלן און לאזן דעם רעשט ווי פריער.</li>
+<li><strong>טוישן נאמען פון פאראיינשטעלונג</strong>: טוישט דעם נאמען פון דער יעצטיגער פאראיינשטעלונג.</li>
+<li><strong>אראפנעמען פאראיינשטעלונג</strong>: מעקט אויס די יעצטיגע פאראיינשטעלונג.</li>
+<li><strong>אפזיכערן פאר אלע אונטערפעקלעך</strong>: ווי <strong>אפזיכערן</strong>, און טיילט אויך צו די אויסגעקליבענע פאראיינשטעלונג צו אלע אונטערפעקלעך פונעם יעצטיגן פעקל.</li>
+</ul>
+<p>פעקל אפציעס גייען נישט אן למפרע. למשל, אויב איר טוישט דעם אויסוואל וואס באשטימט דעם אפשטאנד נאך א פארגעסענעם קארטל, וועלן קארטלעך וואס איר האט פארגעסן פאר דער ענדערונג נאך האלטן דעם אלטן אפשטאנד.</p>
+<p><a id="תת-חפיסות"></a></p>
+<h2 id="אונטערפעקלעך"><a class="header" href="#אונטערפעקלעך">אונטערפעקלעך</a></h2>
+<p>אויב אייער פעקל האט אונטערפעקלעך און איר ווילט אז איינער אדער מער זאלן האבן אנדערע איינשטעלונגען פונעם הויפט פעקל, קען מען זיי צוטיילן צו אנדערע פאראיינשטעלונגען. ביים ווייזן א קארטל קוקט אנקי צו וועלכן אונטערפעקל עס געהערט און נוצט יענעם פעקל’ס אויסוואלן. עס זענען דא צוויי אויסנאמען:</p>
+<ul>
+<li>די <a href="#%D7%9E%D7%92%D7%91%D7%9C%D7%95%D7%AA-%D7%99%D7%95%D7%9E%D7%99%D7%95%D7%AA">גרענעצן</a> פון <strong>נייע קארטלעך א טאג</strong> און <strong>מערסטע חזרות א טאג</strong> ביי אן אונטערפעקל באשטימען וויפיל קארטלעך מען קען נעמען פון אים. אבער דער גאנצער צאל קארטלעך אינעם לערנען רונדע ווערט באשטימט דורך די גרענעצן פונעם פעקל וואס איר האט אויסגעקליבן צו לערנען.</li>
+<li>די <a href="#%D7%A1%D7%93%D7%A8-%D7%97%D7%96%D7%A8%D7%94">סדר פון ווייזן</a> אויסוואלן קומען פונעם פעקל וואס איר האט אויסגעקליבן צו לערנען, נישט פונעם פעקל פונעם יעצטיגן קארטל.</li>
+</ul>
+<p>למשל, שטעלט זיך פאר אז איר האט די פאלגנדע זאמלונג:</p>
+<pre><code>- פעקל א' (פאראיינשטעלונג 1)
+  - פעקל א'::אונטערפעקל ב' (פאראיינשטעלונג 2)
+</code></pre>
+<p>פאראיינשטעלונג 1 און 2 זענען די זעלבע, מיט צוויי חילוקים:</p>
+<ul>
+<li>פאראיינשטעלונג 1:
+<ul>
+<li><strong>לערן טריט</strong>: <code>1m 10m</code></li>
+<li><strong>סדר פון נייע קארטלעך/חזרות</strong>: <code>אויסמישן מיט חזרות</code></li>
+</ul>
+</li>
+<li>פאראיינשטעלונג 2:
+<ul>
+<li><strong>לערן טריט</strong>: <code>20m 2h</code></li>
+<li><strong>סדר פון נייע קארטלעך/חזרות</strong>: <code>ווייזן נאך די חזרות</code></li>
+</ul>
+</li>
+</ul>
+<p>אויב איר קלייבט צו לערנען אונטערפעקל ב’:</p>
+<ul>
+<li>די לערנען טריט פאר אלע נייע קארטלעך זענען <code>20m 2h</code> (פאראיינשטעלונג 2 גייט אן).</li>
+<li>אלע נייע קארטלעך קומען נאך די חזרות (פאראיינשטעלונג 2 גייט אן).</li>
+</ul>
+<p>אויב איר קלייבט צו לערנען פעקל א’:</p>
+<ul>
+<li>די לערנען טריט פאר נייע קארטלעך אין פעקל א’ זענען <code>1m 10m</code> (פאראיינשטעלונג 1 גייט אן).</li>
+<li>די לערנען טריט פאר נייע קארטלעך אין אונטערפעקל ב’ זענען <code>20m 2h</code> (פאראיינשטעלונג 2 גייט אן).</li>
+<li>אלע נייע קארטלעך ווערן געמישט מיט חזרות (פאראיינשטעלונג 1 גייט אן).</li>
+</ul>
+<p>באמערקונג: צוליב טעכנישע גרענעצן שרייבט מען די לערנען טריט מיט ענגלישע אותיות. זייער באדייט איז:</p>
+<ul>
+<li>s = סעקונדעס, למשל 1s פאר איין סעקונדע.</li>
+<li>m = מינוטן.</li>
+<li>h = שעה’ן.</li>
+<li>d = טעג.</li>
+</ul>
+<p><a id="מגבלות-יומיות"></a></p>
+<h2 id="טעגליכע-גרענעצן"><a class="header" href="#טעגליכע-גרענעצן">טעגליכע גרענעצן</a></h2>
+<p><a id="כרטיסים-חדשיםיום"></a></p>
+<h3 id="נייע-קארטלעך-א-טאג"><a class="header" href="#נייע-קארטלעך-א-טאג">נייע קארטלעך א טאג</a></h3>
+<p>דער אויסוואל באשטימט וויפיל נייע קארטלעך מען קען ווייזן אין יעדן טאג וואס איר עפנט די פראגראם. אויב איר לערנט ווייניגער פונעם גרענעץ אדער פארפעלט א טאג, הייבט דער ציילער צומארגנס אן פון אנהייב. איר וועט נישט באקומען מער קארטלעך ווי אייער גרענעץ ערלויבט.</p>
+<p>ביים לערנען א פעקל מיט אונטערפעקלעך, באשטימען די גרענעצן פון יעדן אונטערפעקל דעם מאקסימום וואס מען נעמט פון יענעם פעקל. די גרענעצן פונעם אויסגעקליבענעם פעקל באשטימען דעם גאנצן צאל קארטלעך וואס מען ווייזט.</p>
+<p>לערנען נייע קארטלעך פארגרעסערט צייטווייליג די טעגליכע חזרות, ווייל לעצטנס געלערנטן חומר דארף מען חזרן עטליכע מאל פאר די אפשטאנדן קענען פיל וואקסן. אויב איר לערנט קבוע 20 נייע קארטלעך א טאג, קענט איר ערווארטן בערך 200 חזרה קארטלעך א טאג. מען קען פארמינערן די נויטיגע חזרות דורך ווייזן ווייניגער נייע קארטלעך טעגליך ביז דער חזרה עול ווערט קלענער. נישט ווייניג אנקי באניצער האבן מיט התלהבות געלערנט הונדערטער נייע קארטלעך אין די ערשטע טעג, און דערנאך זיך געפונען איבערגעלאדן מיט חזרות.</p>
+<p><a id="חזרות-מרביותיום"></a></p>
+<h3 id="מערסטע-חזרות-א-טאג"><a class="header" href="#מערסטע-חזרות-א-טאג">מערסטע חזרות א טאג</a></h3>
+<p>לאזט באשטימען א מאקסימום צאל חזרה קארטלעך פאר א טאג. ווען מען דערגרייכט די גרענעץ, ווייזט אנקי נישט נאך חזרה קארטלעך אין יענעם טאג, אפילו נאך ווארטן. ביים קבוע’ן לערנען קען דאס אויסגלייכן צייטווייליגע העכערונגען אינעם צאל גרייטע קארטלעך און פארמיידן א שרעק ביים צוריקקומען נאך א וואך הפסקה. ווען דער אויסוואל באהאלט חזרות, קומט א מעלדונג אינעם סיכום פענצטער וואס לייגט פאר צו פארגרעסערן די גרענעץ אויב איר האט צייט.</p>
+<p>צו שנעל אראפנעמען כמעט די גאנצע טעגליכע גרענעץ, עפנט דעם הויפט מעניו און קלייבט <strong>מאגר געצייג &gt; אראפנעמען די טעגליכע חזרה גרענעץ</strong>. דאס קלייבט נישט אויס קיין באזונדערן פעקל און טוישט נישט זיין נאמען. עס שטעלט פשוט די נייע קארטלעך און חזרה גרענעצן אין די פאראיינשטעלונגען צו א זייער הויכן ווערט, אזוי אז די גרענעץ וועט אייך כמעט נישט אפשטעלן.</p>
+<p>ביים לערנען א פעקל מיט אונטערפעקלעך, ארבעט די חזרה גרענעץ ענליך צו דער נייע קארטלעך גרענעץ.</p>
+<p>אנקי רעכנט אויך אלע לערנען קארטלעך וואס האבן <a href="./preferences.html#%D7%97%D7%96%D7%A8%D7%94">אריבער א טאג גרעניץ</a> אינעם חזרה צאל. די קארטלעך זענען דערפאר אויך אונטער דער חזרה גרענעץ.</p>
+<p><a id="מגבלות-יומיות-לפי-חפיסה"></a></p>
+<h3 id="טעגליכע-גרענעצן-לויט-פעקל"><a class="header" href="#טעגליכע-גרענעצן-לויט-פעקל">טעגליכע גרענעצן לויט פעקל</a></h3>
+<p>מען קען נוצן די זעלבע פאראיינשטעלונג פאר פארשידענע פעקלעך, מיט אן אייגענער גרענעץ פאר יעדן פעקל. אזוי דארף מען נישט מאכן קאפיעס פון פאראיינשטעלונגען נאר דערפאר, און מען קען גרינגער איינשטעלן באזונדערע גרענעצן פאר אונטערפעקלעך.</p>
+<p>אנקי גיט דריי מעגליכקייטן פאר טעגליכע גרענעצן:</p>
+<ul>
+<li><strong>פאראיינשטעלונג</strong>: גייט אן אויף אלע פעקלעך וואס נוצן די פאראיינשטעלונג.</li>
+<li><strong>דער פעקל</strong>: נאר פאר א געוויסן פעקל.</li>
+<li><strong>נאר היינט</strong>: נאר פאר א געוויסן פעקל און צייטווייליג.</li>
+</ul>
+<p><a id="התעלם-ממגבלת-החזרות-עבור-כרטיסים-חדשים"></a></p>
+<h3 id="נייע-קארטלעך-איגנארירן-די-חזרה-גרענעץ"><a class="header" href="#נייע-קארטלעך-איגנארירן-די-חזרה-גרענעץ">נייע קארטלעך איגנארירן די חזרה גרענעץ</a></h3>
+<p>לויט דער ברירת מחדל גייט די חזרה גרענעץ אויך אן אויף נייע קארטלעך. מען ווייזט נישט נייע קארטלעך ווען די חזרה גרענעץ איז דערגרייכט. אויב דער אויסוואל איז אנגעצונדן, קומען נייע קארטלעך אפגעזען פון דער חזרה גרענעץ.</p>
+<p>אויב איר האט א הויפן פארשפעטיגטע חזרה קארטלעך, איז כדאי אפצושטעלן נייע קארטלעך ביז איר האט נאכגעהאלטן דעם הויפן. ווייטער צולייגן נייע קארטלעך בשעת איר זענט שוין הינטערשטעליג קען פארגרעסערן דעם הויפן.</p>
+<p><a id="חישוב-מגבלות-מחפיסת-האב-העליונה"></a></p>
+<h3 id="גרענעצן-הייבן-זיך-אן-פון-אויבן"><a class="header" href="#גרענעצן-הייבן-זיך-אן-פון-אויבן">גרענעצן הייבן זיך אן פון אויבן</a></h3>
+<p>לויט דער ברירת מחדל גייען די טעגליכע גרענעצן פון א העכערן פעקל נישט אן ווען איר קלייבט אן אונטערפעקל. א הויפט פעקל קען האבן א גרענעץ פון 10 נייע קארטלעך א טאג, בשעת זיינע אונטערפעקלעך האבן א גרענעץ פון 20. דער הויפט פעקל’ס גרענעץ ווירקט נישט אויפן צאל נייע קארטלעך וואס איר קענט לערנען פון זיין אונטערפעקל.</p>
+<p>ווען דער אויסוואל איז אנגעצונדן, גייען די העכערע פעקלעך גרענעצן אויך אן ביים אויסקלייבן אן אונטערפעקל. אינעם פריערדיגן ביישפיל קענט איר נאר לערנען 10 נייע קארטלעך פון די אונטערפעקלעך אנשטאט 20.</p>
+<p>דאס קען העלפן אויב איר ווילט לערנען באזונדערע אונטערפעקלעך און דערביי האלטן אן אלגעמיינע גרענעץ פאר די קארטלעך פון אלע אונטערפעקלעך צוזאמען.</p>
+<p><a id="כרטיסים-חדשים"></a></p>
+<h2 id="נייע-קארטלעך"><a class="header" href="#נייע-קארטלעך">נייע קארטלעך</a></h2>
+<p>די אויסוואלן דא ווירקן נאר אויף נייע קארטלעך און <a href="getting-started.html#%D7%9E%D7%A6%D7%91%D7%99-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">קארטלעך ביים לערנען</a>. נאכדעם וואס א קארטל איז פארטיג מיט אלע לערנען טריט, גייען די אויסוואלן אין דעם טייל שוין נישט אן אויף אים.</p>
+<p><a id="שלבי-למידה"></a></p>
+<h3 id="לערן-טריט"><a class="header" href="#לערן-טריט">לערן טריט</a></h3>
+<p>די איינשטעלונג באשטימט דעם צאל לערנען חזרות און די אפשטאנדן צווישן זיי. שרייבט איין אדער מער אפשטאנדן, צעטיילט מיט רווחים. יעדעס דרוקן אויף <strong>גוט</strong> ברענגט דאס קארטל צום קומענדיגן טריט. יעדעס דרוקן אויף <strong>נאכאמאל</strong> ברענגט עס צוריק צום ערשטן טריט.</p>
+<p>למשל, שטעלט זיך פאר אז די לערנען טריט זענען <code>1m 10m 1d</code>.</p>
+<ul>
+<li>מיט <strong>נאכאמאל</strong> גייט דאס קארטל צום ערשטן טריט און קומט ווידער נאך איין מינוט.</li>
+<li>מיט <strong>גוט</strong> אויף א נייעם קארטל אדער נאך דעם איין מינוט טריט, גייט עס צום קומענדיגן טריט און קומט ווידער אין 10 מינוט.</li>
+<li>מיט <strong>גוט</strong> נאך דעם 10 מינוט טריט, קומט עס נישט ווידער ביז צומארגנס.</li>
+<li>מיט <strong>גוט</strong> צומארגנס, ענדיגט עס די לערנען טריט און ווערט א חזרה קארטל. עס קומט ווידער נאך דעם אפשטאנד באשטימט דורך <em>אפשטאנד ביים ענדיגן לערנען</em>.</li>
+</ul>
+<p><strong>שווער</strong> ארבעט אנדערש לויט דעם טריט וואו איר האלט.</p>
+<ul>
+<li>ביים ערשטן טריט ווייזט <strong>שווער</strong> אן אפשטאנד פון <code>6m</code>. <code>6m</code> איז דער דורכשניט פון די ערשטע צוויי טריט: <code>1m</code> און <code>10m</code>.
+<ul>
+<li>אן אויסנאם: מיט נאר איין לערנען טריט ווייזט <strong>שווער</strong> 1.5 מאל דעם טריט. דער אפשטאנד קען זיין העכסטנס איין טאג לענגער פונעם לערנען טריט.</li>
+</ul>
+</li>
+<li>ביי יעדן אנדערן טריט חזרט <strong>שווער</strong> דעם זעלבן טריט.</li>
+</ul>
+<p>אויב עס איז נישט דא אנדערע חומר צום לערנען, ווייזט אנקי לויט דער ברירת מחדל לערנען קארטלעך ביז 20 מינוט פאר דער צייט. צו אויסלעשן דאס אדער טוישן די פאראויס צייט, זעט <a href="preferences.html">איינשטעלונגען</a>.</p>
+<p><a id="גבולות-יום"></a></p>
+<h4 id="טאג-גרענעצן"><a class="header" href="#טאג-גרענעצן">טאג גרענעצן</a></h4>
+<p>אנקי באהאנדלט קורצע טריט אנדערש פון טריט וואס <a href="./preferences.html#%D7%97%D7%96%D7%A8%D7%94">גייען איבער א טאג גרעניץ</a>. קורצע טריט קומען ווי נאר דער אפשטאנד איז פארביי, מיט א קדימה פאר חזרה און נייע קארטלעך, כדי מען זאל קענען ענטפערן ווי נאענט ווי מעגליך צו דער געוואונטשענער צייט. ווען א טריט גייט איבער א טאג גרעניץ, ווערט דער אפשטאנד אויטאמאטיש פארוואנדלט אין טעג. למשל, אויב דער קומענדיגער טאג הייבט זיך אן אין 5 שעה’ן און דער אפשטאנד איז 6 שעה’ן, מאכט אנקי דערפון איין טאג.</p>
+<p><a id="מרווח-סיום-למידה"></a></p>
+<h3 id="אפשטאנד-ביים-ענדיגן-לערנען"><a class="header" href="#אפשטאנד-ביים-ענדיגן-לערנען">אפשטאנד ביים ענדיגן לערנען</a></h3>
+<p>דער צאל טעג צו ווארטן פארן נאכאמאל ווייזן א קארטל נאך “גוט” אויפן לעצטן לערנען טריט. דאס איז דער ערשטער אפשטאנד נאכן ענדיגן לערנען. זעט דעם ביישפיל <a href="deck-options.html#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">פריער אין דעם טייל</a>.</p>
+<p><a id="מרווח-קל"></a></p>
+<h3 id="אפשטאנד-פאר-גרינג"><a class="header" href="#אפשטאנד-פאר-גרינג">אפשטאנד פאר גרינג</a></h3>
+<p>דער צאל טעג צו ווארטן פארן נאכאמאל ווייזן א קארטל נאך “גרינג”.</p>
+<p><strong>גרינג</strong> מאכט לערנען קארטלעך צו חזרה קארטלעך אפגעזען פונעם יעצטיגן טריט, און גיט זיי דעם אפשטאנד פון דעם אויסוואל. דער גרינג אפשטאנד דארף שטענדיג זיין כאטש אזוי לאנג ווי דער אפשטאנד ביים ענדיגן לערנען, און געווענליך עטליכע טעג לענגער.</p>
+<p><a id="סדר-הוספה"></a></p>
+<h3 id="סדר-פון-אריינלייגן"><a class="header" href="#סדר-פון-אריינלייגן">סדר פון אריינלייגן</a></h3>
+<p>אין עלטערע ווערסיעס האט דער אויסוואל באשטימט צי אנקי זאל צולייגן נייע קארטלעך צופעליג אדער לויטן סדר. ביים טוישן דעם אויסוואל סארטירט אנקי איבער די פעקלעך פון דער יעצטיגער פאראיינשטעלונג.</p>
+<p>למעשה טוישט דער אויסוואל דא נישט דעם לערנען סדר. לאזט עס אויף <code>לויטן סדר (עלטערע קארטלעך צום ערשט)</code> און שטעלט אנשטאט דעם איין דעם <a href="deck-options.html#%D7%A1%D7%93%D7%A8-%D7%97%D7%96%D7%A8%D7%94">סדר פון ווייזן</a>.</p>
+<p><a id="שגיאות"></a></p>
+<h2 id="פארגעסונגען"><a class="header" href="#פארגעסונגען">פארגעסונגען</a></h2>
+<p>ווען איר דרוקט <strong>נאכאמאל</strong> אויף א קארטל בשעת חזרה, הייסט דאס א <em>פארגעסונג</em>. די אויסוואלן דא ווירקן אויף אזעלכע קארטלעך.</p>
+<p><a id="שלבי-למידה-מחדש"></a></p>
+<h3 id="איבערלערן-טריט"><a class="header" href="#איבערלערן-טריט">איבערלערן טריט</a></h3>
+<p>ווי לערנען טריט, אבער פאר קארטלעך וואס מען האט פארגעסן. ווען איר פארגעסט א חזרה קארטל און דרוקט <strong>נאכאמאל</strong>, גייט דאס קארטל דורך <em>איבערלערן טריט</em> פאר עס ווערט ווידער א חזרה קארטל.</p>
+<p>אויב די טריט זענען ליידיג, שפרינגט דאס קארטל איבער איבערלערנען און באקומט לויט דער ברירת מחדל א נייעם אפשטאנד פון איין טאג.</p>
+<p><a id="מרווח-מינימלי"></a></p>
+<h3 id="קלענסטער-אפשטאנד"><a class="header" href="#קלענסטער-אפשטאנד">קלענסטער אפשטאנד</a></h3>
+<p>דער קלענסטער צאל טעג וואס א קארטל דארף ווארטן נאכן ענדיגן איבערלערנען. די ברירת מחדל איז איין טאג: עס קומט ווידער צומארגנס ווי נאר איבערלערנען איז פארטיג.</p>
+<h3 id="עלוקות"><a class="header" href="#עלוקות">עלוקות</a></h3>
+<p>באשטימט ווי אנקי באהאנדלט עלוקות. פאר פרטים, זעט <a href="leeches.html">עלוקות</a>.</p>
+<p><a id="סדר-חזרה"></a></p>
+<h2 id="סדר-פון-ווייזן"><a class="header" href="#סדר-פון-ווייזן">סדר פון ווייזן</a></h2>
+<p>די אויסוואלן אין דעם טייל גייען אן אויפן פעקל וואס איר האט אויסגעקליבן צו לערנען אינעם הויפט פענצטער, נישט אויפן פעקל פון דעם קארטל וואס ווערט יעצט געוויזן.</p>
+<p>מער איבער דעם סדר איז דא אינעם <a href="studying.html#%D7%A1%D7%93%D7%A8-%D7%94%D7%AA%D7%A6%D7%95%D7%92%D7%94">לערנען טייל</a>.</p>
+<p><a id="סדר-איסוף-כרטיסים-חדשים"></a></p>
+<h3 id="סדר-פון-נעמען-נייע-קארטלעך"><a class="header" href="#סדר-פון-נעמען-נייע-קארטלעך">סדר פון נעמען נייע קארטלעך</a></h3>
+<p>באשטימט ווי אנקי נעמט נייע קארטלעך פון א פעקל. די אויסוואלן זענען:</p>
+<ul>
+<li>
+<p><strong>פעקל</strong>: נעמט קארטלעך פון יעדן אונטערפעקל לויטן סדר, פון אויבן אן. אין יעדן אונטערפעקל ווערן קארטלעך גענומען פון נידריגן צו הויכן פלאץ. אויב דער אויסגעקליבענער פעקל’ס טעגליכע גרענעץ ווערט דערגרייכט, קען דאס נעמען זיך אפשטעלן פאר איר האט געחזרט אלע אונטערפעקלעך. דער סדר איז דער שנעלסטער אין גרויסע זאמלונגען, און לאזט געבן א קדימה פאר אונטערפעקלעך וואס זענען נאענטער צום אויבערשטן טייל.</p>
+<p>פעקלעך און אונטערפעקלעך זענען שטענדיג אויסגעשטעלט לויטן אלף בית. מען קען דעריבער געבן א נומער פרעפיקס ווי 001 צו באשטימען זייער סדר. מען קען אויך נוצן <code>_</code> און <code>~</code> אלס פרעפיקס צו שטעלן זאכן אויבן אדער אונטן.</p>
+<p>דער פלאץ סדר ווענדט זיך ביים אנהייב אין סדר פון אריינלייגן, אבער מען קען <a href="./browsing.html#%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">ניי באשטימען דעם פלאץ</a> מיט דער האנט אויף פארשידענע וועגן.</p>
+</li>
+<li>
+<p><strong>פעקל, דערנאך צופעליגע רשומות</strong>: נעמט קארטלעך פון יעדן אונטערפעקל לויטן סדר, פון אויבן אן. אין יעדן אונטערפעקל נעמט מען קארטלעך פון צופעליג אויסגעקליבענע רשומות.</p>
+</li>
+<li>
+<p><strong>פון נידריגן צו הויכן פלאץ</strong>: נעמט קארטלעך לויט אן אויפגייענדיגן פלאץ (חזרה נומער), געווענליך פונעם עלטסטן צוגעלייגטן קארטל אן.</p>
+</li>
+<li>
+<p><strong>פון הויכן צו נידריגן פלאץ</strong>: נעמט קארטלעך לויט אן אראפגייענדיגן פלאץ (חזרה נומער), געווענליך פונעם נייסטן צוגעלייגטן קארטל אן.</p>
+</li>
+<li>
+<p><strong>צופעליגע רשומות</strong>: נעמט קארטלעך פון צופעליג אויסגעקליבענע רשומות.</p>
+</li>
+<li>
+<p><strong>צופעליגע קארטלעך</strong>: נעמט קארטלעך אין א צופעליגן סדר.</p>
+</li>
+</ul>
+<p><a id="סדר-חזרה-של-כרטיסים-חדשים"></a></p>
+<h3 id="סארטיר-סדר-פאר-נייע-קארטלעך"><a class="header" href="#סארטיר-סדר-פאר-נייע-קארטלעך">סארטיר סדר פאר נייע קארטלעך</a></h3>
+<p>באשטימט ווי מען סארטירט די נייע קארטלעך נאכן זיי נעמען. די אויסוואלן זענען:</p>
+<ul>
+<li>
+<p><strong>סארט קארטל, דערנאך סדר פון נעמען</strong>: ווייזט קארטלעך לויטן נומער פונעם סארט קארטל. קארטלעך פון יעדן נומער קומען אין דעם סדר ווי מען האט זיי גענומען. אויב באזייטיגן ברידער איז אויסגעלאשן, קומען אלע פארנט←הינטן קארטלעך פאר אלע הינטן←פארנט קארטלעך. דער סדר העלפט ווען מען וויל נישט אז ברידער זאלן קומען צו נאענט איינס צום אנדערן.</p>
+</li>
+<li>
+<p><strong>סדר פון נעמען</strong>: ווייזט די קארטלעך פונקט ווי מען האט זיי גענומען. אויב באזייטיגן ברידער איז אויסגעלאשן, מאכט דאס געווענליך אז אלע ברידער זאלן קומען איינס נאכן אנדערן.</p>
+</li>
+<li>
+<p><strong>סארט קארטל, דערנאך צופעליג</strong>: ווייזט קארטלעך לויטן נומער פונעם סארט קארטל, אבער מישט די קארטלעך פון יעדן נומער. דער סדר העלפט ווען מען וויל נישט אז ברידער זאלן קומען צו נאענט צוזאמען, און דאך וויל מען א צופעליגן סדר.</p>
+</li>
+<li>
+<p><strong>צופעליגע רשומה, דערנאך סארט קארטל</strong>: קלייבט צופעליגע רשומות און ווייזט דערנאך אלע זייערע ברידער לויטן סדר.</p>
+</li>
+<li>
+<p><strong>צופעליג</strong>: מישט אינגאנצן די גענומענע קארטלעך.</p>
+</li>
+</ul>
+<p><a id="סדר-חדשחזרה"></a></p>
+<h3 id="סדר-פון-נייע-קארטלעךחזרות"><a class="header" href="#סדר-פון-נייע-קארטלעךחזרות">סדר פון נייע קארטלעך/חזרות</a></h3>
+<p>באשטימט צי נייע קארטלעך זאלן ווערן געמישט מיט חזרה קארטלעך, קומען פאר זיי אדער נאך זיי.</p>
+<p><a id="סדר-למידה-בין-יומיתחזרות"></a></p>
+<h3 id="סדר-פון-לערנען-פון-פריערדיגע-טעגחזרות"><a class="header" href="#סדר-פון-לערנען-פון-פריערדיגע-טעגחזרות">סדר פון לערנען פון פריערדיגע טעג/חזרות</a></h3>
+<p>באשטימט צי לערנען אדער איבערלערנען קארטלעך וואס גייען איבער א טאג גרעניץ זאלן ווערן געמישט מיט חזרה קארטלעך, קומען פאר זיי אדער נאך זיי. לערנען קארטלעך זענען געווענליך שווערער פון חזרה קארטלעך. א טייל באניצער ווילן זיי דערפאר צום סוף, צו טון קודם די גרינגע זאכן, אדער ביים אנהייב, כדי צו האבן מער צייט ווידער צו חזרן די פארגעסענע.</p>
+<p><a id="סדר-מיון-חזרות"></a></p>
+<h3 id="סארטיר-סדר-פאר-חזרות"><a class="header" href="#סארטיר-סדר-פאר-חזרות">סארטיר סדר פאר חזרות</a></h3>
+<p>באשטימט ווי מען סארטירט חזרה קארטלעך. די אויסוואלן זענען:</p>
+<ul>
+<li>
+<p><strong>חזרה דאטום, דערנאך צופעליג</strong>: דער פעליקייט סדר גיט א קדימה פאר קארטלעך וואס האבן לענגער געווארט. דאס איז דער רעקאמענדירטער סדר ווען איר האלט מיט אלע חזרות, אדער האט נאר א קליינעם פארשפעטיגטן הויפן. נאך א לאנגע הפסקה אדער ביים זיין הינטערשטעליג, קען מען צייטווייליג טוישן דעם סדר.</p>
+</li>
+<li>
+<p><strong>חזרה דאטום, דערנאך פעקל</strong>: גיט אויך א קדימה פאר קארטלעך וואס האבן לענגער געווארט, און ווייזט דערנאך די חזרות פון יעדן אונטערפעקל אין זיין ריי.</p>
+</li>
+<li>
+<p><strong>פעקל, דערנאך חזרה דאטום</strong>: ווייזט די חזרות פון יעדן אונטערפעקל אין זיין ריי. דער סדר איז געווענליך נישט רעקאמענדירט, ווייל שטענדיג זען חומר אינעם זעלבן סדר מאכט גרינגער צו ראטן דעם ענטפער לויטן הקשר און ברענגט שוואכערע זכרונות.</p>
+</li>
+<li>
+<p><strong>פון קורצע צו לאנגע אפשטאנדן</strong>: ווייזט ערשט קארטלעך מיט קורצערע אפשטאנדן.</p>
+</li>
+<li>
+<p><strong>פון לאנגע צו קורצע אפשטאנדן</strong>: ווייזט ערשט קארטלעך מיט לענגערע אפשטאנדן.</p>
+</li>
+<li>
+<p><strong>פון ווייניגער צו מער גרינגקייט</strong>: ווייזט ערשט שווערערע קארטלעך.</p>
+</li>
+<li>
+<p><strong>פון מער צו ווייניגער גרינגקייט</strong>: ווייזט ערשט גרינגערע קארטלעך.</p>
+</li>
+<li>
+<p><strong>פארשפעטיגונג לויטן אפשטאנד</strong>: ווייזט ערשט די קארטלעך וואס איר האט מסתמא מער פארגעסן. דאס איז געווענליך רעקאמענדירט פאר א גרויסן הויפן וואס וועט נעמען צייט דורכצוגיין, כדי ווייניגער צו ריזיקירן פארגעסן נאך קארטלעך.</p>
+<p>מיטן SM-2 אלגאריטם באשטימט מען די פארשפעטיגונג דורך פארגלייכן ווי פארשפעטיגט דאס קארטל איז מיט דער לענג פון זיין אפשטאנד. למשל, א קארטל מיט א 5 טאג אפשטאנד וואס איז 2 טעג פארשפעטיגט וועט קומען פאר א קארטל מיט א 10 טאג אפשטאנד וואס איז 3 טעג פארשפעטיגט.</p>
+<p>ווען FSRS איז אנגעצונדן, ווערט דער אויסוואל אראפגענומען. דער ענליכער FSRS אויסוואל איז <strong>פון נידריגן צו הויכן שאנס צו געדענקען</strong>, גערעכנט לויטן שאנס צו געדענקען יעדעס קארטל און דער געוואונטשענער געדענק ראטע פון דער פאראיינשטעלונג.</p>
+</li>
+</ul>
+<p><a id="הטמנה"></a></p>
+<h2 id="באזייטיגן-ביז-מארגן"><a class="header" href="#באזייטיגן-ביז-מארגן">באזייטיגן ביז מארגן</a></h2>
+<p>ווען אנקי נעמט קארטלעך, נעמט עס ערשט לערנען קארטלעך אינעם זעלבן טאג, דערנאך לערנען קארטלעך וואס גייען איבער טעג, דערנאך חזרה קארטלעך און צום סוף נייע קארטלעך. דאס ווירקט אויפן באזייטיגן:</p>
+<ul>
+<li>אויב אלע באזייטיגן אויסוואלן זענען אנגעצונדן, קומט דער ברודער וואס איז דאס פריסטע אין דער ליסטע. למשל, א חזרה קארטל קומט פאר א נייעם קארטל.</li>
+<li>שפעטערדיגע ברידער אינעם סדר קענען נישט באזייטיגן פריערדיגע סארטן קארטלעך. למשל, אויב באזייטיגן נייע קארטלעך איז אויסגעלאשן און איר לערנט א נייעם קארטל, וועט עס נישט באזייטיגן קיין לערנען קארטל פון א פריערדיגן טאג אדער קיין חזרה קארטל. מען קען דעריבער זען סיי א חזרה ברודער און סיי א נייעם ברודער אינעם זעלבן רונדע.</li>
+</ul>
+<p>די אויסוואלן זענען:</p>
+<ul>
+<li><strong>באזייטיגן פארבונדענע נייע קארטלעך</strong>: צי אנדערע נייע קארטלעך פון דער זעלבער רשומה, ווי פארקערטע קארטלעך און שכינות’דיגע אויסלאזן, זאלן ווערן אפגעשטופט ביז מארגן.</li>
+<li><strong>באזייטיגן פארבונדענע חזרה קארטלעך</strong>: צי אנדערע חזרה קארטלעך פון דער זעלבער רשומה זאלן ווערן אפגעשטופט ביז מארגן.</li>
+<li><strong>באזייטיגן פארבונדענע לערן קארטלעך פון פריערדיגע טעג</strong>: צי אנדערע לערנען קארטלעך פון דער זעלבער רשומה וואס זענען אריבער א טאג גרעניץ זאלן ווערן אפגעשטופט ביז מארגן.</li>
+</ul>
+<p>פאר מער איבער באזייטיגן קארטלעך, זעט <a href="./studying.html#%D7%90%D7%97%D7%99%D7%9D-%D7%95%D7%94%D7%98%D7%9E%D7%A0%D7%94">דעם טייל</a> אינעם מדריך.</p>
+<p><a id="שמע"></a></p>
+<h2 id="קול"><a class="header" href="#קול">קול</a></h2>
+<ul>
+<li>
+<p><strong>נישט אויטאמאטיש אפשפילן קול</strong>: לויט דער ברירת מחדל שפילט אנקי אויטאמאטיש יעדן קול אויף אייערע קארטלעך. מיט דעם אויסוואל וועט אנקי נישט שפילן קול ביז איר דרוקט נאכאמאל אפשפילן, <kbd>R</kbd> אדער <kbd>F5</kbd>.</p>
+</li>
+<li>
+<p><strong>אויסלאזן פראגע ביים נאכאמאל אפשפילן ענטפער</strong>: באשטימט צי מען זאל שפילן דעם פראגע זייט’ס קול ביים נאכאמאל אפשפילן פון דער ענטפער זייט. אנקי שפילט נישט אויטאמאטיש קול פונעם <code>{{FrontSide}}</code> פעלד. דער אויסוואל ווירקט נישט אויפן אויטאמאטישן אפשפילן.</p>
+</li>
+</ul>
+<p><a id="שעון-עצר"></a></p>
+<h2 id="זייגערס"><a class="header" href="#זייגערס">זייגערס</a></h2>
+<p><a id="timer"></a></p>
+<p>אנקי פאלגט נאך וויפיל צייט עס נעמט אייך ענטפערן יעדעס קארטל, כדי צו זען וויפיל צייט איר האט געלערנט יעדן טאג. די צייט ווירקט נישט אויפן צייט פלאן.</p>
+<p><a id="קוצב-זמן-פנימי"></a></p>
+<h3 id="אינערליכער-זייגער"><a class="header" href="#אינערליכער-זייגער">אינערליכער זייגער</a></h3>
+<ul>
+<li>גרעסטע צאל סעקונדעס פאר אן ענטפער: די ברירת מחדל גרענעץ איז 60 סעקונדעס. אויב עס נעמט לענגער, נעמט אנקי אן אז איר זענט אוועק פונעם קאמפיוטער אדער עפעס האט אייך אפגעצויגן. עס באגרעניצט די איינגעשריבענע צייט צו 60 סעקונדעס, כדי נישט צו געבן אומגענויע סטאטיסטיק.</li>
+<li>דער אינערליכער זייגער ארבעט פון ווען די פראגע קומט ביז איר דרוקט אן אפשאצונג קנעפל פארן ענטפער. אויב איר נוצט קבוע מער פון 60 סעקונדעס פאר א קארטל, קען מען פארגרעסערן די גרענעץ. נאך בעסער איז צו מאכן אייערע קארטלעך פשוטער.</li>
+</ul>
+<p><a id="קוצב-זמן-על-המסך"></a></p>
+<h3 id="זייגער-אויפן-עקרן"><a class="header" href="#זייגער-אויפן-עקרן">זייגער אויפן עקרן</a></h3>
+<ul>
+<li>ווייזן א זייגער אויפן עקרן: ווייזט אינעם לערנען פענצטער א זייגער וואס ציילט די צייט פון לערנען יעדעס קארטל. ער שטעלט זיך אפ ווען מען דערגרייכט די מאקסימום סעקונדעס פאר אן ענטפער וואס זענען באשטימט פארן אינערליכן זייגער.</li>
+<li>אפשטעלן דעם זייגער ביים ווייזן ענטפער: באשטימט צי דער עקרן זייגער זאל ווייטער לויפן פון ווען דער ענטפער קומט ביז איר דרוקט אן אפשאצונג קנעפל. דער אויסוואל ווירקט נישט אויף דער צייט וואס ווערט איינגעשריבן אין אייער סטאטיסטיק.</li>
+</ul>
+<p><a id="התקדמות-אוטומטית"></a></p>
+<h2 id="אויטאמאטיש-ווייטערגיין"><a class="header" href="#אויטאמאטיש-ווייטערגיין">אויטאמאטיש ווייטערגיין</a></h2>
+<p>אויטאמאטיש ווייטערגיין טוט געוויסע פעולות אויטאמאטיש נאך א באשטימטער צייט. צו נוצן עס, שטעלט ערשט א צייט העכער פון נול ביי <strong>סעקונדעס צו ווייזן די פראגע</strong> און/אדער <strong>סעקונדעס צו ווייזן דעם ענטפער</strong>. אינעם לערנען פענצטער, נוצט דערנאך אויטאמאטיש ווייטערגיין אונטער <strong>נאך אויסוואלן</strong> צו אנהייבן.</p>
+<p><strong>ווארטן אויף קול</strong> באשטימט צי די אויסגעקליבענע פעולה זאל אנהייבן פאר דער קול פון דער פראגע אדער ענטפער ענדיגט זיך.</p>
+<p>צו אנצינדן אויטאמאטיש ווייטערגיין אלס ברירת מחדל, עפנט <strong>פעקל אפציעס</strong>, גייט צו <strong>אויטאמאטיש ווייטערגיין</strong>, שטעלט וויפיל סעקונדעס צו ווארטן ביי דער פראגע און/אדער ענטפער, און צייכנט אן אז עס זאל זיין אקטיוו פארן פעקל אדער דער פאראיינשטעלונג. נאכן אפזיכערן, אויב איר זענט שוין אינעם חזרה פענצטער, ווערט אויך דער יעצטיגער רונדע דערהיינטיגט. מען דארף נישט פארמאכן אנקי.</p>
+<p>בשעת חזרה קען מען נאך אנצינדן אדער אויסלעשן אויטאמאטיש ווייטערגיין דורך <strong>נאך אויסוואלן &gt; אויטאמאטיש ווייטערגיין</strong>. נוצט דאס פאר א רונדע מיט דער האנט ביי א טייל קארטלעך און אויטאמאטיש ביי אנדערע. הייבט אן מיט גענוג צייט פאר פראגע און ענטפער, קוקט אז דער קצב לייגט נישט קיין דרוק, און ערשט דערנאך פארקירצט די צייטן.</p>
+<p><a id="ימים-קלים"></a></p>
+<h2 id="גרינגע-טעג"><a class="header" href="#גרינגע-טעג">גרינגע טעג</a></h2>
+<p>צו נוצן ווייניגער צייט אויף אנקי אין געוויסע וואכן טעג, ווי פרייטאג און שבת, קען די מעגליכקייט העלפן. נאכן רעכענען דעם אפשטאנד ווערט ער א ביסל צוגעפאסט, כדי צו טוישן דעם חזרה דאטום. שטעלן אלע טעג צו “ווייניגער” אדער “דאס ווייניגסטע” וועט געבן דעם זעלבן עול ווי אלע טעג אויף “געווענליך”. דאס ארבעט סיי מיט FSRS און סיי מיטן אלטן SM-2 אלגאריטם. טוישן די גרינגע טעג איינשטעלונגען טוישט נישט עקזיסטירנדע אפשטאנדן למפרע, נאר קומענדיגע. אין פשוטע ווערטער, איר וועט נישט גלייך זען א ענדערונג אינעם צאל גרייטע קארטלעך.</p>
+<h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
+<p>דער פרייער אפשטאנד חזרה פלאנירער (FSRS) איז אן אנדער מעגליכקייט צו אנקי’ס אלטן SuperMemo 2 (SM-2) אלגאריטם. דורך גענויער באשטימען וויפיל אינפארמאציע איר גייט מסתמא פארגעסן, קען ער העלפן געדענקען מער חומר אינעם זעלבן צייט.</p>
+<p>ווען איר צינדט אן FSRS, ווערן נייע אויסוואלן צוטריטליך, און SM-2 אויסוואלן ווי <strong>אפשטאנד ביים ענדיגן לערנען</strong> און <strong>גרינג צוגאב</strong> ווערן באהאלטן. דער אויסוואל איז געמיינזאם פאר אלע פאראיינשטעלונגען.</p>
+<p>כדי צו פארמיידן געווענליכע טעותן, קומט אינעם ממשק א קורצער הסבר איבער FSRS איינשטעלונגען און וואס עס מיינט צו טוישן די געוואונטשענע געדענק ראטע, פאראמעטערס און חזרה צייטן. אויב א ווארענונג קומט, לייענט זי פארן באשטעטיגן. זי קומט געווענליך פארמיידן אז אסאך קארטלעך זאלן ווערן אפגעשטופט אדער מקדים אויף איינמאל אן אייער כוונה.</p>
+<p>מען קען אויך גרינג אנצינדן, אויסלעשן אדער טוישן צווישן FSRS און SM-2 דורך <strong>מאגר געצייג &gt; חזרה פלאנירונג שיטה</strong>. דער פענצטער ווייזט וואס איז יעצט אקטיוו, לאזט גלייך טוישן די שיטה און גיט קורצע עצות פאר ריכטיגן באנוץ. אויב איר ווייסט נישט וואס אויסצוקלייבן, עפנט ערשט דעם פענצטער, לייענט זיין קורצן הסבר און באשליסט דערנאך צי אריבערצוגיין.</p>
+<p><a id="מדריך-קצר"></a></p>
+<h3 id="א-קורצער-מדריך"><a class="header" href="#א-קורצער-מדריך">א קורצער מדריך</a></h3>
+<ul>
+<li>צינדט אן FSRS אינעם “FSRS” טייל אונטן אין די פעקל אפציעס. מען קען נאר אנצינדן FSRS פאר דער גאנצער זאמלונג, נישט פאר א טייל פאראיינשטעלונגען און פאר אנדערע אויסלעשן.</li>
+<li>מאכט זיכער אז אלע <a href="#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94">לערן טריט</a> און <a href="#%D7%A9%D7%9C%D7%91%D7%99-%D7%9C%D7%9E%D7%99%D7%93%D7%94-%D7%9E%D7%97%D7%93%D7%A9">איבערלערן טריט</a> זענען קירצער פון איין טאג און קענען ווערן פארענדיגט אינעם זעלבן טאג. 23 שעה’ן זענען נישט רעקאמענדירט אפילו עס איז ווייניגער פון א טאג, ווייל איר קענט נישט פארענדיגן דעם טריט אינעם זעלבן טאג ווי די ערשטע חזרה. טריט ווי 10 אדער 30 מינוט זענען גוט.</li>
+<li>דרוקט “פארבעסערן די איצטיגע פאראיינשטעלונג” אונטער “FSRS פאראמעטערס”. אויב עס קומט “די FSRS פאראמעטערס זעען יעצט אויס ווי די בעסטע מעגליכע”, איז דאס אין ארדענונג.</li>
+<li>קלייבט א <a href="#%D7%A9%D7%99%D7%9E%D7%95%D7%A8-%D7%A8%D7%A6%D7%95%D7%99">געוואונטשענע געדענק ראטע</a>: דער פראצענט קארטלעך וואס איר וועט מצליח זיין צו געדענקען ווען זיי זענען גרייט צו חזרה. <strong>דאס איז די וויכטיגסטע FSRS איינשטעלונג. א העכערע ראטע ברענגט קורצערע אפשטאנדן און מער חזרות א טאג.</strong> די ברירת מחדל איז 90%, א גוטער באלאנס צווישן געדענקען און ארבעט. העכער 90% וואקסט די ארבעט זייער שנעל, און העכער 97% קען דער עול זיין איבערוועלטיגנד. מען קען נוצן דעם <a href="#%D7%94%D7%A1%D7%99%D7%9E%D7%95%D7%9C%D7%98%D7%95%D7%A8">סימולאטאר</a> צו פארגלייכן ראטעס און זען זייער ערווארטעטן השפעה אויפן חזרה עול.
+פאראמעטערס און געוואונטשענע געדענק ראטע זענען באזונדער פאר יעדער פאראיינשטעלונג. מען קען מאכן עטליכע פאראיינשטעלונגען מיט אנדערע פאראמעטערס און ראטעס.</li>
+</ul>
+<p>FSRS קען זיך צופאסן צו כמעט יעדן הרגל, חוץ איין זאך: דרוקן “שווער” אנשטאט “נאכאמאל” ווען איר פארגעסט דעם ענטפער. ביים דרוקן “שווער” נעמט FSRS אן אז איר האט ריכטיג געדענקט, כאטש מיט ספיקות און פיל אנשטרענגונג. אויב איר דרוקט “שווער” ווען איר האט נישט געקענט דעם ענטפער, ווערן אלע אפשטאנדן אומפארשטענדליך גרויס. אויב איר האט דעם הרגל, טוישט אים און נוצט “נאכאמאל” ווען איר פארגעסט.</p>
+<p>וועגן ניי באשטימען צייטן מיט דער האנט: עס איז נישט רעקאמענדירט דאס צו טון פאר קארטלעך. אויב זיי זענען גרינג און איר ווילט לענגערע אפשטאנדן, וועלן עטליכע חזרות מיט “גרינג” גענוג זיין. אויב איר קענט נישט דעם ענטפער, דרוקט “נאכאמאל”. דאס וועט נישט פיל פארגרעסערן דעם חזרה עול, ווייל אפילו נאך נאכאמאל ווערן די אפשטאנדן נישט ווי ביי א נייעם קארטל.</p>
+<p><a id="שימור-רצוי"></a></p>
+<h3 id="געוואונטשענע-געדענק-ראטע"><a class="header" href="#געוואונטשענע-געדענק-ראטע">געוואונטשענע געדענק ראטע</a></h3>
+<p>די געוואונטשענע געדענק ראטע באשטימט דעם שאנס אז איר וועט געדענקען קארטלעך ווען זיי זענען באשטימט צו חזרה. די ברירת מחדל פון <code>0.90</code> פלאנירט די קארטלעך אזוי אז איר זאלט האבן א 90% שאנס זיי צו געדענקען ביים קומענדיגן חזרה. געווענליך זאל דאס געבן בערך 90% ריכטיגע ענטפערס און נאר בערך 10% פארגעסונגען.</p>
+<p>דא איז א גראף וואס ווייזט ווי טוישן דעם ווערט ווירקט אויפן עול:</p>
+<p><img src="./media/FSRS_retention.png" alt="א גראף וואס ווייזט ווי דער עול וואקסט עקספאנענציעל ווען די געוואונטשענע געדענק ראטע קומט נאענטער צו איינס." /></p>
+<p>דער גענויער פארעם פונעם גראף איז אנדערש ביי יעדן, אבער צוויי מוסטערן זענען אמת ביי אלעמען:</p>
+<ul>
+<li>
+<p>וואס נאענטער די געוואונטשענע ראטע קומט צו 1.0, אלץ שטערקער וואקסט דער עול.
+שטעלט זיך פאר א קארטל וואס איר האט א 90% שאנס צו געדענקען נאך 100 טעג. מיט א געוואונטשענער ראטע פון <code>0.90</code> וועט איר אים ווידער חזרן אין 100 טעג. אבער מיט <code>0.95</code> וועט איר אים דארפן חזרן נאך 46 טעג.
+דאס מיינט אז מיט <code>0.95</code> ווערן די אפשטאנדן כמעט האלב אזוי גרויס, און איר דארף חזרן צוויי מאל אזוי אפט ווי מיט <code>0.90</code>.
+ביי <code>0.97</code> איז דער אפשטאנד 27 טעג, און איר דארף חזרן 3.7 מאל אזוי אפט.
+ביי <code>0.99</code> איז דער אפשטאנד נאר 9 טעג, און איר דארף חזרן מער ווי 10 מאל אזוי אפט ווי מיט די ברירות מחדל.</p>
+</li>
+<li>
+<p>וואס נידריגער די געוואונטשענע ראטע, אלץ גרעסער דער פראצענט קארטלעך וואס איר פארגעסט און דארף ווידער חזרן. צום סוף קומט א פונקט וואו די פארגעסענע קארטלעך לייגן צו מער ארבעט ווי די לענגערע אפשטאנדן שפארן. אויך, אפט פארגעסן חומר קען אפשוואכן דעם חשק צום לערנען.</p>
+</li>
+</ul>
+<p>דערפאר ראטן מיר צו זיין פארזיכטיג ביים טוישן דעם נומער, און געווענליך האלטן אים אונטער <code>0.97</code>. אויב איר קלייבט צווישן עטליכע ווערטן, נוצט דעם <a href="#%D7%94%D7%A1%D7%99%D7%9E%D7%95%D7%9C%D7%98%D7%95%D7%A8">סימולאטאר</a> צו זען דעם ערווארטעטן חזרה עול און טעגליכן צייט פארן טוישן די איינשטעלונג.</p>
+<p><a id="פרמטרי-fsrs"></a></p>
+<h3 id="fsrs-פאראמעטערס"><a class="header" href="#fsrs-פאראמעטערס">FSRS פאראמעטערס</a></h3>
+<p>FSRS פאראמעטערס ווירקן אויף דעם קארטלעך צייט פלאן. טוישט זיי נישט מיט דער האנט און קאפירט זיי נישט פון אן אנדערן.</p>
+<p><strong>פארבעסערן FSRS פאראמעטערס</strong></p>
+<p>דער FSRS פארבעסערער נוצט מאשין לערנען צו דערקענען אייערע זכרון מוסטערן און געפינען די פאסיגסטע פאראמעטערס פאר אייער חזרות היסטאריע. ער דארף דערפאר א צאל חזרות כדי צו צופאסן די פאראמעטערס.</p>
+<p>ווען איר דרוקט <strong>פארבעסערן די איצטיגע פאראיינשטעלונג</strong>, אנאליזירט FSRS אייער חזרות היסטאריע און שאפט די פאסיגסטע פאראמעטערס פאר אייער זכרון און דעם חומר וואס איר לערנט. אויב איר האט פעקלעך מיט זייער פארשידענער שוועריגקייט, איז כדאי צו געבן זיי באזונדערע פאראיינשטעלונגען, ווייל גרינגע און שווערע פעקלעך וועלן האבן אנדערע פאראמעטערס. מען דארף נישט אפט פארבעסערן די פאראמעטערס; איינמאל א חודש איז גענוג.</p>
+<p>לויט דער ברירת מחדל ווערן די פאראמעטערס גערעכנט פון דער חזרות היסטאריע פון אלע פעקלעך וואס נוצן די יעצטיגע פאראיינשטעלונג. מען קען <a href="./searching.html">צופאסן דעם זוכן</a> פארן פארבעסערן אויב איר ווילט אויסשליסן געוויסע קארטלעך.</p>
+<p>מען קען אויך פארבעסערן אלע פאראיינשטעלונגען צוזאמען מיט <strong>פארבעסערן אלע פאראיינשטעלונגען</strong>.</p>
+<p><strong>אפשאצן FSRS פאראמעטערס</strong></p>
+<p>מיט <strong>אפשאצן</strong> קען מען זען מאסן ווי גוט די פאראמעטערס שטימען מיט אייער חזרות היסטאריע. קלענערע נומערן ווייזן א בעסערע צופאסונג.</p>
+<p>Log loss האט נישט קיין פשוטן אינטואיטיוון פירוש. RMSE (bins) קען מען פארשטיין ווי דעם דורכשניטליכן חילוק צווישן דעם פאראויסגעזאגטן שאנס צו געדענקען א קארטל (R) און דעם אמת’ן שאנס געמאסטן פון אייער חזרות היסטאריע. למשל, RMSE=5% מיינט אז FSRS טועה דורכשניטליך מיט 5% ביים פאראויסזאגן R. מען דארף נישט פארשטיין די מאסן צו נוצן FSRS.</p>
+<p>Log loss און RMSE (bins) שטימען נישט אינגאנצן איינס מיטן אנדערן. צוויי פעקלעך קענען דעריבער האבן ענליכע RMSE ווערטן מיט זייער אנדערע Log loss ווערטן, אדער פארקערט.</p>
+<p>לויט דער ברירת מחדל ווערן Log loss און RMSE (bins) גערעכנט פון אלע פעקלעך מיט דער יעצטיגער פאראיינשטעלונג. מען קען <a href="./searching.html">צופאסן דעם זוכן</a> פארן אפשאצן צו טוישן וועלכע קארטלעך מען נעמט אריין.</p>
+<details><summary>פרטים: ווי צו לייענען די אפשאצונג פון FSRS פאראמעטערס</summary>
+<p><strong>אפשאצן</strong> זאגט נישט צי איר “לערנט גוט” אדער צי דער פעקל איז גרינג. עס קוקט ווי גוט די יעצטיגע FSRS פאראמעטערס פאראויסזאגן דעם וועג וואס מען זעט אין אייער חזרות היסטאריע. אין פשוטע ווערטער, FSRS פרובירט צו שאצן דעם שאנס אז איר וועט געדענקען א קארטל אין א געוויסן חזרה צייט, און פארגלייכט די שאצונג מיט וואס האט באמת פאסירט אין אייערע חזרות.</p>
+<p>RMSE (bins) איז גרינגער צו פארשטיין: עס באשרייבט בערך דעם דורכשניטליכן חילוק צווישן FSRS’ס געשאצטן שאנס און דער געמאסטענער הצלחה ראטע אין גרופעס פון ענליכע קארטלעך. א נידריגער ווערט מיינט געווענליך א בעסערע צופאסונג. Log loss איז א מאטעמאטישער מאס וואס איז מער עמפינדליך צו טעותן, בפרט ווען דער מאדעל איז זייער זיכער און דאך טועה. דערפאר קען RMSE זיין ענליך ביי צוויי פעקלעך און Log loss זייער אנדערש.</p>
+<p>מען דארף נישט נאכלויפן א גאנץ פולקומענעם נומער. די מאסן ווענדן זיך אינעם צאל חזרות, ווי אייניג דער חומר איז, אייערע דרוק געוואוינהייטן און וועלכע קארטלעך איר האט אריינגענומען אינעם זוכן. אויב די מאסן זעען אויס שלעכט אדער טוישן זיך שטארק, קוקט ערשט אז איר האט כסדר גענוצט <strong>נאכאמאל</strong>, <strong>שווער</strong>, <strong>גוט</strong> און <strong>גרינג</strong> ריכטיג, און נישט געמישט זייער פארשידענע שוועריגקייטן אינעם זעלבן פאראיינשטעלונג. געווענליך איז גענוג צו פארבעסערן פון צייט צו צייט, און נישט טוישן די פאראמעטערס מיט דער האנט לויט די מאסן.</p>
+</details>
+<p><a id="תזמן-מחדש-כרטיסים-בעת-שינוי"></a></p>
+<h3 id="ניי-באשטימען-חזרה-צייטן-ביים-טוישן"><a class="header" href="#ניי-באשטימען-חזרה-צייטן-ביים-טוישן">ניי באשטימען חזרה צייטן ביים טוישן</a></h3>
+<p>דער אויסוואל באשטימט צי קארטלעך חזרה דאטומען זאלן זיך טוישן ביים אנצינדן FSRS, טוישן די געוואונטשענע געדענק ראטע אדער די פאראמעטערס. די ברירת מחדל איז נישט ניי צו באשטימען: קומענדיגע חזרות נוצן דעם נייעם צייט פלאן, אבער דער עול טוישט זיך נישט גלייך. ווען ניי באשטימען איז אנגעצונדן, טוישן זיך די קארטלעך דאטומען. לויט אייער געוואונטשענער ראטע קען דאס אפט מאכן אסאך קארטלעך גרייט צו חזרה. דערפאר <strong>איז דער אויסוואל נישט רעקאמענדירט</strong> ביים ערשטן אריבערגיין פון SM-2.</p>
+<p>נוצט דעם אויסוואל זעלטן, ווייל עס לייגט צו א חזרה איינשרייבונג פאר יעדן קארטל און פארגרעסערט אייער זאמלונג.</p>
+<p>אויב איר גייט דאס ערשטע מאל אריבער פון SM-2 און דאך ווילט נוצן דעם אויסוואל, איז כדאי ערשט צו מאכן א גיבוי, אנצינדן FSRS מיט ניי באשטימען, און דערנאך, אויב נויטיג, צוריקנעמען אדער צוריקשטעלן פונעם גיבוי.</p>
+<p><a id="הסימולטור"></a></p>
+<h3 id="דער-סימולאטאר"><a class="header" href="#דער-סימולאטאר">דער סימולאטאר</a></h3>
+<p>מען קען נוצן דעם סימולאטאר צו באקומען א שאצונג פון אייער עול, סיי חזרות א טאג און סיי לערנען מינוטן א טאג.</p>
+<ul>
+<li><strong>טעג צו סימולירן</strong> באשטימט די לענג פון דער נאכגעמאכטער לערנען היסטאריע.</li>
+<li><strong>נאך נייע קארטלעך צו סימולירן</strong> באשטימט צי דער סימולאטאר זאל נאכמאכן מער קארטלעך ווי די פאראיינשטעלונג האט יעצט. למשל, אויב עס זענען דא 100 קארטלעך און איר שטעלט דעם אויסוואל צו 50, סימולירט עס 150 קארטלעך צוזאמען. דאס העלפט ווען איר פלאנירט צולייגן נאך נייע קארטלעך.</li>
+<li><strong>נייע קארטלעך א טאג</strong> און <strong>מערסטע חזרות א טאג</strong> באשטימען וויפיל נייע קארטלעך מען לערנט טעגליך און דעם מאקסימום צאל חזרות א טאג.</li>
+<li><strong>גרעסטער אפשטאנד</strong> באשטימט די גרעסטע לענג פונעם אפשטאנד אין טעג.</li>
+</ul>
+<p>כדי די סימולאציע זאל זיין ווי נאענט צום אמת ווי מעגליך, נעמט דער סימולאטאר אין חשבון די אמת’ע זכרון צושטאנדן פון אייערע קארטלעך: שוועריגקייט, פעסטקייט און שאנס צו געדענקען. ער נוצט אויך אייערע FSRS פאראמעטערס און געוואונטשענע געדענק ראטע, דעריבער טוישן זיי אויך די סימולאציע.</p>
+<p><a id="שלבי-למידה-ולמידה-מחדש"></a></p>
+<h4 id="לערנען-און-איבערלערנען-טריט"><a class="header" href="#לערנען-און-איבערלערנען-טריט">לערנען און איבערלערנען טריט</a></h4>
+<p>לערנען און איבערלערנען טריט פון איין טאג אדער מער זענען נישט רעקאמענדירט מיט FSRS. זיי זענען געווען פאפולער מיטן אלטן SM-2 בעיקר ווייל נאכאמאל פארגעסן א קארטל נאכן ענדיגן לערנען האט געקענט שטארק פארמינערן זיין גרינגקייט. א טייל האבן דאס גערופן “גרינגקייט גיהנום”. FSRS האט נישט דעם פראבלעם. מיט טריט קירצער פון א טאג לאזט איר FSRS באשטימען די צייטן וואס עס האט גערעכנט אלס די בעסטע פאר אייער חומר און זכרון. נאך א סיבה נישט צו נוצן לאנגע טריט איז אז FSRS קען באשטימען די ערשטע חזרה קירצער פונעם לעצטן לערנען טריט. דאס קען מאכן אז <strong>שווער</strong> זאל ווייזן א לענגערע צייט ווי <strong>גוט</strong>.</p>
+<p>עס איז אויך כדאי צו האלטן ווייניג לערנען טריט. באווייזן ווייזן אז חזרן א קארטל עטליכע מאל אין איין טאג לייגט נישט צו פיל צום זכרון אויף לאנג. אייער צייט ווערט דערפאר בעסער גענוצט אויף אנדערע קארטלעך אדער א קירצערן לערנען רונדע.</p>
+<p>מען קען לאזן FSRS באשטימען דעם קורצן צייט פלאן דורך לאזן די לערנען און איבערלערנען טריט פעלדער ליידיג. דאס איז א נסיון מעגליכקייט. אפילו FSRS-5 <em>קען</em> געבן אפשטאנדן קירצער פון א טאג, מיינט עס נישט אז עס <em>וועט</em> דאס טון. אייער <strong>נאכאמאל</strong> אפשטאנד קען זיין איין טאג אדער נאך לענגער.</p>
+<p><a id="מתקדם"></a></p>
+<h2 id="פארגעשריטן"><a class="header" href="#פארגעשריטן">פארגעשריטן</a></h2>
+<p><a id="מרווח-מרבי"></a></p>
+<h3 id="גרעסטער-אפשטאנד"><a class="header" href="#גרעסטער-אפשטאנד">גרעסטער אפשטאנד</a></h3>
+<p>דער גרעסטער צאל טעג וואס א חזרה קארטל קען ווארטן פארן ווידער קומען. ווען חזרות דערגרייכן די גרענעץ, געבן <strong>שווער</strong>, <strong>גוט</strong> און <strong>גרינג</strong> אלע דעם זעלבן אפשטאנד. וואס קירצער איר שטעלט דעם אפשטאנד, אלץ גרעסער ווערט דער עול. די ברירת מחדל איז 100 יאר. מען קען דאס פארקלענערן אויב איר זענט גרייט צו לערנען מער צייט פאר א העכערע געדענק ראטע.</p>
+<p><a id="שימור-היסטורי"></a></p>
+<h3 id="פריערדיגע-געדענק-ראטע"><a class="header" href="#פריערדיגע-געדענק-ראטע">פריערדיגע געדענק ראטע</a></h3>
+<p>די איינשטעלונג איז באהאלטן ווען FSRS איז נישט אנגעצונדן.</p>
+<p>ווען א טייל פון אייער חזרות היסטאריע פעלט, דארף FSRS אויספילן דאס פעלנדיגע. לויט דער ברירת מחדל נעמט עס אן אז איר האט געדענקט 90% פונעם חומר ביים טון יענע אלטע חזרות. אויב אייער אלטע געדענק ראטע איז געווען פיל העכער אדער נידריגער פון 90%, וועט צופאסן דעם אויסוואל העלפן FSRS בעסער שאצן די פעלנדיגע חזרות.</p>
+<p>אייער חזרות היסטאריע קען זיין נישט פולשטענדיג צוליב צוויי סיבות:</p>
+<ul>
+<li>איר נוצט <strong>איגנארירן קארטלעך געחזרט פאר</strong>.</li>
+<li>איר האט פריער אויסגעמעקט חזרה יומנים צו באפרייען פלאץ, אדער אימפארטירט חומר פון אן אנדער חזרה פראגראם.</li>
+</ul>
+<p>די צווייטע מעגליכקייט איז גאנץ זעלטן. אויב איר נוצט נישט די ערשטע מעגליכקייט, דארף מען מסתמא נישט צופאסן די איינשטעלונג.</p>
+<p><a id="התעלם-מחזרות-לפני"></a></p>
+<h3 id="איגנארירן-חזרות-פאר"><a class="header" href="#איגנארירן-חזרות-פאר">איגנארירן חזרות פאר</a></h3>
+<p>ווען עס איז באשטימט, ווערן קארטלעך געלערנט פאר דעם דאטום נישט אריינגערעכנט ביים פארבעסערן FSRS פאראמעטערס. דאס העלפט אויב איר האט אימפארטירט אן אנדערן’ס צייט פלאן דאטן אדער געטוישט ווי איר נוצט די ענטפער קנעפלעך.</p>
+<p><a id="רמת-קלות-התחלתית"></a></p>
+<h3 id="אנהייב-גרינגקייט"><a class="header" href="#אנהייב-גרינגקייט">אנהייב גרינגקייט</a></h3>
+<p>באשטימט מיט וועלכער גרינגקייט קארטלעך הייבן אן. עס ווערט באשטימט ווען א קארטל ענדיגט לערנען צום ערשטן מאל. די ברירת מחדל איז 2.50. דעריבער, נאך וואס איר האט פארענדיגט לערנען א קארטל, וועט <strong>גוט</strong> אין די קומענדיגע חזרות פארגרעסערן דעם אפשטאנד בערך 2.5 מאל. למשל, נאך א 10 טאג אפשטאנד וועט דער קומענדיגער זיין ארום 25 טעג. לויט אייערע קומענדיגע אפשאצונגען קען די גרינגקייט ארויפגיין אדער אראפגיין פונעם אנהייב ווערט.</p>
+<p><a id="בונוס-קל"></a></p>
+<h3 id="גרינג-צוגאב"><a class="header" href="#גרינג-צוגאב">גרינג צוגאב</a></h3>
+<p>נאך א פאקטאר אויפן אפשטאנד ווען א חזרה קארטל ווערט געענטפערט <strong>גרינג</strong>. מיט דער ברירת מחדל פון 1.30 וועט <strong>גרינג</strong> געבן 1.3 מאל דעם “גוט” אפשטאנד. למשל, אויב “גוט” וואלט געווען 10 טעג, וועט “גרינג” זיין ארום 13 טעג.</p>
+<p><a id="מכפיל-מרווח"></a></p>
+<h3 id="אפשטאנד-פאקטאר"><a class="header" href="#אפשטאנד-פאקטאר">אפשטאנד פאקטאר</a></h3>
+<p>נאך א פאקטאר פאר אלע חזרות. מיט דער ברירת מחדל פון 1.00 טוט עס גארנישט. מיט 0.80 ווערן די אפשטאנדן 80% פון זייער געווענליכער גרייס, אזוי אז א 10 טאג אפשטאנד ווערט 8 טעג. מען קען דערמיט מאכן די חזרות אפטער אדער זעלטענער.</p>
+<p>פאר מיטל שווערע חומר זאל דער דורכשניטליכער באניצער געדענקען בערך 90% פון די <a href="getting-started.html#%D7%9E%D7%A6%D7%91%D7%99-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D">באפעסטיגטע קארטלעך</a> ווען זיי קומען צו חזרה. מען קען איבערקוקן אייערע רעזולטאטן דורך עפענען די גראפן / סטאטיסטיק פונעם פעקל און קוקן אויפן ענטפער קנעפלעך גראף. די באפעסטיגטע געדענק ראטע איז דער פראצענט ריכטיגע ענטפערס אויף דער רעכטער זייט. אויב איר לערנט נאך נישט לאנג, האט איר אפשר נאכנישט קיין באפעסטיגטע קארטלעך. די רעזולטאטן ביי נייע און פרישע קארטלעך קענען זיך שטארק טוישן. ווארט דערפאר ביז איר האט א שיינעם צאל באפעסטיגטע חזרות פארן ארויסנעמען מסקנות וועגן אייער געדענק ראטע.</p>
+<p>אויפן SuperMemo וועבזייטל שטייט אז מען קען געפינען א פאסיגן פאקטאר פאר א געוואונטשענע געדענק ראטע. זייער נוסחא איז:</p>
+<pre><code>log(געוואונטשענע געדענק ראטע%) / log(יעצטיגע געדענק ראטע%)
+</code></pre>
+<p>שטעלט זיך פאר אז די יעצטיגע געדענק ראטע איז 85% און מיר ווילן זי פארגרעסערן צו 90%. מען רעכנט דעם פאקטאר אזוי:</p>
+<pre><code>log(90%) / log(85%) = 0.65
+</code></pre>
+<p>אויב איר לייגט אריין די רעזולטאט 65% אינעם אפשטאנד פאקטאר, וועט איר מיט דער צייט זען אז אייער געדענק ראטע קומט נאענטער צום געוואונטשענעם ווערט.</p>
+<p>דער צוזאמענהאנג צווישן לערנען צייט און געדענק ראטע איז נישט לינעאר. דא זעט מען אז צו פארגרעסערן די ראטע מיט 5 פראצענט פונקטן, דארף מען לערנען 35% אפטער. אויב דער חומר איז זייער וויכטיג, קען עס זיין כדאי די צוגעלייגטע מי; דאס מוז איר אליין באשליסן. אויב איר זארגט פשוט אז איר פארגעסט צו פיל, קען מער צייט אינעם ערשטן לערנען אדער זכרון סימנים געבן מער תועלת מיט ווייניגער מי.</p>
+<p>צום סוף, אנקי צווינגט א נייעם אפשטאנד צו זיין כאטש איין טאג לענגער פונעם פריערדיגן, כדי מען זאל נישט בלייבן מיטן זעלבן אפשטאנד אויף אייביג. צו חזרן א קארטל איינמאל א טאג פאר עטליכע טעג, לייגט צו מער לערנען טריט אנשטאט צופאסן דעם פאקטאר.</p>
+<p><a id="מרווח-קשה"></a></p>
+<h3 id="שווער-אפשטאנד"><a class="header" href="#שווער-אפשטאנד">שווער אפשטאנד</a></h3>
+<p>דער פאקטאר וואס גייט אן ביים דרוקן <strong>שווער</strong>. דער פראצענט איז לויטן פריערדיגן אפשטאנד. למשל, מיט דער ברירת מחדל פון 1.20 באקומט א קארטל מיט א 10 טאג אפשטאנד 12 טעג.</p>
+<p><a id="מרווח-חדש"></a></p>
+<h3 id="נייער-אפשטאנד"><a class="header" href="#נייער-אפשטאנד">נייער אפשטאנד</a></h3>
+<p>דער פאקטאר ביים דרוקן <strong>נאכאמאל</strong> אויף א חזרה קארטל. די ברירת מחדל 0.00 מיינט אז דער אפשטאנד ווערט צוריקגעשטעלט צו נול ביים פארגעסן. דאס ווערט דערנאך איין טאג דורך דעם [קלענסטן אפשטאנד](#מרווח מינימלי).</p>
+<p>אויב מען טוישט די ברירת מחדל, קענען פארגעסענע קארטלעך האלטן א טייל פונעם פריערדיגן אפשטאנד. למשל, א קארטל מיט א 100 טאג אפשטאנד וועט באקומען א נייעם אפשטאנד פון 20 טעג אויב איר שטעלט <strong>נייער אפשטאנד</strong> צו 0.20.</p>
+<p>כאטש האלטן א טייל פונעם אפשטאנד קען אויסזען מסתבר, האט SuperMemo באמערקט אז עס קען באמת שאטן. דערפאר ראטן מיר דאס צו לאזן אויף דער ברירת מחדל.</p>
+<p><a id="תזמון-מותאם-אישית"></a></p>
+<h3 id="אייגענע-חזרה-פלאנירונג"><a class="header" href="#אייגענע-חזרה-פלאנירונג">אייגענע חזרה פלאנירונג</a></h3>
+<p>פאר פארגעשריטענע באניצער: מען קען באקומען מער שליטה איבער אנקי’ס צייט פלאן דורך אייגענעם JavaScript אינעם אייגענע חזרה פלאנירונג פעלד. דאס איז אן אלגעמיינער אויסוואל; דער קוד דא גייט אן אויף אלע פאראיינשטעלונגען.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="preferences.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="profiles.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="preferences.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="profiles.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>זוכן - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="חיפוש"></a></p>
+<h1 id="זוכן"><a class="header" href="#זוכן">זוכן</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#פשוטע-זוכונגען">פשוטע זוכונגען</a></li>
+<li class="toc-level-2"><a href="#באגרעניצן-צו-א-פעלד">באגרעניצן צו א פעלד</a></li>
+<li class="toc-level-2"><a href="#צעטלעך-פעקלעך-קארטלעך-און-רשומות">צעטלעך, פעקלעך, קארטלעך און רשומות</a></li>
+<li class="toc-level-2"><a href="#איגנארירן-ניקוד-און-צוזאמענגעשטעלטע-צייכנס">איגנארירן ניקוד און צוזאמענגעשטעלטע צייכנס</a></li>
+<li class="toc-level-2"><a href="#רעגולערע-אויסדרוקן">רעגולערע אויסדרוקן</a></li>
+<li class="toc-level-2"><a href="#קארטל-צושטאנד">קארטל צושטאנד</a></li>
+<li class="toc-level-2"><a href="#פאנען">פאנען</a></li>
+<li class="toc-level-2"><a href="#קארטל-אייגנשאפטן">קארטל אייגנשאפטן</a></li>
+<li class="toc-level-2"><a href="#לעצטע-געשעענישן">לעצטע געשעענישן</a></li>
+<li class="toc-level-3"><a href="#צוגעלייגט">צוגעלייגט</a></li>
+<li class="toc-level-3"><a href="#רעדאקטירט">רעדאקטירט</a></li>
+<li class="toc-level-3"><a href="#געענטפערט">געענטפערט</a></li>
+<li class="toc-level-3"><a href="#צום-ערשטן-מאל-געענטפערט">צום ערשטן מאל געענטפערט</a></li>
+<li class="toc-level-2"><a href="#טרעפן-באזונדערע-צייכנס">טרעפן באזונדערע צייכנס</a></li>
+<li class="toc-level-3"><a href="#רויע-אריינגאבע">רויע אריינגאבע</a></li>
+<li class="toc-level-2"><a href="#אידענטיפיקאציע-נומערן-id">אידענטיפיקאציע נומערן (ID)</a></li>
+<li class="toc-level-2"><a href="#אנדערע-זוכונגען">אנדערע זוכונגען</a></li>
+</ul>
+</details>
+<p>אנקי’ס “<a href="browsing.html">דורכבלעטערן</a>” פענצטער און “<a href="filtered-decks.html">געפילטערטער פעקל</a>” נוצן דעם זעלבן וועג צו זוכן באזונדערע קארטלעך / רשומות. מען קען עס אויך נוצן צו צופאסן <a href="deck-options.html#fsrs">דעם FSRS פארבעסערונג פארנעם אין די פעקל אויסוואלן</a>.</p>
+<p><a id="חיפושים-פשוטים"></a></p>
+<h2 id="פשוטע-זוכונגען"><a class="header" href="#פשוטע-זוכונגען">פשוטע זוכונגען</a></h2>
+<p>ווען איר שרייבט טעקסט אינעם זוכן פעלד, געפינט Anki די פאסיגע רשומות און ווייזט זייערע קארטלעך. Anki זוכט אין אלע פעלדער פון די רשומות, אבער נישט אין צעטלעך. זעט <a href="#%D7%AA%D7%92%D7%99%D7%95%D7%AA-%D7%97%D7%A4%D7%99%D7%A1%D7%95%D7%AA-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D-%D7%95%D7%A8%D7%A9%D7%95%D7%9E%D7%95%D7%AA">ווייטער אין דעם טייל</a> ווי צו זוכן צעטלעך. עטליכע ביישפילן:</p>
+<p><code>בגד</code><br />
+זוכט דעם ווארט “בגד”; עס טרעפט אויך ווערטער ווי “בגדים” און “לבגד”.</p>
+<p><code>בגד פשתים</code><br />
+געפינט רשומות וואס אנטהאלטן סיי “בגד” און סיי “פשתים”, למשל “בגד צמר או בגד פשתים”.</p>
+<p><code>בגד or צמר</code><br />
+געפינט רשומות וואס אנטהאלטן “בגד” אדער “צמר”.</p>
+<p><code>בגד (צמר or פשתים)</code><br />
+געפינט רשומות וואס אנטהאלטן “בגד” מיט “צמר”, אדער “בגד” מיט “פשתים”.</p>
+<p><code>-צמר </code><br />
+געפינט רשומות וואס אנטהאלטן נישט “צמר “.</p>
+<p><code>-צמר -פשתים</code><br />
+געפינט רשומות וואס אנטהאלטן נישט “צמר “ און נישט “פשתים”.</p>
+<p><code>-(צמר or פשתים)</code><br />
+די זעלבע ווי דער פריערדיגער ביישפיל.</p>
+<p><code>"את הבגד"</code><br />
+געפינט רשומות מיטן גענויען רצף צייכנס “את הבגד”, למשל “ואת הבגד”, אבער נישט “לבגד” אדער “והבגד “.</p>
+<p><code>-"את הבגד "</code><br />
+געפינט רשומות וואס אנטהאלטן נישט דעם גענויען רצף צייכנס “את הבגד “.</p>
+<p><code>ב_ד</code><br />
+געפינט רשומות מיט ב, איין צייכן און ד, ווי בגד, בדד, ברד אא“וו.</p>
+<p><code>ב*ד</code><br />
+געפינט רשומות מיט ב, נול אדער מער צייכנס און ד, ווי בד, ברד, בערד אא“וו.</p>
+<p><code>w:בגד</code><br />
+זוכט דעם גאנצן ווארט “בגד “ אנשטאט סתם א רצף צייכנס. עס טרעפט “בגד “, אבער נישט “בגדים” אדער “והבגד”. ענדערונגען אינעם אויסשטעל קענען ווערן באהאנדלט ווי ווארט גרענעצן. למשל, <code>w:בגד</code> טרעפט וה<strong>בגד</strong>ים, ווייל דער “בגד” טייל אינעם ווארט איז אין פעטן דרוק.</p>
+<p><code>w:בגד*</code><br />
+טרעפט “בגד” און “בגדים”, אבער נישט “והבגד”.</p>
+<p><code>w:*בגד</code><br />
+טרעפט “בגד” און “והבגד”, אבער נישט “בגדים”.</p>
+<p>עטליכע פרטים צו באמערקן פון די אויבנדערמאנטע ביישפילן:</p>
+<ul>
+<li>
+<p>זוכן ווערטער ווערן צעטיילט מיט רווחים.</p>
+</li>
+<li>
+<p>ווען עס זענען דא עטליכע זוכן ווערטער, זוכט Anki רשומות וואס שטימען מיט אלע ווערטער. עס ווערט אויטאמאטיש צוגעלייגט אן <code>and</code> צווישן די ווערטער. מען קען עס אויך שרייבן בפירוש (<code>צמר and בגד</code> איז ווי <code>צמר בגד</code>), אבער עלטערע Anki ווערסיעס וועלן באהאנדלען <code>and</code> ווי נאך א ווארט צו זוכן.</p>
+</li>
+<li>
+<p>מען קען נוצן <code>or</code> ווען גענוג איז אז נאר איינס פון די ווערטער זאל זיך געפינען.</p>
+</li>
+<li>
+<p>מען קען צולייגן א מקף (<code>-</code>) פאר א זוכן ווארט צו געפינען רשומות וואס אנטהאלטן נישט דעם ווארט.</p>
+</li>
+<li>
+<p>מען קען גרופירן זוכן ווערטער מיט קלאמערן, ווי <code>בגד (צמר or פשתים)</code>. דאס איז וויכטיג ביים צונויפמישן OR און AND זוכונגען. מיט די קלאמערן טרעפט דער ביישפיל “בגד צמר “ אדער “בגד פשתים”; אן די קלאמערן וואלט עס געפונען “בגד צמר “ אדער “פשתים”.</p>
+</li>
+<li>
+<p>Anki קען זוכן איבער אויסשטעל גרענעצן נאר אינעם <a href="editing.html#%D7%94%D7%AA%D7%90%D7%9E%D7%94-%D7%90%D7%99%D7%A9%D7%99%D7%AA-%D7%A9%D7%9C-%D7%A9%D7%93%D7%95%D7%AA">סארטיר פעלד</a> וואס איר האט באשטימט. למשל, אויב איר לייגט “<strong>בגד</strong>ים” אין א פעלד מיט “בגד” אין פעטן דרוק, וועט עס נישט ווערן געפונען מיט <code>בגדים</code>, חוץ אויב יענער פעלד איז דער סארטיר פעלד. אויב א ווארט האט נישט קיין באזונדערן אויסשטעל, אדער דער אויסשטעל טוישט זיך נישט אין מיטן ווארט, קען Anki עס געפינען אין יעדן פעלד.</p>
+</li>
+<li>
+<p>געווענליכע זוכונגען מאכן נישט קיין חילוק צווישן גרויסע און קליינע לאטיינישע אותיות: a-z טרעפט A-Z און פארקערט. אנדערע אותיות, ווי קירילישע, ווערן באהאנדלט מיט א חילוק צווישן גרויס און קליין אין א געווענליכן זוכן. מען קען זיי אבער זוכן אן דעם חילוק מיט ווארט גרענעצן אדער א רעגולערן אויסדרוק (<code>w:</code>, <code>re:</code>).</p>
+</li>
+</ul>
+<p><a id="הגבלה-לשדה"></a></p>
+<h2 id="באגרעניצן-צו-א-פעלד"><a class="header" href="#באגרעניצן-צו-א-פעלד">באגרעניצן צו א פעלד</a></h2>
+<p>מען קען אויך בעטן Anki צו טרעפן נאר ווען א געוויסער פעלד אנטהאלט טעקסט. אנדערש פון די פריערדיגע ביישפילן, פאדערט א פעלד זוכן לויט דער ברירת מחדל א גענויע צופאסונג.</p>
+<p><code>מקור:קפג</code><br />
+געפינט רשומות מיט א פעלד מיטן נאמען “מקור” וואס איז גענוי “קפג”. א פעלד מיט “סימן קפג” וועט נישט שטימען.</p>
+<p><code>"מסכת ודף:יבמות ה"</code><br />
+געפינט רשומות וואו דאס “מסכת ודף” פעלד איז גענוי “יבמות ה”. די טאפלטע גענזעלעך זענען נויטיג; זעט <a href="#%D7%94%D7%AA%D7%90%D7%9E%D7%AA-%D7%AA%D7%95%D7%95%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D">ווייטער אין דעם טייל</a>.</p>
+<p><code>מקור:*קפג*</code><br />
+געפינט רשומות וואו דאס מקור פעלד אנטהאלט קפג ערגעץ, און דעריבער טרעפט עס אויך “סימן קפג”.</p>
+<p><code>מקור:</code><br />
+געפינט רשומות מיט א ליידיגן מקור פעלד.</p>
+<p><code>מקור:_*</code><br />
+געפינט רשומות מיט א מקור פעלד וואס איז נישט ליידיג.</p>
+<p><code>מקור:*</code><br />
+געפינט רשומות וואס האבן א מקור פעלד, צי ליידיג צי נישט.</p>
+<p><code>מק*:טקסט</code><br />
+געפינט רשומות אין א פעלד וועמענס נאמען הייבט זיך אן מיט “מק”.</p>
+<p><a id="תגיות-חפיסות-כרטיסים-ורשומות"></a></p>
+<h2 id="צעטלעך-פעקלעך-קארטלעך-און-רשומות"><a class="header" href="#צעטלעך-פעקלעך-קארטלעך-און-רשומות">צעטלעך, פעקלעך, קארטלעך און רשומות</a></h2>
+<p><code>tag:ברכות</code><br />
+געפינט רשומות מיטן צעטל “ברכות”, אדער אונטערצעטלעך ווי “ברכות::ברכות_הריח”.</p>
+<p><code>tag:none</code><br />
+געפינט רשומות אן צעטלעך.</p>
+<p><code>tag:ברכ*</code><br />
+געפינט רשומות מיט צעטלעך וואס הייבן זיך אן מיט “ברכ”.</p>
+<p><code>deck:מכות</code><br />
+געפינט קארטלעך אין א פעקל אויפן אויבערשטן שטאפל מיטן נאמען “מכות”, אדער אין זיינע אונטערפעקלעך ווי “מכות::אלו הן הלוקין”. דער זוכן טרעפט נישט אונטערפעקלעך מיטן זעלבן נאמען, ווי “שס::מכות”.</p>
+<p><code>deck:שס::מכות</code><br />
+געפינט קארטלעך אינעם אונטערפעקל “שס::מכות”.</p>
+<p><code>deck:מכות -deck:מכות::*</code><br />
+געפינט קארטלעך אין “מכות”, אבער נישט אין זיינע אונטערפעקלעך.</p>
+<p><code>deck:"אלו הן הלוקין"</code><br />
+א זוכן ווען דער פעקל נאמען האט א רווח.</p>
+<p><code>"deck:אלו הן הלוקין"</code><br />
+די זעלבע ווי דער פריערדיגער ביישפיל.</p>
+<p><code>deck:filtered</code><br />
+נאר געפילטערטע פעקלעך.</p>
+<p><code>-deck:filtered</code><br />
+נאר געווענליכע פעקלעך.</p>
+<p><code>preset:"Default"</code><br />
+קארטלעך אין אלע פעקלעך וואס נוצן די [פעקל פאראיינשטעלונג](deck-options.md#קבוצת הגדרות) “Default”.</p>
+<p><code>card:בסיסי</code><br />
+געפינט קארטלעך געשאפן דורך א סארט קארטל מיטן נאמען “בסיסי”.</p>
+<p><code>card:1</code><br />
+זוכט קארטלעך לויטן נומער פונעם קארטל סארט. למשל, צו געפינען דעם צווייטן באהאלטענעם אויסלאז ביי א רשומה פון פילט אויס דאס אויסגעלאזטע, נוצט <code>card:2</code>.</p>
+<p><code>note:בסיסי</code><br />
+זוכט קארטלעך געשאפן מיט א סארט רשומה מיטן נאמען “בסיסי”.</p>
+<p><a id="התעלמות-מסימני-הטעמהתווים-משולבים"></a></p>
+<h2 id="איגנארירן-ניקוד-און-צוזאמענגעשטעלטע-צייכנס"><a class="header" href="#איגנארירן-ניקוד-און-צוזאמענגעשטעלטע-צייכנס">איגנארירן ניקוד און צוזאמענגעשטעלטע צייכנס</a></h2>
+<p>מען קען נוצן <code>nc:</code> (א קורצונג פון “no combining”) כדי Anki זאל איגנארירן צוזאמענגעשטעלטע צייכנס, ווי ניקוד און טעמי המקרא. למשל:</p>
+<p><code>nc:ויאמר</code><br />
+טרעפט רשומות מיט “ויאמר”, “וַיֹּ֨אמֶר֙”, “וַיֹּאמֶר” אא“וו.</p>
+<p>זוכונגען וואס איגנארירן צוזאמענגעשטעלטע צייכנס זענען לאנגזאמער פון געווענליכע זוכונגען.</p>
+<p>אין די איינשטעלונגען <a href="./preferences.html#%D7%93%D7%A4%D7%93%D7%95%D7%A3">קען מען דאס מאכן די ברירת מחדל</a>, אויך אן דעם פרעפיקס.</p>
+<p><a id="ביטויים-רגולריים"></a></p>
+<h2 id="רעגולערע-אויסדרוקן"><a class="header" href="#רעגולערע-אויסדרוקן">רעגולערע אויסדרוקן</a></h2>
+<p>פאר פארגעשריטענע באניצער:</p>
+<p>Anki שטיצט זוכן אין רשומות מיט “רעגולערע אויסדרוקן”, א געווענליכן און שטארקן וועג צו זוכן אין טעקסט.</p>
+<p>הייבט אן א זוכן מיט <code>re:</code> צו נוצן רעגולערע אויסדרוקן. כדי עס גרינגער צו מאכן, וועט Anki באהאנדלען דעם אריינגעשריבענעם טעקסט אלס [רויע אריינגאבע](#קלט גולמי). געדענקט דערפאר די כללים וואס שטייען דארט.</p>
+<p>עטליכע פרטים צו באמערקן:</p>
+<ul>
+<li>לויט דער ברירת מחדל מאכט דער זוכן נישט קיין חילוק צווישן גרויסע און קליינע אותיות. לייגט <code>(?-i)</code> ביים אנהייב צו מאכן דעם חילוק.</li>
+<li>א טייל צייכנס, ווי רווחים און נייע שורות, קענען זיין אויסגעדרוקט אנדערש אין HTML. מען קען נוצן דעם HTML רעדאקטאר אינעם רעדאקטירן פענצטער צו זען דעם אונטערליגנדן HTML אינהאלט.</li>
+</ul>
+<p><a id="מצב-כרטיס"></a></p>
+<h2 id="קארטל-צושטאנד"><a class="header" href="#קארטל-צושטאנד">קארטל צושטאנד</a></h2>
+<p><code>is:due</code><br />
+חזרה און לערנען קארטלעך וואס ווארטן צום לערנען.</p>
+<p><code>is:new</code><br />
+נייע קארטלעך.</p>
+<p><code>is:learn</code><br />
+קארטלעך ביים לערנען.</p>
+<p><code>is:review</code><br />
+חזרה קארטלעך, סיי גרייט צו חזרה און סיי נאכנישט, און קארטלעך וואס מען האט פארגעסן.</p>
+<p><code>is:suspended</code><br />
+קארטלעך וואס זענען אפגעשטעלט <a href="leeches.html">אויטאמאטיש</a> אדער מיט דער האנט.</p>
+<p><code>is:buried</code><br />
+קארטלעך וואס זענען באזייטיגט ביז מארגן <a href="studying.html#%D7%90%D7%97%D7%99%D7%9D-%D7%95%D7%94%D7%98%D7%9E%D7%A0%D7%94">אויטאמאטיש</a> אדער מיט דער האנט.</p>
+<p><code>is:buried-sibling</code><br />
+קארטלעך וואס זענען אויטאמאטיש באזייטיגט ביז מארגן.</p>
+<p><code>is:buried-manually</code><br />
+קארטלעך וואס זענען באזייטיגט ביז מארגן מיט דער האנט.</p>
+<p>קארטלעך וואס מען האט <a href="deck-options.html#%D7%A9%D7%92%D7%99%D7%90%D7%95%D7%AA">פארגעסן</a> קענען זיין אין עטליכע פון די אויבנדערמאנטע קאטעגאריעס. דערפאר קען העלפן צונויפשטעלן זוכן ווערטער פאר גענויערע רעזולטאטן:</p>
+<p><code>is:learn is:review</code><br />
+קארטלעך וואס מען האט פארגעסן און ווארטן צום איבערלערנען.</p>
+<p><code>-is:learn is:review</code><br />
+חזרה קארטלעך, אן די קארטלעך וואס מען האט פארגעסן.</p>
+<p><code>is:learn -is:review</code><br />
+קארטלעך ביים ערשטן מאל לערנען.</p>
+<p><a id="דגלים"></a></p>
+<h2 id="פאנען"><a class="header" href="#פאנען">פאנען</a></h2>
+<p><code>flag:1</code><br />
+קארטלעך מיט א רויטן פאן.</p>
+<p><code>flag:2</code><br />
+קארטלעך מיט אן אראנזשן פאן.</p>
+<p><code>flag:3</code><br />
+קארטלעך מיט א גרינעם פאן.</p>
+<p><code>flag:4</code><br />
+קארטלעך מיט א בלויען פאן.</p>
+<p><code>flag:5</code><br />
+קארטלעך מיט א ראזע פאן.</p>
+<p><code>flag:6</code><br />
+קארטלעך מיט א טורקיז פאן.</p>
+<p><code>flag:7</code><br />
+קארטלעך מיט א לילא פאן.</p>
+<p><a id="מאפייני-כרטיס"></a></p>
+<h2 id="קארטל-אייגנשאפטן"><a class="header" href="#קארטל-אייגנשאפטן">קארטל אייגנשאפטן</a></h2>
+<p>אין די אויסוואלן פון דעם טייל וואס רעדן וועגן יעצט און די צוקונפט, מיינט ‘0’ היינט, 1 מארגן, 2 איבערמארגן, -1 נעכטן אא“וו.</p>
+<p><code>prop:ivl&gt;=10</code><br />
+קארטלעך מיט אן אפשטאנד פון 10 טעג אדער מער.</p>
+<p><code>prop:due=1</code><br />
+קארטלעך באשטימט פאר מארגן.</p>
+<p><code>prop:due=-1</code><br />
+קארטלעך באשטימט פאר נעכטן וואס מען האט נאך נישט געענטפערט.</p>
+<p><code>prop:due&gt;=1</code><br />
+אלע קארטלעך באשטימט פאר דער צוקונפט, אריינגערעכנט מארגן.</p>
+<p><code>prop:due&lt;=-1</code><br />
+אלע קארטלעך וועמענס צייט איז שוין פארביי.</p>
+<p><code>prop:due&gt;=-1 prop:due&lt;=1</code><br />
+קארטלעך באשטימט פאר נעכטן, היינט און מארגן.</p>
+<p><code>prop:reps&lt;10</code><br />
+קארטלעך וואס מען האט געענטפערט ווייניגער פון 10 מאל.</p>
+<p><code>prop:lapses&gt;3</code><br />
+קארטלעך וואס מען האט פארגעסן מער פון 3 מאל.</p>
+<p><code>prop:ease!=2.5</code><br />
+קארטלעך גרינגער אדער שווערער פון דער פעליקייט גרינגקייט.</p>
+<p>די פאלגנדע זוכונגען פאדערן אז FSRS זאל זיין אנגעצונדן:</p>
+<p><code>prop:s&gt;21</code><br />
+קארטלעך מיט פעסטקייט (stability) העכער פון 21 טעג.</p>
+<p><code>prop:d&gt;0.3</code><br />
+קארטלעך מיט שוועריגקייט (difficulty) העכער פון 0.3.</p>
+<p><code>prop:r&lt;0.9</code><br />
+קארטלעך מיט א שאנס צו געדענקען (retrievability) נידריגער פון 0.9.</p>
+<p><a id="אירועים-אחרונים"></a></p>
+<h2 id="לעצטע-געשעענישן"><a class="header" href="#לעצטע-געשעענישן">לעצטע געשעענישן</a></h2>
+<p>אין די אויסוואלן פון דעם טייל וואס רעדן וועגן יעצט און דער פארגאנגענהייט, מיינט 1 היינט, 2 <strong>היינט און נעכטן</strong> אא“וו.
+צו ווייזן נאר א געוויסן טאג, מוז מען אויסשליסן אלע טעג נאך אים. למשל, נאר צו ווייזן וואס איז נעכטן צוגעקומען, שרייבט
+<code>added:2 -added:1</code>.</p>
+<p><a id="נוספו"></a></p>
+<h3 id="צוגעלייגט"><a class="header" href="#צוגעלייגט">צוגעלייגט</a></h3>
+<p><code>added:1</code><br />
+קארטלעך צוגעלייגט היינט.</p>
+<p><code>added:7</code><br />
+קארטלעך צוגעלייגט אין די לעצטע 7 טעג.</p>
+<p>מען קוקט לויט דער צייט ווען דאס קארטל איז געשאפן געווארן, נישט ווען די רשומה איז געשאפן געווארן. דעריבער ווערן קארטלעך געשאפן אין דער תקופה אריינגערעכנט, אפילו זייערע רשומות זענען שוין לאנג דא.</p>
+<p><a id="נערכו"></a></p>
+<h3 id="רעדאקטירט"><a class="header" href="#רעדאקטירט">רעדאקטירט</a></h3>
+<p><code>edited:X</code><br />
+קארטלעך וואו דער רשומה טעקסט איז צוגעלייגט אדער רעדאקטירט געווארן אין די לעצטע X טעג.</p>
+<p><a id="נענו"></a></p>
+<h3 id="געענטפערט"><a class="header" href="#געענטפערט">געענטפערט</a></h3>
+<p><code>rated:1</code><br />
+קארטלעך געענטפערט היינט.</p>
+<p><code>rated:1:2</code><br />
+קארטלעך געענטפערט “שווער” (2) היינט.</p>
+<p><code>rated:7:1</code><br />
+קארטלעך געענטפערט “נאכאמאל” (1) אין די לעצטע 7 טעג.</p>
+<p><code>rated:31:4</code><br />
+קארטלעך געענטפערט “גרינג” (4) אין די לעצטע 31 טעג.</p>
+<p>Anki שטיצט אפשאצונג זוכונגען פאר מער פון 31 טעג.</p>
+<p>ביים זוכן קארטלעך געענטפערט אין א געוויסן טאג קען <code>rated:n -rated:(n-1)</code> נישט שטענדיג ארבעטן. נוצט אנשטאט דעם די פאלגנדע זוכונגען:</p>
+<p><code>prop:rated=0</code><br />
+קארטלעך געענטפערט היינט.</p>
+<p><code>prop:rated=-1</code><br />
+קארטלעך געענטפערט מיט איין טאג צוריק.</p>
+<p><code>prop:rated=-7</code><br />
+קארטלעך געענטפערט מיט 7 טעג צוריק.</p>
+<p><a id="נענו-לראשונה"></a></p>
+<h3 id="צום-ערשטן-מאל-געענטפערט"><a class="header" href="#צום-ערשטן-מאל-געענטפערט">צום ערשטן מאל געענטפערט</a></h3>
+<p><code>introduced:1</code><br />
+קארטלעך צום ערשטן מאל געענטפערט היינט.</p>
+<p><code>introduced:365</code><br />
+קארטלעך צום ערשטן מאל געענטפערט אין די לעצטע 365 טעג.</p>
+<p><a id="התאמת-תווים-מיוחדים"></a></p>
+<h2 id="טרעפן-באזונדערע-צייכנס"><a class="header" href="#טרעפן-באזונדערע-צייכנס">טרעפן באזונדערע צייכנס</a></h2>
+<p>ווי אויבן געוויזן, האבן געוויסע צייכנס ווי <code>*</code>, <code>_</code> און <code>"</code> א באזונדערן באדייט ביים זוכן. צו זוכן די צייכנס אליין, מוז מען זאגן Anki זיי נישט צו באהאנדלען באזונדער. דאס הייסט “escape פאר א צייכן”, און מען טוט עס בעיקר מיט טאפלטע גענזעלעך און צוריקגעקערטע שרעג שטריכן.</p>
+<ul>
+<li>
+<p><em>רווח</em><br />
+צו טרעפן עפעס מיט רווחים, נעמט ארום <code>"כל המונח"</code> מיט טאפלטע גענזעלעך. ביי א זוכן מיט א צווייפינטל, קען מען אויך ארומנעמען נאר דעם <code>חלק:"שאחרי הנקודתיים"</code>.</p>
+</li>
+<li>
+<p><code>And</code>/<code>Or</code><br />
+צו זוכן די ווערטער, נעמט זיי ארום מיט טאפלטע גענזעלעך. למשל, <code>i "and" u</code> זוכט “i”, “u” און דעם ווארט “and”. אויב דער גאנצער זוכן אויסדרוק איז ארומגענומען מיט גענזעלעך ווי אינעם פריערדיגן ביישפיל, דארף מען נישט מאכן escape פאר <code>and</code> אדער <code>or</code>.</p>
+</li>
+<li>
+<p><code>"</code>, <code>*</code> און <code>_</code><br />
+לייגט א צוריקגעקערטן שרעג שטריך פאר די צייכנס כדי זיי צו זוכן ווי זיי זענען אליין. למשל, <code>_</code> טרעפט יעדן איינציגן צייכן, אבער <code>\_</code> טרעפט נאר אן אמת’ן אונטערשטריך.</p>
+</li>
+<li>
+<p><code>\</code><br />
+א צוריקגעקערטער שרעג שטריך נעמט אראפ דעם באזונדערן באדייט פון אנדערע צייכנס, און ווערט דעריבער אויך באהאנדלט באזונדער. צו זוכן דעם שרעג שטריך אליין, נוצט <code>\\</code> אנשטאט <code>\</code>.</p>
+</li>
+<li>
+<p><code>(</code> און <code>)</code><br />
+מען קען זוכן קלאמערן דורך ארומנעמען דעם גאנצן אויסדרוק מיט גענזעלעך, דורך א צוריקגעקערטן שרעג שטריך, אדער ביידע צוזאמען. למשל, <code>"(תוכן)"</code>, <code>\(תוכן\)</code> און <code>"\(תוכן\)"</code> זענען גלייכע זוכונגען און טרעפן <code>(תוכן)</code>.</p>
+</li>
+<li>
+<p><code>-</code><br />
+א זוכן ווארט וואס הייבט זיך אן מיט <code>-</code> ווערט געווענליך אויסגעשלאסן: למשל, <code>-צמר</code> טרעפט אלעס חוץ צמר. צו זוכן א מקף אליין, נוצט א צוריקגעקערטן שרעג שטריך אדער נעמט ארום דעם טעקסט מיט גענזעלעך. למשל, <code>\-שערי</code> אדער <code>"-שערי"</code> טרעפן “שערי-תשובה” און “שערי-ארמון”.</p>
+</li>
+<li>
+<p><code>:</code><br />
+מען מוז מאכן escape פאר א צווייפינטל מיט א צוריקגעקערטן שרעג שטריך, חוץ אויב עס קומט פריער אן אנדער צווייפינטל אן escape. למשל, <code>w:3:30</code> זוכט “3:30” ביי א ווארט גרעניץ און דארף נישט קיין שרעג שטריך. אבער אן א זוכן מיט א צווייפינטל, דארף מען אזוי מאכן escape: <code>3\:30</code>.</p>
+</li>
+<li>
+<p><code>&amp;</code>, <code>&lt;</code> און <code>&gt;</code><br />
+Anki באהאנדלט <code>&amp;</code>, <code>&lt;</code> און <code>&gt;</code> אלס HTML ביים זוכן, און זוכונגען מיט זיי ארבעטן דעריבער נישט ווי ערווארטעט. מען קען זיי אבער זוכן מיט זייערע HTML נעמען (<code>&amp;amp;</code> פאר <code>&amp;</code>, <code>&amp;lt;</code> פאר <code>&lt;</code> און <code>&amp;gt;</code> פאר <code>&gt;</code>). למשל, <code>&amp;amp;תוכן</code> זוכט א רשומה מיט <code>&amp;תוכן</code> אינעם פעלד.</p>
+</li>
+</ul>
+<p><a id="קלט-גולמי"></a></p>
+<h3 id="רויע-אריינגאבע"><a class="header" href="#רויע-אריינגאבע">רויע אריינגאבע</a></h3>
+<p>טעקסט נאך געוויסע שליסל ווערטער (ווי <code>re:</code>) ווערט באהאנדלט אלס רויע אריינגאבע. דאס מיינט אז די אויבנדערמאנטע צייכנס פארלירן רוב פון זייער באזונדערן באדייט. מען דארף דא נאר א ביסל escape צו פארמיידן אומקלארקייט:</p>
+<ul>
+<li>
+<p>מען מוז מאכן escape פאר טאפלטע גענזעלעך (<code>"</code>).</p>
+</li>
+<li>
+<p>ביי רווחים און קלאמערן אן escape דארף דער גאנצער זוכן אויסדרוק זיין ארומגענומען מיט גענזעלעך.</p>
+</li>
+<li>
+<p>דער זוכן אויסדרוק קען זיך נישט ענדיגן מיט אן אומפאריגן צאל צוריקגעקערטע שרעג שטריכן.</p>
+</li>
+</ul>
+<p><a id="מזהי-אובייקטים-id"></a></p>
+<h2 id="אידענטיפיקאציע-נומערן-id"><a class="header" href="#אידענטיפיקאציע-נומערן-id">אידענטיפיקאציע נומערן (ID)</a></h2>
+<p><code>nid:123</code><br />
+די רשומה מיטן רשומה ID 123.</p>
+<p><code>cid:123,456,789</code><br />
+אלע קארטלעך מיט קארטל ID 123, 456 אדער 789.</p>
+<p>מען קען געפינען רשומה און קארטל ID אינעם <a href="stats.html">קארטל אינפארמאציע</a> פענצטער אין דורכבלעטערן.</p>
+<p><a id="חיפושים-אחרים"></a></p>
+<h2 id="אנדערע-זוכונגען"><a class="header" href="#אנדערע-זוכונגען">אנדערע זוכונגען</a></h2>
+<p><code>prop:due=1 is:learn</code><br />
+לערנען קארטלעך וואס גייען איבער א טאג גרעניץ און זענען באשטימט פאר מארגן.</p>
+<p><code>prop:due=0 is:learn -introduced:1</code><br />
+לערנען קארטלעך וואס גייען איבער א טאג גרעניץ און זענען באשטימט פאר היינט.</p>
+<p><code>prop:resched=0</code><br />
+קארטלעך וועמענס צייט פלאן איז היינט ניי באשטימט געווארן דורך <strong>שטעלן א חזרה דאטום</strong> אדער <strong>ניי באשטימען חזרה צייטן ביים טוישן</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="filtered-decks.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="question-bank.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="filtered-decks.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="question-bank.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

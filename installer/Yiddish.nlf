@@ -1,0 +1,191 @@
+﻿# Yiddish NSIS language file
+NLF v6
+# Language ID
+1085
+# Font and size - dash (-) means default
+-
+-
+# Codepage - dash (-) means ASCII code page
+1255
+# RTL - anything else than RTL means LTR
+RTL
+# Translation by Amir Szekely (aka KiCHiK), fixed by Yaron Shahrabani
+# ^Branding
+#Nullsoft Install System %s
+אנקי אויף יידיש
+# ^SetupCaption
+אינסטאלירן $(^Name)
+# ^UninstallCaption
+אוועקנעמען $(^Name)
+# ^LicenseSubCaption
+: דער רישוי-הסכם
+# ^ComponentsSubCaption
+: אינסטאלירן-ברירות
+# ^DirSubCaption
+: אינסטאלירן-תיקיה
+# ^InstallingSubCaption
+: אינסטאלירט
+# ^CompletedSubCaption
+: די אינסטאלירונג איז פארטיג
+# ^UnComponentsSubCaption
+: אוועקנעמען-ברירות
+# ^UnDirSubCaption
+: תיקיה צום אוועקנעמען
+# ^ConfirmSubCaption
+: באשטעטיגן דאס אוועקנעמען
+# ^UninstallingSubCaption
+: נעמט אוועק
+# ^UnCompletedSubCaption
+: דאס אוועקנעמען איז פארטיג
+# ^BackBtn
+< &צוריק
+# ^NextBtn
+&ווייטער >
+# ^AgreeBtn
+איך בין &מסכים
+# ^AcceptBtn
+איך בין &מסכים צו די תנאים פונעם רישוי-הסכם
+# ^DontAcceptBtn
+איך בין &נישט מסכים צו די תנאים פונעם רישוי-הסכם
+# ^InstallBtn
+&אינסטאלירן
+# ^UninstallBtn
+&אוועקנעמען
+# ^CancelBtn
+אפזאגן
+# ^CloseBtn
+&פארמאכן
+# ^BrowseBtn
+&אויסקלויבן...
+# ^ShowDetailsBtn
+&ווייזן פרטים
+# ^ClickNext
+דרוקט ווייטער כדי צו גיין ווייטער.
+# ^ClickInstall
+דרוקט אינסטאלירן כדי אנצוהייבן די אינסטאלירונג.
+# ^ClickUninstall
+דרוקט אוועקנעמען כדי אנצוהייבן דאס אוועקנעמען.
+# ^Name
+נאמען
+# ^Completed
+די פעולה איז פארטיג
+# ^LicenseText
+ליינט דעם רישוי-הסכם איידער איר אינסטאלירט $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, דרוקט 'איך בין מסכים'.
+# ^LicenseTextCB
+ליינט דעם רישוי-הסכם איידער איר אינסטאלירט $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, צייכנט אן דאס קעסטל אונטן. $_CLICK
+# ^LicenseTextRB
+ליינט דעם רישוי-הסכם איידער איר אינסטאלירט $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, קלויבט די ערשטע ברירה אונטן. $_CLICK
+# ^UnLicenseText
+ליינט דעם רישוי-הסכם איידער איר נעמט אוועק $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, דרוקט 'איך בין מסכים'.
+# ^UnLicenseTextCB
+ליינט דעם רישוי-הסכם איידער איר נעמט אוועק $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, צייכנט אן דאס קעסטל אונטן. $_CLICK
+# ^UnLicenseTextRB
+ליינט דעם רישוי-הסכם איידער איר נעמט אוועק $(^NameDA). אויב איר זענט מסכים צו אלע תנאים, קלויבט די ערשטע ברירה אונטן. $_CLICK
+# ^Custom
+לויט אייער בחירה
+# ^ComponentsText
+צייכנט אן די טיילן וואס איר ווילט אינסטאלירן, און נעמט אראפ דעם צייכן פון די אנדערע. $_CLICK
+# ^ComponentsSubText1
+קלויבט דעם אינסטאלירן-סארט:
+# ^ComponentsSubText2_NoInstTypes
+קלויבט טיילן צום אינסטאלירן:
+# ^ComponentsSubText2
+אדער קלויבט נאך טיילן צום אינסטאלירן:
+# ^UnComponentsText
+צייכנט אן די טיילן וואס איר ווילט אוועקנעמען, און נעמט אראפ דעם צייכן פון די אנדערע. $_CLICK
+# ^UnComponentsSubText1
+קלויבט דעם אוועקנעמען-סארט:
+# ^UnComponentsSubText2_NoInstTypes
+קלויבט טיילן צום אוועקנעמען:
+# ^UnComponentsSubText2
+אדער קלויבט נאך טיילן צום אוועקנעמען:
+# ^DirText
+די פראגראם וועט אינסטאלירן $(^NameDA) אין דער פאלגנדיקער תיקיה. צו נוצן אן אנדער תיקיה, דרוקט 'אויסקלויבן' און קלויבט א נייע תיקיה. $_CLICK
+# ^DirSubText
+די ציל-תיקיה
+# ^DirBrowseText
+קלויבט א תיקיה פאר $(^NameDA):
+# ^UnDirText
+די פראגראם וועט אוועקנעמען $(^NameDA) פון דער פאלגנדיקער תיקיה. צו נוצן אן אנדער תיקיה, דרוקט 'אויסקלויבן' און קלויבט א נייע תיקיה. $_CLICK
+# ^UnDirSubText
+""
+# ^UnDirBrowseText
+קלויבט די תיקיה פון וועלכער מען זאל אוועקנעמען $(^NameDA):
+# ^SpaceAvailable
+"פארהאן פלאץ: "
+# ^SpaceRequired
+"נויטיגער פלאץ: "
+# ^UninstallingText
+מען וועט אוועקנעמען $(^NameDA) פון דער פאלגנדיקער תיקיה. $_CLICK
+# ^UninstallingSubText
+נעמט אוועק פון:
+# ^FileError
+א פעלער ביים עפענען א פייל צום שרייבן:\r\n\t$0\r\nדרוקט אפזאגן כדי אפצושטעלן די אינסטאלירונג,\r\nנאכאמאל צו פרובירן נאכאמאל, אדער\r\nאיבערהיפן כדי איבערצוהיפן דעם פייל.
+# ^FileError_NoIgnore
+א פעלער ביים עפענען א פייל צום שרייבן:\r\n\t$0\r\nדרוקט נאכאמאל צו פרובירן נאכאמאל, אדער\r\nאפזאגן כדי אפצושטעלן די אינסטאלירונג.
+# ^CantWrite
+"מען קען נישט שרייבן: "
+# ^CopyFailed
+דאס קאפירן איז דורכגעפאלן
+# ^CopyTo
+קאפירן צו
+# ^Registering
+"רעגיסטרירט: "
+# ^Unregistering
+"נעמט אראפ די רעגיסטראציע: "
+# ^SymbolNotFound
+"דער סימבאל איז נישט געפונען: "
+# ^CouldNotLoad
+"מען קען נישט אריינלאדן: "
+# ^CreateFolder
+"שאפן א תיקיה: "
+# ^CreateShortcut
+"שאפן א קיצור: "
+# ^CreatedUninstaller
+"דער אוועקנעמער איז געשאפן: "
+# ^Delete
+"אויסמעקן א פייל: "
+# ^DeleteOnReboot
+"אויסמעקן נאכן אויפמאכן דעם קאמפיוטער: "
+# ^ErrorCreatingShortcut
+"א פעלער ביים שאפן א קיצור: "
+# ^ErrorCreating
+"א פעלער ביים שאפן: "
+# ^ErrorDecompressing
+א פעלער ביים אויספאקן די דאטן. דער אינסטאלירן-פייל קען זיין געשעדיגט.
+# ^ErrorRegistering
+א פעלער ביים רעגיסטרירן א DLL
+# ^ExecShell
+"אויספירן א פייל-פעולה: "
+# ^Exec
+"אויספירן: "
+# ^Extract
+"פאקט אויס: "
+# ^ErrorWriting
+"א פעלער ביים שרייבן אין א פייל: "
+# ^InvalidOpcode
+דער אינסטאלירן-פייל איז געשעדיגט: אן אומגילטיגע באפעל.
+# ^NoOLE
+"קיין OLE פאר: "
+# ^OutputFolder
+"די רעזולטאט-תיקיה: "
+# ^RemoveFolder
+"אוועקנעמען א תיקיה: "
+# ^RenameOnReboot
+"טוישן דעם נאמען ביים ווידער אויפמאכן: "
+# ^Rename
+"טוישן דעם נאמען: "
+# ^Skipped
+"איבערגעהיפט: "
+# ^CopyDetails
+קאפירן פרטים צום קליפבארד
+# ^LogInstall
+אפזיכערן דעם אינסטאלירן-יומן
+# ^Byte
+" B"
+# ^Kilo
+" K"
+# ^Mega
+" M"
+# ^Giga
+" G"

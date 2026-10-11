@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>דער פעקלעך-עקראן - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="מסך-החפיסות"></a></p>
+<h1 id="דער-פעקלעך-פענצטער"><a class="header" href="#דער-פעקלעך-פענצטער">דער פעקלעך פענצטער</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#די-פעקלעך-ליסטע">די פעקלעך ליסטע</a></li>
+<li class="toc-level-2"><a href="#די-קנעפלעך-אין-דער-פעקל-שורה">די קנעפלעך אין דער פעקל שורה</a></li>
+<li class="toc-level-2"><a href="#די-פארשריט-לייסטן">די פארשריט לייסטן</a></li>
+<li class="toc-level-2"><a href="#צושטאנד-סימבאלן">צושטאנד סימבאלן</a></li>
+<li class="toc-level-2"><a href="#חזרות-היץ-מאפע">חזרות היץ מאפע</a></li>
+<li class="toc-level-2"><a href="#סטאטיסטיק-און-א-קיילעכדיגער-דיאגראם">סטאטיסטיק און א קיילעכדיגער דיאגראם</a></li>
+<li class="toc-level-2"><a href="#ווארענונג-וועגן-א-גרויסן-עול">ווארענונג וועגן א גרויסן עול</a></li>
+<li class="toc-level-2"><a href="#צוזאמענגעדריקטער-מצב-און-גראע-שאטירונגען">צוזאמענגעדריקטער מצב און גראע שאטירונגען</a></li>
+<li class="toc-level-2"><a href="#אויסקלייבן-עטליכע-פעקלעך">אויסקלייבן עטליכע פעקלעך</a></li>
+<li class="toc-level-2"><a href="#קורצוועגן-פונעם-פעקלעך-פענצטער">קורצוועגן פונעם פעקלעך פענצטער</a></li>
+</ul>
+</details>
+<p>דער פעקלעך פענצטער איז דער הויפט פענצטער פון דער פראגראם. פון דארט קלייבט מען וואס צו לערנען, זעט וויפיל קארטלעך ווארטן, לייגט צו פראגעס, עפנט דורכבלעטערן און קומט צו די געווענליכע פעקל פעולות.</p>
+<p><img src="media%5Cyi-ui-8.png" alt="image-20251019001853586" /></p>
+<p><a id="רשימת-החפיסות"></a></p>
+<h2 id="די-פעקלעך-ליסטע"><a class="header" href="#די-פעקלעך-ליסטע">די פעקלעך ליסטע</a></h2>
+<p>יעדער פעקל האט אן אייגענע שורה. דרוקן אויפן נאמען קלייבט אויס דעם פעקל און עפנט זיין סיכום פענצטער. אויב דער פעקל האט אונטערפעקלעך, עפנט און פארמאכט דער פייל נעבן אים די אינערליכע ליסטע. ווען עס זענען דא אסאך פעקלעך, קען מען נוצן דאס זוכן פעלד אינעם הויפט פענצטער צו פארקלענערן די ליסטע לויטן פעקל נאמען אדער וועג.</p>
+<p>די שורה מיט א גראען הינטערגרונט איז דער יעצטיגער פעקל. רוב קורצוועג פעולות אינעם פעקלעך פענצטער, ווי אנהייבן לערנען אדער עפענען אויסוואלן, גייען אן אויפן אנגעצייכנטן פעקל. נאכן אריינגיין אין א פעקל, קומט זיין נאמען אויך אין דעם קעפל פונעם סיכום און לערנען פענצטער, כדי קלאר צו זען וואו מען האלט.</p>
+<p><a id="הכפתורים-בשורת-החפיסה"></a></p>
+<h2 id="די-קנעפלעך-אין-דער-פעקל-שורה"><a class="header" href="#די-קנעפלעך-אין-דער-פעקל-שורה">די קנעפלעך אין דער פעקל שורה</a></h2>
+<p>ביי דער זייט פון יעדער פעקל שורה זענען דא קליינע קנעפלעך פאר שנעלע פעולות:</p>
+<ul>
+<li><strong>שרייבט א פראגע</strong>: עפנט דעם צולייגן פענצטער מיט דעם פעקל שוין אויסגעקליבן אלס ציל.</li>
+<li><strong>דורכבלעטערן</strong>: עפנט דעם דורכבלעטערן פענצטער מיטן זוכן באגרעניצט צו דעם פעקל.</li>
+<li><strong>שאפן אן אונטערפעקל</strong>: לייגט צו א נייעם פעקל אינעם יעצטיגן פעקל.</li>
+<li><strong>לערנען</strong>: עפנט דעם חזרה פענצטער.</li>
+</ul>
+<p>דרוקן מיטן רעכטן מייז קנעפל אויף א פעקל שורה עפנט נאך פעולות, ווי טוישן נאמען, אויסמעקן, עקספארטירן, פעקל אויסוואלן, אייגענע לערנען, פילטערן פראגעס און צוריקברענגען פון באזייטיגן ביז מארגן. ביי געפילטערטע פעקלעך איז אויך דא איבערבויען אדער אויסליידיגן.</p>
+<img src="media/yi-guide-12.svg" alt="דער מעניו ביים דרוקן מיטן רעכטן מייז קנעפל אויף א פעקל" style="zoom:75%;" />
+<p><a id="פסי-ההתקדמות"></a></p>
+<h2 id="די-פארשריט-לייסטן"><a class="header" href="#די-פארשריט-לייסטן">די פארשריט לייסטן</a></h2>
+<p>אין מיטן פון דער פעקל שורה איז דא א קאלירטע לייסט וואס גיט א סיכום פונעם פעקל פאר היינט. האלטן דעם מייז איבער אירע טיילן ווייזט מער גענויע פרטים.</p>
+<ul>
+<li><strong>נייע קארטלעך</strong>: חומר וואס איז נאכנישט געלערנט געווארן.</li>
+<li><strong>ביים לערנען</strong>: קארטלעך אין קורצע לערנען טריט וואס דארפן בקרוב צוריקקומען.</li>
+<li><strong>קארטלעך פאר חזרה</strong>: קארטלעך וועמענס חזרה צייט איז אנגעקומען.</li>
+<li><strong>חזרות געטון היינט</strong>: א גראער טייל וואס ווייזט וויפיל איר זענט שוין דורכגעגאנגען היינט.</li>
+<li><strong>פאר מארגן</strong>: ווען עס איז נישט דא נאך חומר פאר היינט אבער עס זענען דא קארטלעך פאר מארגן, קען די לייסט ווייזן מארגן’ס עול.</li>
+</ul>
+<p>נומערן אין קלאמערן אין דער לייסט ווייזן קארטלעך איבער דער יעצטיגער טעגליכער גרענעץ. למשל, חזרות וואס זענען באהאלטן צוליב דער טעגליכער חזרה גרענעץ וועלן שטיין אין קלאמערן און נישט דווקא אריינגיין אינעם לערנען רונדע, ביז איר טוישט די גרענעץ אדער נוצט א פאסיגן כלי.</p>
+<p><img src="media/yi-guide-7.svg" alt="פרטים פון די פארשריט לייסטן אין א פעקל שורה" /></p>
+<p><a id="סמלי-מצב"></a></p>
+<h2 id="צושטאנד-סימבאלן"><a class="header" href="#צושטאנד-סימבאלן">צושטאנד סימבאלן</a></h2>
+<p>נעבן יעדן פעקל איז דא א צושטאנד סימבאל. א ליידיגער פעקל ווערט אנגעצייכנט אנדערש פון א פעקל מיט חומר. ווען אלע חומר פאר היינט איז פארטיג, קומט א פארטיג סימן. אויב עס זענען דא קארטלעך וואס זענען באזייטיגט ביז מארגן, קען דער סימבאל ווייזן אז דער פעקל איז פארטיג, אבער עס איז נאך דא חומר וואס איז באהאלטן ביז מארגן אדער ביז מען ברענגט עס צוריק. א געפילטערטער פעקל האט אן אייגענעם סימן, כדי קלאר צו ווייזן אז זיינע קארטלעך זענען געקומען פון אנדערע היים פעקלעך.</p>
+<p><a id="מפת-חום"></a></p>
+<h2 id="חזרות-היץ-מאפע"><a class="header" href="#חזרות-היץ-מאפע">חזרות היץ מאפע</a></h2>
+<p>אינעם הויפט פענצטער און אינעם פעקל סיכום איז דא א חזרות היץ מאפע, ווי א קאלירטער קאלענדאר. יעדער טאג וואס איר האט געלערנט באקומט א קאליר לויטן צאל חזרות. אזוי זעט מען שנעל א רצף פון לערנען, פארנומענע טעג און שטילערע טעג.</p>
+<p><a id="סטטיסטיקות-ותרשים-פאי"></a></p>
+<h2 id="סטאטיסטיק-און-א-קיילעכדיגער-דיאגראם"><a class="header" href="#סטאטיסטיק-און-א-קיילעכדיגער-דיאגראם">סטאטיסטיק און א קיילעכדיגער דיאגראם</a></h2>
+<p>ביי דער זייט פונעם פעקלעך פענצטער איז דא א סטאטיסטיק געגנט מיט א סיכום פון דער זאמלונג פאר היינט. אויבן זעט מען <strong>סך הכל קארטלעך פאר חזרה</strong>, וויפיל קארטלעך זענען צוגעקומען היינט און די געשאצטע לערנען צייט. די פארשריט לייסט אונטן טיילט די ארבעט אין קאטעגאריעס, ווי חזרות שוין געטון היינט, קארטלעך פאר היינט, פארשפעטיגטע קארטלעך און נייע קארטלעך. דרוקן אויף א טייל סטאטיסטיק נומערן עפנט א בחינה אויף די קארטלעך פון יענעם נומער, למשל חזרה אויף קארטלעך פאר היינט. דרוקן אויף אנדערע נומערן עפנט דורכבלעטערן מיט א פאסיגן זוכן, כדי מען זאל קענען זען פון וועלכע קארטלעך דער נומער באשטייט איידער מען באשליסט וואס צו טון.</p>
+<p>אונטער דער היץ מאפע איז דא א קיילעכדיגער דיאגראם מיטן נאמען <strong>סטאטיסטיק</strong>. דער שליסל טיילט די זאמלונג אין <strong>בוגר</strong>, <strong>יונג</strong>, <strong>נייע</strong>, <strong>ביים לערנען</strong>, <strong>אפגעשטעלט</strong> און <strong>באזייטיגט ביז מארגן</strong>. האלטן דעם מייז איבער א טייל אדער זיין באשרייבונג ווייזט אן הסבר און נומערן. דרוקן דערויף עפנט דורכבלעטערן געפילטערט צו יענער גרופע.</p>
+<p>אויף <strong>סך הכל קארטלעך פאר חזרה</strong> קען מען עפענען א מעניו מיטן רעכטן מייז קנעפל. דארט קען מען באשטימען צי אויך אריינצונעמען נייע קארטלעך אין דער חזרה, אויסקלייבן דעם סדר פון די קארטלעך וואס מען הייבט אן פונעם הויפט פענצטער, אדער מקדים זיין חזרה אויף מארגן’ס קארטלעך וואס זענען נישט יונג. אינעם צוזאמענגעדריקטן מצב ווערט דער קאלענדאר באהאלטן און די סטאטיסטיק קלענער, צו לאזן מער פלאץ פאר דער פעקלעך ליסטע. זעט <a href="#%D7%9E%D7%A6%D7%91-%D7%93%D7%97%D7%95%D7%A1-%D7%95%D7%92%D7%95%D7%95%D7%A0%D7%99-%D7%90%D7%A4%D7%95%D7%A8">צוזאמענגעדריקטער מצב און גראע שאטירונגען</a>.</p>
+<p><a id="התראת-עומס"></a></p>
+<h2 id="ווארענונג-וועגן-א-גרויסן-עול"><a class="header" href="#ווארענונג-וועגן-א-גרויסן-עול">ווארענונג וועגן א גרויסן עול</a></h2>
+<p>אונטער דער צאל חזרות פאר היינט קען דער פענצטער ווייזן א ווארענונג איבער קומענדיגע טעג מיט א גרויסן ערווארטעטן צאל חזרות. די ווארענונג איז נישט פארבונדן מיט פראגעס וואס זענען שוין פארשפעטיגט; זי העלפט אייך זען אן אנקומענדיגן עול פאראויס. דרוקן אויף א טאג אין דער ווארענונג הייבט אן א חזרה אויף עלטערע פראגעס וואס זענען באשטימט פאר יענעם טאג, און וואס מען קען א ביסל מקדים זיין אן א גרויסן פארלוסט.</p>
+<p><img src="media%5Cyi-guide-9.svg" alt="image-20260604104247076" /></p>
+<p><a id="מצב-דחוס-וגווני-אפור"></a></p>
+<h2 id="צוזאמענגעדריקטער-מצב-און-גראע-שאטירונגען"><a class="header" href="#צוזאמענגעדריקטער-מצב-און-גראע-שאטירונגען">צוזאמענגעדריקטער מצב און גראע שאטירונגען</a></h2>
+<p>ווער עס ארבעט מיט אסאך פעקלעך קען אנצינדן <strong>צוזאמענגעדריקטער מצב</strong>. דאס באהאלט דעם קאלענדאר אינעם הויפט פענצטער און מאכט די סטאטיסטיק קלענער, צו באפרייען פלאץ פאר דער פעקלעך ליסטע. מען קען אויך פארקלענערן די גרייס פונעם צוזאמענגעדריקטן אויסשטעל לויט פראצענט.</p>
+<p><img src="media%5Cyi-ui-10.png" alt="image-20260604104354750" /></p>
+<p>צו אנצינדן דעם מצב, עפנט <strong>הויפט מעניו &gt; איינשטעלונגען &gt; אויסזען</strong>, און ביי <strong>אויסזען פונעם הויפט בלאט</strong> צייכנט אן <strong>צוזאמענגעדריקטער מצב</strong>. אויפן זעלבן פלאץ קען מען אויך טוישן <strong>אויסשטעל גרייס אינעם צוזאמענגעדריקטן מצב</strong>.</p>
+<p>דארט קען מען אויך אנצינדן <strong>הויפט עקראן אין גראע שאטירונגען (אן קאלירן)</strong>. דאס פארבייט די קאלירטע פעקלעך תצוגה מיט א שטילערן אויסשטעל, פאר ווער עס וויל ווייניגער קאלירן ביים לערנען.</p>
+<p><a id="בחירת-כמה-חפיסות"></a></p>
+<h2 id="אויסקלייבן-עטליכע-פעקלעך"><a class="header" href="#אויסקלייבן-עטליכע-פעקלעך">אויסקלייבן עטליכע פעקלעך</a></h2>
+<p>אויבן אין דער פעקלעך ליסטע איז דא א בחירה קנעפל. אין דעם מצב קען מען אנצייכענען עטליכע פעקלעך און טון אויף זיי פעולות ווי קאפירן, אויסשניידן, אריינקלעבן אדער אויסמעקן, לויט די אויסוואלן אויפן לייסט. נוצט דאס פארזיכטיג ווען איר שטעלט איבער א גרויסן בוים פון פעקלעך.</p>
+<p><a id="קיצורי-מסך-החפיסות"></a></p>
+<h2 id="קורצוועגן-פונעם-פעקלעך-פענצטער"><a class="header" href="#קורצוועגן-פונעם-פעקלעך-פענצטער">קורצוועגן פונעם פעקלעך פענצטער</a></h2>
+<p>מען קען איינשטעלן קורצוועגן פאר געווענליכע פעקל פעולות אינעם <strong>איינשטעלן קורצוועג קנעפלעך</strong> פענצטער פונעם הויפט מעניו. עפנט דארט דעם <strong>הויפט עקראן</strong> קוויטל און זוכט די גרופע <strong>קורצוועג קנעפלעך פאר פעקל אויסוואלן</strong>. דארט זענען פעולות ווי טוישן נאמען, אויסוואלן, עקספארטירן, אויסמעקן, שאפן אן אונטערפעקל, סיכום, פילטערן פראגעס און אייגענע לערנען.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="getting-help.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="studying.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="getting-help.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="studying.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

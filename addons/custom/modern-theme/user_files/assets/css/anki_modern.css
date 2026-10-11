@@ -1,0 +1,80 @@
+body {
+  /* background-color: #f2f3f4 !important; */
+  background-color:var(--bs-body-bg) !important;
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  /* background-color: var(--bs-body-bg); */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.anki-navbar{
+   font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+}
+
+
+nav {
+  top: -50px;
+}
+nav:hover {
+  top: 0px;
+}
+.nav-item {
+  cursor: pointer;
+}
+
+.full {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.align-hetmap-center {
+  text-align: center;
+}
+.searchcards {
+  /* position: absolute; */
+  margin-left: 10px;
+  /* left: 0; */
+}
+
+/* tooltips */
+
+/* progress and bar */
+ /* אין צורך בCSS כפול- יש כבר בסטייל של הטולטיפ */
+/* global floating tooltip — נוצר ע"י lazy_tooltips.js */
+/* #global_tooltip {
+    position: fixed;
+    display: none;
+    background: var(--canvas-overlay, #333);
+    color: var(--fg, #fff);
+    border: 1px solid var(--border, #555);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: var(--bs-body-font-family);
+    z-index: 99999;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    max-width: 300px;
+    text-align: center;
+    direction: rtl;
+} */
+.progress-bar, .progress{
+  overflow: visible !important;
+  white-space: unset;
+  cursor: pointer;
+  min-width: fit-content;
+}
+

@@ -1,0 +1,47 @@
+{
+  "access_dialog_from_reviewer": "ב",
+  "add_entry_to_context_menu": true,
+  "add_num_area_to_dialog": false,
+  "default accept is ivl and due": true,
+  "focus_lineedit": "r",
+  "one_more_day": "f",
+  "one_less_day": "d",
+  "quick_buttons__left__change_due_and_interval": [
+    {
+      "key": "c",
+      "label": "איין וואך (c)",
+      "ivl": 7
+    },
+    {
+      "key": "x",
+      "label": "איין חודש (x)",
+      "ivl": 30
+    },
+    {
+      "key": "y",
+      "label": "איין יאר (y)",
+      "ivl": 365
+    }
+  ],
+  "quick_buttons__right__change_due_only": [
+    {
+      "key": "t",
+      "label": "איין וואך (t)",
+      "ivl": 7
+    },
+    {
+      "key": "g",
+      "label": "איין חודש (g)",
+      "ivl": 30
+    },
+    {
+      "key": "b",
+      "label": "איין יאר (b)",
+      "ivl": 365
+    }
+  ],
+  "relearn_key": "a",
+  "secondary_accept_1": "e",
+  "secondary_accept_2": "space",
+  "show_tooltip": true
+}

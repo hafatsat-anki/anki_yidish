@@ -1,0 +1,277 @@
+{
+  "Settings": {
+    "CSS": "",
+    "Editor shortcut": "",
+    "Popup shortcut": "Ctrl+Alt+J",
+    "Size mode": "last"
+  },
+  "Scripts & Symbols": [
+    {
+      "1. Menu": "ניקוד",
+      "2. Shortcut": "Ctrl+Shift+Alt+A",
+      "3. Items": [
+        {
+          "1. Symbol": "ְ",
+          "2. Shortcut": "שוא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֱ",
+          "2. Shortcut": "חטף סגול",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֲ",
+          "2. Shortcut": "חטף פּתח",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֳ",
+          "2. Shortcut": "חטף קמץ",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ִ",
+          "2. Shortcut": "חיריק",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֵ",
+          "2. Shortcut": "צירה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֶ",
+          "2. Shortcut": "סגול",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ַ",
+          "2. Shortcut": "פּתח",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ָ",
+          "2. Shortcut": "קמץ (גדול)",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֹ",
+          "2. Shortcut": "חולם (מלא)",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֺ",
+          "2. Shortcut": "חולם חסר",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֻ",
+          "2. Shortcut": "קובוץ",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ּ",
+          "2. Shortcut": "דגש, מפיק, שורוק",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ׁ",
+          "2. Shortcut": "ש ימנית",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ׂ",
+          "2. Shortcut": "ש שמאלית",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ׇ",
+          "2. Shortcut": "קמץ קטן",
+          "3. HTML": "false"
+        }
+      ]
+    },
+    {
+      "1. Menu": "טעמי המקרא",
+      "2. Shortcut": "Ctrl+Shift+Alt+S",
+      "3. Items": [
+        {
+          "1. Symbol": "֑",
+          "2. Shortcut": "אתנחתא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֒",
+          "2. Shortcut": "סגולתא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֓",
+          "2. Shortcut": "שלשלת",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֔",
+          "2. Shortcut": "זקף קטן",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֕",
+          "2. Shortcut": "זקף גדול",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֖",
+          "2. Shortcut": "טיפחא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֗",
+          "2. Shortcut": "רביע",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֘",
+          "2. Shortcut": "צינורית",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֙",
+          "2. Shortcut": "פשטא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֚",
+          "2. Shortcut": "יתיב",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֛",
+          "2. Shortcut": "תביר",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֜",
+          "2. Shortcut": "גרש",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֝",
+          "2. Shortcut": "גרש מוקדם",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֞",
+          "2. Shortcut": "גרשיים",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֟",
+          "2. Shortcut": "קרני פרה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֠",
+          "2. Shortcut": "תלישא גדולה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֡",
+          "2. Shortcut": "פזר",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֢",
+          "2. Shortcut": "אתנח הפוך",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֣",
+          "2. Shortcut": "מונח",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֤",
+          "2. Shortcut": "מהפך",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֥",
+          "2. Shortcut": "מרכא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֦",
+          "2. Shortcut": "מרכא כפולה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֧",
+          "2. Shortcut": "דרגא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֨",
+          "2. Shortcut": "קדמא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֩",
+          "2. Shortcut": "תלישא קטנה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֪",
+          "2. Shortcut": "ירח בן יומו",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֫",
+          "2. Shortcut": "עולה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֬",
+          "2. Shortcut": "עילוי",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֭",
+          "2. Shortcut": "דחי",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֮",
+          "2. Shortcut": "זרקא",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "֯",
+          "2. Shortcut": "סימן עגול של המסורה",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "ֽ",
+          "2. Shortcut": "מתג",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "׀",
+          "2. Shortcut": "פסק",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "־",
+          "2. Shortcut": "מקף",
+          "3. HTML": "false"
+        },
+        {
+          "1. Symbol": "׃",
+          "2. Shortcut": "סוף פסוק",
+          "3. HTML": "false"
+        }
+      ]
+    }
+  ]
+}

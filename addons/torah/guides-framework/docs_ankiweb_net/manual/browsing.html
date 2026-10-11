@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>דורכבלעטערן - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="דפדוף"></a></p>
+<h1 id="דורכבלעטערן"><a class="header" href="#דורכבלעטערן">דורכבלעטערן</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#טאבעלע-מצבים">טאבעלע מצבים</a></li>
+<li class="toc-level-2"><a href="#דער-זייט-סרגל">דער זייט סרגל</a></li>
+<li class="toc-level-3"><a href="#דער-זוך-כלי">דער זוך כלי</a></li>
+<li class="toc-level-3"><a href="#דער-אויסוואל-כלי">דער אויסוואל כלי</a></li>
+<li class="toc-level-3"><a href="#אפגעזיכערטע-זוכענישן">אפגעזיכערטע זוכענישן</a></li>
+<li class="toc-level-3"><a href="#רעדאקטירן-פריטים">רעדאקטירן פריטים</a></li>
+<li class="toc-level-3"><a href="#געפינען-פריטים">געפינען פריטים</a></li>
+<li class="toc-level-2"><a href="#דער-זוך-קעסטל">דער זוך קעסטל</a></li>
+<li class="toc-level-3"><a href="#פארגעשריטענע-זוכעניש-און-אויסצייכענען-רעזולטאטן">פארגעשריטענע זוכעניש און אויסצייכענען רעזולטאטן</a></li>
+<li class="toc-level-2"><a href="#קארטלרשומה-טאבעלע">קארטל/רשומה טאבעלע</a></li>
+<li class="toc-level-3"><a href="#שורות">שורות</a></li>
+<li class="toc-level-3"><a href="#שפאלטן">שפאלטן</a></li>
+<li class="toc-level-2"><a href="#דער-רעדאקטירער-שטח">דער רעדאקטירער שטח</a></li>
+<li class="toc-level-2"><a href="#מעניוס-און-פעולות">מעניוס און פעולות</a></li>
+<li class="toc-level-3"><a href="#דער-קיצור-סרגל">דער קיצור סרגל</a></li>
+<li class="toc-level-3"><a href="#טעקע">טעקע</a></li>
+<li class="toc-level-3"><a href="#רשומות">רשומות</a></li>
+<li class="toc-level-3"><a href="#קארטלעך">קארטלעך</a></li>
+<li class="toc-level-3"><a href="#גיי-צו">גיי צו</a></li>
+<li class="toc-level-3"><a href="#זוכן-און-איבערבייטן">זוכן און איבערבייטן</a></li>
+<li class="toc-level-2"><a href="#געפין-און-בייט-איבער">געפין און בייט איבער</a></li>
+<li class="toc-level-2"><a href="#געפינען-דאפלטע">געפינען דאפלטע</a></li>
+<li class="toc-level-2"><a href="#טוישן-און-איבערבייטן-פעלד-אינהאלט">טוישן און איבערבייטן פעלד אינהאלט</a></li>
+</ul>
+</details>
+<p>דער דורכבלעטערער פענסטער ערלויבט אייך צו זוכן און רעדאקטירן אייערע קארטלעך און רשומות.
+מען עפנט אים מיט א דרוק אויף <strong>דורכבלעטערן</strong> אינעם הויפט פענסטער, אדער מיטן קנעפל <kbd>B</kbd>.
+ער האט דריי חלקים: דער <em>זייט סרגל</em> רעכטס, די <em>קארטל/רשומה טאבעלע</em> אויבן לינקס, און דער <em>רעדאקטירער שטח</em> אונטן לינקס.
+שטעלט דעם מויז צווישן צוויי חלקים, דריקט און שלעפט, כדי צו פארברייטערן איינעם און פארקלענערן דעם אנדערן.</p>
+<p><a id="מצבי-טבלה"></a></p>
+<h2 id="טאבעלע-מצבים"><a class="header" href="#טאבעלע-מצבים">טאבעלע מצבים</a></h2>
+<img src="media/yi-ui-0.png" alt="טאבעלע מצבים" style="zoom:67%;" />
+<p>אנקי האט צוויי מצבים: די טאבעלע ווייזט אדער קארטלעך אדער רשומות.
+מען קען טוישן דעם מצב מיטן שאלטער אויבן, רעכטס פונעם זוך פעלד, אדער מיט <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>. דער שאלטער ווייזט אויך צי מען זעט יעצט <strong>ק</strong>ארטלעך אדער <strong>ר</strong>שומות.</p>
+<p><strong>הערה</strong>: כדי עס זאל זיין פשוט, גייט דער מדריך געווענליך אויס פון קארטל מצב.
+וואו עס שטייט אויסקלייבן, געפינען און אזוי ווייטער פון “קארטלעך”, לייענט דאס לויטן יעצטיגן מצב: קארטלעך אדער רשומות.</p>
+<p><a id="סרגל-הצד"></a></p>
+<h2 id="דער-זייט-סרגל"><a class="header" href="#דער-זייט-סרגל">דער זייט סרגל</a></h2>
+<p>דער <em>זייט סרגל</em> רעכטס גיט א שנעלן צוטריט צו געווענליכע זוך אויסדרוקן. עס האט אויך א זוך סרגל, כלים צו רעדאקטירן צעטלעך און פעקלעך, און צוויי באזונדערע כלים וואס ווערן ערקלערט ווייטער.
+מען טוישט צווישן די כלים מיטן סרגל אויבן אינעם זייט סרגל, אדער מיט די קיצורים
+<kbd>Alt</kbd>+<kbd>1</kbd>/<kbd>2</kbd>.</p>
+<p><a id="כלי-החיפוש"></a></p>
+<h3 id="דער-זוך-כלי"><a class="header" href="#דער-זוך-כלי">דער זוך כלי</a></h3>
+<p><img src="media/yi-guide-1.svg" alt="דער זוך כלי" /></p>
+<p>א דרוק אויף א פריט אינעם זייט סרגל זוכט לויט אים.</p>
+<p>האלט <kbd>Ctrl</kbd> ביים דריקן צו צולייגן דעם פריט צום יעצטיגן זוכן מיט א תנאי AND, דאס הייסט נאך א תנאי, אנשטאט אנהייבן א נייע זוכעניש.
+צום ביישפיל, אויב איר ווילט ווייזן קארטלעך <em>ביים לערנען</em> אינעם פעקל “סוכה”, דריקט אויף “לערנען”
+און דערנאך אויף “סוכה” בשעת איר האלט <kbd>Ctrl</kbd>.</p>
+<p>האלט <kbd>Shift</kbd> צו שאפן א זוכעניש מיט OR, דאס הייסט אדער, אנשטאט AND.
+צום ביישפיל, דריקט אויף איין פעקל און דערנאך אויף אן אנדערן מיט <kbd>Shift</kbd>, צו ווייזן קארטלעך פון ביידע פעקלעך צוזאמען.</p>
+<p>האלט <kbd>Alt</kbd> צו אויסשליסן א תנאי פונעם זוכן, מיט א <code>-</code> פאר אים: צום ביישפיל, נישט צו ווייזן די קארטלעך פון א געוויסן פעקל.
+מען קען צוזאמנעמען <kbd>Alt</kbd> מיט <kbd>Ctrl</kbd> אדער <kbd>Shift</kbd>. א דרוק מיט <kbd>Ctrl</kbd>+<kbd>Alt</kbd>, צום ביישפיל, לייגט צו א נייעם אויסשליס תנאי.</p>
+<p>מען קען אויך האלטן <kbd>Ctrl</kbd> און
+<kbd>Shift</kbd> צוזאמען ביים דריקן אויף א זוך אויסדרוק, כדי איבערצובייטן אלע תנאים פונעם זעלבן סארט.
+נעמט אן אז איר האט געשריבן די צוזאמענגעשטעלטע זוכעניש
+<code>deck:שבת (is:due or tag:important)</code>
+און איר ווילט יעצט דעם זעלבן זוכן פארן פעקל עירובין. האלט
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd> ביים דריקן אויף פעקל עירובין אינעם זייט סרגל, און איר באקומט:
+<code>deck:עירובין (is:due or tag:important)</code>.</p>
+<p><a id="כלי-הבחירה"></a></p>
+<h3 id="דער-אויסוואל-כלי"><a class="header" href="#דער-אויסוואל-כלי">דער אויסוואל כלי</a></h3>
+<p><img src="media/yi-guide-2.svg" alt="דער אויסוואל כלי" /></p>
+<p>דער אויסוואל כלי ערלויבט אויסצוקלייבן מערערע פריטים אויף איינמאל, דורך האלטן <kbd>Ctrl</kbd>
+אדער <kbd>Shift</kbd> ביים דריקן. מען קען אויך שלעפן און אראפלאזן צו טוישן דעם סדר פון פעקלעך און
+צעטלעך.</p>
+<p>צום ביישפיל: איר האט די צעטלעך <code>היזק_ראיה</code>, <code>חלוקה</code> און <code>השותפין</code>.
+דריקט אויף דער צעטל <code>ברירה</code>, און דערנאך אויף <code>חלוקה</code> מיט <kbd>Ctrl</kbd>. ביידע צעטלעך
+זענען יעצט אויסגעקליבן. שלעפט איינע פון זיי צו <code>השותפין</code>, כדי ביידע זאלן ווערן אירע אונטערצעטלעך.
+אנקי האט דערביי געטוישט די נעמען צו
+<code>השותפין::חלוקה</code> און <code>השותפין::היזק_ראיה</code>, לויטן סדר, און האט דערהיינטיגט די רשומות דערמיט.</p>
+<p>נאך א באניץ פאר מערערע אויסגעקליבענע פריטים איז זוכן: דריקט רעכטס אויף
+די אויסוואל און קלייבט <strong>זוכן &gt; אלע/איינער פון די אויסגעקליבענע</strong>.
+מען קען דאס צוזאמנעמען מיט די קנעפלעך ערקלערט ביי [דער זוך כלי](#כלי החיפוש),
+כדי צו צולייגן די געשאפענע זוכעניש צום יעצטיגן זוכן.</p>
+<p><a id="חיפושים-שמורים"></a></p>
+<h3 id="אפגעזיכערטע-זוכענישן"><a class="header" href="#אפגעזיכערטע-זוכענישן">אפגעזיכערטע זוכענישן</a></h3>
+<p>אויב איר זוכט כסדר דאס זעלבע,
+קענט איר אפזיכערן די יעצטיגע זוכעניש: דריקט רעכטס אויפן אויבערשטן פריט אינעם זייט סרגל,
+קלייבט “זיכער אפ די יעצטיגע זוכעניש” און שרייבט א נאמען.
+מען קען אויך שלעפן יעדן פריט פונעם זייט סרגל צו דעם שטח צו צולייגן א פאסיגע אפגעזיכערטע זוכעניש,
+און אזוי זי צושטעלן אויבן.</p>
+<p><a id="עריכת-פריטים"></a></p>
+<h3 id="רעדאקטירן-פריטים"><a class="header" href="#רעדאקטירן-פריטים">רעדאקטירן פריטים</a></h3>
+<p>מען קען אויסמעקן אדער טוישן נעמען פון צעטלעך, פעקלעך און אפגעזיכערטע זוכענישן גלייך אינעם זייט סרגל,
+דורכן רעכטן מויז מעניו, אדער מיט א קיצור: <kbd>Del</kbd> און
+<kbd>F2</kbd>. מען קען אויך אויסמעקן מערערע פריטים אויף איינמאל
+(זעט <a href="#%D7%9B%D7%9C%D7%99-%D7%94%D7%91%D7%97%D7%99%D7%A8%D7%94">דער אויסוואל כלי</a>).</p>
+<p><a id="מציאת-פריטים"></a></p>
+<h3 id="געפינען-פריטים"><a class="header" href="#געפינען-פריטים">געפינען פריטים</a></h3>
+<p>צו געפינען א געוויסן פריט אינעם זייט סרגל בוים, טייפט א חלק פון זיין נאמען אינעם זוך סרגל
+אויבן.</p>
+<p><a id="תיבת-החיפוש"></a></p>
+<h2 id="דער-זוך-קעסטל"><a class="header" href="#דער-זוך-קעסטל">דער זוך קעסטל</a></h2>
+<p>איבער דער קארטל ליסטע איז א זוך קעסטל. דארט קען מען טייפן פארשידענע זאכן
+צו זוכן קארטלעך. פארן זוך סינטאקס,
+זעט <a href="searching.html">זוכן</a>.</p>
+<p><a id="חיפוש-מורחב-והדגשת-תוצאות"></a></p>
+<h3 id="פארגעשריטענע-זוכעניש-און-אויסצייכענען-רעזולטאטן"><a class="header" href="#פארגעשריטענע-זוכעניש-און-אויסצייכענען-רעזולטאטן">פארגעשריטענע זוכעניש און אויסצייכענען רעזולטאטן</a></h3>
+<p>צו עפענען די פארגעשריטענע זוכעניש, עפנט דעם דורכבלעטערער פענסטער און דריקט <strong>פארגעשריטענע זוכעניש</strong> אינעם אויבערשטן סרגל. מען קען זי אויך עפענען דורך <strong>זוכן און איבערבייטן &gt; פארגעשריטענע זוכעניש</strong>, אדער מיט <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>. א זייט פענסטערל מיט קאטאגאריעס וועט זיך עפענען. עס בויט פאר אייך דעם אנקי זוך סינטאקס, אן אז איר זאלט דארפן געדענקען אלע ענגלישע ווערטער.</p>
+<p>דער אויבערשטער חלק איז א פרייע אויסדרוק שורה. טייפט א ווארט אדער אן אויסדרוק, און נוצט <strong>און</strong> / <strong>אדער</strong> צו באשטימען צי אלע תנאים מוזן פאסן אדער איינער איז גענוג. לייגט צו קלאמערן פאר א צוזאמענגעשטעלטע זוכעניש, און שלעפט אויסדרוקן צו טוישן זייער סדר. ווען די שאילתה איז ריכטיג, דריקט דעם זוך קנעפל אדער Enter.</p>
+<p>צו פארשטיין קלאמערן, טראכט פון יעדן אויסדרוק אלס א תנאי. א רווח צווישן תנאים מיינט געווענליך <strong>און</strong>, און <code>or</code> מיינט <strong>אדער</strong>. קלאמערן זאגן אנקי קודם צו אויסרעכענען די גרופע אינעווייניג. צום ביישפיל, <code>deck:ברכות (tag:דף_ב or tag:דף_ג)</code> מיינט: זוך נאר אינעם פעקל ברכות, און ווייז דארט קארטלעך מיט דער צעטל דף ב אדער דף ג. אן די קלאמערן קען <code>deck:ברכות tag:דף_ב or tag:דף_ג</code> אויך צוריקברענגען קארטלעך מיט דער צעטל דף ג פון דרויסן דעם פעקל ברכות, ווייל <code>or</code> טיילט די שאילתה אין צוויי ברייטערע מעגליכקייטן.</p>
+<p>מען קען צוזאמנעמען קלאמערן מיט אויסשליסן. א מקף פאר א תנאי מיינט <strong>נישט</strong>: <code>deck:ברכות -(tag:קל or tag:חזרה_מהירה)</code> זוכט אינעם פעקל ברכות, אבער לאזט ארויס יעדע קארטל מיט איינע פון די צוויי צעטלעך אינעם קלאמער. אזוי בויט מען א גענויע זוכעניש אן איבערצוזאגן דעם זעלבן תנאי כסדר.</p>
+<p>אין דער קאטאגאריע <strong>פלאץ און סארט</strong> קלייבט מען אויס פעקלעך, סארטן רשומה און צעטלעך. נוצט זי ווען איר ווייסט אין וועלכן תחום צו זוכן: א באזונדערן פעקל, א סארט רשומה פון פראגעס און ענטפערס, אדער א צעטל פאר א מסכתא אדער נושא. <strong>קארטל מצב</strong> פילטערט לויט ניי, ביים לערנען, ביים חזרן, ווארט פאר היינט, אפגעשטעלט אדער באזייטיגט ביז מארגן. <strong>פענער</strong> פילטערט לויטן פאן קאליר. <strong>דאטום מרווח</strong> זוכט לויטן צולייג דאטום, לערן דאטום אדער געפלאנטן דאטום. <strong>מאסן</strong> פילטערט לויט מרווח, צאל חזרות, דורכפאלן און מעגליכקייט צו דערמאנען.</p>
+<p>אינעם מעניו <strong>זוכן און איבערבייטן</strong> זענען אויך פאראן כלים פאר געווענליכע זוכענישן: <strong>זוך לויטן צולייג דאטום</strong>, <strong>זוך לויטן רעדאקטיר דאטום</strong>, <strong>זוך לויטן לעצטן לערן דאטום</strong> און <strong>זוך געשיכטע</strong>. די כלים לייגן אריין דעם פאסיגן אויסדרוק אינעם זוך קעסטל. דערנאך קען מען אים אליין רעדאקטירן אדער צולייגן נאך תנאים.</p>
+<p>ווען די רעזולטאטן ווערן געוויזן, קען מען אנשאלטן <strong>צייכן אויס ווערטער אין זוך רעזולטאטן</strong> כדי אנצוצייכענען די געפונענע ווערטער אין דער טאבעלע און אינעם רעדאקטירער שטח. דאס העלפט ביי א געווענליכן ווארט, אדער ווען דער זעלבער קארטל האט עטליכע ענליכע ערטער. אויב איר האט געטוישט א קארטל אין אן אנדערן פענסטער און די רעזולטאטן זענען נישט דערהיינטיגט, דריקט <strong>פריש אויף</strong> אינעם סרגל אדער מעניו צו לאדענען די קארטל ליסטע פון פריש.</p>
+<p><a id="טבלת-כרטיסיםרשומות"></a></p>
+<h2 id="קארטלרשומה-טאבעלע"><a class="header" href="#קארטלרשומה-טאבעלע">קארטל/רשומה טאבעלע</a></h2>
+<p>די טאבעלע שורות שטעלן פאר קארטלעך אדער רשומות וואס פאסן צו דער יעצטיגער זוכעניש.
+ביים דריקן אויף א שורה ווערט די פאסיגע רשומה געוויזן אונטן.</p>
+<h3 id="שורות"><a class="header" href="#שורות">שורות</a></h3>
+<p>אויב איר שלעפט דעם מויז אדער האלט <kbd>Ctrl</kbd> צו אויסקלייבן מערערע
+שורות, ווערט דער קארטל רעדאקטירער צייטווייליג באהאלטן. פארשידענע פעולות, ווי
+טוישן פעקל, קענען זיך צולייגן צו מערערע קארטלעך אדער רשומות אויף איינמאל, אן זיך צו ווענדן
+אינעם יעצטיגן מצב. דערפאר ווערט אין קארטל מצב א רשומה גערעכנט אלס אויסגעקליבן
+אויב איינע פון אירע קארטלעך איז אויסגעקליבן. אין רשומה מצב ווערט א קארטל גערעכנט אלס אויסגעקליבן
+אויב איר רשומה איז אויסגעקליבן.</p>
+<p>אנדערע פעולות, ווי ווייזן קארטל אינפארמאציע, ארבעטן נאר אויף איין
+קארטל אדער רשומה. דאס הייסט דער <em>יעצטיגער</em> קארטל אדער רשומה, געווענליך דער
+לעצטער וואס מען האט אויסגעקליבן אדער געדריקט.
+אין קארטל מצב געהערט די יעצטיגע רשומה צום יעצטיגן קארטל. אין
+רשומה מצב איז דער יעצטיגער קארטל דער ערשטער פון דער יעצטיגער רשומה.</p>
+<p>דער הינטערגרונט קאליר ווענדט זיך אינעם קארטל און דער רשומה. אין קארטל מצב
+גייט דער ערשטער תנאי וואס פאסט:</p>
+<ol>
+<li>אויב דער קארטל האט <strong>א פאן</strong>, נוצט מען דעם פאן קאליר.</li>
+<li>אויב דער קארטל איז <strong>אפגעשטעלט</strong>, געל.</li>
+<li>אויב די רשומה פונעם קארטל איז <strong>אנגעצייכנט</strong>, לילא.</li>
+</ol>
+<p>אין רשומה מצב גייט דער קאליר נאר אן אויף אנגעצייכנטע רשומות.<br />
+פאר מער אינפארמאציע וועגן אנגעצייכנטע רשומות און אפגעשטעלטע קארטלעך, זעט <a href="studying.html#%D7%A2%D7%A8%D7%99%D7%9B%D7%94-%D7%95%D7%A2%D7%95%D7%93">רעדאקטירן און נאך</a>.</p>
+<p><a id="עמודות"></a></p>
+<h3 id="שפאלטן"><a class="header" href="#שפאלטן">שפאלטן</a></h3>
+<p>מען קען איינשטעלן די שפאלטן: דריקט רעכטס אויף איינעם פון זיי, אדער <kbd>Ctrl</kbd> מיט א דרוק,
+כדי צו אויסקלייבן וועלכע שפאלטן איר ווילט זען.
+מען קען שלעפן שפאלטן צו טוישן זייער סדר. א דרוק אויף א שפאלט סארטירט לויט אים;
+דריקט ווידער צו איבערקערן דעם סדר, פון אנהייב צו סוף אדער פארקערט. מען קען
+נישט סארטירן לויט די פראגע
+און ענטפער שפאלטן.
+אינעם זעלבן רעכטן מויז מעניו איז אויך אן אונטערמעניו <strong>- פארגעשריטן -</strong>. עפנט אים און צייכנט אן די נאך שפאלטן וואס איר ווילט ווייזן. אזוי שאלט מען אן די באזונדערע שפאלטן; זיי ווייזן זיך נישט אויטאמאטיש פאר מען שאלט זיי אליין אן אינעם שפאלט מעניו.</p>
+<p>אלע שפאלטן זענען צוטריטלעך סיי אין <a href="#%D7%9E%D7%A6%D7%91%D7%99-%D7%98%D7%91%D7%9C%D7%94">קארטל מצב און סיי אין רשומה מצב</a>,
+אבער אמאל מיט אביסל אנדערע נעמען און דאטן. די פאלגנדע טאבעלע ערקלערט
+זייער אויפפירונג אין ביידע מצבים.</p>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>שפאלט</th><th>קארטל מצב</th><th>רשומה מצב</th></tr></thead><tbody>
+<tr><td>ענטפער</td><td>דער הינטערשטער זייט פונעם קארטל אין איין שורה, אן דער פראגע. מען קען אויך אויסקלייבן אן <a href="templates/styling.html">אייגענעם אויסשטעל</a> אינעם סארט קארטל רעדאקטירער.</td><td>ווי אין קארטל מצב, אבער פארן ערשטן קארטל פון דער רשומה.</td></tr>
+<tr><td>קארטל(עך)</td><td>דער נאמען פונעם קארטל סארט רשומה.</td><td>די צאל קארטלעך אין דער רשומה.</td></tr>
+<tr><td>קארטל געטוישט</td><td>דאס לעצטע מאל וואס דער קארטל איז געטוישט געווארן, צום ביישפיל ביי א חזרה ווען די חזרה געשיכטע און דער מרווח זענען דערהיינטיגט געווארן.</td><td>דאס לעצטע מאל וואס איינער פון דער רשומה קארטלעך איז געטוישט געווארן.</td></tr>
+<tr><td>געשאפן</td><td>ווי אין רשומה מצב, פאר דער רשומה פונעם קארטל.</td><td>דער שאף דאטום פון דער רשומה.</td></tr>
+<tr><td>פעקל</td><td>דער נאמען פונעם פעקל וואו דער קארטל ליגט.</td><td>די צאל פארשידענע פעקלעך וואו די רשומה קארטלעך ליגן, אדער דעם פעקל נאמען אויב אלע ליגן אינעם זעלבן פעקל.</td></tr>
+<tr><td>געפלאנטער דאטום</td><td>דער געפלאנטער דאטום פאר קארטלעך ביים חזרן אדער ביים לערנען אדער איבערלערנען; פאר נייע קארטלעך — זייער פלאץ אינעם נייע קארטל ריי. דער ווערט איז אין קלאמערן אויב דער קארטל איז אפגעשטעלט אדער באזייטיגט. מען סארטירט קודם לויטן סארט, און דערנאך לויט דאטום אדער פלאץ.</td><td>דער געפלאנטער דאטום פון דער רשומה קומענדיגן חזרה אדער לערן/איבערלערן קארטל וואס איז נישט אפגעשטעלט, באזייטיגט אדער אין א געפילטערטן פעקל.</td></tr>
+<tr><td>גרינגקייט (דורכשניט)</td><td>די קארטל גרינגקייט, אויב ער איז נישט ניי.</td><td>די דורכשניטליכע גרינגקייט פון דער רשומה קארטלעך וואס זענען נישט ניי.</td></tr>
+<tr><td>מרווח (דורכשניט)</td><td>דער קארטל מרווח, אויב ער איז ביים חזרן אדער איבערלערנען.</td><td>דער דורכשניטליכער מרווח פון דער רשומה קארטלעך ביים חזרן אדער איבערלערנען.</td></tr>
+<tr><td>דורכפאלן</td><td>וויפיל מאל דער קארטל איז אפגעשאצט געווארן אלס “נאכאמאל”.</td><td>סך הכל דורכפאלן פון אלע רשומה קארטלעך.</td></tr>
+<tr><td>רשומה</td><td>ווי אין רשומה מצב, פאר דער רשומה פונעם קארטל.</td><td>דער נאמען פונעם רשומה סארט.</td></tr>
+<tr><td>רשומה געטוישט</td><td>ווי אין רשומה מצב, פאר דער רשומה פונעם קארטל.</td><td>דאס לעצטע מאל וואס מען האט רעדאקטירט די רשומה, צום ביישפיל א פעלד אינהאלט.</td></tr>
+<tr><td>פראגע</td><td>דער פארנט זייט פונעם קארטל אין איין שורה. מען קען אויך אויסקלייבן אן <a href="templates/styling.html">אייגענעם אויסשטעל</a> אינעם סארט קארטל רעדאקטירער.</td><td>ווי אין קארטל מצב, אבער פארן ערשטן קארטל פון דער רשומה.</td></tr>
+<tr><td>חזרות</td><td>וויפיל מאל מען האט געחזרט דעם קארטל.</td><td>סך הכל חזרות פון אלע רשומה קארטלעך.</td></tr>
+<tr><td>סארטיר פעלד</td><td>ווי אין רשומה מצב, פאר דער רשומה פונעם קארטל.</td><td>דער אינהאלט פונעם פעלד באשטימט אלס סארטיר פעלד פאר דעם סארט רשומה. נאר דעם פעלד קען מען ווייזן און לויט אים סארטירן. מען טוישט אים מיט א דרוק אויף <strong>פעלדער…</strong> אינעם רעדאקטירער שטח.</td></tr>
+<tr><td>צעטלעך</td><td>ווי אין רשומה מצב, פאר דער רשומה פונעם קארטל.</td><td>די רשומה צעטלעך.</td></tr>
+</tbody></table>
+</div>
+<p><a id="אזור-העריכה"></a></p>
+<h2 id="דער-רעדאקטירער-שטח"><a class="header" href="#דער-רעדאקטירער-שטח">דער רעדאקטירער שטח</a></h2>
+<p>דער אונטערשטער רעכטער שטח ווייזט די רשומה פון דער יעצט אויסגעקליבענער שורה.
+פאר מער וועגן קארטלעך און רשומות, זעט <a href="getting-started.html">אנהייבן</a>.
+פאר מער וועגן אויסשטעל קנעפלעך, זעט <a href="editing.html">רעדאקטירן</a>.</p>
+<p>מען קען פארויסקוקן וויאזוי דער יעצט אויסגעקליבענער קארטל וועט אויסזען
+ביים חזרן, מיט א דרוק אויף <strong>פארויסקוק</strong> אויבן אינעם רעדאקטירער שטח.
+אין דעם פארויסקוק ווייזן זיך נישט די ‘טייפט די ענטפער’ פעלדער,
+כדי מען זאל קענען שנעל קוקן דעם קארטל.
+אין רשומה מצב ווייזט דער פארויסקוק דעם ערשטן קארטל פון דער אויסגעקליבענער רשומה.</p>
+<p><a id="תפריטים-ופעולות"></a></p>
+<h2 id="מעניוס-און-פעולות"><a class="header" href="#מעניוס-און-פעולות">מעניוס און פעולות</a></h2>
+<p>אויבן אינעם דורכבלעטערער פענסטער געפינט זיך א סרגל מיט פארשידענע מעניוס,
+מיט פעולות וואס מען קען דארט דורכפירן.</p>
+<img src="media/yi-ui-4.png" alt="דורכבלעטערער מעניוס" style="zoom:75%;" />
+<p>אונטער אים איז א שורה פון קיצורים פאר פעולות פון די מעניוס. זייער ערקלערונג קומט ווייטער.</p>
+<img src="media/yi-guide-5.svg" alt="דער דורכבלעטערער קיצור סרגל" style="zoom:50%;" />
+<p><a id="סרגל-הקיצורים"></a></p>
+<h3 id="דער-קיצור-סרגל"><a class="header" href="#דער-קיצור-סרגל">דער קיצור סרגל</a></h3>
+<p>דער קיצור סרגל ווייזט נאר די פעולות אינעם בילד. האלט דעם מויז איבער אן אייקאן צו זען דעם פעולה נאמען, קלייבט אויס איין אדער מער שורות, און דריקט דעם פאסיגן אייקאן. פון רעכטס צו לינקס זענען דאס:</p>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>פעולה</th><th>ווען נוצט מען זי</th></tr></thead><tbody>
+<tr><td>פארגעשריטענע זוכעניש</td><td>עפנט א זוך פענסטערל לויט פעקל, צעטל, סארט רשומה, קארטל מצב, דאטומען און מאסן. פאסיג ווען מען וויל נישט אליין טייפן דעם זוך סינטאקס.</td></tr>
+<tr><td>באהאלט דעם זייט סרגל</td><td>באהאלט אדער ווייזט דעם זייט סרגל צו מאכן פלאץ פאר דער קארטל טאבעלע און רעדאקטירן.</td></tr>
+<tr><td>לייג צו רשומות</td><td>עפנט דעם צולייג פענסטער צו שאפן א נייע רשומה. דעם פעקל און סארט רשומה באשטימט מען אויבן אינעם צולייג פענסטער.</td></tr>
+<tr><td>אינפארמאציע</td><td>ווייזט אינפארמאציע פונעם יעצטיגן קארטל, מיטן צייטפלאן מצב און חזרה געשיכטע. די פעולה איז פאר איין קארטל אויף א מאל.</td></tr>
+<tr><td>צייכן אן</td><td>לייגט צו אדער נעמט אוועק די צעטל <code>marked</code> פון די אויסגעקליבענע רשומות. אנגעצייכנטע רשומות ווייזן זיך מיט א באזונדערן קאליר.</td></tr>
+<tr><td>שטעל אפ</td><td>שטעלט אפ אדער שאלט ווידער אן די אויסגעקליבענע קארטלעך. אפגעשטעלטע קארטלעך קומען נישט צום לערנען ביז מען ברענגט זיי אליין צוריק.</td></tr>
+<tr><td>לייג באזייטיג</td><td>לייגט באזייטיג אדער ברענגט צוריק די אויסגעקליבענע קארטלעך. באזייטיגן באהאלט א קארטל ביז מארגן, אן אויסמעקן און אן טוישן די רשומה.</td></tr>
+<tr><td>טויש פעקל</td><td>פירט די אויסגעקליבענע קארטלעך אין אן אנדערן פעקל. אויב א רשומה האט מערערע קארטלעך, ווערן נאר די אויסגעקליבענע אריבערגעפירט.</td></tr>
+<tr><td>טויש דעם סארט רשומה</td><td>טוישט די אויסגעקליבענע רשומות צו אן אנדערן סארט, מיט א פארבינדונג פון די אלטע און נייע פעלדער.</td></tr>
+<tr><td>לייג צו צעטלעך</td><td>לייגט צו איין אדער מער צעטלעך צו אלע אויסגעקליבענע רשומות. צעטלעך געהערן צו דער רשומה, דערפאר ווייזן זיי זיך אויף אלע קארטלעך וואס ווערן געשאפן פון איר.</td></tr>
+<tr><td>נעם אוועק צעטלעך</td><td>נעמט אוועק צעטלעך פון די אויסגעקליבענע רשומות. שרייבט די נעמען צו אוועקנעמען און באשטעטיגט.</td></tr>
+<tr><td>ריין אויס נישט גענוצטע צעטלעך</td><td>נעמט אוועק פון דער צעטלעך ליסטע די צעטלעך וואס געהערן נישט צו קיין רשומה. דאס מעקט נישט אויס קארטלעך אדער רשומות.</td></tr>
+<tr><td>מעק אויס</td><td>מעקט אויס די אויסגעקליבענע רשומות און אלע קארטלעך וואס זענען געשאפן פון זיי. נוצט דאס נאר נאכן נאכקוקן אז די אויסוואל איז ריכטיג.</td></tr>
+<tr><td>שטעל א געפלאנטן דאטום</td><td>באשטימט אליין א חזרה צייט פאר די אויסגעקליבענע קארטלעך, צום ביישפיל אין א צאל טעג אדער אין א טאג מרווח. פאסיג פאר א באזונדערן צייטפלאן טויש.</td></tr>
+<tr><td>שטעל א נייעם פלאץ</td><td>טוישט דעם פלאץ פון נייע קארטלעך אינעם נייע קארטל ריי. פאסיג אויסצושטעלן די סדר פון נייעם חומר פארן אנהייבן לערנען.</td></tr>
+</tbody></table>
+</div>
+<p>נאך דורכבלעטערער פעולות זענען צוטריטלעך דורך די מעניוס און מיט א רעכטן דרוק אויף א שורה, אבער זענען נישט אינעם קיצור סרגל פונעם בילד.</p>
+<p><a id="קובץ"></a></p>
+<h3 id="טעקע"><a class="header" href="#טעקע">טעקע</a></h3>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>נאמען</th><th>פעולה</th></tr></thead><tbody>
+<tr><td>מאך צוריק</td><td>מאכט צוריק די לעצטע פעולה.</td></tr>
+<tr><td>קלייב אלעס אויס</td><td>קלייבט אויס אלע געוויזענע שורות.</td></tr>
+<tr><td>קלייב אויס רשומות</td><td>ווייזט נאר די יעצט אויסגעקליבענע רשומות און קלייבט אויס אלע שורות.</td></tr>
+<tr><td>קער איבער די אויסוואל</td><td>קלייבט אויס די ביז יעצט נישט אויסגעקליבענע שורות, און נעמט אוועק די ביז יעצטיגע אויסוואל.</td></tr>
+<tr><td>שאף א געפילטערטן פעקל מיט די אנגעצייכנטע פראגעס</td><td>ווייזט דעם <a href="filtered-decks.html#%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%99%D7%93%D7%A0%D7%99%D7%AA">געפילטערטן פעקל</a> פענסטער מיט די אויסגעקליבענע פראגעס אלס פילטער. א דרוק אויף באשטעטיגן שאפט א געפילטערטן פעקל מיט די קארטלעך אויסגעקליבן אין דער טאבעלע.</td></tr>
+<tr><td>שאף א געפילטערטן פעקל</td><td>ווייזט דעם <a href="filtered-decks.html#%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%99%D7%93%D7%A0%D7%99%D7%AA">געפילטערטן פעקל</a> פענסטער מיט דער יעצטיגער זוכעניש אלס פילטער. נוצט <kbd>Alt</kbd> צו באשטימען אנשטאט דעם צווייטן פילטער.</td></tr>
+<tr><td>פיר סארטן רשומה</td><td>עפנט דעם פענסטער צו פירן סארטן רשומה.</td></tr>
+<tr><td>פריש אויף</td><td>לאדט דעם דורכבלעטערער פענסטער פון פריש. נוצט דאס נאך א טויש אין אן אנדערן פענסטער, ווי צולייגן א נייע רשומה.</td></tr>
+</tbody></table>
+</div>
+<h3 id="רשומות"><a class="header" href="#רשומות">רשומות</a></h3>
+<p>רוב פון די פאלגנדע פעולות ארבעטן אויף די אויסגעקליבענע רשומות. זיי זענען אויך צוטריטלעך דורכן
+רעכטן מויז מעניו אויף אן אויסגעקליבענער שורה אין רשומה מצב. אין קארטל מצב
+געפינט מען זיי אין אן אונטערמעניו פונעם רעכטן מויז מעניו.</p>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>נאמען</th><th>פעולה</th></tr></thead><tbody>
+<tr><td>לייג צו רשומות</td><td>עפנט דעם <a href="editing.html#%D7%94%D7%95%D7%A1%D7%A4%D7%AA-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D-%D7%95%D7%A8%D7%A9%D7%95%D7%9E%D7%95%D7%AA">צולייג</a> פענסטער.</td></tr>
+<tr><td>שאף א קאפיע</td><td>עפנט א קאפיע פון דער יעצטיגער רשומה אינעם <a href="editing.html#%D7%94%D7%95%D7%A1%D7%A4%D7%AA-%D7%9B%D7%A8%D7%98%D7%99%D7%A1%D7%99%D7%9D-%D7%95%D7%A8%D7%A9%D7%95%D7%9E%D7%95%D7%AA">רעדאקטירער</a>. מען קען זי אביסל טוישן און גרינג שאפן פארשידענע ווערסיעס פון אייערע קארטלעך. אלס ברירת מחדל ווערט די קאפיע געשאפן אינעם זעלבן פעקל ווי דער אריגינאל.</td></tr>
+<tr><td>עקספארטיר רשומות</td><td>עפנט דעם <a href="exporting.html">עקספארט</a> פענסטער.</td></tr>
+<tr><td>לייג צו צעטלעך</td><td>לייגט צו צעטלעך צו אלע אויסגעקליבענע רשומות.</td></tr>
+<tr><td>נעם אוועק צעטלעך</td><td>שרייבט די צעטלעך און נעמט זיי אוועק פון אלע אויסגעקליבענע רשומות.</td></tr>
+<tr><td>ריין אויס נישט גענוצטע צעטלעך</td><td>נעמט אוועק פונעם זייט סרגל אלע צעטלעך וואס געהערן נישט צו קיין רשומה.</td></tr>
+<tr><td>צייכן אן</td><td>אויב די יעצטיגע רשומה איז אנגעצייכנט, דאס הייסט זי האט די צעטל <em>Marked</em>, נעמט מען אוועק דעם סימון פון אלע אויסגעקליבענע רשומות. אויב זי איז נישט אנגעצייכנט, צייכנט מען אלע אויסגעקליבענע רשומות אן.</td></tr>
+<tr><td>טויש דעם סארט רשומה</td><td>טוישט די אויסגעקליבענע רשומות פון איין סארט צום אנדערן. צום ביישפיל: איר האט א סארט פאר <em>מערערע פראגעס און ענטפערס</em>, אבער בטעות אריינגעלייגט פארבונדענעם טעקסט אין <em>01 שאלה רגילה</em>. מיט דער אפציע קען מען פאררעכטן דעם טעות. דער קארטל צייטפלאן ווערט נישט געטוישט.</td></tr>
+<tr><td>מעק אויס</td><td>מעקט אויס אלע אויסגעקליבענע רשומות און זייערע קארטלעך. מען קען נישט אוועקנעמען באזונדערע קארטלעך, ווייל די באזונדערע קארטלעך ווערן באשטימט דורך <a href="templates/intro.html">מוסטערן</a>.</td></tr>
+<tr><td>מאך א קאפיע פון דער רשומה</td><td>שאפט קאפיעס פון די אויסגעקליבענע רשומות אן עפענען דעם רעדאקטירער פענסטער.</td></tr>
+</tbody></table>
+</div>
+<p><a id="כרטיסים"></a></p>
+<h3 id="קארטלעך"><a class="header" href="#קארטלעך">קארטלעך</a></h3>
+<p>די פאלגנדע פעולות ארבעטן אויף די יעצט אויסגעקליבענע קארטלעך. זיי זענען אויך צוטריטלעך דורכן
+רעכטן מויז מעניו אויף אן אויסגעקליבענער שורה אין קארטל מצב. אין רשומה מצב
+געפינט מען זיי אין אן אונטערמעניו פונעם רעכטן מויז מעניו.</p>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>נאמען</th><th>פעולה</th></tr></thead><tbody>
+<tr><td>טויש פעקל</td><td>פירט די יעצט אויסגעקליבענע קארטלעך אין אן אנדערן פעקל.</td></tr>
+<tr><td>שטעל א געפלאנטן דאטום</td><td>טוישט נייע קארטלעך צו חזרה קארטלעך און באשטימט א געפלאנטן דאטום. דאס קען העלפן צו רוקן קארטלעך א פאר טעג פאראויס אדער צוריק ווען אייער לערן סדר ווערט געשטערט. א מרווח ווי <code>60-90</code> שטעלט דעם דאטום צווישן 60 און 90 טעג פון היינט. נייע קארטלעך באקומען א מרווח גלייך צום אפשטופ; חזרה קארטלעך באקומען א נייעם דאטום אן טוישן זייער יעצטיגן מרווח, סיידן מען לייגט צו אן אויסרוף צייכן (<code>!</code>) ביים סוף. די ענטפער צייט ווערט נישט רעקארדירט ביים מאנועל איינשטעלן קארטלעך, ווייל מען קען דאס טון אויך אויסער א חזרה, און אנקי ווייסט נישט וועלכער קארטל ווערט אפשר געוויזן אין יענער צייט.</td></tr>
+<tr><td>פארגעס</td><td>פירט די יעצט אויסגעקליבענע קארטלעך צום סוף פונעם נייע קארטל ריי. די ביז יעצטיגע חזרה געשיכטע בלייבט. מען קען אויסקלייבן צוריקצוברענגען דעם אריגינעלן פלאץ און צוריקצושטעלן די קארטל דורכפאל און חזרה ציילערס.</td></tr>
+<tr><td>שטעל א נייעם פלאץ</td><td>טוישט דעם סדר ווי נייע קארטלעך וועלן זיך ווייזן. די יעצטיגע פלעצער קען מען זען דורך אנשאלטן דעם <em>געפלאנטער דאטום</em> שפאלט, ווי ערקלערט אויבן ביי דער <a href="#%D7%A2%D7%9E%D7%95%D7%93%D7%95%D7%AA">טאבעלע</a>. מיט מערערע אויסגעקליבענע קארטלעך גיט די פעולה יעדן קארטל א וואקסנדיגן נומער לויטן סדר. אלס ברירת מחדל שטייגט דער נומער מיט איינס פאר יעדן קארטל, אבער מען קען טוישן דעם “טריט”. <strong>רוק דעם פלאץ פון עקזיסטירנדע קארטלעך</strong> ערלויבט אריינצולייגן קארטלעך צווישן עקזיסטירנדע און שטופן די עקזיסטירנדע ווייטער. צום ביישפיל, ביי פינף קארטלעך, אויב איר ווילט רוקן 3, 4 און 5 צווישן 1 און 2, וועט די אפציע געבן דעם סדר 1, 3, 4, 5, 2. אויב זי איז אויסגעשאלטן, וועלן 1 און 2 באקומען דעם זעלבן פלאץ נומער, און מען וועט נישט קענען פאראויס וויסן וועלכער פון זיי קומט קודם. ווען די אפציע איז איינגעשאלטן, ווערט יעדער קארטל מיט א העכערן פלאץ געטוישט.</td></tr>
+<tr><td>שטעל אפ</td><td><a href="studying.html#%D7%A2%D7%A8%D7%99%D7%9B%D7%94-%D7%95%D7%A2%D7%95%D7%93">שטעלט אפ</a> אדער שאלט ווידער אן אלע אויסגעקליבענע קארטלעך, לויט צי דער יעצטיגער קארטל איז אפגעשטעלט.</td></tr>
+<tr><td>לייג באזייטיג</td><td><a href="studying.html#%D7%A2%D7%A8%D7%99%D7%9B%D7%94-%D7%95%D7%A2%D7%95%D7%93">לייגט באזייטיג</a> ביז מארגן אדער ברענגט צוריק אלע אויסגעקליבענע קארטלעך, לויט צי דער יעצטיגער קארטל איז באזייטיגט.</td></tr>
+<tr><td>צייכן אן מיט א פאן</td><td>טוישט די פענער פון אלע אויסגעקליבענע קארטלעך. צי מען לייגט צו אדער נעמט אוועק דעם פאן, ווענדט זיך צי דער יעצטיגער קארטל האט שוין דעם אויסגעקליבענעם פאן.</td></tr>
+<tr><td>אינפארמאציע</td><td>ווייזט פארשידענע אינפארמאציע פונעם יעצטיגן קארטל, מיט זיין חזרה געשיכטע. פאר מער, זעט <a href="stats.html#%D7%9E%D7%99%D7%93%D7%A2-%D7%A2%D7%9C-%D7%9B%D7%A8%D7%98%D7%99%D7%A1">קארטל אינפארמאציע</a>.</td></tr>
+</tbody></table>
+</div>
+<p><a id="עבור-אל"></a></p>
+<h3 id="גיי-צו"><a class="header" href="#גיי-צו">גיי צו</a></h3>
+<p>דער מעניו גיט קלאוויאטור קיצורים צו שפרינגען צווישן פארשידענע חלקים
+פונעם דורכבלעטערער און צו גיין ארויף און אראפ אין דער קארטל ליסטע.</p>
+<p><a id="חיפוש-והחלפה"></a></p>
+<h3 id="זוכן-און-איבערבייטן"><a class="header" href="#זוכן-און-איבערבייטן">זוכן און איבערבייטן</a></h3>
+<!-- prettier-ignore -->
+<div class="table-wrapper"><table><thead><tr><th>נאמען</th><th>פעולה</th></tr></thead><tbody>
+<tr><td>פארגעשריטענע זוכעניש</td><td>עפנט א פענסטער צו זוכן גענויער לויט פארשידענע פילטערס, ווי דאטומען און סארט קארטל. דריקט אויף איינע פון די אפציעס; דער פאסיגער זוך אויסדרוק ווערט אויטאמאטיש געשריבן לויט <a href="searching.html">אנקי זוך אויסדרוקן</a>.</td></tr>
+<tr><td>זוך געשיכטע</td><td>עפנט א פענסטער מיט אייערע לעצטע זוכענישן.</td></tr>
+<tr><td>זוך לויטן צולייג דאטום</td><td>פילטערט קארטלעך צוגעלייגט צווישן געוויסע דאטומען.</td></tr>
+<tr><td>זוך לויטן רעדאקטיר דאטום</td><td>פילטערט קארטלעך רעדאקטירט צווישן געוויסע דאטומען.</td></tr>
+<tr><td>זוך לויטן לעצטן לערן דאטום</td><td>פילטערט קארטלעך וואס מען האט צום לעצטן מאל געלערנט צווישן געוויסע דאטומען.</td></tr>
+<tr><td>געפין דאפלטע</td><td>עפנט דעם <a href="#%D7%9E%D7%A6%D7%99%D7%90%D7%AA-%D7%9B%D7%A4%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA">דאפלטע</a> פענסטער.</td></tr>
+<tr><td>געפין און בייט איבער</td><td>עפנט דעם <a href="#%D7%9E%D7%A6%D7%90-%D7%95%D7%94%D7%97%D7%9C%D7%A3">געפין און בייט איבער</a> פענסטער.</td></tr>
+<tr><td>טוישן און איבערבייטן פעלד אינהאלט</td><td>עפנט דעם <a href="#%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%95%D7%94%D7%97%D7%9C%D7%A4%D7%AA-%D7%AA%D7%95%D7%9B%D7%9F-%D7%9C%D7%A9%D7%93%D7%95%D7%AA">טוישן און איבערבייטן פעלד אינהאלט</a> פענסטער.</td></tr>
+</tbody></table>
+</div>
+<p>צו שאפן א געפילטערטן פעקל פון די קארטלעך וואס ווערן געוויזן, צייכנט אן די געוואונטשענע קארטלעך און קלייבט <strong>טעקע &gt; שאף א געפילטערטן פעקל מיט די אנגעצייכנטע פראגעס</strong>. אנקי עפנט דעם געפילטערטן פעקל פענסטער מיט דער פאסיגער זוכעניש שוין אריין. באשטעטיגט צו שאפן א צייטווייליגן פעקל פאר א געצילטע לימוד, צום ביישפיל פאר א מבחן אדער צו באהאנדלען קארטלעך מיט א פאן.</p>
+<p>צו קאפירן א רשומה, צייכנט זי אן און קלייבט <strong>רשומות &gt; מאך א קאפיע פון דער רשומה</strong>, אדער נוצט דעם רעכטן מויז מעניו. די פעולה שאפט א קאפיע אן אויסמעקן דעם אריגינאל. דאס פאסט ווען מען וויל בויען עטליכע ענליכע פראגעס פונעם זעלבן מקור, היטן א יסודותדיגן נוסח און טוישן נאר איין פרט. ביים אויסשטעלן נייע קארטלעך, נוצט די פלאץ פעולות צו רוקן קארטלעך ארויף אדער אראפ אינעם נייע קארטל ריי.</p>
+<p>צו טוישן דעם סארט פון אסאך רשומות צוזאמען, צייכנט אן די רשומות און קלייבט <strong>רשומות &gt; טויש דעם סארט רשומה (געמישטע אויסוואל)</strong>. קלייבט דעם נייעם סארט אינעם פענסטער וואס עפנט זיך, און פארבינדט דערנאך יעדן אלטן פעלד מיטן פאסיגן נייעם פעלד. אויב איר ווילט נישט אריבערפירן א פעלד, קלייבט <strong>איבערהיפן</strong>. דאס העלפט ווען חומר איז בטעות אריינגעלייגט געווארן אינעם אומריכטיגן סארט רשומה.</p>
+<p>צו רעדאקטירן פעלד אינהאלט אין אסאך רשומות, צייכנט אן די רשומות און קלייבט <strong>זוכן און איבערבייטן &gt; טוישן און איבערבייטן פעלד אינהאלט</strong>. קלייבט דעם פעלד און צי צו איבערבייטן, צולייגן אדער אוועקנעמען טעקסט. מאכט זיכער אז <strong>נאר אויסגעקליבענע רשומות</strong> איז אנגעצייכנט אויב איר ווילט נישט טוישן די גאנצע זאמלונג. דאס פאסט צו פאררעכטן א מקור וואס קומט אין אסאך קארטלעך, טוישן א שטענדיגן נוסח, אדער צולייגן א צעטל אדער הילף טעקסט צו א גרופע רשומות.</p>
+<p>מען קען צולייגן נאך אינפארמאציע שפאלטן, ווי חזרות, מרווח, גרינגקייט, טויש דאטום, צייטפלאן מצב און רשומה פרטים. דריקט רעכטס אויפן שפאלט קעפל, עפנט <strong>- פארגעשריטן -</strong> פאר באזונדערע שפאלטן, און צייכנט אן וואס איר ווילט זען. דערנאך שלעפט די שפאלטן צו אויסשטעלן זייער סדר און דריקט אויפן קעפל צו סארטירן. די שפאלטן העלפן דערקענען שווערע קארטלעך, אלטע חזרות, רשומות מיט אסאך דורכפאלן און קארטלעך וואס דארפן באהאנדלט ווערן.</p>
+<p><a id="מצא-והחלף"></a></p>
+<h2 id="געפין-און-בייט-איבער"><a class="header" href="#געפין-און-בייט-איבער">געפין און בייט איבער</a></h2>
+<p>דער פענסטער ערלויבט איבערצובייטן טעקסט אין רשומות. ווי ערקלערט אויבן, איז ער צוטריטלעך
+דורכן <strong>זוכן און איבערבייטן</strong> מעניו און דורכן טאבעלע רעכטן מויז מעניו.</p>
+<p>אינעם ערשטן פעלד שרייבט מען דעם טעקסט צו איבערבייטן, און אינעם צווייטן
+דעם נייעם טעקסט. דערנאך איז דא א אראפפאל מעניו אויסצוקלייבן
+וואו אנקי זאל זוכן דעם טעקסט: אין רשומה צעטלעך,
+אין אלע פעלדער אדער נאר אין א געוויסן פעלד. נאר פעלדער וואס געהערן צו דער אויסגעקליבענער
+רשומה ווערן געוויזן אין דער ליסטע.</p>
+<p>אלס ברירת מחדל ווערן נאר אויסגעקליבענע רשומות געטוישט. צו אוועקנעמען
+די גרעניץ, נעמט אוועק דעם סימון פון “נאר אויסגעקליבענע רשומות”.</p>
+<img src="media/yi-ui-3.png" alt="געפין און בייט איבער פענסטער" style="zoom:60%;" />
+<p><a id="מציאת-כפילויות"></a></p>
+<h2 id="געפינען-דאפלטע"><a class="header" href="#געפינען-דאפלטע">געפינען דאפלטע</a></h2>
+<p>מיט <strong>רשומות &gt; געפין דאפלטע</strong> קען מען זוכן רשומות
+מיטן זעלבן אינהאלט. ביים עפענען דעם פענסטער קוקט אנקי אלע
+אייערע סארטן רשומה און ווייזט א ליסטע פון אלע מעגליכע פעלדער. צו
+זוכן דאפלטע אינעם <em>הינטערשטן</em> פעלד, קלייבט אים אויס
+און דריקט <strong>זוך</strong>.</p>
+<p>אלס ברירת מחדל זוכט מען אין אלע סארטן רשומה מיט דעם געבעטן פעלד.
+דאס איז אנדערש פון דער דאפלט בדיקה ביים אליין צולייגן קארטלעך,
+וואס איז באגרעניצט צו איין סארט רשומה.</p>
+<p>דער <strong>אפציאנעלער פילטער</strong> פעלד באגרעניצט וואו אנקי
+זוכט דאפלטע. אויב איר ווילט זוכן נאר
+אין “01שאלה רגילה” און “בסיסי”, שרייבט:</p>
+<pre><code>"note:01שאלה רגילה" or "note:בסיסי"
+</code></pre>
+<p>אדער, צו זוכן דאפלטע נאר אין א געוויסן פעקל,
+נוצט:</p>
+<pre><code>"deck:עירובין"
+</code></pre>
+<p>דער זוך סינטאקס איז דער זעלבער ווי אינעם דורכבלעטערער.
+פאר מער, זעט <a href="searching.html">זוכן</a>.</p>
+<p>דריקט אויף איינעם פון די לינקס אין דער רעזולטאט ליסטע צו ווייזן
+די דאפלטע רשומות אין דער זעלבער גרופע. אויב די זוכעניש ברענגט אסאך
+דאפלטע, קענט איר דריקן <strong>לייג א צעטל אויף דאפלטע</strong>,
+וואס לייגט די צעטל <em>duplicate</em> אויף אלע פאסיגע רשומות. דערנאך זוכט
+די צעטל אינעם דורכבלעטערער און באהאנדלט אלע פון איין עקראן.</p>
+<p><a id="שינוי-והחלפת-תוכן-לשדות"></a></p>
+<h2 id="טוישן-און-איבערבייטן-פעלד-אינהאלט"><a class="header" href="#טוישן-און-איבערבייטן-פעלד-אינהאלט">טוישן און איבערבייטן פעלד אינהאלט</a></h2>
+<img src="media/yi-guide-6.svg" alt="רעדאקטירן מערערע רשומות" style="zoom:50%;" />
+<p>צו טוישן דעם אינהאלט פון אסאך רשומות אויף איינמאל, קלייבט אויס די
+געוואונטשענע רשומות און דריקט <strong>זוכן און איבערבייטן &gt; טוישן און איבערבייטן פעלד אינהאלט</strong>.
+אינעם פענסטער קען מען צולייגן אינהאלט צו די געוואונטשענע פעלדער אין אלע אויסגעקליבענע קארטלעך/רשומות,
+פאר אדער נאך דעם ביז יעצטיגן טעקסט אין יעדן פעלד, אדער אים איבערבייטן.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="profiles.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="filtered-decks.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="profiles.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="filtered-decks.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

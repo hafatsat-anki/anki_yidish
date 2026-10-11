@@ -1,0 +1,17 @@
+{
+  "max_displayed_notes": 1500,
+  "tag_exported_cards": true,
+  "exported_tag": "שאלות_מיובאות",
+  "hidden_fields": [
+    "(תשובות נכונות)",
+    "(הזן סוג שאלה)"
+  ],
+  "skip_duplicates": true,
+  "copy_tags": true,
+  "allow_empty_search": true,
+  "preview_on_right_side": true,
+  "hide_imported_in_session": false,
+  "mark_imported_in_session": true,
+  "auto_consolidate_done": false,
+  "note_type_consolidation_last_auto_run": 0
+}

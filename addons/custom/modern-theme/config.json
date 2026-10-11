@@ -1,0 +1,50 @@
+{
+    "filter_order":  1,
+    "animation":  false,
+    "show_beta_banner":  true,
+    "small_row":  false,
+    "alert_overdue":  false,
+    "bright_theme":  false,
+    "last_overdue_alert":  "22.02.2022",
+    "change answer buttons":  true,
+    "date_format":  "eu",
+    "distribution_version":  "כד תשרי תשפז",
+    "beta":  {
+                 "enabled":  true,
+                 "feedback_email":  "anki4tora@gmail.com"
+             },
+    "note_correction_factors":  {
+                                    "Fr":  2,
+                                    "English":  2
+                                },
+    "heatmap_position":  "default",
+    "theme":  "default",
+    "forecast_enabled":  true,
+    "grayscale_mode":  false,
+    "show_fullscreen_window_controls":  false,
+    "forecast_threshold_percent":  150,
+    "forecast_min_cards":  30,
+    "local":  {
+                  "Average":  "דורכשניט:",
+                  "cards/minute":  "קארטלעך א מינוט",
+                  "minute":  "מינוט",
+                  "minutes":  "מינוטן",
+                  "more":  "more",
+                  "New":  "New",
+                  "Due":  "Due",
+                  "Learn":  "Learn",
+                  "Learning":  "Learning",
+                  "Review":  "Review",
+                  "Total":  "סך הכל",
+                  "Cards":  "קארטלעך",
+                  "Notes":  "רשומות",
+                  "Done in":  "פארענדיגט אין",
+                  "day":  "טאג",
+                  "days":  "טעג",
+                  "Mature":  "בוגר",
+                  "Young":  "יונג",
+                  "Unseen":  "נאך נישט געלערנט",
+                  "Suspended":  "אפגעשטעלט"
+              },
+    "compact_mode":  0
+}

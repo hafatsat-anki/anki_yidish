@@ -1,0 +1,9 @@
+h1:target {
+    margin-top: 64px;
+}
+#searchresults strong{
+    background-color: yellow;
+}
+.hljs{
+    direction: rtl !important;
+}

@@ -1,0 +1,45 @@
+{
+  "recent_fonts": [],
+  "prev_font": "",
+  "size_Shortcut": "none",
+  "font_Shortcut": "none",
+  "brush_shortcut": "Alt+B",
+  "style_preset_1_shortcut": "",
+  "style_preset_2_shortcut": "",
+  "style_preset_3_shortcut": "",
+  "style_preset_4_shortcut": "",
+  "style_preset_5_shortcut": "",
+  "style_preset_edit_hint_shown": false,
+  "style_presets": [
+    {
+      "label": "א",
+      "font": "Arial",
+      "size": "12",
+      "color": "black"
+    },
+    {
+      "label": "א",
+      "font": "David",
+      "size": "14",
+      "color": "blue"
+    },
+    {
+      "label": "א",
+      "font": "Miriam",
+      "size": "16",
+      "color": "red"
+    },
+    {
+      "label": "א",
+      "font": "Segoe UI",
+      "size": "18",
+      "color": "green"
+    },
+    {
+      "label": "א",
+      "font": "Tahoma",
+      "size": "20",
+      "color": "purple"
+    }
+  ]
+}

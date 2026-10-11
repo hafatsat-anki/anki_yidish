@@ -1,0 +1,12 @@
+adding-add-shortcut-ctrlandenter = צולייגן (קורצוועג: ctrl+enter)
+adding-added = צוגעלייגט
+adding-discard-current-input = פארווארפן דעם איצטיגן אינהאלט?
+adding-keep-editing = ווייטער רעדאקטירן
+adding-edit = רעדאקטירן "{ $val }"
+adding-history = היסטאריע
+adding-note-deleted = (רשומה אויסגעמעקט)
+adding-shortcut = קורצוועג: { $val }
+adding-the-first-field-is-empty = דאס ערשטע פעלד איז ליידיג.
+adding-you-have-a-cloze-deletion-note = איר האט א רשומה מיט אויסגעלאזטע ווערטער, אבער איר האט נישט אויסגעלאזט קיין ווערטער. ווייטערגיין?
+adding-cloze-outside-cloze-notetype = אויסלאזן ווערטער קען מען נאר ביי א סארט רשומה פאר אויסגעלאזטע ווערטער.
+adding-cloze-outside-cloze-field = אויסלאזן ווערטער קען מען נאר אין פעלדער וואס נוצן דעם פילטער 'cloze:'. געווענליך איז דאס דאס ערשטע פעלד.

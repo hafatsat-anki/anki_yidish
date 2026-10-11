@@ -1,0 +1,14 @@
+{
+  "actions": [
+    {
+      "hotkey": "alt+shift+5",
+      "name": "strikeThrough",
+      "tooltip": "קו אמצעי"
+    },
+    {
+      "hotkey": "ctrl+shift+alt+_",
+      "name": "insertHorizontalRule",
+      "tooltip": "הוסף קו חוצץ"
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>טעקסט-פיילס - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="../favicon.svg">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="../css/misc.css">
+    <link rel="stylesheet" href="../css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const path_to_site_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../intro.html">הקדמה</a></li><li class="chapter-item "><a href="../background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="../platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="../platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="../platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="../platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="../platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="../platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="../platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="../platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="../getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="../getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="../deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="../studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="../editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="../math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="../preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="../deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="../profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="../browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="../filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="../searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="../question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="../importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="../importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="../importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="../importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="../exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="../backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="../files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="../stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="../media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="../leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="../troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="../syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="../misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="../contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="../faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="קובצי-טקסט"></a></p>
+<h1 id="טעקסט-טעקעס"><a class="header" href="#טעקסט-טעקעס">טעקסט טעקעס</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#טאבעלעס-און-utf-8">טאבעלעס און UTF-8</a></li>
+<li class="toc-level-2"><a href="#html">HTML</a></li>
+<li class="toc-level-2"><a href="#אימפארטירן-מידיא">אימפארטירן מידיא</a></li>
+<li class="toc-level-2"><a href="#טאפלטע-רשומות-און-דערהיינטיגן">טאפלטע רשומות און דערהיינטיגן</a></li>
+<li class="toc-level-2"><a href="#טעקע-קעפלעך">טעקע קעפלעך</a></li>
+<li class="toc-level-3"><a href="#סארט-רשומה-עמודה">סארט רשומה עמודה</a></li>
+<li class="toc-level-3"><a href="#פעקל-עמודה">פעקל עמודה</a></li>
+<li class="toc-level-3"><a href="#guid-עמודה">GUID עמודה</a></li>
+</ul>
+</details>
+<p>יעדע <strong>פשוטע טעקסט</strong> טעקע וואס אנטהאלט פעלדער צעטיילט מיט קאמאס, פינטל קאמאס אדער טאבים קען מען אימפארטירן אין אנקי, אויב זי איז אויסגעשטעלט לויט די פאלגנדע תנאים.</p>
+<ul>
+<li>
+<p>די טעקעס מוזן זיין פשוטע טעקסט טעקעס (ענדיגן זיך מיט .txt). אנדערע פארמאטן, ווי myfile.xls, myfile.rtf און myfile.doc, מוז מען ערשט אפזיכערן אלס פשוטע טעקסט טעקעס.</p>
+</li>
+<li>
+<p>די טעקעס מוזן זיין אין UTF-8 פארמאט (זעט ווייטער).</p>
+</li>
+<li>
+<p>אנקי באשטימט דעם צאל פעלדער אין דער טעקע לויט דער ערשטער שורה וואס איז נישט קיין באמערקונג. אויב שפעטערדיגע רשומות האבן ווייניגער פעלדער, באהאנדלט אנקי די פעלנדיגע פעלדער ווי ליידיגע. אויב א טייל רשומות האבן צוגעלייגטע פעלדער, ווערט דער צוגעלייגטער אינהאלט נישט אימפארטירט.</p>
+</li>
+<li>
+<p>אנקי פרובירט צו דערקענען וועלכן צעטיילער די טעקע נוצט (קאמאס, טאבים אא“וו). אויב עס דערקענט נישט ריכטיג, קען מען דאס טוישן אינעם פענצטער מיט די אימפארט אויסוואלן און זען א פאראויסווייזונג פון די רעזולטאטן. מען קען אויך צולייגן [טעקע קעפלעך](#כותרות קובץ) צו באשטימען א געוויסן צעטיילער.</p>
+</li>
+</ul>
+<p>מען קען צופאסן די פעלדער אין דער טעקסט טעקע צו יעדן פעלד אין די רשומות, אריינגערעכנט דאס צעטלעך פעלד. ביים אימפארטירן קען מען אויסקלייבן וועלכער פעלד אין דער טעקסט טעקע געהערט צו וועלכן פעלד אין דער רשומה.</p>
+<p>ביים אימפארטירן א טעקסט טעקע, קען מען אויסקלייבן אין וועלכן פעקל די קארטלעך זאלן אריינגיין.</p>
+<p>דאס איז א ביישפיל פון א ריכטיגער טעקע מיט דריי פעלדער:</p>
+<pre><code>ברכות;שבת;עירובין
+שדה ראשון;שדה שני;שדה שלישי
+</code></pre>
+<p>עס זענען דא צוויי וועגן אריינצולייגן נייע שורות (Enter) אדער דעם צעטיילער צווישן פעלדער אינעווייניג אין די פעלדער אליין.</p>
+<p><strong>ארומנעמען דעם אינהאלט פונעם פעלד מיט גענזעלעך</strong>:</p>
+<pre><code>שלום;"זוהי תשובה
+בשתי שורות"
+שתים;זהו שדה בשורה אחת
+"זה כולל את התו ; ";שדה אחר
+</code></pre>
+<p>גענזעלעך צייכענען אן דעם אנהייב און סוף פון א פעלד. דעריבער, אויב איר ווילט אריינלייגן גענזעלעך אינעם פעלד, מוז מען פארבייטן איין טאפלט גענזעלע מיט צוויי טאפלטע גענזעלעך, כדי עס זאל נישט ווערן באהאנדלט ווי דער פעלד גרעניץ, אזוי:</p>
+<pre><code>שדה ראשון;"שדה שני עם ""מרכאות מוחרגות"" בתוכו"
+</code></pre>
+<p>ווען מען נוצט א טאבעלע פראגראם ווי LibreOffice צו שאפן די CSV טעקע, טוט זי אויטאמאטיש די נויטיגע פארבייטונגען פון טאפלטע גענזעלעך.</p>
+<p><strong>נוצן HTML שורה איבערגאנגען</strong>:</p>
+<pre><code>שלום; זוהי&lt;br&gt;תשובה בשתי שורות
+שתים; זוהי תשובה בשורה אחת
+</code></pre>
+<p>מען מוז אנצייכענען <strong>ערלויבן HTML אין פעלדער</strong> אינעם אימפארט פענצטער, כדי HTML שורה איבערגאנגען זאלן ארבעטן.</p>
+<p>עטליכע שורות מיט אנטלויף צייכנס וועלן נישט ארבעטן ריכטיג ווען א תשובה פון פילט אויס דאס אויסגעלאזטע ציט זיך איבער עטליכע שורות. אין דעם פאל, נוצט HTML שורה איבערגאנגען.</p>
+<p>מען קען אויך אריינלייגן צעטלעך אין א באזונדער פעלד און עס אויסקלייבן אלס צעטלעך פעלד אינעם אימפארט פענצטער:</p>
+<pre><code>שדה ראשון;שדה שני;תגיות
+</code></pre>
+<p>דאס איז א ביישפיל פון א ריכטיגער טעקע, וואו מען לאזט אויס די ערשטע שורה (זי הייבט זיך אן מיט #):</p>
+<pre><code># זוהי שורת הערה
+דוגמא;ניסוי;בדיקה
+שדה1;שדה2;שדה3
+</code></pre>
+<p><a id="גיליונות-אלקטרוניים-ו-utf-8"></a></p>
+<h2 id="טאבעלעס-און-utf-8"><a class="header" href="#טאבעלעס-און-utf-8">טאבעלעס און UTF-8</a></h2>
+<p>אויב אייער טעקע האט אותיות וואס זענען נישט לאטייניש (ווי עברית אא“וו), ערווארטעט אנקי אז די טעקעס זאלן ווערן אפגעזיכערט מיט “UTF-8 קאדירונג”. דער גרינגסטער וועג איז צו נוצן די אומזיסטע טאבעלע פראגראם LibreOffice אנשטאט Excel צום רעדאקטירן די טעקע. זי שטיצט גרינג UTF-8 און פירט אויך ארויס אינהאלט מיט עטליכע שורות ריכטיג, אנדערש ווי Excel. אויב איר ווילט ווייטער נוצן Excel, זוכט א פאסיגע לייזונג דערפאר.</p>
+<p>צו אפזיכערן א טאבעלע מיט LibreOffice אין א טעקע וואס אנקי קען לייענען, גייט צו <strong>טעקע &gt; אפזיכערן אלס</strong>, און קלייבט CSV אלס סארט טעקע. נאכן באשטעטיגן די פעליקייט אויסוואלן, זיכערט LibreOffice אפ די טעקע, און מען קען זי אימפארטירן אין אנקי.</p>
+<h2 id="html"><a class="header" href="#html">HTML</a></h2>
+<p>אנקי קען באהאנדלען טעקסט וואס ווערט אימפארטירט פון טעקסט טעקעס אלס HTML. דאס מיינט אז מען קען ארויספירן טעקסט מיט פעטן דרוק, שיפן דרוק און אנדערע אויסשטעלן אין א טעקסט טעקע, און אים צוריק אימפארטירן. צו ארייננעמען HTML אויסשטעל, צייכנט אן “ערלויבן HTML אין פעלדער” ביים אימפארטירן. אויב איר פרובירט צו אימפארטירן קארטלעך וואס אנטהאלטן ווינקל קלאמערן אדער אנדערע HTML סימנים, קען זיין אז איר וועט וועלן אויסלעשן דעם אויסוואל.</p>
+<p>אויב איר ווילט נוצן HTML פארן אויסשטעל פון דער טעקע און אויך אריינלייגן ווינקל קלאמערן אדער דעם &amp; צייכן, קען מען נוצן די פאלגנדע ערזעצונגען:</p>
+<div class="table-wrapper"><table><thead><tr><th>צייכן</th><th>ערזעצונג</th></tr></thead><tbody>
+<tr><td>&lt;</td><td><code>&amp;lt;</code></td></tr>
+<tr><td>&gt;</td><td><code>&amp;gt;</code></td></tr>
+<tr><td>&amp;</td><td><code>&amp;amp;</code></td></tr>
+</tbody></table>
+</div>
+<p><a id="ייבוא-מדיה"></a></p>
+<h2 id="אימפארטירן-מידיא"><a class="header" href="#אימפארטירן-מידיא">אימפארטירן מידיא</a></h2>
+<p>צו אימפארטירן אויך קול און בילדער פון א טעקסט טעקע, קאפירט די טעקעס אין דער <a href="../files.html">collection.media טעקע</a>. <strong>לייגט נישט אריין אונטערטעקעס אין דער מידיא טעקע, ווייל געוויסע פעולות וועלן דעמאלט נישט ארבעטן.</strong></p>
+<p>נאכן קאפירן די טעקעס, טוישט איינס פון די פעלדער אין אייער טעקסט טעקע אזוי:</p>
+<pre><code>&lt;img src="myimage.jpg"&gt;
+</code></pre>
+<p>אדער</p>
+<pre><code>[sound:myaudio.mp3]
+</code></pre>
+<p>מען קען אויך נוצן <a href="../browsing.html">זוכן און פארבייטן</a> אינעם דורכבלעטערן פענצטער צו דערהיינטיגן אלע פעלדער אויף איינמאל. אויב יעדער פעלד אנטהאלט א טעקסט ווי “myaudio”, און איר ווילט אז עס זאל שפילן א קול, זוכט <code>(.*)</code> און פארבייט מיט <code>[sound:\\1.mp3]</code>, מיטן אויסוואל <strong>רעגולערע אויסדרוקן</strong> אנגעצייכנט.</p>
+<p>ביים אימפארטירן א טעקסט טעקע מיט אזעלכע הפניות, מוז מען זיכער מאכן אז “ערלויבן HTML” איז אנגעצייכנט.</p>
+<p>איר קענט טראכטן דאס צו טון אין א מוסטער, אזוי:</p>
+<pre><code>&lt;img src="{{field name}}"&gt;
+</code></pre>
+<p>אנקי שטיצט דאס נישט צוליב צוויי סיבות: דאס זוכן וועלכע מידיא טעקעס זענען אין באנוץ וואלט געפאדערט אסאך ארבעט, ווייל מען וואלט געדארפט אויסשטעלן יעדעס קארטל; און אזא פעולה וואלט נישט געווען קלאר פאר באניצער פון געטיילטע פעקלעך. נוצט דערפאר דעם וועג פון זוכן און פארבייטן.</p>
+<p><a id="כפילויות-ועדכון"></a></p>
+<h2 id="טאפלטע-רשומות-און-דערהיינטיגן"><a class="header" href="#טאפלטע-רשומות-און-דערהיינטיגן">טאפלטע רשומות און דערהיינטיגן</a></h2>
+<p>ביים אימפארטירן טעקסט טעקעס, נוצט אנקי דאס ערשטע פעלד צו באשטימען צי א רשומה איז איינציג. לויט דער פעליקייט, אויב דאס ערשטע פעלד אין דער אימפארטירטער טעקע שטימט מיט א רשומה וואס איז שוין דא אין אוסף, און יענע רשומה איז פונעם זעלבן סארט וואס איר אימפארטירט, ווערן אירע אנדערע פעלדער דערהיינטיגט לויטן אינהאלט פון דער אימפארטירטער טעקע. א אויסוואל ליסטע אינעם אימפארט פענצטער לאזט דאס טוישן: מען קען אינגאנצן אויסלאזן טאפלטע רשומות, אדער זיי אימפארטירן אלס נייע רשומות אנשטאט דערהיינטיגן די עקזיסטירנדע.</p>
+<p>די איינשטעלונג <strong>גרעניץ פון צופאסן</strong> באשטימט ווי מען דערקענט טאפלטע רשומות. מיט <strong>סארט רשומה</strong>, דערקענט אנקי א טאפלטע רשומה ווען אן אנדערע רשומה פונעם זעלבן סארט האט דאס זעלבע ערשטע פעלד. מיט <strong>סארט רשומה און פעקל</strong>, ווערט זי נאר אנגעצייכנט אלס טאפלט ווען די עקזיסטירנדע רשומה געפינט זיך אויך אין דעם פעקל וואו איר אימפארטירט.</p>
+<p>אויב דערהיינטיגן איז אנגעצונדן און עלטערע ווערסיעס פון די רשומות זענען שוין דא אין אוסף, ווערן זיי דערהיינטיגט אויפן יעצטיגן פלאץ (אין זייערע יעצטיגע פעקלעך), אנשטאט אריבערגיין אין דעם פעקל וואס איר האט אויסגעקליבן אינעם אימפארט פענצטער. ווען רשומות ווערן דערהיינטיגט אויפן פלאץ, בלייבט זייער צייט פלאן אינפארמאציע פאר אלע זייערע קארטלעך.</p>
+<p>פאר אינפארמאציע איבער טאפלטע רשומות אין .apkg טעקעס, זעט <a href="../exporting.html#%D7%97%D7%A4%D7%99%D7%A1%D7%94-apkg">פעקל פעקלעך</a>.</p>
+<p><a id="כותרות-קובץ"></a></p>
+<h2 id="טעקע-קעפלעך"><a class="header" href="#טעקע-קעפלעך">טעקע קעפלעך</a></h2>
+<p>אנקי שטיצט באזונדערע קעפלעך וואס מען קען אריינלייגן אין א טעקסט טעקע צו מאכן דעם אימפארט מער פארזיכערט אדער באקוועם. זיי זענען אויסגעשטעלט אלס פארלעך <code>#מפתח:ערך</code> (#key:value), און מוזן זיין אויף באזונדערע שורות אויבן אין דער טעקע.</p>
+<div class="table-wrapper"><table><thead><tr><th>שליסל</th><th>ערלויבטע ווערטן</th><th>פעולה</th></tr></thead><tbody>
+<tr><td><code>separator</code></td><td><code>Comma</code>, <code>Semicolon</code>, <code>Tab</code>, <code>Space</code>, <code>Pipe</code>, <code>Colon</code>, אדער די פאסיגע צייכנס אליין</td><td>באשטימט דעם צעטיילער צווישן פעלדער.</td></tr>
+<tr><td><code>html</code></td><td><code>true</code>, <code>false</code></td><td>באשטימט צי מען באהאנדלט די טעקע אלס HTML.</td></tr>
+<tr><td><code>tags</code></td><td>א ליסטע צעטלעך, צעטיילט מיט רווחים</td><td>לייגט צו די אויסגערעכנטע צעטלעך צו יעדער אימפארטירטער רשומה.</td></tr>
+<tr><td><code>columns</code></td><td>א ליסטע נעמען, צעטיילט מיטן צעטיילער וואס איז פריער באשטימט געווארן</td><td>באשטימט דעם צאל עמודות און ווייזט זייערע נעמען ביים אימפארטירן.</td></tr>
+<tr><td><code>notetype</code></td><td>דער נאמען אדער ID פון א סארט רשומה</td><td>קלייבט פאראויס דעם סארט רשומה, אויב עס איז דא.</td></tr>
+<tr><td><code>deck</code></td><td>דער נאמען אדער ID פון א פעקל</td><td>קלייבט פאראויס דעם פעקל, אויב עס איז דא.</td></tr>
+<tr><td><code>notetype column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, …</td><td>באשטימט וועלכע עמודה אנטהאלט דעם נאמען אדער ID פונעם סארט רשומה פאר יעדער רשומה; זעט <a href="#%D7%A2%D7%9E%D7%95%D7%93%D7%AA-%D7%A1%D7%95%D7%92-%D7%A8%D7%A9%D7%95%D7%9E%D7%94">סארט רשומה עמודה</a>.</td></tr>
+<tr><td><code>deck column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, …</td><td>באשטימט וועלכע עמודה אנטהאלט דעם נאמען אדער ID פונעם פעקל פאר יעדער רשומה; זעט <a href="#%D7%A2%D7%9E%D7%95%D7%93%D7%AA-%D7%97%D7%A4%D7%99%D7%A1%D7%94">פעקל עמודה</a>.</td></tr>
+<tr><td><code>tags column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, …</td><td>באשטימט וועלכע עמודה אנטהאלט די צעטלעך פון יעדער רשומה.</td></tr>
+<tr><td><code>guid column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, …</td><td>באשטימט וועלכע עמודה אנטהאלט דעם GUID פון יעדער רשומה; זעט <a href="#%D7%A2%D7%9E%D7%95%D7%93%D7%AA-guid">GUID עמודה</a>.</td></tr>
+</tbody></table>
+</div>
+<p>א טייל קעפלעך האבן נאך השפעות.</p>
+<p><a id="עמודת-סוג-רשומה"></a></p>
+<h3 id="סארט-רשומה-עמודה"><a class="header" href="#סארט-רשומה-עמודה">סארט רשומה עמודה</a></h3>
+<p>געווענליך ווערן אלע רשומות פון איין טעקע צוגעפאסט צו איין סארט רשומה. דאס טוישט זיך ווען עס איז דא אן עמודה מיט נעמען אדער ID פון סארטן רשומות.</p>
+<p>אזוי קען מען אימפארטירן רשומות פון פארשידענע סארטן, און די פעלדער ווערן אויטאמאטיש צוגעפאסט: די ערשטע געווענליכע עמודה ווערט גענוצט פארן ערשטן פעלד פון יעדער רשומה, אפגעזען פונעם סארט רשומה; די צווייטע געווענליכע עמודה פארן צווייטן פעלד, און אזוי ווייטער. א <em>געווענליכע עמודה</em> מיינט דא אן עמודה וואס אנטהאלט נישט באזונדערע אינפארמאציע, ווי פעקלעך, צעטלעך, סארטן רשומות אדער GUIDs.</p>
+<p><a id="עמודת-חפיסה"></a></p>
+<h3 id="פעקל-עמודה"><a class="header" href="#פעקל-עמודה">פעקל עמודה</a></h3>
+<p>געווענליך ווערן אלע נייע קארטלעך פון א טעקסט אימפארט אריינגעלייגט אין איין פעקל לויט אייער בחירה. אבער אויב די טעקע האט א פעקל עמודה, ווערן די נייע קארטלעך פון יעדער רשומה אריינגעלייגט אין דעם פעקל וואס שטייט ביי איר. אויב דער פעקל איז נאכנישט דא, ווערט א פעקל מיט יענעם נאמען געשאפן.</p>
+<p><a id="עמודת-guid"></a></p>
+<h3 id="guid-עמודה"><a class="header" href="#guid-עמודה">GUID עמודה</a></h3>
+<p>GUID איז א ראשי תיבות פון <em>Globally Unique Identifier</em> (א כלל’דיג איינציגער אידענטיפיצירער). ווען איר שאפט רשומות אין אנקי, גיט אנקי יעדער רשומה אן איינציגן ID וואס מען קען נוצן צום דערקענען טאפלטע רשומות. אויב איר פירט ארויס רשומות מיט זייער GUID, קען מען טוישן די רשומות און זיי צוריק אימפארטירן צום דערהיינטיגן די עקזיסטירנדע רשומות, כל זמן מען טוישט נישט דאס GUID פעלד.</p>
+<p>דער GUID איז געמאכט צו ווערן געשאפן דורך אנקי. אויב איר שאפט אייגענע ID, ווי <code>MYNOTE0001</code>, איז כדאי זיי אריינצולייגן אינעם ערשטן פעלד, אנשטאט זיי צוצושטעלן אלס אנקי’ס אינערליכן GUID. ביים אימפארטירן קען אנקי נוצן דאס ערשטע פעלד אדער דעם GUID צו דערקענען טאפלטע רשומות. מען דארף דערפאר נישט פארוואנדלען אייגענע ID אין GUID, כדי צו קענען דערהיינטיגן אייערע רשומות.</p>
+<p>נאך א פרט: דער אויסוואל פאר טאפלטע רשומות ארבעט נישט פאר שורות מיט א GUID וואס איז נישט ליידיג. אויב עס איז דא א GUID וואס געפינט זיך שוין אין אוסף, ווערט נישט געשאפן א טאפלטע רשומה.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="../importing/xml-kalizcor.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="../importing/packaged-decks.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="../importing/xml-kalizcor.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="../importing/packaged-decks.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="../lunr.js"></script>
+        <script src="../lunr.stemmer.support.js"></script>
+        <script src="../lunr.he.js"></script>
+
+        <script src="../mark.min.js"></script>
+        <script src="../unified-searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

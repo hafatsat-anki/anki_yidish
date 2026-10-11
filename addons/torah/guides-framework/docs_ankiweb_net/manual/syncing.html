@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="yi" class="light" dir="rtl">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>סינכראניזירן מיט AnkiWeb - מדריך פאר אנקי אויפן זכרון הלימוד</title>
+
+    <!-- Custom HTML head -->
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" id="highlight-css" href="highlight.css">
+    <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+    <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/mdbook-admonish.css">
+
+</head>
+
+<body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const path_to_site_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_root = path_to_root;
+            window.path_to_site_root = path_to_site_root;
+            window.path_to_searchindex_js = path_to_site_root + "searchindex.js";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">הקדמה</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> הינטערגרונט</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> הערות פאר יעדער פלאטפארמע</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">2.1.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">2.1.1.</strong> אינסטאלירן און דערהייבן</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">2.1.2.</strong> פראבלעמען ביים אינסטאלירן</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">2.1.3.</strong> פראבלעמען ביים אויפמאכן</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">2.1.4.</strong> פראבלעמען מיט דער אויסזען</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">2.1.5.</strong> פראבלעמען ביים קאפירן און איינקלעבן</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">2.1.6.</strong> טעקסט-גרייס</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">2.1.7.</strong> פראבלעמען מיט צוטריט-רעכטן</a></li><li class="chapter-item "><a href="platform/windows/damaged_collection.html"><strong aria-hidden="true">2.1.8.</strong> געשעדיגטע זאמלונגען</a></li></ol></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">3.</strong> אנהייבן צו ארבעטן</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">4.</strong> באקומען הילף</a></li><li class="chapter-item "><a href="deck-browser.html"><strong aria-hidden="true">5.</strong> דער פעקלעך-עקראן</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">6.</strong> לערנען</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">7.</strong> צולייגן און רעדאקטירן</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">8.</strong> מאטעמאטיק און סימבאלן</a></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">9.</strong> פרעפערענצן</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">10.</strong> פעקל-איינשטעלונגען</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">11.</strong> פראפילן</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">12.</strong> דורכבלעטערן</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">13.</strong> געפילטערטע פעקלעך</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">14.</strong> זוכן</a></li><li class="chapter-item "><a href="question-bank.html"><strong aria-hidden="true">15.</strong> דער שאלות-מאגר</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">16.</strong> אימפארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/single-questions.html"><strong aria-hidden="true">16.1.</strong> אימפארטירן באזונדערע שאלות פון א פייל</a></li><li class="chapter-item "><a href="importing/xml-kalizcor.html"><strong aria-hidden="true">16.2.</strong> אימפארטירן XML פון קלזכור</a></li><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">16.3.</strong> טעקסט-פיילס</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">16.4.</strong> פארפאקטע פעקלעך</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">17.</strong> עקספארטירן</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="printing-word.html"><strong aria-hidden="true">17.1.</strong> דרוקן און עקספארטירן צו Word</a></li></ol></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">18.</strong> רעזערוו-קאפיעס</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">19.</strong> פייל-פארוואלטונג</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">20.</strong> סטאטיסטיק</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">21.</strong> מעדיע</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">22.</strong> שווערע קארטלעך</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">23.</strong> לייזן פראבלעמען</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">24.</strong> סינכראניזירן מיט AnkiWeb</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">25.</strong> פארשידענע ענינים</a></li><li class="chapter-item affix "><a href="contrib.html">ביישטייערן</a></li><li class="chapter-item affix "><a href="faqs.html">אפטע פראגעס</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="ווייזן אדער באהאלטן דעם אינהאלט" aria-label="ווייזן אדער באהאלטן דעם אינהאלט"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="טוישן דעם אויסזען"
+                            aria-label="טוישן דעם אויסזען" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="אויסזען" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">ליכטיג</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">ברוין</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">טונקל</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">טונקל בלוי</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">שווארץ</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="זוכן (קיצור: s)"
+                            aria-label="ווייזן דעם זוך פעלד" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">מדריך פאר אנקי אויפן זכרון הלימוד</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="דרוקן דעם מדריך" aria-label="דרוקן דעם מדריך">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="שרייבט זוך ווערטער ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a id="סנכרון-עם-ankiweb"></a></p>
+<h1 id="סינכראניזירן-מיט-ankiweb"><a class="header" href="#סינכראניזירן-מיט-ankiweb">סינכראניזירן מיט AnkiWeb</a></h1>
+<details class="fallback-toc" open>
+<summary>אינהאלט</summary>
+<ul>
+<li class="toc-level-2"><a href="#איינשטעלן">איינשטעלן</a></li>
+<li class="toc-level-2"><a href="#אויטאמאטיש-סינכראניזירן">אויטאמאטיש סינכראניזירן</a></li>
+<li class="toc-level-2"><a href="#דער-קנעפל-קאליר">דער קנעפל קאליר</a></li>
+<li class="toc-level-2"><a href="#מידיא">מידיא</a></li>
+<li class="toc-level-2"><a href="#צוזאמענשטויסן">צוזאמענשטויסן</a></li>
+<li class="toc-level-2"><a href="#צונויפמישן-צוזאמענשטויסן">צונויפמישן צוזאמענשטויסן</a></li>
+<li class="toc-level-2"><a href="#אויסמעקן-דאטן-פון-ankiweb">אויסמעקן דאטן פון AnkiWeb</a></li>
+<li class="toc-level-3"><a href="#וואס-ווערט-אויסגעמעקט">וואס ווערט אויסגעמעקט</a></li>
+<li class="toc-level-3"><a href="#צוריקקומען-צו-ankiweb">צוריקקומען צו AnkiWeb</a></li>
+<li class="toc-level-3"><a href="#פארמיידן-אויסמעקן-דאטן">פארמיידן אויסמעקן דאטן</a></li>
+<li class="toc-level-2"><a href="#פייערוואלס">פייערוואלס</a></li>
+<li class="toc-level-2"><a href="#פראקסי-סערווערס-און-פילטערס-נטפרי-אאוו">פראקסי סערווערס און פילטערס (נטפרי אא"וו)</a></li>
+<li class="toc-level-2"><a href="#fsrs">FSRS</a></li>
+</ul>
+</details>
+<p>AnkiWeb איז א דינסט וואס לאזט אייך האלטן אייער קארטלעך זאמלונג סינכראניזירט צווישן פארשידענע מכשירים און לערנען אנליין. עפנט אן אומזיסטע קאנטע אויפן AnkiWeb וועבזייטל איידער איר טוט די פאלגנדע שריט.</p>
+<p><a id="הגדרה"></a></p>
+<h2 id="איינשטעלן"><a class="header" href="#איינשטעלן">איינשטעלן</a></h2>
+<p>צו אנהייבן סינכראניזירן אייער זאמלונג צווישן מכשירים, דרוקט אויפן סינכראניזירן קנעפל אינעם מעניו, אדער <kbd>Y</kbd> אויפן קלאוויאטור. מען וועט אייך בעטן דעם AnkiWeb באניצער נאמען און פאסווארט וואס איר האט געשאפן ביים זיך רעגיסטרירן.</p>
+<img src="media/sync-button.png" alt="דער סינכראניזירן קנעפל" style="zoom:67%;" />
+<p>ביים ערשטן סינכראניזירן וועט Anki פרעגן צי איר ווילט אויפלאדן אדער אראפלאדן. אויב איר האט קארטלעך אויפן קאמפיוטער און אייער AnkiWeb קאנטע איז ליידיג, קלייבט <strong>אויפלאדן</strong> צו שיקן אייערע דאטן צו AnkiWeb. אויב איר האט קארטלעך אין AnkiWeb פון אן אנדער מכשיר און נישט אויפן קאמפיוטער, קלייבט <strong>אראפלאדן</strong> צו פארבייטן די ליידיגע לאקאלע זאמלונג מיט די קארטלעך פון AnkiWeb. אויב ביידע מכשירים האבן פארשידענע קארטלעך, [דארף מען נאך ארבעט](#מיזוג התנגשויות) כדי נישט צו פארלירן דאטן.</p>
+<p>נאכן ערשטן סינכראניזירן אין איין ריכטונג, קען Anki צונויפמישן ענדערונגען פון עטליכע פלעצער, מיט עטליכע אויסנאמען.</p>
+<p>אויב עטליכע מענטשן נוצן Anki אויפן זעלבן קאמפיוטער און יעדער האט אן אייגענעם פראפיל, דארף יעדער מאכן אן אייגענע AnkiWeb קאנטע צום סינכראניזירן. סינכראניזירן עטליכע פראפילן מיט איין AnkiWeb קאנטע וועט פארלירן דאטן.</p>
+<p><a id="סנכרון-אוטומטי"></a></p>
+<h2 id="אויטאמאטיש-סינכראניזירן"><a class="header" href="#אויטאמאטיש-סינכראניזירן">אויטאמאטיש סינכראניזירן</a></h2>
+<p>נאכן אנצינדן סינכראניזירן וועט Anki אויטאמאטיש סינכראניזירן ווען אייער זאמלונג ווערט פארמאכט אדער געעפנט. אויב איר ווילט דאס טון מיט דער האנט, קען מען אויסלעשן אויטאמאטיש סינכראניזירן אין Anki’ס <a href="preferences.html#%D7%A1%D7%99%D7%A0%D7%9B%D7%A8%D7%95%D7%9F">איינשטעלונגען</a>.</p>
+<p><a id="צבע-הכפתור"></a></p>
+<h2 id="דער-קנעפל-קאליר"><a class="header" href="#דער-קנעפל-קאליר">דער קנעפל קאליר</a></h2>
+<p>דער סינכראניזירן קנעפל ווערט בלוי ווען מען דארף א געווענליכע סינכראניזאציע, און רויט ווען מען דארף א פולע סינכראניזאציע.</p>
+<p><a id="מדיה"></a></p>
+<h2 id="מידיא"><a class="header" href="#מידיא">מידיא</a></h2>
+<p>Anki סינכראניזירט אלע קול טעקעס און בילדער וואס אייערע רשומות נוצן. עס דערקענט ווען מידיא ווערט צוגעלייגט, אראפגענומען אדער פארביטן אין דער מידיא טעקע, אבער נישט ווען מען רעדאקטירט אן עקזיסטירנדע טעקע. כדי די ענדערונגען זאלן ווערן סינכראניזירט, מוז מען אויך צולייגן, אראפנעמען אדער פארבייטן א טעקע.</p>
+<p>סינכראניזירן אין איין ריכטונג (ווען מען פרעגט אויפלאדן אדער אראפלאדן) ווירקט נישט אויפן מידיא סינכראן. מידיא ענדערונגען ווערן שטענדיג צונויפגעמישט.</p>
+<p>צו פארמיידן בטעות פארלירן דאטן, ווערן אויסמעקונגען נאר סינכראניזירט צו אנדערע מכשירים אויב מען האט זיי געטון נאכן פולן מידיא סינכראן. אויב איר מעקט אויס טעקעס איידער אייער מכשיר איז אינגאנצן סינכראניזירט, און די אויסגעמעקטע טעקעס זענען שוין אין AnkiWeb, וועלן זיי ווערן אראפגעלאדן ביים קומענדיגן סינכראן.</p>
+<p>אויב איר האט בטעות אויסגעמעקט מידיא טעקעס און ווילט זיי צוריקשטעלן, עפנט די איינשטעלונגען און לאגט זיך ארויס. ביים קומענדיגן סינכראן וועט Anki צוריקברענגען יעדע אויסגעמעקטע טעקע וואס איז נאך דא אין AnkiWeb.</p>
+<p>אויב איר לויפט Anki אלס א פארטאטיווע ווערסיע פון א USB דרייוו, נוצט דעם NTFS טעקע סיסטעם. אויף FAT32 קען Anki נישט דערקענען מידיא ענדערונגען. געווענליך קען מען טוישן דעם טעקע סיסטעם דורך פארמאטירן דעם דרייוו (אכטונג: דאס מעקט אויס אלע טעקעס פונעם דרייוו).</p>
+<p><a id="התנגשויות"></a></p>
+<h2 id="צוזאמענשטויסן"><a class="header" href="#צוזאמענשטויסן">צוזאמענשטויסן</a></h2>
+<p>אין א געווענליכן צושטאנד קען מען צונויפמישן חזרות און ענדערונגען פון רשומות. אויב איר חזרט אדער רעדאקטירט קארטלעך אויף צוויי מכשירים פארן סינכראן, היט Anki די ענדערונגען פון ביידע פלעצער. אויב דאס זעלבע קארטל איז געלערנט געווארן אויף צוויי פלעצער, ווערן ביידע חזרות איינגעשריבן אין דער היסטאריע, און דאס קארטל בלייבט אין דעם צושטאנד פון דער לעצטער תשובה.</p>
+<p>א טייל ענדערונגען קען Anki נישט צונויפמישן. דאס האט בעיקר שייכות מיטן רשומה אויסשטעל, ווי צולייגן א נייעם פעלד אדער אראפנעמען א קארטל מוסטער. ווען איר טוט אזא פעולה, וועט Anki אייך ווארענען און געבן דעם אויסוואל אפצוזאגן. אויב איר גייט ווייטער, וועט מען ביים קומענדיגן סינכראן פרעגן צי איר ווילט האלטן די לאקאלע קאפיע אדער די קאפיע פון AnkiWeb.</p>
+<p>אויב מען טרעפט געוויסע פראבלעמען ביים סינכראן, קען עס אויך צווינגען סינכראניזאציע אין איין ריכטונג. אויב דאס פאסירט כסדר, ווענדט זיך צום שטיצע אימעיל.</p>
+<p>ווען מען דארף סינכראניזירן אין איין ריכטונג, מוז מען אויסקלייבן צי צו האלטן די זאמלונג אויפן לאקאלן מכשיר אדער די זאמלונג פון AnkiWeb. אויב ביידע זייטן זענען געטוישט געווארן, קען מען נאר האלטן איין זייט’ס ענדערונגען.</p>
+<p>אויב איר קלייבט <strong>אויפלאדן</strong>, ווערט דער אינהאלט פונעם לאקאלן מכשיר געשיקט צו AnkiWeb. דערנאך מוז מען סינכראניזירן די אנדערע מכשירים און אויסקלייבן <strong>אראפלאדן</strong>, כדי זיי זאלן באקומען א קאפיע פונעם זעלבן אינהאלט.</p>
+<p>אויב איר קלייבט <strong>אראפלאדן</strong>, ווערן אלע לאקאלע ענדערונגען פארביטן מיט די דאטן פון AnkiWeb.</p>
+<p>נאכן סינכראניזירן אלע מכשירים, וועט דער קומענדיגער סינכראן צוריק צונויפמישן ענדערונגען פון ביידע זייטן ווי געווענליך.</p>
+<p>צו צווינגען א פולן אויפלאד אדער אראפלאד (למשל, אויב איר האט בטעות אויסגעמעקט א פעקל אויף איין זייט און ווילט אים צוריקברענגען אנשטאט סינכראניזירן זיין אויסמעקונג), צייכנט אן “ביים קומענדיגן סינכראניזירן, צווינגען ענדערונגען אין איין ריכטונג” ביי <strong>איינשטעלונגען &gt; סינכראניזירן</strong>, און סינכראניזירט ווי געווענליך. איר וועט קענען אויסקלייבן וועלכע זייט צו נוצן.</p>
+<p>צווינגען סינכראניזאציע אין איין ריכטונג ווירקט נאר אויף די קארטלעך; די מידיא ווערט סינכראניזירט ווי געווענליך. אויב איר ווילט אראפנעמען טעקעס פון AnkiWeb, מאכט ערשט זיכער אז אייער מכשיר איז אינגאנצן סינכראניזירט. ווען דער סינכראן איז דערהיינטיגט, וועט יעדע טעקע וואס איר נעמט אראפ (למשל דורך <strong>איבערקוקן מידיא</strong>) ווערן אראפגענומען פון AnkiWeb ביים קומענדיגן סינכראן.</p>
+<p><a id="מיזוג-התנגשויות"></a></p>
+<h2 id="צונויפמישן-צוזאמענשטויסן"><a class="header" href="#צונויפמישן-צוזאמענשטויסן">צונויפמישן צוזאמענשטויסן</a></h2>
+<p>דער <a href="#%D7%94%D7%92%D7%93%D7%A8%D7%94">ערשטער סינכראן</a> קען נאר סינכראניזירן אין איין ריכטונג. דעריבער, אויב איר האט צוגעלייגט פארשידענעם אינהאלט אויף פארשידענע מכשירים אדער פראפילן פארן איינשטעלן סינכראן, וועט איין מכשיר’ס אינהאלט פארלוירן ווערן אויב מען שרייבט אים איבער מיטן אנדערן מכשיר’ס אינהאלט. מיט א ביסל ארבעט קען מען צונויפמישן די דאטן מיט דער האנט אין איין זאמלונג.</p>
+<p>מאכט ערשט א גיבוי אויף יעדן מכשיר אדער פראפיל, אין פאל עפעס גייט נישט ריכטיג. אין דער קאמפיוטער ווערסיע קען מען נוצן <strong>הויפט מעניו &gt; עקספארטירן</strong> צו ארויספירן “אלע פעקלעך” מיט צייט פלאן אינפארמאציע און מידיא, און אפזיכערן די טעקע אויף א זיכער פלאץ. אין AnkiMobile קען מען מיטן צולייגן/עקספארטירן קנעפל אויפן פעקלעך פענצטער ארויספירן אלע פעקלעך מיט מידיא.</p>
+<p>אויב איינער פון אייערע מכשירים איז א טעלעפאן, סינכראניזירט אים ערשט. אויב עס איז דא א צוזאמענשטויס, קלייבט <strong>אויפלאדן</strong> צו איבערשרייבן די עקזיסטירנדע AnkiWeb דאטן מיט די דאטן פונעם טעלעפאן. אויב ביידע מכשירים אדער פראפילן זענען אויפן קאמפיוטער, סינכראניזירט ערשט דעם מיט די מערסטע פעקלעך.</p>
+<p>גייט יעצט צוריק צום אנדערן מכשיר אדער פראפיל. אויב אויטאמאטיש סינכראניזירן איז אנגעצונדן, קען ארויפקומען א מעלדונג וואס פרעגט אויפלאדן אדער אראפלאדן. דרוקט <strong>אפזאגן</strong>, ווייל מיר ווילן נאך נישט סינכראניזירן.</p>
+<p>אין דער פעקלעך ליסטע, דרוקט אויפן ראדל סימבאל נעבן דעם ערשטן פעקל און קלייבט <strong>עקספארטירן</strong>. פירט ארויס דעם אינהאלט מיט צייט פלאן און מידיא, און זיכערט אפ די <code>.apkg</code> טעקע. טוט דאס נאכאמאל פאר יעדן פעקל אויפן אויבערשטן שטאפל.</p>
+<p>נאכן ארויספירן אלע פעקלעך אויפן אויבערשטן שטאפל, דרוקט דעם סינכראניזירן קנעפל אויבן רעכטס און קלייבט <strong>אראפלאדן</strong>. דאס שרייבט איבער דעם לאקאלן אינהאלט מיט דעם וואס איר האט סינכראניזירט פונעם אנדערן מכשיר.</p>
+<p>יעצט קען מען נוצן <strong>הויפט מעניו &gt; אימפארטירן</strong> צו אימפארטירן די <code>.apkg</code> טעקעס וואס איר האט פריער ארויסגעפירט. דאס מישט זייער אינהאלט צוזאמען מיטן עקזיסטירנדן אינהאלט, אזוי אז אלעס איז אויף איין פלאץ.</p>
+<p><a id="מחיקת-נתונים-מ-ankiweb"></a></p>
+<h2 id="אויסמעקן-דאטן-פון-ankiweb"><a class="header" href="#אויסמעקן-דאטן-פון-ankiweb">אויסמעקן דאטן פון AnkiWeb</a></h2>
+<p>AnkiWeb איז אן אומזיסטע דינסט, און דער סיסטעם מעקט פון צייט צו צייט אויס דאטן פון קאנטעס וואס זענען נישט אין באנוץ, כדי צו שפארן קאסטן. אויב איר האט זיך נישט אריינגעלאגט אדער סינכראניזירט אין די לעצטע 6 חדשים, קענען די דאטן פון אייער קאנטע ווערן אויסגעמעקט.</p>
+<p><a id="מה-נמחק"></a></p>
+<h3 id="וואס-ווערט-אויסגעמעקט"><a class="header" href="#וואס-ווערט-אויסגעמעקט">וואס ווערט אויסגעמעקט</a></h3>
+<p>נאר אייערע דאטן וואס זענען געהיטן אין AnkiWeb ווערן אויסגעמעקט. די קאנטע אליין בלייבט, און מען קען זי ווידער נוצן.</p>
+<p>אלע קארטלעך אויף אייער קאמפיוטער, טעלעפאן אדער טאבלעט בלייבן אויף יענע מכשירים. זאכן וואס איר האט געטיילט פון אייער קאנטע, אריינגערעכנט פעקלעך און צוגאבן, בלייבן אויך אין AnkiWeb.</p>
+<p><a id="חזרה-ל-ankiweb"></a></p>
+<h3 id="צוריקקומען-צו-ankiweb"><a class="header" href="#צוריקקומען-צו-ankiweb">צוריקקומען צו AnkiWeb</a></h3>
+<p>נאכדעם וואס אייער פעקל דאטן זענען אויסגעלאפן, קען מען זיי נישט צוריקברענגען פון AnkiWeb. אבער אפשר קען מען זיי צוריקשטעלן פון א לאקאלער קאפיע אדער א <a href="./backups.html">גיבוי</a>.</p>
+<p><a id="הימנעות-ממחיקת-נתונים"></a></p>
+<h3 id="פארמיידן-אויסמעקן-דאטן"><a class="header" href="#פארמיידן-אויסמעקן-דאטן">פארמיידן אויסמעקן דאטן</a></h3>
+<p>ווען איר באזוכט ankiweb.net אדער נוצט סינכראניזירן אין Anki, AnkiMobile אדער AnkiDroid, ווערט אייער קאנטע אויטאמאטיש אנגעצייכנט אלס אקטיוו.</p>
+<p>אויב אייער קאנטע איז נישט אקטיוו געווען פאר 6 חדשים אדער מער, און איר האט גענוצט די דינסט פאר א וואך אדער מער, וועט איר באקומען אן אימעיל אז די אויסמעקונג שטייט פאר. צו האלטן די קאנטע אקטיוו, גייט אריין אין ankiweb.net און לערנט א קארטל, אדער סינכראניזירט איינס פון אייערע מכשירים אינערהאלב 30 טעג.</p>
+<p><a id="חומות-אש"></a></p>
+<h2 id="פייערוואלס"><a class="header" href="#פייערוואלס">פייערוואלס</a></h2>
+<p>Anki דארף קענען מאכן ארויסגייענדיגע HTTPS פארבינדונגען צום סינכראניזירן. עס מוז קענען זיך פארבינדן צו ankiweb.net, sync.ankiweb.net, sync2.ankiweb.net אא“וו. די דאמיינס און זייערע IP אדרעסן קענען זיך טוישן מיט דער צייט. דערפאר ראטן מיר צו ערלויבן צוטריט מיט wildcard צו <code>*.ankiweb.net</code>, כדי ווייניגער צו דארפן טוישן די פייערוואל כללים אין דער צוקונפט.</p>
+<p>אויב איר האט א פייערוואל אויפן קאמפיוטער, לייגט צו אן אויסנאם פאר Anki. אויף א נעצווערק פון א ארבעטס פלאץ אדער מוסד, ווענדט זיך צום נעצווערק פארוואלטער פאר הילף; מיר קענען דאס נישט פארריכטן פון דא.</p>
+<p><a id="שרתי-פרוקסי-וסינונים-נטפרי-וכו"></a></p>
+<h2 id="פראקסי-סערווערס-און-פילטערס-נטפרי-אאוו"><a class="header" href="#פראקסי-סערווערס-און-פילטערס-נטפרי-אאוו">פראקסי סערווערס און פילטערס (נטפרי אא“וו)</a></h2>
+<p>שטארק באגרעניצטע נעצווערקס וואס כאפן אויף זיכערע פארבינדונגען און שטעלן צו אייגענע סערטיפיקאטן קענען מאכן SSL טעותן אין Anki. אין אזעלכע סביבות, זעט די אנווייזונגען ביי <a href="../faq/error-establishing-a-secure-connection-when-syncing.html">טעות ביים שאפן א זיכערע פארבינדונג ביים סינכראניזירן</a>, בפרט דעם נטפרי טייל.</p>
+<h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
+<p>מאכט זיכער אז אלע אייערע אנקי פראגראמען שטיצן FSRS. Anki 23.10, AnkiMobile 23.10 און AnkiWeb שטיצן עס אלע. AnkiDroid שטיצט עס פון ווערסיע 2.17 און העכער. אויב איינס פון אייערע פראגראמען שטיצט עס נישט, וועט עס נישט ארבעטן ריכטיג.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <a rel="prev" href="troubleshooting.html" class="mobile-nav-chapters previous"
+                            title="פריערדיגער קאפיטל" aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a rel="next prefetch" href="misc.html" class="mobile-nav-chapters next"
+                            title="קומענדיגער קאפיטל" aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a rel="prev" href="troubleshooting.html" class="nav-chapters previous" title="פריערדיגער קאפיטל"
+                    aria-label="פריערדיגער קאפיטל" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a rel="next prefetch" href="misc.html" class="nav-chapters next" title="קומענדיגער קאפיטל"
+                    aria-label="קומענדיגער קאפיטל" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <!-- Custom JS scripts loaded before searcher.js when search depends on them -->
+        <script src="lunr.js"></script>
+        <script src="lunr.stemmer.support.js"></script>
+        <script src="lunr.he.js"></script>
+
+        <script src="mark.min.js"></script>
+        <script src="unified-searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+
+    </div>
+</body>
+
+</html>

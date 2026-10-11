@@ -1,0 +1,2 @@
+rm F5.zip
+zip -r F5.zip *py zipping  *md user_files LICENSE *json --exclude \*~

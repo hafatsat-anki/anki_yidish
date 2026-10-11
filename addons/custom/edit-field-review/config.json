@@ -1,0 +1,216 @@
+{
+  "ctrl_click": false,
+  "outline": true,
+  "process_paste": true,
+  "remove_span": false,
+  "tag": "div",
+  "resize_image_default_state": true,
+  "resize_image_preserve_ratio": 2,
+  "shortcuts": {
+    "cloze": "Ctrl + Shift + C",
+    "cloze-alt": "Ctrl + Shift + Alt + C",
+    "image-resize": "Alt + S"
+  },
+  "special_formatting": {
+    "fontcolor": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "F7",
+      "arg": {
+        "type": "color",
+        "value": "#00f"
+      }
+    },
+    "formatblock": {
+      "enabled": false,
+      "command": "formatBlock",
+      "shortcut": "Ctrl + .",
+      "arg": {
+        "type": "text",
+        "value": "pre"
+      }
+    },
+    "highlight": {
+      "enabled": false,
+      "command": "hiliteColor",
+      "shortcut": "Ctrl + Shift + B",
+      "arg": {
+        "type": "color",
+        "value": "#00f"
+      }
+    },
+    "bold": {
+      "enabled": true,
+      "command": "bold",
+      "shortcut": "Ctrl + B",
+      "arg": null
+    },
+    "italic": {
+      "enabled": true,
+      "command": "italic",
+      "shortcut": "Ctrl + I",
+      "arg": null
+    },
+    "underline": {
+      "enabled": true,
+      "command": "underline",
+      "shortcut": "Ctrl + U",
+      "arg": null
+    },
+    "hyperlink": {
+      "enabled": false,
+      "command": "createLink",
+      "shortcut": "Ctrl + Shift + H",
+      "arg": null
+    },
+    "indent": {
+      "enabled": false,
+      "command": "indent",
+      "shortcut": "Ctrl + Shift + ]",
+      "arg": null
+    },
+    "justifyCenter": {
+      "enabled": false,
+      "command": "justifyCenter",
+      "shortcut": "Ctrl + Shift + Alt + S",
+      "arg": null
+    },
+    "justifyFull": {
+      "enabled": false,
+      "command": "justifyFull",
+      "shortcut": "Ctrl + Shift + Alt + B",
+      "arg": null
+    },
+    "justifyLeft": {
+      "enabled": false,
+      "command": "justifyLeft",
+      "shortcut": "Ctrl + Shift + Alt + L",
+      "arg": null
+    },
+    "justifyRight": {
+      "enabled": false,
+      "command": "justifyRight",
+      "shortcut": "Ctrl + Shift + Alt + R",
+      "arg": null
+    },
+    "orderedlist": {
+      "enabled": false,
+      "command": "insertOrderedList",
+      "shortcut": "Ctrl + ]",
+      "arg": null
+    },
+    "outdent": {
+      "enabled": false,
+      "command": "outdent",
+      "shortcut": "Ctrl + Shift + [",
+      "arg": null
+    },
+    "removeformat": {
+      "enabled": true,
+      "command": "removeFormat",
+      "shortcut": "Ctrl + R",
+      "arg": null
+    },
+    "strikethrough": {
+      "enabled": false,
+      "command": "strikeThrough",
+      "shortcut": "Ctrl + Shift + Alt + 5",
+      "arg": null
+    },
+    "subscript": {
+      "enabled": false,
+      "command": "subscript",
+      "shortcut": "Ctrl + =",
+      "arg": null
+    },
+    "superscript": {
+      "enabled": false,
+      "command": "superscript",
+      "shortcut": "Ctrl + Shift + =",
+      "arg": null
+    },
+    "unhyperlink": {
+      "enabled": false,
+      "command": "createLink",
+      "shortcut": "Ctrl + Shift + Alt + H",
+      "arg": null
+    },
+    "unorderedlist": {
+      "enabled": false,
+      "command": "insertUnorderedList",
+      "shortcut": "Ctrl + [",
+      "arg": null
+    },
+    "טעקסט קאליר 1": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F7",
+      "arg": {
+        "type": "color",
+        "value": "#aaaa7f"
+      }
+    },
+    "טעקסט קאליר 2": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F8",
+      "arg": {
+        "type": "color",
+        "value": "#ff557f"
+      }
+    },
+    "טעקסט קאליר 3": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F9",
+      "arg": {
+        "type": "color",
+        "value": "#55aaff"
+      }
+    },
+    "טעקסט קאליר 4": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F10",
+      "arg": {
+        "type": "color",
+        "value": "#000000"
+      }
+    },
+    "טעקסט קאליר 5": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F11",
+      "arg": {
+        "type": "color",
+        "value": "#3377cc"
+      }
+    },
+    "טעקסט קאליר 6": {
+      "enabled": true,
+      "command": "foreColor",
+      "shortcut": "Ctrl+F12",
+      "arg": {
+        "type": "color",
+        "value": "#aa007f"
+      }
+    }
+  },
+  "סרגל טעקסט קאליר": "#ff0000",
+  "פיל קאליר": "#ffff00",
+  "reviewer_font_shortcut": "ctrl+f1",
+  "reviewer_size_shortcut": "ctrl+f2",
+  "review_preset_shortcuts": {
+    "preset_1": "",
+    "preset_2": "",
+    "preset_3": "",
+    "preset_4": "",
+    "preset_5": ""
+  },
+  "edited_note_types": {},
+  "auto_make_editable": true,
+  "version": {
+    "major": 1,
+    "minor": 0
+  }
+}

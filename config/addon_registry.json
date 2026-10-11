@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "addons": [
+    {
+      "source_dir": "addons/ankiweb/advanced-browser_874215009",
+      "deploy_dir": "874215009",
+      "name": "AdvancedBrowser",
+      "display_name": "טורים נוספים בדפדוף",
+      "source": "ankiweb",
+      "min_point_version": 45,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/review-heatmap_1771074083",
+      "deploy_dir": "1771074083",
+      "name": "ReviewHeatmap",
+      "display_name": "לוח שנה לפי אחוזים",
+      "source": "ankiweb",
+      "min_point_version": 49,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [
+        "review_heatmap",
+        "1722241614",
+        "723520343"
+      ],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/batch-editing_291119185",
+      "deploy_dir": "291119185",
+      "name": "BatchEditing",
+      "display_name": "החלפת מילים לכמה כרטיסים בבת אחת",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [
+        "batch_editing"
+      ],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/multi-window_354407385",
+      "deploy_dir": "354407385",
+      "name": "MultiWindow",
+      "display_name": "מאפשר לפתוח את אותו חלון מספר פעמים",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 26,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/study-key_1024346707",
+      "deploy_dir": "1024346707",
+      "name": "StudyKey",
+      "display_name": "מדלג על תצוגה מקדימה ואפשרויות בתפריט חפיסה",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/defer-cards_149564514",
+      "deploy_dir": "149564514",
+      "name": "DeferCards",
+      "display_name": "העברת שאלות לחפיסת דחויים במהלך מבחן",
+      "source": "ankiweb",
+      "min_point_version": 49,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/progress-bar_1685464019",
+      "deploy_dir": "1685464019",
+      "name": "ProgressBar",
+      "display_name": "סרגל התקדמות",
+      "source": "ankiweb",
+      "min_point_version": 49,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/large-buttons_1829090218",
+      "deploy_dir": "1829090218",
+      "name": "LargeButtons",
+      "display_name": "כפתורי תשובה גדולים וצבעוניים",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/hide-answer-buttons_1931020967",
+      "deploy_dir": "1931020967",
+      "name": "HideAnswerButtons",
+      "display_name": "הסתרת כפתורים בעורך",
+      "source": "ankiweb",
+      "min_point_version": 50,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/remove-clozes_1966460736",
+      "deploy_dir": "1966460736",
+      "name": "RemoveClozes",
+      "display_name": "הסרת סימוני השלם את החסר",
+      "source": "ankiweb",
+      "min_point_version": 41,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/deck-browser-counts_1997961715",
+      "deploy_dir": "1997961715",
+      "name": "DeckBrowserCounts",
+      "display_name": "שינוי חפיסה נבחרת באמצעות ניווט במקלדת",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/unicode-normalize_2065559429",
+      "deploy_dir": "2065559429",
+      "name": "UnicodeNormalize",
+      "display_name": "ניקוד וטעמי המקרא",
+      "source": "ankiweb",
+      "min_point_version": 50,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/mini-format-pack_295889520",
+      "deploy_dir": "295889520",
+      "name": "MiniFormatPack",
+      "display_name": "אפשרויות נוספות לעריכה כגון קו חוצץ",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/find-replace_307397307",
+      "deploy_dir": "307397307",
+      "name": "FindReplace",
+      "display_name": "עורך תמונה",
+      "source": "ankiweb",
+      "min_point_version": 41,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/inspector-window_404783644",
+      "deploy_dir": "404783644",
+      "name": "InspectorWindow",
+      "display_name": "חלון בדיקה נפרד",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/fast-bar_46611790",
+      "deploy_dir": "46611790",
+      "name": "FastBar",
+      "display_name": "סמלים לסרגל כלים במסך דפדוף",
+      "source": "ankiweb",
+      "min_point_version": 45,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/deck-name-display_699175524",
+      "deploy_dir": "699175524",
+      "name": "DeckNameDisplay",
+      "display_name": "מציג את שם החפיסה בכותרת החלון",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/deck-shortcuts_734297936",
+      "deploy_dir": "734297936",
+      "name": "DeckShortcuts",
+      "display_name": "קיצור מקשים להתמקדות מהירה בשדה הרצוי",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/external-editor_805891399",
+      "deploy_dir": "805891399",
+      "name": "ExternalEditor",
+      "display_name": "עורך מתקדם",
+      "source": "ankiweb",
+      "min_point_version": 22,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/comfort-toolkit_847766233",
+      "deploy_dir": "847766233",
+      "name": "ComfortToolkit",
+      "display_name": "ערכת כלים נוחה",
+      "source": "ankiweb",
+      "min_point_version": 60,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/idle-notifier_998250600",
+      "deploy_dir": "998250600",
+      "name": "IdleNotifier",
+      "display_name": "מסייע למניעת איבוד ריכוז",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/ankiweb/empty-addon_1566569834",
+      "deploy_dir": "1566569834",
+      "name": "EmptyAddon",
+      "display_name": "הסתרת תשובה בתפריט אפשרויות",
+      "source": "ankiweb",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/shortcut-manager",
+      "deploy_dir": "shortcut-manager",
+      "legacy_deploy_dir": "000מנהל קיצורי מקשים",
+      "name": "ShortcutManager",
+      "display_name": "מנהל קיצורי מקשים",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/remove-buttons",
+      "deploy_dir": "remove-buttons",
+      "legacy_deploy_dir": "00הסרת כפתורים מיותרים",
+      "name": "RemoveButtons",
+      "display_name": "עריכת תפריטים ותיקוני עברית",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/modern-theme",
+      "deploy_dir": "modern-theme",
+      "legacy_deploy_dir": "modern_anki",
+      "name": "ModernTheme",
+      "display_name": "עיצוב מודרני",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/font-size",
+      "deploy_dir": "font-size",
+      "legacy_deploy_dir": "00000000הגדלת_גופן",
+      "name": "FontSize",
+      "display_name": "גודל גופן",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/new-search",
+      "deploy_dir": "new-search",
+      "legacy_deploy_dir": "10101חיפוש_חדש",
+      "name": "NewSearch",
+      "display_name": "חיפוש חדש",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/edit-field-review",
+      "deploy_dir": "edit-field-review",
+      "legacy_deploy_dir": "88ערוך שדה במהלך סקירה",
+      "name": "EditFieldReview",
+      "display_name": "ערוך שדה במהלך סקירה",
+      "source": "custom",
+      "min_point_version": 41,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [
+        "1020366288"
+      ],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/rescheduler",
+      "deploy_dir": "rescheduler",
+      "legacy_deploy_dir": "99תזמון_מחדש",
+      "name": "Rescheduler",
+      "display_name": "חלונית תזמון מחדש",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/new-design",
+      "deploy_dir": "new-design",
+      "legacy_deploy_dir": "99עיצובחדש",
+      "name": "NewDesign",
+      "display_name": "עיצוב חדש",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/answer-reducer",
+      "deploy_dir": "answer-reducer",
+      "legacy_deploy_dir": "99מצמצם_כפתורי_תשובה_לעבר_לא_עבר",
+      "name": "AnswerReducer",
+      "display_name": "מצמצם כפתורי תשובה",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/disable-updates",
+      "deploy_dir": "disable-updates",
+      "legacy_deploy_dir": "000משבית עדכונים",
+      "name": "DisableUpdates",
+      "display_name": "משבית עדכונים",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/fsrs-guard",
+      "deploy_dir": "fsrs-guard",
+      "legacy_deploy_dir": "מדריך_FSRS",
+      "name": "FsrsGuide",
+      "display_name": "מדריך FSRS",
+      "source": "custom",
+      "min_point_version": 55,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/xml-converter",
+      "deploy_dir": "xml-converter",
+      "legacy_deploy_dir": "00convertxmlkl",
+      "name": "XmlConverter",
+      "display_name": "המרת XML לאנקי",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/auto-save-editor",
+      "deploy_dir": "auto-save-editor",
+      "legacy_deploy_dir": "11auto_save_editor",
+      "name": "AutoSaveEditor",
+      "display_name": "שמירה אוטומטית בעורך",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/add-table",
+      "deploy_dir": "add-table",
+      "name": "AddTable",
+      "display_name": "הוספת טבלה בעורך",
+      "source": "custom",
+      "legacy_deploy_dir": "000הוספת_טבלה_בעורך",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [
+        "1237621971"
+      ],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/note-trash",
+      "deploy_dir": "note-trash",
+      "legacy_deploy_dir": "note_trash",
+      "name": "NoteTrash",
+      "display_name": "צוריקברענגען אויסגעמעקטע רשומות",
+      "source": "custom",
+      "min_point_version": 49,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/browser-checkboxes",
+      "deploy_dir": "browser-checkboxes",
+      "legacy_deploy_dir": "תיבות_סימון_בדפדפן",
+      "name": "BrowserCheckboxes",
+      "display_name": "סימון קעסטלעך אינעם דורכבלעטערער",
+      "source": "custom",
+      "min_point_version": 49,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/refresh-browser",
+      "deploy_dir": "refresh-browser",
+      "legacy_deploy_dir": "CTRLF5_to_Refresh_the_Browser",
+      "name": "RefreshBrowser",
+      "display_name": "ריענון דפדוף",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/duplicate-reorder",
+      "deploy_dir": "duplicate-reorder",
+      "legacy_deploy_dir": "Duplicate_and_Reorder",
+      "name": "DuplicateReorder",
+      "display_name": "שכפול כרטיסים",
+      "source": "custom",
+      "min_point_version": 45,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/bottom-bar",
+      "deploy_dir": "bottom-bar",
+      "legacy_deploy_dir": "444444441136455830",
+      "name": "BottomBar",
+      "display_name": "סרגל כפתורים תחתון במבחן",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/print-addon",
+      "deploy_dir": "print-addon",
+      "legacy_deploy_dir": "51025789669",
+      "name": "PrintAddon",
+      "display_name": "תוסף הדפסה",
+      "source": "custom",
+      "min_point_version": 45,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/batch-note-edit",
+      "deploy_dir": "batch-note-edit",
+      "legacy_deploy_dir": "1111שינוי_רשומה_להרבה_כרטיסים",
+      "name": "BatchNoteEdit",
+      "display_name": "שינוי רשומה להרבה כרטיסים",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/highlight-search",
+      "deploy_dir": "highlight-search",
+      "legacy_deploy_dir": "הדגשת מילים בתוצאות חיפוש",
+      "name": "HighlightSearch",
+      "display_name": "הדגשת מילים בתוצאות חיפוש",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/type-questions",
+      "deploy_dir": "type-questions",
+      "legacy_deploy_dir": "הקלדת שאלות",
+      "name": "TypeQuestions",
+      "display_name": "הקלדת שאלות",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/auto-advance",
+      "deploy_dir": "auto-advance",
+      "legacy_deploy_dir": "התקדמות_אוטומטית_כברירת_מחדל",
+      "name": "AutoAdvance",
+      "display_name": "התקדמות אוטומטית כברירת מחדל",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/filtered-deck-browser",
+      "deploy_dir": "filtered-deck-browser",
+      "legacy_deploy_dir": "חפיסה_מסוננת מחלון_דפדוף",
+      "name": "FilteredDeckBrowser",
+      "display_name": "חפיסה מסוננת מחלון דפדוף",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/addon-search-bar",
+      "deploy_dir": "addon-search-bar",
+      "legacy_deploy_dir": "סרגל חיפוש בחלון תוספים",
+      "name": "AddonSearchBar",
+      "display_name": "סרגל חיפוש בחלון תוספים",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/zoom-settings",
+      "deploy_dir": "zoom-settings",
+      "legacy_deploy_dir": "הגדרות_זום",
+      "name": "ZoomSettings",
+      "display_name": "הגדרות זום",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/question-skip-fix",
+      "deploy_dir": "question-skip-fix",
+      "legacy_deploy_dir": "פתרון_למעבר_שאלה",
+      "name": "QuestionSkipFix",
+      "display_name": "תיקוני מעבר וריענון במהלך מבחן",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/default-deck",
+      "deploy_dir": "default-deck",
+      "legacy_deploy_dir": "‏‏000ברירת_מחדל_לחפיסה_חדשה",
+      "name": "DefaultDeck",
+      "display_name": "ברירת מחדל לחפיסה חדשה",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/torah/question-bank",
+      "deploy_dir": "question-bank",
+      "legacy_deploy_dir": "99900מאגרשאלות",
+      "name": "QuestionBank",
+      "display_name": "מאגר שאלות",
+      "source": "torah",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/torah/torah-cards",
+      "deploy_dir": "torah-cards",
+      "legacy_deploy_dir": "99הוספת כרטיסיות תורניות",
+      "name": "TorahCards",
+      "display_name": "הוספת כרטיסיות תורניות",
+      "source": "torah",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/torah/guides-framework",
+      "deploy_dir": "guides-framework",
+      "legacy_deploy_dir": "99הוספת מדריכים",
+      "name": "GuidesFramework",
+      "display_name": "הוספת מדריכים",
+      "source": "torah",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/torah/hebrew-date",
+      "deploy_dir": "hebrew-date",
+      "legacy_deploy_dir": "66תאריך עבריhebdatelib",
+      "name": "HebrewDate",
+      "display_name": "תאריך עברי",
+      "source": "torah",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/torah/external-import",
+      "deploy_dir": "external-import",
+      "legacy_deploy_dir": "ייבוא שאלות מקובץ חיצוני לפי בחירה",
+      "name": "ExternalImport",
+      "display_name": "ייבוא שאלות מקובץ חיצוני",
+      "source": "torah",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/niqqud-reviewer",
+      "deploy_dir": "niqqud-reviewer",
+      "legacy_deploy_dir": "ניקוד_במהלך_סקירה",
+      "name": "NiqqudReviewer",
+      "display_name": "ניקוד במהלך סקירה",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/pdf-viewer",
+      "deploy_dir": "pdf-viewer",
+      "legacy_deploy_dir": "מציג_PDF",
+      "name": "PdfViewer",
+      "display_name": "PDF Frame",
+      "source": "custom",
+      "min_point_version": 0,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": true
+    },
+    {
+      "source_dir": "addons/custom/yiddish-core",
+      "deploy_dir": "yiddish-core",
+      "name": "YiddishCore",
+      "display_name": "אנקי אויף יידיש",
+      "source": "custom",
+      "min_point_version": 250902,
+      "max_point_version": 0,
+      "status": "active",
+      "dependencies": [
+        "_shared_libs"
+      ],
+      "conflicts": [],
+      "cross_platform": false
+    }
+  ]
+}

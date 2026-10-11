@@ -1,0 +1,26 @@
+{
+  "all_notes": true,
+  "last_day_imported": {
+    "non_profile": "2023-00-00"
+  },
+  "daf_on": false,
+  "rab_name": false,
+  "ask_before_import": false,
+  "import_to_each_profile": false,
+  "menu_scrollable": false,
+  "profiles": [],
+  "repo_allow_dupes": false,
+  "daf_allow_dupes": true,
+  "daily_tracks_enabled_by_profile": {},
+  "daily_tracks_by_profile": {},
+  "daily_tracks_enabled": false,
+  "daily_tracks": [],
+  "matchscope_notetype": true,
+  "matchscope_notetype_and_deck": false,
+  "import_to_shas_deck": true,
+  "import_to_daf_deck": false,
+  "repo_separte_by_prakim": true,
+  "group_by_masechet": true,
+  "imported_dates_log": {},
+  "show_import_log": true
+}

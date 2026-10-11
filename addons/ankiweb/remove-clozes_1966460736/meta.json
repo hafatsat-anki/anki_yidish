@@ -1,0 +1,13 @@
+{
+  "min_point_version": 41,
+  "mod": 0,
+  "conflicts": [
+    "836994508"
+  ],
+  "name": "הסרת סימוני השלם את החסר",
+  "max_point_version": 52,
+  "branch_index": 1,
+  "disabled": false,
+  "update_enabled": false,
+  "homepage": "https://github.com/glutanimate/remove-clozes"
+}
